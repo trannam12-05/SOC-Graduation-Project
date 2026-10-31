@@ -1,0 +1,8 @@
+{
+  "path": "/root/m2-isolated-20261101T0035/ovsdb.before",
+  "sha256": "09afc9da76c632f14c24e4754f499b620c8c3042f235b02144198a8f50a99081",
+  "bytes": 16043,
+  "mode": "0o600",
+  "schema": "8.5.1",
+  "root_only_directory": "0o700"
+}

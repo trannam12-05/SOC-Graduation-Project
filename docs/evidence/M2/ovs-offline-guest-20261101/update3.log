@@ -1,0 +1,25 @@
+Get:1 file:/opt/ovs-offline noble InRelease [256 kB]
+Get:2 file:/opt/ovs-offline noble-updates InRelease [126 kB]
+Get:1 file:/opt/ovs-offline noble InRelease [256 kB]
+Get:3 file:/opt/ovs-offline noble-security InRelease [126 kB]
+Get:2 file:/opt/ovs-offline noble-updates InRelease [126 kB]
+Get:3 file:/opt/ovs-offline noble-security InRelease [126 kB]
+Get:4 file:/opt/ovs-offline noble/universe amd64 Packages [15.0 MB]
+Ign:4 file:/opt/ovs-offline noble/universe amd64 Packages
+Get:5 file:/opt/ovs-offline noble/main amd64 Packages [1401 kB]
+Ign:5 file:/opt/ovs-offline noble/main amd64 Packages
+Get:4 file:/opt/ovs-offline noble/universe amd64 Packages [15.0 MB]
+Get:5 file:/opt/ovs-offline noble/main amd64 Packages [1401 kB]
+Get:6 file:/opt/ovs-offline noble-updates/main amd64 Packages [1408 kB]
+Ign:6 file:/opt/ovs-offline noble-updates/main amd64 Packages
+Get:7 file:/opt/ovs-offline noble-updates/universe amd64 Packages [1708 kB]
+Ign:7 file:/opt/ovs-offline noble-updates/universe amd64 Packages
+Get:6 file:/opt/ovs-offline noble-updates/main amd64 Packages [1408 kB]
+Get:7 file:/opt/ovs-offline noble-updates/universe amd64 Packages [1708 kB]
+Get:8 file:/opt/ovs-offline noble-security/main amd64 Packages [1146 kB]
+Ign:8 file:/opt/ovs-offline noble-security/main amd64 Packages
+Get:9 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Ign:9 file:/opt/ovs-offline noble-security/universe amd64 Packages
+Get:8 file:/opt/ovs-offline noble-security/main amd64 Packages [1146 kB]
+Get:9 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Reading package lists...

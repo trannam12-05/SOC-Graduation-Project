@@ -1,0 +1,26 @@
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common python3-openvswitch
+  python3-sortedcontainers
+Suggested packages:
+  openvswitch-doc python-sortedcontainers-doc
+The following NEW packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common openvswitch-switch
+  python3-openvswitch python3-sortedcontainers
+0 upgraded, 7 newly installed, 0 to remove and 18 not upgraded.
+Inst libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libunbound8 (1.19.2-1ubuntu3.12 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst openvswitch-common (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst python3-sortedcontainers (2.4.0-2 Ubuntu:24.04/noble [all])
+Inst libxdp1 (1.4.2-1ubuntu4 Ubuntu:24.04/noble [amd64])
+Inst python3-openvswitch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst openvswitch-switch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libunbound8 (1.19.2-1ubuntu3.12 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf openvswitch-common (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf python3-sortedcontainers (2.4.0-2 Ubuntu:24.04/noble [all])
+Conf libxdp1 (1.4.2-1ubuntu4 Ubuntu:24.04/noble [amd64])
+Conf python3-openvswitch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf openvswitch-switch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])

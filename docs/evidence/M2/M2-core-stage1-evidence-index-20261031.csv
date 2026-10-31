@@ -1,0 +1,3 @@
+﻿ten_anh,noi_dung,thoi_diem,duong_dan,vi_tri_bao_cao,sha256
+M2-core-seed-ready-real-terminal-20261031.png,"Terminal thật hoàn tất seed, Core tắt; không phải guest login",2026-10-31T19:55:46.8688519+07:00,docs/evidence/M2/M2-core-seed-ready-real-terminal-20261031.png,"Hình 2.3, mục 2.10",a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf
+M2-core-stopped-eight-nics-real-terminal-20261031.png,"Terminal kiểm tra chỉ đọc: status0, 8 NIC/MAC không link, disk8GiB, bundle và seed",2026-10-31T19:57:58.1764632+07:00,docs/evidence/M2/M2-core-stopped-eight-nics-real-terminal-20261031.png,"Hình 2.4, mục 2.12",cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd

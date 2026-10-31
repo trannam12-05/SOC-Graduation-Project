@@ -1,0 +1,28 @@
+{
+  "collected_at": "2026-11-01T00:23:05.997833+07:00",
+  "old_docx_unchanged_sha256": "e56082e52f591384aa03e40a599fccb9ee80c087000dba0138a810b7a54c467b",
+  "new_docx_sha256": "c7161d843fe11b5bfd380685f3140954f96716189757ee2badc90340caefc061",
+  "verified_nic_rows": 8,
+  "duplicate_macs": 0,
+  "core_lab_node_count": 1,
+  "core_lab_network_count": 0,
+  "tap_master_count": 0,
+  "core_running_qemu_pid": "13455",
+  "guest_console_observation": {
+    "ipv4_forwarding": 0,
+    "ipv6_forwarding": 0,
+    "physical_nics_have_addresses": false,
+    "ovs_bridges_listed": 0,
+    "ovs_mirrors_listed": 0,
+    "basis": "Actual framebuffer M2-port-l2-baseline; manually read, not shell output inferred from proposal"
+  },
+  "windows_free_GiB": 2.21966552734375,
+  "eve_memavailable_MiB": 5602.10546875,
+  "network_changes_executed": false,
+  "bridge_or_vlan_created": false,
+  "additional_vm_started": false,
+  "docx_checks": "ZIP/XML, 14 embedded image bytes, A4, 3/2/2/2 cm, TNR 12–13; no GUI pagination review",
+  "guest_mac_verification": "Eight MACs manually matched current console to old CSV and current QEMU device/netdev arguments",
+  "proposed_config_executed": false,
+  "tests": "T00 baseline observed; T01–T15 not executed"
+}

@@ -1,0 +1,10 @@
+{
+  "configuration_verified": true,
+  "traffic_tested": false,
+  "mirror_created": false,
+  "ens10_unchanged": true,
+  "forwarding_unchanged": true,
+  "no_core_ip_or_route": true,
+  "restart_tested": false,
+  "port_count_excluding_local": 7
+}

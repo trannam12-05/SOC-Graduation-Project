@@ -1,0 +1,9 @@
+eve_port,configured_mac,guest_nic,qemu_runtime,network_id,proposed_role,verification
+e0,02:53:45:f2:19:00,,,0,Access VLAN 30,EVE configuration only; guest mapping pending boot
+e1,02:53:45:f2:19:01,,,0,Access VLAN 40,EVE configuration only; guest mapping pending boot
+e2,02:53:45:f2:19:02,,,0,Access VLAN 50,EVE configuration only; guest mapping pending boot
+e3,02:53:45:f2:19:03,,,0,Access VLAN 60,EVE configuration only; guest mapping pending boot
+e4,02:53:45:f2:19:04,,,0,Access VLAN 99,EVE configuration only; guest mapping pending boot
+e5,02:53:45:f2:19:05,,,0,Trunk OPNsense Primary,EVE configuration only; guest mapping pending boot
+e6,02:53:45:f2:19:06,,,0,Trunk OPNsense Secondary,EVE configuration only; guest mapping pending boot
+e7,02:53:45:f2:19:07,,,0,Mirror Suricata,EVE configuration only; guest mapping pending boot

@@ -1,0 +1,56 @@
+M2 - XAC MINH CLOUD-INIT / UBUNTU-CONSOLE-TEST
+Ngày: 2026-10-31; múi giờ thu thập: UTC+07:00 (Asia/Saigon).
+Loại log: bản chép kết quả từ ảnh console thật đã xem, không phải raw stdout guest.
+User xác nhận trước phiên: soc-test đăng nhập console thành công; cloud-init done,
+extended_status done, DataSourceNoCloud [seed=/dev/sr0], errors [], recoverable_errors {}.
+Đối chiếu độc lập trong phiên: chạy lại các lệnh chỉ đọc tại shell soc-test.
+
+Đối tượng: EVE 192.168.220.143 / SOC-Ubuntu-Image-Test / node 2 Ubuntu-Console-Test.
+Node UUID: 09ac16f0-1614-48c5-8d01-ee1ab1b29582.
+Nguồn ảnh: QEMU VNC :26870, TCP 32770 trên EVE, truy cập qua SSH có kiểm tra host key.
+Ảnh nguyên framebuffer 720x400; PNG lossless; không sửa/cắt/ghép nội dung.
+Không lưu password/hash/private key/token; không thử đăng nhập bằng mật khẩu.
+
+Hình 2.1: M2-cloud-init-success-20261031T184335+0700.png
+Khoảng thu: 2026-10-31T18:43:35+07:00 đến 18:43:42+07:00 (chi tiết trong JSON).
+Lệnh thực tế: cloud-init status --long
+status: done
+extended_status: done
+boot_status_code: enabled-by-generator
+last_update: Thu, 01 Jan 1970 00:03:33 +0000
+detail: DataSourceNoCloud [seed=/dev/sr0]
+errors: []
+recoverable_errors: {}
+Đánh giá: ĐẠT cloud-init; chưa thu riêng exit code; không suy diễn mã thoát 0.
+
+Hình 2.2: M2-ubuntu-system-info-20261031T184400+0700.png
+Khoảng thu: 2026-10-31T18:44:00+07:00 đến 18:44:08+07:00 (chi tiết trong JSON).
+Lệnh: hostname; ip -br link; nproc; free -m; whoami; cloud-id
+hostname: soc-ubuntu-console-test
+ip -br link: lo UNKNOWN; ens3 UP, MAC 00:50:00:00:02:00.
+Chỉ ens3 là NIC Ethernet hiện có; lo không phải cổng topology.
+nproc: 1
+free -m: Mem total=1967, used=303, free=1494, shared=0, buff/cache=317, available=1664.
+Swap total=0, used=0, free=0. Đơn vị các cột bộ nhớ: MiB theo free -m.
+whoami: soc-test
+cloud-id: nocloud
+Đối chiếu XML/QEMU: cpu=1 / -smp 1; ram=2048 / -m 2048; ethernet=1, virtio-net-pci.
+Lab test: 0 network object, 0 interface link. TAP vunl0_2_0 không có bridge master.
+ens3 UP không chứng minh có IP/gateway/Internet. Không kiểm tra địa chỉ IP guest trong phiên.
+Ảnh ban đầu hostnamectl: Ubuntu 24.04.5 LTS, x86-64, hostname soc-ubuntu-console-test.
+
+Giới hạn thời gian: EVE báo Etc/UTC, NTPSynchronized=no, lệch đồng hồ Windows.
+Không coi last_update năm 1970 hoặc đồng hồ EVE là thời điểm chụp; chưa sửa đồng hồ.
+
+Lịch sử thu thập: ảnh 18:41:56 chứa lệnh nhưng chưa render kết quả; không dùng kết luận.
+Lần system-info 18:42:06: underscore trong biến getconf bị bàn phím VNC nhận thành dấu -, lệnh lỗi.
+Không lấy lần getconf lỗi làm kết quả CPU. Đã đổi sang nproc, trả về 1 ở ảnh chính.
+Các ảnh/log trung gian giữ nguyên, xem danh mục để phân loại; không ghi đè bằng ảnh chụp lại.
+
+ĐẠT: console soc-test; cloud-init/NoCloud; nhận diện hostname/NIC/CPU/RAM hiện tại.
+CHƯA NGHIỆM THU: OVS package/runtime; VLAN, trunk, mirror, LACP, HA, thông lượng.
+ĐỀ XUẤT: Core 8 vNIC = 5 access + 2 trunk OPNsense + 1 mirror; chưa áp dụng.
+Chưa kiểm tra tên/giới hạn 8 NIC; chưa gán IP hoặc mapping cổng mới.
+Quyền đã dùng: chỉ lệnh chẩn đoán đọc và tạo tài liệu/minh chứng trên D:\SOC.
+Không cài phần mềm, thay cấu hình mạng/seed/image, dừng/start/wipe/delete node.
+Chưa đo lại checksum base/seed trong phiên này; kết quả bảo toàn checksum base ở phiên khôi phục trước.

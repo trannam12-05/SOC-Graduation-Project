@@ -1,0 +1,1342 @@
+{
+  "labs": [
+    {
+      "path": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+      "id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+      "nodes": [
+        {
+          "id": "3",
+          "name": "SOC-Core-L2",
+          "type": "qemu",
+          "template": "linux",
+          "image": "linux-ubuntu-24.04-soc-core-l2",
+          "console": "vnc",
+          "cpu": "1",
+          "cpulimit": "1",
+          "ram": "2048",
+          "ethernet": "8",
+          "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+          "firstmac": "02:53:45:f2:19:00",
+          "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+          "qemu_version": "2.12.0",
+          "qemu_arch": "x86_64",
+          "qemu_nic": "virtio-net-pci",
+          "delay": "0",
+          "icon": "Server-2D-Linux-S.svg",
+          "config": "0",
+          "left": "480",
+          "top": "320"
+        }
+      ]
+    },
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "id": "6950cf3d-4dc4-40ac-9d27-da32823d1935",
+      "nodes": []
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "id": "63b4a248-3c28-4b6b-b1c8-be41865b9452",
+      "nodes": [
+        {
+          "id": "1",
+          "name": "R1",
+          "type": "iol",
+          "template": "iol",
+          "image": "i86bi-linux-l3-jk9s-15.0.1.bin",
+          "ethernet": "1",
+          "nvram": "1024",
+          "ram": "1024",
+          "serial": "0",
+          "console": "",
+          "delay": "0",
+          "icon": "Router-2D-Gen-White-S.svg",
+          "config": "0",
+          "left": "477",
+          "top": "84"
+        }
+      ]
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "id": "459ae313-d464-454d-a219-b096bf8d2cfe",
+      "nodes": [
+        {
+          "id": "1",
+          "name": "Ubuntu-Test",
+          "type": "qemu",
+          "template": "linux",
+          "image": "linux-ubuntu-24.04-ovs",
+          "console": "vnc",
+          "cpu": "1",
+          "cpulimit": "1",
+          "ram": "2048",
+          "ethernet": "1",
+          "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab",
+          "firstmac": "00:50:00:00:01:00",
+          "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+          "qemu_version": "2.12.0",
+          "qemu_arch": "x86_64",
+          "qemu_nic": "virtio-net-pci",
+          "delay": "0",
+          "icon": "Server-2D-Linux-S.svg",
+          "config": "0",
+          "left": "512",
+          "top": "384"
+        },
+        {
+          "id": "2",
+          "name": "Ubuntu-Console-Test",
+          "type": "qemu",
+          "template": "linux",
+          "image": "linux-ubuntu-24.04-soc-console-test",
+          "console": "vnc",
+          "cpu": "1",
+          "cpulimit": "1",
+          "ram": "2048",
+          "ethernet": "1",
+          "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582",
+          "firstmac": "00:50:00:00:02:00",
+          "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+          "qemu_version": "2.12.0",
+          "qemu_arch": "x86_64",
+          "qemu_nic": "virtio-net-pci",
+          "delay": "0",
+          "icon": "Server-2D-Linux-S.svg",
+          "config": "0",
+          "left": "714",
+          "top": "384"
+        }
+      ]
+    }
+  ],
+  "vm_processes": [
+    {
+      "pid": "287703",
+      "executable": "qemu-system-x86_64",
+      "cwd": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1",
+      "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab",
+      "name": "Ubuntu-Test"
+    },
+    {
+      "pid": "297601",
+      "executable": "qemu-system-x86_64",
+      "cwd": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/2",
+      "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582",
+      "name": "Ubuntu-Console-Test"
+    }
+  ],
+  "processes": [
+    {
+      "pid": "1",
+      "executable": "systemd"
+    },
+    {
+      "pid": "520",
+      "executable": "multipathd"
+    },
+    {
+      "pid": "868",
+      "executable": "dhclient"
+    },
+    {
+      "pid": "1654",
+      "executable": "php"
+    },
+    {
+      "pid": "1657",
+      "executable": "cron"
+    },
+    {
+      "pid": "1661",
+      "executable": "@dbus-daemon"
+    },
+    {
+      "pid": "1673",
+      "executable": "irqbalance"
+    },
+    {
+      "pid": "1677",
+      "executable": "python3"
+    },
+    {
+      "pid": "1694",
+      "executable": "systemd-logind"
+    },
+    {
+      "pid": "1749",
+      "executable": "bash"
+    },
+    {
+      "pid": "1760",
+      "executable": "python3"
+    },
+    {
+      "pid": "1802",
+      "executable": "agetty"
+    },
+    {
+      "pid": "1806",
+      "executable": "guacd"
+    },
+    {
+      "pid": "1839",
+      "executable": "uml_switch"
+    },
+    {
+      "pid": "30299",
+      "executable": "sshd -D [listener] 0 of 10-100 startups"
+    },
+    {
+      "pid": "30933",
+      "executable": "upowerd"
+    },
+    {
+      "pid": "31889",
+      "executable": "packagekitd"
+    },
+    {
+      "pid": "37311",
+      "executable": "systemd-networkd"
+    },
+    {
+      "pid": "37316",
+      "executable": "systemd-resolved"
+    },
+    {
+      "pid": "37319",
+      "executable": "systemd-journald"
+    },
+    {
+      "pid": "37397",
+      "executable": "systemd-timesyncd"
+    },
+    {
+      "pid": "37447",
+      "executable": "systemd-udevd"
+    },
+    {
+      "pid": "115140",
+      "executable": "polkitd"
+    },
+    {
+      "pid": "115146",
+      "executable": "ModemManager"
+    },
+    {
+      "pid": "117543",
+      "executable": "mysqld"
+    },
+    {
+      "pid": "119354",
+      "executable": "snap-failure"
+    },
+    {
+      "pid": "119367",
+      "executable": "systemd-run"
+    },
+    {
+      "pid": "119400",
+      "executable": "snapd"
+    },
+    {
+      "pid": "137658",
+      "executable": "apache2"
+    },
+    {
+      "pid": "137660",
+      "executable": "apache2"
+    },
+    {
+      "pid": "137661",
+      "executable": "apache2"
+    },
+    {
+      "pid": "137662",
+      "executable": "apache2"
+    },
+    {
+      "pid": "137663",
+      "executable": "apache2"
+    },
+    {
+      "pid": "137664",
+      "executable": "apache2"
+    },
+    {
+      "pid": "158375",
+      "executable": "apache2"
+    },
+    {
+      "pid": "158376",
+      "executable": "apache2"
+    },
+    {
+      "pid": "158378",
+      "executable": "apache2"
+    },
+    {
+      "pid": "179465",
+      "executable": "java"
+    },
+    {
+      "pid": "242650",
+      "executable": "rsyslogd"
+    },
+    {
+      "pid": "249305",
+      "executable": "udisksd"
+    },
+    {
+      "pid": "253854",
+      "executable": "VGAuthService"
+    },
+    {
+      "pid": "253855",
+      "executable": "vmtoolsd"
+    },
+    {
+      "pid": "287700",
+      "executable": "qemu_wrapper"
+    },
+    {
+      "pid": "287701",
+      "executable": "qemu_wrapper"
+    },
+    {
+      "pid": "287702",
+      "executable": "sh"
+    },
+    {
+      "pid": "287703",
+      "executable": "qemu-system-x86_64"
+    },
+    {
+      "pid": "297597",
+      "executable": "qemu_wrapper"
+    },
+    {
+      "pid": "297599",
+      "executable": "qemu_wrapper"
+    },
+    {
+      "pid": "297600",
+      "executable": "sh"
+    },
+    {
+      "pid": "297601",
+      "executable": "qemu-system-x86_64"
+    },
+    {
+      "pid": "303954",
+      "executable": "apache2"
+    },
+    {
+      "pid": "310592",
+      "executable": "apache2"
+    },
+    {
+      "pid": "344399",
+      "executable": "sleep"
+    },
+    {
+      "pid": "344417",
+      "executable": "snapd"
+    },
+    {
+      "pid": "344516",
+      "executable": "sshd: root@notty"
+    },
+    {
+      "pid": "344519",
+      "executable": "systemd"
+    },
+    {
+      "pid": "344520",
+      "executable": "(sd-pam)"
+    },
+    {
+      "pid": "344573",
+      "executable": "python3"
+    }
+  ],
+  "overlays": [
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/2/virtioa.qcow2",
+      "bytes": 66191360,
+      "inode": 531480
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/2/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2",
+      "bytes": 196664,
+      "inode": 531477
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/2/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2",
+      "bytes": 621346944,
+      "inode": 531409
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/2/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+      "bytes": 621284352,
+      "inode": 531434
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1/virtioa.qcow2",
+      "bytes": 35848192,
+      "inode": 531442
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2",
+      "bytes": 196664,
+      "inode": 531477
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2",
+      "bytes": 621346944,
+      "inode": 531409
+    },
+    {
+      "path": "/opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+      "bytes": 621284352,
+      "inode": 531434
+    }
+  ],
+  "node_status": [
+    {
+      "lab": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "id": 1,
+      "name": "Ubuntu-Test",
+      "status": 2,
+      "cpu": 1,
+      "ram": 2048,
+      "ethernet": 1
+    },
+    {
+      "lab": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "id": 2,
+      "name": "Ubuntu-Console-Test",
+      "status": 2,
+      "cpu": 1,
+      "ram": 2048,
+      "ethernet": 1
+    },
+    {
+      "lab": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+      "id": 3,
+      "name": "SOC-Core-L2",
+      "status": 0,
+      "cpu": 1,
+      "ram": 2048,
+      "ethernet": 8
+    }
+  ],
+  "jobs": {
+    "returncode": 0,
+    "stdout": "JOB   UNIT                  TYPE  STATE\n47902 snapd.service         start running\n3150  snapd.failure.service start running\n\n2 jobs listed.\n",
+    "stderr": ""
+  },
+  "sessions": {
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "uptime": {
+    "returncode": 0,
+    "stdout": " 17:52:00 up  6:35,  0 users,  load average: 1.48, 1.22, 1.15\n",
+    "stderr": ""
+  },
+  "memory": {
+    "returncode": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:            7897        2254         466           6        5176        5330\nSwap:           4095           0        4095\n",
+    "stderr": ""
+  },
+  "disk": {
+    "returncode": 0,
+    "stdout": "Filesystem                        1024-blocks     Used Available Capacity Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv    59674748 14578904  42343080      26% /\n",
+    "stderr": ""
+  },
+  "timers": {
+    "returncode": 0,
+    "stdout": "NEXT                        LEFT          LAST                        PASSED           UNIT                           ACTIVATES\nSat 2026-10-31 18:09:00 UTC 16min left    Sat 2026-10-31 17:39:00 UTC 13min ago        phpsessionclean.timer          phpsessionclean.service\nSat 2026-10-31 23:23:29 UTC 5h 31min left Sat 2026-10-31 12:14:46 UTC 5h 37min ago     fwupd-refresh.timer            fwupd-refresh.service\nSun 2026-11-01 00:00:00 UTC 6h left       n/a                         n/a              dpkg-db-backup.timer           dpkg-db-backup.service\nSun 2026-11-01 00:00:00 UTC 6h left       Sat 2026-10-31 11:16:59 UTC 6h ago           logrotate.timer                logrotate.service\nSun 2026-11-01 00:45:12 UTC 6h left       Sat 2026-10-31 12:46:31 UTC 5h 5min ago      apt-daily.timer                apt-daily.service\nSun 2026-11-01 03:10:20 UTC 9h left       Mon 2026-10-26 07:06:30 UTC 5 days ago       e2scrub_all.timer              e2scrub_all.service\nSun 2026-11-01 03:36:42 UTC 9h left       Sat 2026-10-31 12:12:35 UTC 5h 39min ago     man-db.timer                   man-db.service\nSun 2026-11-01 06:03:34 UTC 12h left      Sat 2026-10-31 11:28:05 UTC 6h ago           apt-daily-upgrade.timer        apt-daily-upgrade.service\nSun 2026-11-01 08:46:40 UTC 14h left      Sat 2026-10-31 12:14:16 UTC 5h 37min ago     motd-news.timer                motd-news.service\nSun 2026-11-01 11:21:59 UTC 17h left      Sat 2026-10-31 11:21:59 UTC 6h ago           update-notifier-download.timer update-notifier-download.service\nSun 2026-11-01 11:31:24 UTC 17h left      Sat 2026-10-31 11:31:24 UTC 6h ago           systemd-tmpfiles-clean.timer   systemd-tmpfiles-clean.service\nMon 2026-11-02 00:41:28 UTC 1 day 6h left Mon 2026-10-26 07:29:04 UTC 5 days ago       fstrim.timer                   fstrim.service\nMon 2026-11-02 23:33:27 UTC 2 days left   Fri 2026-10-23 14:29:02 UTC 1 week 1 day ago update-notifier-motd.timer     update-notifier-motd.service\nn/a                         n/a           n/a                         n/a              apport-autoreport.timer        apport-autoreport.service\nn/a                         n/a           n/a                         n/a              snapd.snap-repair.timer        snapd.snap-repair.service\nn/a                         n/a           n/a                         n/a              ua-timer.timer                 ua-timer.service\n\n16 timers listed.\n",
+    "stderr": ""
+  },
+  "task_executables": [],
+  "collector_time": "2026-10-31T20:39:24.465950+07:00",
+  "local_manifest_checks": [
+    {
+      "manifest": "M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/core-l2-implementation-plan.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-l2-plan-evidence-index-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-l2-plan-readonly-20261031T1856+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-l2-plan-final-check-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-l2-plan-review-20261031.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-seed-ready-real-terminal-20261031.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-apt-offline-check-20261031.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-apt-offline-check-v2-20261031.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-apt-update-noble-20261031.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-baseline-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-bundle-validation-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-bundle-validation-v2-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-evidence-index-20261031.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-evidence-index-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-execution-20261031.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-final-evidence-index-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-final-status-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-final-status-v2-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-image-node-config-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-lab-20261031.unl",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-meta-data-20261031.yaml",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-metadata-manifest-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-network-config-20261031.yaml",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-package-manifest-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-packages-20261031.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-payload-v2-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-seed-redacted-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-seed-status-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-seed-status-v2-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stage1-windows-memory-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-stopped-eight-nics-real-terminal-20261031.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage1-core-preparation-20261031-final.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage1-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage1-core-preparation-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/evidence/M2/M2-core-stage2-preflight-20261031T2015+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/evidence/M2/M2-core-stage2-preflight-20261031T2015+0700-nic-mapping.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/evidence/M2/M2-core-stage2-preflight-20261031T2015+0700.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "path": "docs/evidence/M2/M2-core-stage2-preflight-20261031T2015+0700-evidence-index.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-20261031-02.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-core-after-cleanup-preflight-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-eve-after-cleanup-memory-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-top-private-bytes-20261031.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-real-terminal-full-20261031.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-real-terminal-20261031.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-capture-20261031.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage2-after-cleanup-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "path": "docs/evidence/M2/M2-memory-after-cleanup-evidence-index-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-diagnostic-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-diagnostic-20261031-02.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-eve-status-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-eve-processes-20261031-01.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-top10-20261031.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-diagnostic-report-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-diagnostic-report-20261031.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-memory-SHA256SUMS-20261031.txt",
+      "path": "M2-memory-evidence-index-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/M2/M2-cloud-init-validation-20261031.docx",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/M2/M2-cloud-init-validation-20261031.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184156+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184156+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184252+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184252+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184335+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-success-20261031T184335+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-cloud-init-validation-20261031T1844+0700.log",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-console-after-checks-20261031T184220+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-console-after-checks-20261031T184220+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-console-initial-20261031T184136+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-console-initial-20261031T184136+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-evidence-index-20261031T1844+0700.csv",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-evidence-index-20261031T1844+0700.md",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184206+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184206+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184308+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184308+0700.png",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184400+0700.json",
+      "exists": true,
+      "match": true
+    },
+    {
+      "manifest": "M2-SHA256SUMS-20261031T1844+0700.txt",
+      "path": "docs/evidence/M2/M2-ubuntu-system-info-20261031T184400+0700.png",
+      "exists": true,
+      "match": true
+    }
+  ],
+  "local_files": [
+    {
+      "path": "docs\\M2\\core-l2-implementation-plan.md",
+      "bytes": 50282
+    },
+    {
+      "path": "docs\\M2\\deployment-options.md",
+      "bytes": 15133
+    },
+    {
+      "path": "docs\\M2\\M2-cloud-init-validation-20261031.docx",
+      "bytes": 21522
+    },
+    {
+      "path": "docs\\M2\\M2-cloud-init-validation-20261031.md",
+      "bytes": 25241
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031-final.docx",
+      "bytes": 141178
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031-final.md",
+      "bytes": 45556
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031.docx",
+      "bytes": 140291
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031.md",
+      "bytes": 42747
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-after-cleanup-20261031.docx",
+      "bytes": 214215
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-after-cleanup-20261031.md",
+      "bytes": 74110
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-preflight-20261031T2015+0700.docx",
+      "bytes": 144537
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-preflight-20261031T2015+0700.md",
+      "bytes": 55444
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184156+0700.json",
+      "bytes": 7245
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184156+0700.png",
+      "bytes": 12637
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184252+0700.json",
+      "bytes": 7245
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184252+0700.png",
+      "bytes": 11497
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184335+0700.json",
+      "bytes": 7360
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-success-20261031T184335+0700.png",
+      "bytes": 4683
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-cloud-init-validation-20261031T1844+0700.log",
+      "bytes": 3707
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-console-after-checks-20261031T184220+0700.json",
+      "bytes": 7225
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-console-after-checks-20261031T184220+0700.png",
+      "bytes": 11766
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-console-initial-20261031T184136+0700.json",
+      "bytes": 7220
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-console-initial-20261031T184136+0700.png",
+      "bytes": 12596
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-after-cleanup-preflight-20261031-01.json",
+      "bytes": 15224
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-l2-plan-evidence-index-20261031.md",
+      "bytes": 3409
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-l2-plan-final-check-20261031.json",
+      "bytes": 1983
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-l2-plan-readonly-20261031T1856+0700.json",
+      "bytes": 225395
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-l2-plan-review-20261031.log",
+      "bytes": 3915
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-l2-plan-SHA256SUMS-20261031.txt",
+      "bytes": 607
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-seed-ready-real-terminal-20261031.png",
+      "bytes": 53021
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-apt-offline-check-20261031.log",
+      "bytes": 2836
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-apt-offline-check-v2-20261031.log",
+      "bytes": 2836
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-apt-update-noble-20261031.log",
+      "bytes": 1203
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-baseline-20261031.json",
+      "bytes": 6427
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-bundle-validation-20261031.json",
+      "bytes": 3699
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-bundle-validation-v2-20261031.json",
+      "bytes": 3699
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-evidence-index-20261031.csv",
+      "bytes": 713
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-evidence-index-20261031.md",
+      "bytes": 3444
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-execution-20261031.log",
+      "bytes": 4468
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-final-evidence-index-20261031.md",
+      "bytes": 3229
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-final-status-20261031.json",
+      "bytes": 14842
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-final-status-v2-20261031.json",
+      "bytes": 15223
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-image-node-config-20261031.json",
+      "bytes": 3634
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-lab-20261031.unl",
+      "bytes": 786
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-meta-data-20261031.yaml",
+      "bytes": 94
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-metadata-manifest-20261031.json",
+      "bytes": 2626
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-network-config-20261031.yaml",
+      "bytes": 1262
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-package-manifest-20261031.json",
+      "bytes": 63023
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-packages-20261031.csv",
+      "bytes": 16176
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-payload-v2-20261031.json",
+      "bytes": 1878
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-seed-redacted-20261031.json",
+      "bytes": 2132
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-seed-status-20261031.json",
+      "bytes": 1059
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-seed-status-v2-20261031.json",
+      "bytes": 1273
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-SHA256SUMS-20261031.txt",
+      "bytes": 3791
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage1-windows-memory-20261031.json",
+      "bytes": 190
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage2-preflight-20261031T2015+0700-evidence-index.md",
+      "bytes": 1677
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage2-preflight-20261031T2015+0700-nic-mapping.csv",
+      "bytes": 841
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage2-preflight-20261031T2015+0700-SHA256SUMS.txt",
+      "bytes": 799
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage2-preflight-20261031T2015+0700.json",
+      "bytes": 15223
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stage2-preflight-20261031T2015+0700.log",
+      "bytes": 936
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-core-stopped-eight-nics-real-terminal-20261031.png",
+      "bytes": 71451
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-eve-after-cleanup-memory-20261031-01.json",
+      "bytes": 2942
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-evidence-index-20261031T1844+0700.csv",
+      "bytes": 4250
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-evidence-index-20261031T1844+0700.md",
+      "bytes": 6033
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-20261031-01.json",
+      "bytes": 112307
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-20261031-02.json",
+      "bytes": 111575
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-capture-20261031.json",
+      "bytes": 604
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-evidence-index-20261031.md",
+      "bytes": 2756
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-real-terminal-20261031.png",
+      "bytes": 50827
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-real-terminal-full-20261031.png",
+      "bytes": 68697
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-SHA256SUMS-20261031.txt",
+      "bytes": 1418
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-after-cleanup-top-private-bytes-20261031.csv",
+      "bytes": 505
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-diagnostic-20261031-01.json",
+      "bytes": 58353
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-diagnostic-20261031-02.json",
+      "bytes": 58748
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-diagnostic-report-20261031.docx",
+      "bytes": 6140
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-diagnostic-report-20261031.md",
+      "bytes": 8743
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-eve-processes-20261031-01.json",
+      "bytes": 2942
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-eve-status-20261031-01.json",
+      "bytes": 15223
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-evidence-index-20261031.md",
+      "bytes": 1581
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-SHA256SUMS-20261031.txt",
+      "bytes": 831
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-memory-top10-20261031.csv",
+      "bytes": 459
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-SHA256SUMS-20261031T1844+0700.txt",
+      "bytes": 2688
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184206+0700.json",
+      "bytes": 7296
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184206+0700.png",
+      "bytes": 11342
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184308+0700.json",
+      "bytes": 7276
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184308+0700.png",
+      "bytes": 9899
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184400+0700.json",
+      "bytes": 7391
+    },
+    {
+      "path": "docs\\evidence\\M2\\M2-ubuntu-system-info-20261031T184400+0700.png",
+      "bytes": 5691
+    },
+    {
+      "path": "network\\core-l2\\port-mapping.md",
+      "bytes": 2940
+    },
+    {
+      "path": "network\\ip-plan\\vlan-ip-plan.md",
+      "bytes": 3929
+    },
+    {
+      "path": "opnsense\\ha\\ha-design.md",
+      "bytes": 3996
+    }
+  ],
+  "word_packages": [
+    {
+      "path": "docs\\M2\\M2-cloud-init-validation-20261031.docx",
+      "zip_valid": true
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031-final.docx",
+      "zip_valid": true
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage1-core-preparation-20261031.docx",
+      "zip_valid": true
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-after-cleanup-20261031.docx",
+      "zip_valid": true
+    },
+    {
+      "path": "docs\\M2\\M2-report-stage2-preflight-20261031T2015+0700.docx",
+      "zip_valid": true
+    }
+  ]
+}

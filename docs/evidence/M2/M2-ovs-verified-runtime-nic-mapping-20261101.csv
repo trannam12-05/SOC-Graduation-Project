@@ -1,0 +1,9 @@
+﻿qemu_backend,eve_host_tap,guest_mac,guest_interface,peer_and_role
+net0,vunl0_3_0,02:53:45:f2:19:00,ens3,Chưa nối peer; vai trò VLAN chưa gán
+net1,vunl0_3_1,02:53:45:f2:19:01,ens4,Chưa nối peer; vai trò VLAN chưa gán
+net2,vunl0_3_2,02:53:45:f2:19:02,ens5,Chưa nối peer; vai trò VLAN chưa gán
+net3,vunl0_3_3,02:53:45:f2:19:03,ens6,Chưa nối peer; vai trò VLAN chưa gán
+net4,vunl0_3_4,02:53:45:f2:19:04,ens7,Chưa nối peer; vai trò VLAN chưa gán
+net5,vunl0_3_5,02:53:45:f2:19:05,ens8,Chưa nối peer; vai trò VLAN chưa gán
+net6,vunl0_3_6,02:53:45:f2:19:06,ens9,Chưa nối peer; vai trò VLAN chưa gán
+net7,vunl0_3_7,02:53:45:f2:19:07,ens10,Chưa nối peer; vai trò VLAN chưa gán

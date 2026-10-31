@@ -1,0 +1,130 @@
+{
+  "lab_id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+  "node_id": 3,
+  "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+  "status": 0,
+  "interfaces": [
+    {
+      "id": 0,
+      "eve_name": "e0",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:00"
+    },
+    {
+      "id": 1,
+      "eve_name": "e1",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:01"
+    },
+    {
+      "id": 2,
+      "eve_name": "e2",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:02"
+    },
+    {
+      "id": 3,
+      "eve_name": "e3",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:03"
+    },
+    {
+      "id": 4,
+      "eve_name": "e4",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:04"
+    },
+    {
+      "id": 5,
+      "eve_name": "e5",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:05"
+    },
+    {
+      "id": 6,
+      "eve_name": "e6",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:06"
+    },
+    {
+      "id": 7,
+      "eve_name": "e7",
+      "network_id": 0,
+      "mac": "02:53:45:f2:19:07"
+    }
+  ],
+  "lab_path": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+  "node_params": {
+    "id": "3",
+    "name": "SOC-Core-L2",
+    "type": "qemu",
+    "template": "linux",
+    "image": "linux-ubuntu-24.04-soc-core-l2",
+    "console": "vnc",
+    "cpu": "1",
+    "cpulimit": "1",
+    "ram": "2048",
+    "ethernet": "8",
+    "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+    "firstmac": "02:53:45:f2:19:00",
+    "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+    "qemu_version": "2.12.0",
+    "qemu_arch": "x86_64",
+    "qemu_nic": "virtio-net-pci",
+    "delay": "0",
+    "icon": "Server-2D-Linux-S.svg",
+    "config": "0",
+    "left": "480",
+    "top": "320"
+  },
+  "disk_info": {
+    "virtual-size": 8589934592,
+    "filename": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2",
+    "cluster-size": 65536,
+    "format": "qcow2",
+    "actual-size": 621293568,
+    "format-specific": {
+      "type": "qcow2",
+      "data": {
+        "compat": "1.1",
+        "lazy-refcounts": false,
+        "refcount-bits": 16,
+        "corrupt": false
+      }
+    },
+    "dirty-flag": false
+  },
+  "disk_sha256": "0de140dda997a09b6d72230ae74b68612fdc2cfbc59949d7e2021561246ac718",
+  "base_sha256": "04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94",
+  "image_audit": [
+    {
+      "args": [
+        "/opt/qemu-2.12.0/bin/qemu-img",
+        "check",
+        "--output=json",
+        "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2"
+      ],
+      "rc": 0,
+      "stdout": "{\n    \"image-end-offset\": 621412352,\n    \"compressed-clusters\": 27971,\n    \"total-clusters\": 131072,\n    \"check-errors\": 0,\n    \"allocated-clusters\": 28663,\n    \"filename\": \"/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2\",\n    \"format\": \"qcow2\",\n    \"fragmented-clusters\": 28107\n}\n"
+    },
+    {
+      "args": [
+        "/opt/qemu-2.12.0/bin/qemu-img",
+        "compare",
+        "-f",
+        "qcow2",
+        "-F",
+        "qcow2",
+        "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+        "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2"
+      ],
+      "rc": 0,
+      "stdout": "Warning: Image size mismatch!\nImages are identical.\n"
+    }
+  ],
+  "core_booted": false,
+  "network_objects": 0,
+  "links": 0,
+  "seed": "pending interactive password",
+  "node_id_note": "Initial ID1 status2 was a false positive from existing Ubuntu-Test console port. No matching Core UUID process/runtime existed. Only new Core assigned globally free ID3; status now0."
+}

@@ -1,0 +1,26 @@
+{
+  "base64_length": 26780,
+  "sha256": "d064b8dbdecf43a2ed2927ac3d924c6e66c0d88c7f7c3627532bd55d700ca9f2",
+  "collector_time_start": "2026-11-01T00:04:35.189879+07:00",
+  "collector_time_end": "2026-11-01T00:10:09.769800+07:00",
+  "verified_against_guest_console": true,
+  "files": [
+    "update.log",
+    "simulate.log",
+    "update3.log",
+    "services.log",
+    "update2.log",
+    "verification.log",
+    "install.log",
+    "journal.log",
+    "signatures.log",
+    "warnings.log",
+    "simulate2.log",
+    "apt-options.txt",
+    "indexes-sha256.txt",
+    "guest-sha256.txt",
+    "guest-links.json",
+    "offline.list",
+    "m2-ovs-install-20261031.log"
+  ]
+}

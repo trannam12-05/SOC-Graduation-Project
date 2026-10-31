@@ -1,0 +1,13 @@
+Collector: 2026-11-01T00:23:05.997833+07:00 UTC+07:00
+# Nhật ký xác minh thiết kế cổng M2
+
+Phạm vi: chỉ đọc EVE/QEMU/TAP/tài nguyên và console guest; chỉ ghi tài liệu trên Windows.
+Lệnh host: đọc XML lab, /proc/*/cmdline, /proc/meminfo/status/loadavg; ip -j link;
+free -m; lscpu; vmstat 1 3; df -h; timedatectl; stat binary VPCS; liệt kê tên/kích thước image.
+Lệnh guest đã gửi: ip -br link; ip -br addr; sysctl net.ipv4.ip_forward
+net.ipv6.conf.all.forwarding; sudo -n ovs-vsctl list-br; sudo -n ovs-vsctl list Mirror.
+Không có lệnh add-br/add-port/set Port/create Mirror/ip link set/sysctl -w hoặc start/stop.
+Kết quả: tám MAC khớp; tám TAP chưa bridge master; lab một node/không network;
+guest forwarding=0/0, chưa IP trên vNIC, chưa bridge/mirror. Số liệu RAM đọc tại thời điểm inventory.
+Cấu hình 8 vai trò và giao dịch OVS chỉ là dự kiến trong docs/M2; T01–T15 chưa chạy.
+Ảnh topology GUI chưa có; hướng dẫn chụp thủ công nằm ở mục 2.27.

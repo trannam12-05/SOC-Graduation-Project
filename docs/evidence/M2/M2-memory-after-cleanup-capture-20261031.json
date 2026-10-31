@@ -1,0 +1,14 @@
+{
+  "captured_at": "2026-10-31T20:31:32.3764378+07:00",
+  "image": "M2-memory-after-cleanup-real-terminal-full-20261031.png",
+  "dimensions": [
+    1199,
+    882
+  ],
+  "source": "Actual PowerShell window via Win32 PrintWindow",
+  "window_action": "Expanded actual window height before capture to expose complete output",
+  "image_content_edited": false,
+  "sha256": "88aa6b944b46a273cfb852e45726deb5ddf814e34e0b1914d3b08b3d05d0078b",
+  "earlier_incomplete_capture": "M2-memory-after-cleanup-real-terminal-20261031.png",
+  "earlier_capture_role": "Retained; incomplete output; not used for conclusion"
+}

@@ -1,0 +1,5 @@
+{
+  "source_sha256": "263c27f2b85f742fd15e8f9eef0c44831e52ae1bbf4a18234e7b7387985c9123",
+  "source_bytes": 11934,
+  "change": "Disable only IPv6 host stack on new br-core-l2; no forwarding changes"
+}

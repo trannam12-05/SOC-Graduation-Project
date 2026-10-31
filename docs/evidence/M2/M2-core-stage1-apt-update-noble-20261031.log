@@ -1,0 +1,13 @@
+Get:1 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble InRelease [256 kB]
+Get:1 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble InRelease [256 kB]
+Get:2 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-updates InRelease [126 kB]
+Get:3 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-security InRelease [126 kB]
+Get:2 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-updates InRelease [126 kB]
+Get:3 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-security InRelease [126 kB]
+Get:4 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble/main amd64 Packages [1401 kB]
+Get:5 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble/universe amd64 Packages [15.0 MB]
+Get:6 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-updates/universe amd64 Packages [1708 kB]
+Get:7 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-updates/main amd64 Packages [1408 kB]
+Get:8 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-security/universe amd64 Packages [1223 kB]
+Get:9 file:/opt/unetlab/soc-core-preparation-20261031/mirror noble-security/main amd64 Packages [1146 kB]
+Reading package lists...

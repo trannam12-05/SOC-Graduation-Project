@@ -1,0 +1,27 @@
+{
+  "created_remote_utc_untrusted": "2026-10-31T17:06:55.705250+00:00",
+  "account": "soc-core-admin",
+  "hostname": "soc-core-l2",
+  "instance_id": "iid-soc-core-l2-da130c3e-4cfe-4e11-91cb-254581c02547",
+  "seed_path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso",
+  "seed_sha256": "f4aea1d849fff37e272d0efbb117a670582751504cb5b8042a9e10c018258dbd",
+  "seed_bytes": 48996352,
+  "mode": "0o600",
+  "files": [
+    "/meta-data",
+    "/network-config",
+    "/ovs-noble-amd64-offline-20261031.tar",
+    "/user-data"
+  ],
+  "ssh_pwauth": false,
+  "root_login_disabled": true,
+  "lock_passwd": false,
+  "password_hash_configured": true,
+  "plaintext_password_saved": false,
+  "public_key_fingerprint": "SHA256:NmKKtOy8jUJd/x2Zg9xzrdGLCRAHCFfdNejRnrJ+ne4",
+  "network_config": "8 MAC matches, DHCP4/DHCP6/RA off, no addresses; no guest boot",
+  "bundle_sha256": "f65ddae0f71bee455760ddb209153bfbc2377de3f0989af3475ad86061e4c03e",
+  "package_count": 70,
+  "yaml_check": "PHP YAML parse, not cloud-init runtime/schema",
+  "core_booted": false
+}

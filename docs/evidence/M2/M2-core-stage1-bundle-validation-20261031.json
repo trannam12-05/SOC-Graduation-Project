@@ -1,0 +1,30 @@
+{
+  "package_count": 70,
+  "all_sha256_verified": true,
+  "all_deb_control_package_version_arch_verified": true,
+  "architectures": [
+    "all",
+    "amd64"
+  ],
+  "repository_suites": [
+    "noble",
+    "noble-updates",
+    "noble-security"
+  ],
+  "signature_fingerprint": "F6ECB3762474EDA9D21B7022871920D1991BC93C",
+  "offline_byte_check_command": [
+    "apt-get",
+    "--yes",
+    "--download-only",
+    "--no-download",
+    "--no-install-recommends",
+    "install",
+    "openvswitch-switch"
+  ],
+  "offline_byte_check_rc": 0,
+  "offline_byte_check_output": "Reading package lists...\nBuilding dependency tree...\nThe following additional packages will be installed:\n  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1\n  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2\n  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8\n  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0\n  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g\n  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal\n  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common\n  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0\n  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl\n  openvswitch-common passwd procps python3 python3-minimal python3-netifaces\n  python3-openvswitch python3-sortedcontainers python3.12 python3.12-minimal\n  readline-common tar tzdata uuid-runtime zlib1g\nSuggested packages:\n  liblocale-gettext-perl perl cron quota ecryptfs-utils debconf-doc\n  debconf-kde-helper debconf-utils libgtk3-perl libnet-ldap-perl\n  libterm-readline-gnu-perl whiptail | dialog apt debsig-verify glibc-doc\n  locales libnss-nis libnss-nisplus rng-tools libpam-doc ca-certificates\n  ethtool openvswitch-doc python3-doc python3-tk python3-venv python3-netaddr\n  python3-pyparsing python-sortedcontainers-doc python3.12-venv python3.12-doc\n  binutils binfmt-support readline-doc bzip2 ncompress xz-utils tar-scripts\n  tar-doc\nRecommended packages:\n  apt-utils debconf-i18n libidn2-0 libgpg-error-l10n libgpm2 sensible-utils\n  psmisc ca-certificates\nThe following NEW packages will be installed:\n  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1\n  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2\n  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8\n  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0\n  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g\n  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal\n  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common\n  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0\n  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl\n  openvswitch-common openvswitch-switch passwd procps python3 python3-minimal\n  python3-netifaces python3-openvswitch python3-sortedcontainers python3.12\n  python3.12-minimal readline-common tar tzdata uuid-runtime zlib1g\n0 upgraded, 70 newly installed, 0 to remove and 0 not upgraded.\nAfter this operation, 90.4 MB of additional disk space will be used.\nDownload complete and in download only mode\n",
+  "host_dpkg_status_sha256_before_after": "1eee22a30b8b70d667043e637d39c1d025384b0bbb8f6869efca9c9364cbfc9b",
+  "host_apt_configuration_unchanged": true,
+  "isolated_apt_status_still_empty": true,
+  "guest_runtime_compatibility": "Not tested; Core remains OFF. Verify target installed-state simulation/kernel module after approved boot. Do not install all dependency debs indiscriminately."
+}

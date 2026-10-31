@@ -1,0 +1,2 @@
+Oct 31 23:58:29 soc-core-l2 (ovs-ctl)[1856]: ovsdb-server.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:30 soc-core-l2 (ovs-ctl)[1903]: ovs-vswitchd.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS

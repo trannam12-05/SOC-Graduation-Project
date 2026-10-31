@@ -1,0 +1,29 @@
+{
+  "created_remote_utc_untrusted": "2026-10-31T17:06:55.705250+00:00",
+  "account": "soc-core-admin",
+  "hostname": "soc-core-l2",
+  "instance_id": "iid-soc-core-l2-da130c3e-4cfe-4e11-91cb-254581c02547",
+  "seed_path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso",
+  "seed_sha256": "961ae4131e0f758a4a3b3565a29ebe87f7cadb90e368a5745ca7fcd33b011578",
+  "seed_bytes": 48996352,
+  "mode": "0o600",
+  "files": [
+    "/meta-data",
+    "/network-config",
+    "/ovs-noble-amd64-offline-20261031-v2.tar",
+    "/user-data"
+  ],
+  "ssh_pwauth": false,
+  "root_login_disabled": true,
+  "lock_passwd": false,
+  "password_hash_configured": true,
+  "plaintext_password_saved": false,
+  "public_key_fingerprint": "SHA256:NmKKtOy8jUJd/x2Zg9xzrdGLCRAHCFfdNejRnrJ+ne4",
+  "network_config": "8 MAC matches, DHCP4/DHCP6/RA off, no addresses; no guest boot",
+  "bundle_sha256": "c513ad7720c719f5f7bd24b2e73af3b2ec55a7f60ca67a0492621d25f5c2940b",
+  "package_count": 70,
+  "yaml_check": "PHP YAML parse, not cloud-init runtime/schema",
+  "core_booted": false,
+  "payload_revision": "v2 - excluded one zero-byte transient download file; all70 debs unchanged",
+  "previous_seed_archived_root_only": "/opt/unetlab/soc-core-preparation-20261031/secrets/cdrom-stage1-v1.iso"
+}

@@ -1,0 +1,5 @@
+a43ee1302f4bd32627df28d44aa5224c2b98835907efb1a5ad07ad68e17b3fee  docs/M2/core-l2-implementation-plan.md
+903f7635eb49df77e1ad3aa43b6b72112574c9a9465b892898dbb88c9bbfc372  docs/evidence/M2/M2-core-l2-plan-evidence-index-20261031.md
+a8c5b666d6393fc418c76248575d4cc02c0324fe9151801c6e2928111efa9555  docs/evidence/M2/M2-core-l2-plan-readonly-20261031T1856+0700.json
+86e3900ae5b892dea18b4cdf4b1852b38e546e798ab991124e217d844454fcb4  docs/evidence/M2/M2-core-l2-plan-final-check-20261031.json
+64416e46c1d767e4f8f5f6666e76edf00ff9bb841f699ce4caacd30df99e7890  docs/evidence/M2/M2-core-l2-plan-review-20261031.log

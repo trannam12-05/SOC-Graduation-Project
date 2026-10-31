@@ -1,0 +1,15 @@
+Collector: 2026-10-31T20:15:52.446447+07:00
+Windows sample: 2026-10-31T20:15:53.2551919+07:00
+Windows FreePhysicalMemory: 586348 KiB = 572.6 MiB
+Required Windows minimum: 2097152 KiB = 2048 MiB
+Decision: DO NOT START; Windows memory gate failed.
+EVE free -m (available column, not free column):
+               total        used        free      shared  buff/cache   available
+Mem:            7897        2248         476           6        5172        5335
+Swap:           4095           0        4095
+Core status=0; CPU=1; RAM=2048 MiB; configured ethernet=8; network links=0.
+Core QEMU process absent; Core runtime directory absent.
+Core disk and seed SHA256 match stage1 markers. Nine protected file hashes unchanged.
+Old Ubuntu-Test and Ubuntu-Console-Test processes still present.
+Only read-only checks performed. No start/stop/install/network/seed/template change.
+Guest diagnostics and screenshots of boot/runtime NOT performed.

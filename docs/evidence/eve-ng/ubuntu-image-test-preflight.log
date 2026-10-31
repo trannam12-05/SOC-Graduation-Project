@@ -1,0 +1,19 @@
+EVE-NG Ubuntu image test preflight
+Time: 2026-10-31 14:24:54 +07:00
+EVE version: 6.2.0-4 Community
+Requested test lab name collision: absent
+Existing labs observed: M2.unl, M2_Core_L3.unl
+Linux template: intel/linux.yml and amd/linux.yml
+Template settings: type=qemu; arch=x86_64; qemu_version=2.12.0; cpu=2 default; ram=4096 MiB default; ethernet=1; qemu_nic=virtio-net-pci
+Template qemu_options: -machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host
+OVMF files: /usr/share/OVMF/OVMF_CODE.fd and /usr/share/OVMF/OVMF_VARS.fd present; generic Linux template does not specify OVMF or pflash
+Ubuntu cloud image manifest includes cloud-init, grub-pc, grub-efi-amd64
+Cloud-init seed tooling: /usr/bin/genisoimage available
+Current dedicated image folder files: virtioa.qcow2 only
+Existing labs referencing image folder: none found
+Lab/node/seed created: no
+Node booted: no
+Internet/production network connected: no
+Official EVE API login performed: no; pending decision because second login can invalidate current Web UI session
+Screenshot captured: no browser automation/screenshot tool available
+No credentials/private keys/passphrases captured

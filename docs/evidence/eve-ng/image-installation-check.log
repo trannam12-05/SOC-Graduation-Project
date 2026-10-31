@@ -1,0 +1,41 @@
+SOC EVE-NG image installation preflight
+Time: 2026-10-31 13:57:24 +07:00
+Staging image SHA-256: 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94 (verified)
+Windows OpenSSH client/scp: available
+ssh-agent: stopped
+SSH key BatchMode attempt: failed (Permission denied (publickey,password))
+Remote preflight, directory creation, upload: not performed
+Secrets recorded: none
+Time: 2026-10-31 14:10:47 +07:00
+Elevated Start-Service ssh-agent attempted with user approval: yes
+Service state afterward: Stopped; StartType: Disabled
+Startup Type changed: no
+Key loaded / SSH retested / remote image install: no
+Reason paused: starting a Disabled service requires changing Startup Type, which was not authorized
+Time: 2026-10-31 14:12:46 +07:00
+Authorized service-only change: ssh-agent Startup Type set to Manual; service started
+Verified state: Running / Manual
+ssh-add: interactive user prompt launched; key load pending user passphrase entry
+Passphrase stored: no
+Remote SSH/install: not yet performed
+Time: 2026-10-31 14:14:41 +07:00
+Agent: Running / Manual
+ssh-add fingerprint verified: SHA256:NmKKtOy8jUJd/x2Zg9xzrdGLCRAHCFfdNejRnrJ+ne4
+SSH: success, publickey only, StrictHostKeyChecking=yes
+EVE: 6.2.0-4; QEMU filesystem available: 44127700 KiB
+Linux templates: intel/linux.yml and amd/linux.yml; default ethernet=1; qemu_arch=x86_64; virtio NIC; virtioa.qcow2 convention
+Created new remote directory only: /opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs (root:root 0755)
+Upload: not performed; remote stat formatting command failed, then read-only check confirmed directory exists and virtioa.qcow2 absent
+EVE image recognized: no, not yet uploaded
+No lab/node start/OVS/network config changes
+Time: 2026-10-31 14:18:21 +07:00
+SCP status: exit 0; destination was checked absent before upload
+Remote path: /opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2
+Remote size: 621284352 bytes
+Remote SHA-256: 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94 (matches staging and Canonical manifest)
+Remote file owner/mode: root:root / 644; directory root:root / 755
+Read-only EVE filesystem/template markers: directory present; virtioa.qcow2 present; intel/linux.yml present
+EVE filesystem/template recognition criteria: pass; UI list not directly observed; boot not tested
+Permission adjustment/fixpermissions: none
+Lab/node/OVS/network configuration: unchanged
+Read-only postcheck quoting retry: corrected and succeeded

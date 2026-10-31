@@ -1,0 +1,365 @@
+{
+  "core-created-stopped.json": {
+    "lab_id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+    "node_id": 3,
+    "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+    "status": 0,
+    "interfaces": [
+      {
+        "id": 0,
+        "eve_name": "e0",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:00"
+      },
+      {
+        "id": 1,
+        "eve_name": "e1",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:01"
+      },
+      {
+        "id": 2,
+        "eve_name": "e2",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:02"
+      },
+      {
+        "id": 3,
+        "eve_name": "e3",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:03"
+      },
+      {
+        "id": 4,
+        "eve_name": "e4",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:04"
+      },
+      {
+        "id": 5,
+        "eve_name": "e5",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:05"
+      },
+      {
+        "id": 6,
+        "eve_name": "e6",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:06"
+      },
+      {
+        "id": 7,
+        "eve_name": "e7",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:07"
+      }
+    ],
+    "lab_path": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+    "node_params": {
+      "id": "3",
+      "name": "SOC-Core-L2",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-ubuntu-24.04-soc-core-l2",
+      "console": "vnc",
+      "cpu": "1",
+      "cpulimit": "1",
+      "ram": "2048",
+      "ethernet": "8",
+      "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+      "firstmac": "02:53:45:f2:19:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "480",
+      "top": "320"
+    },
+    "disk_info": {
+      "virtual-size": 8589934592,
+      "filename": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2",
+      "cluster-size": 65536,
+      "format": "qcow2",
+      "actual-size": 621293568,
+      "format-specific": {
+        "type": "qcow2",
+        "data": {
+          "compat": "1.1",
+          "lazy-refcounts": false,
+          "refcount-bits": 16,
+          "corrupt": false
+        }
+      },
+      "dirty-flag": false
+    },
+    "disk_sha256": "0de140dda997a09b6d72230ae74b68612fdc2cfbc59949d7e2021561246ac718",
+    "base_sha256": "04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94",
+    "image_audit": [
+      {
+        "args": [
+          "/opt/qemu-2.12.0/bin/qemu-img",
+          "check",
+          "--output=json",
+          "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2"
+        ],
+        "rc": 0,
+        "stdout": "{\n    \"image-end-offset\": 621412352,\n    \"compressed-clusters\": 27971,\n    \"total-clusters\": 131072,\n    \"check-errors\": 0,\n    \"allocated-clusters\": 28663,\n    \"filename\": \"/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2\",\n    \"format\": \"qcow2\",\n    \"fragmented-clusters\": 28107\n}\n"
+      },
+      {
+        "args": [
+          "/opt/qemu-2.12.0/bin/qemu-img",
+          "compare",
+          "-f",
+          "qcow2",
+          "-F",
+          "qcow2",
+          "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+          "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2"
+        ],
+        "rc": 0,
+        "stdout": "Warning: Image size mismatch!\nImages are identical.\n"
+      }
+    ],
+    "core_booted": false,
+    "network_objects": 0,
+    "links": 0,
+    "seed": "pending interactive password",
+    "node_id_note": "Initial ID1 status2 was a false positive from existing Ubuntu-Test console port. No matching Core UUID process/runtime existed. Only new Core assigned globally free ID3; status now0."
+  },
+  "seed-ready.json": {
+    "created_remote_utc_untrusted": "2026-10-31T17:06:55.705250+00:00",
+    "account": "soc-core-admin",
+    "hostname": "soc-core-l2",
+    "instance_id": "iid-soc-core-l2-da130c3e-4cfe-4e11-91cb-254581c02547",
+    "seed_path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso",
+    "seed_sha256": "961ae4131e0f758a4a3b3565a29ebe87f7cadb90e368a5745ca7fcd33b011578",
+    "seed_bytes": 48996352,
+    "mode": "0o600",
+    "files": [
+      "/meta-data",
+      "/network-config",
+      "/ovs-noble-amd64-offline-20261031-v2.tar",
+      "/user-data"
+    ],
+    "ssh_pwauth": false,
+    "root_login_disabled": true,
+    "lock_passwd": false,
+    "password_hash_configured": true,
+    "plaintext_password_saved": false,
+    "public_key_fingerprint": "SHA256:NmKKtOy8jUJd/x2Zg9xzrdGLCRAHCFfdNejRnrJ+ne4",
+    "network_config": "8 MAC matches, DHCP4/DHCP6/RA off, no addresses; no guest boot",
+    "bundle_sha256": "c513ad7720c719f5f7bd24b2e73af3b2ec55a7f60ca67a0492621d25f5c2940b",
+    "package_count": 70,
+    "yaml_check": "PHP YAML parse, not cloud-init runtime/schema",
+    "core_booted": false,
+    "payload_revision": "v2 - excluded one zero-byte transient download file; all70 debs unchanged",
+    "previous_seed_archived_root_only": "/opt/unetlab/soc-core-preparation-20261031/secrets/cdrom-stage1-v1.iso"
+  },
+  "bundle-ready.json": {
+    "bundle": "/opt/unetlab/soc-core-preparation-20261031/ovs-noble-amd64-offline-20261031-v2.tar",
+    "sha256": "c513ad7720c719f5f7bd24b2e73af3b2ec55a7f60ca67a0492621d25f5c2940b",
+    "package_count": 70,
+    "bytes": 48619520,
+    "revision": "v2",
+    "previous_bundle_retained": "/opt/unetlab/soc-core-preparation-20261031/ovs-noble-amd64-offline-20261031.tar"
+  },
+  "bundle-validated.json": {
+    "package_count": 70,
+    "all_sha256_verified": true,
+    "all_deb_control_package_version_arch_verified": true,
+    "architectures": [
+      "all",
+      "amd64"
+    ],
+    "repository_suites": [
+      "noble",
+      "noble-updates",
+      "noble-security"
+    ],
+    "signature_fingerprint": "F6ECB3762474EDA9D21B7022871920D1991BC93C",
+    "offline_byte_check_command": [
+      "apt-get",
+      "--yes",
+      "--download-only",
+      "--no-download",
+      "--no-install-recommends",
+      "install",
+      "openvswitch-switch"
+    ],
+    "offline_byte_check_rc": 0,
+    "offline_byte_check_output": "Reading package lists...\nBuilding dependency tree...\nThe following additional packages will be installed:\n  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1\n  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2\n  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8\n  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0\n  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g\n  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal\n  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common\n  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0\n  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl\n  openvswitch-common passwd procps python3 python3-minimal python3-netifaces\n  python3-openvswitch python3-sortedcontainers python3.12 python3.12-minimal\n  readline-common tar tzdata uuid-runtime zlib1g\nSuggested packages:\n  liblocale-gettext-perl perl cron quota ecryptfs-utils debconf-doc\n  debconf-kde-helper debconf-utils libgtk3-perl libnet-ldap-perl\n  libterm-readline-gnu-perl whiptail | dialog apt debsig-verify glibc-doc\n  locales libnss-nis libnss-nisplus rng-tools libpam-doc ca-certificates\n  ethtool openvswitch-doc python3-doc python3-tk python3-venv python3-netaddr\n  python3-pyparsing python-sortedcontainers-doc python3.12-venv python3.12-doc\n  binutils binfmt-support readline-doc bzip2 ncompress xz-utils tar-scripts\n  tar-doc\nRecommended packages:\n  apt-utils debconf-i18n libidn2-0 libgpg-error-l10n libgpm2 sensible-utils\n  psmisc ca-certificates\nThe following NEW packages will be installed:\n  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1\n  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2\n  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8\n  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0\n  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g\n  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal\n  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common\n  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0\n  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl\n  openvswitch-common openvswitch-switch passwd procps python3 python3-minimal\n  python3-netifaces python3-openvswitch python3-sortedcontainers python3.12\n  python3.12-minimal readline-common tar tzdata uuid-runtime zlib1g\n0 upgraded, 70 newly installed, 0 to remove and 0 not upgraded.\nAfter this operation, 90.4 MB of additional disk space will be used.\nDownload complete and in download only mode\n",
+    "host_dpkg_status_sha256_before_after": "1eee22a30b8b70d667043e637d39c1d025384b0bbb8f6869efca9c9364cbfc9b",
+    "host_apt_configuration_unchanged": true,
+    "isolated_apt_status_still_empty": true,
+    "guest_runtime_compatibility": "Not tested; Core remains OFF. Verify target installed-state simulation/kernel module after approved boot. Do not install all dependency debs indiscriminately."
+  },
+  "protected": [
+    {
+      "path": "/opt/unetlab/html/templates/intel/linux.yml",
+      "sha256": "ce0c2a0979695727c1b84235c6ac5075f35129b0f51a8b0ef68112e285ae5803",
+      "bytes": 1910
+    },
+    {
+      "path": "/opt/unetlab/html/templates/amd/linux.yml",
+      "sha256": "b28853200c3b23101ea2609222f66ff0f8c74d60b5ea0c6a7730333024fa9902",
+      "bytes": 1889
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+      "sha256": "04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94",
+      "bytes": 621284352
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso",
+      "sha256": "5f454921f7c183a0971a8694fe55c064713261fcfac418c94abc206a8f8dd1c1",
+      "bytes": 374784
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2",
+      "sha256": "8c98ce7c8cade137a0d9682220c2d50809e0a4ae28e4a6a5cbdc191cb83215ca",
+      "bytes": 196664
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/cdrom.iso",
+      "sha256": "372cf2d7107e79211c10541f9f04d0f66774b5cd77e5af2fc194351b38f353ca",
+      "bytes": 374784
+    },
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "sha256": "31eb884959b33e20ef48e0d6a1595c16a3e61ac056ff2e2c1a48f23694869dff",
+      "bytes": 205
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "sha256": "437651e437e7897a29a3e0724ccead621e12aa3ea77b4fd9395a27f024f40ee2",
+      "bytes": 687
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "sha256": "84ef91478d3647ee61c2fb3eaab8afb0efefc7a141537480b258b8b50490e0ed",
+      "bytes": 1436
+    }
+  ],
+  "qemu_running": [
+    {
+      "pid": "287703",
+      "name": "Ubuntu-Test",
+      "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab"
+    },
+    {
+      "pid": "297601",
+      "name": "Ubuntu-Console-Test",
+      "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582"
+    }
+  ],
+  "core_process_present": false,
+  "core_runtime_directory_exists": false,
+  "core_lab_xml": "<?xml version='1.0' encoding='utf-8'?>\n<lab name=\"SOC-M2-Core-L2\" id=\"f39cfc8c-5eaf-461e-bb0c-60b5fde848b7\" version=\"1\" scripttimeout=\"600\" lock=\"0\" author=\"SOC Project\">\n  <description>SOC Core L2 stage 1 - keep stopped, 8 unconnected NICs</description>\n  <topology>\n    <nodes>\n      <node id=\"3\" name=\"SOC-Core-L2\" type=\"qemu\" template=\"linux\" image=\"linux-ubuntu-24.04-soc-core-l2\" console=\"vnc\" cpu=\"1\" cpulimit=\"1\" ram=\"2048\" ethernet=\"8\" uuid=\"2b295168-b72e-4de7-b364-37298252dd9f\" firstmac=\"02:53:45:f2:19:00\" qemu_options=\"-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host\" qemu_version=\"2.12.0\" qemu_arch=\"x86_64\" qemu_nic=\"virtio-net-pci\" delay=\"0\" icon=\"Server-2D-Linux-S.svg\" config=\"0\" left=\"480\" top=\"320\" />\n    </nodes>\n  </topology>\n</lab>",
+  "live_eve_node": {
+    "status": 0,
+    "interfaces": [
+      {
+        "id": 0,
+        "eve_name": "e0",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:00"
+      },
+      {
+        "id": 1,
+        "eve_name": "e1",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:01"
+      },
+      {
+        "id": 2,
+        "eve_name": "e2",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:02"
+      },
+      {
+        "id": 3,
+        "eve_name": "e3",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:03"
+      },
+      {
+        "id": 4,
+        "eve_name": "e4",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:04"
+      },
+      {
+        "id": 5,
+        "eve_name": "e5",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:05"
+      },
+      {
+        "id": 6,
+        "eve_name": "e6",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:06"
+      },
+      {
+        "id": 7,
+        "eve_name": "e7",
+        "network_id": 0,
+        "mac": "02:53:45:f2:19:07"
+      }
+    ],
+    "cpu": 1,
+    "ram": 2048,
+    "ethernet": 8
+  },
+  "seed_sha256_live": "961ae4131e0f758a4a3b3565a29ebe87f7cadb90e368a5745ca7fcd33b011578",
+  "core_disk_sha256_live": "0de140dda997a09b6d72230ae74b68612fdc2cfbc59949d7e2021561246ac718",
+  "free_memory": "               total        used        free      shared  buff/cache   available\nMem:            7897        2281         442           6        5173        5302\nSwap:           4095           0        4095\n",
+  "df": "Filesystem                        1024-blocks     Used Available Capacity Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv    59674748 14578252  42343732      26% /\n",
+  "collected_at_windows": "2026-10-31T20:23:49.135370+07:00",
+  "windows_memory": {
+    "CollectedAt": "2026-10-31T20:23:49.9032556+07:00",
+    "TotalVisibleMemoryKiB": 16473976,
+    "FreePhysicalMemoryKiB": 262776
+  },
+  "protected_comparison": [
+    {
+      "path": "/opt/unetlab/html/templates/intel/linux.yml",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/html/templates/amd/linux.yml",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/cdrom.iso",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "unchanged": true
+    }
+  ]
+}

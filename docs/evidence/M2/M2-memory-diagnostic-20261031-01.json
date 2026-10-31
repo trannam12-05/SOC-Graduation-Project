@@ -1,0 +1,1032 @@
+{
+    "CollectedAt":  "2026-10-31T20:23:32.8157868+07:00",
+    "InstalledPhysicalMiB":  16087.9,
+    "VisiblePhysicalMiB":  16087.9,
+    "AvailableMiB":  231.2,
+    "FreePhysicalMemoryKiB":  251868,
+    "CommittedMiB":  31712.6,
+    "CommitLimitMiB":  34245.7,
+    "CommitPercent":  92,
+    "AutomaticManagedPagefile":  true,
+    "Pagefiles":  [
+                      {
+                          "Name":  "C:\\pagefile.sys",
+                          "AllocatedBaseSize":  18157,
+                          "CurrentUsage":  2043,
+                          "PeakUsage":  3039,
+                          "TempPageFile":  false
+                      }
+                  ],
+    "PagefileUnits":  "MiB for allocated/current/peak",
+    "Top10ByWorkingSet":  [
+                              {
+                                  "PID":  23240,
+                                  "Name":  "chrome",
+                                  "Application":  "Google Chrome",
+                                  "WorkingSetMiB":  543.2,
+                                  "PrivateWorkingSetMiB":  497.4,
+                                  "PrivateBytesMiB":  725.6,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  4340,
+                                  "Name":  "Memory Compression",
+                                  "Application":  null,
+                                  "WorkingSetMiB":  469.4,
+                                  "PrivateWorkingSetMiB":  469.4,
+                                  "PrivateBytesMiB":  6.3,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  20308,
+                                  "Name":  "Code",
+                                  "Application":  "Visual Studio Code",
+                                  "WorkingSetMiB":  344.7,
+                                  "PrivateWorkingSetMiB":  312.2,
+                                  "PrivateBytesMiB":  636.9,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  19664,
+                                  "Name":  "Code",
+                                  "Application":  "Visual Studio Code",
+                                  "WorkingSetMiB":  208.4,
+                                  "PrivateWorkingSetMiB":  179.6,
+                                  "PrivateBytesMiB":  338,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  22124,
+                                  "Name":  "chrome",
+                                  "Application":  "Google Chrome",
+                                  "WorkingSetMiB":  177.7,
+                                  "PrivateWorkingSetMiB":  170.5,
+                                  "PrivateBytesMiB":  615.4,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  18356,
+                                  "Name":  "chrome",
+                                  "Application":  "Google Chrome",
+                                  "WorkingSetMiB":  133.5,
+                                  "PrivateWorkingSetMiB":  70.5,
+                                  "PrivateBytesMiB":  166.9,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  6792,
+                                  "Name":  "MsMpEng",
+                                  "Application":  null,
+                                  "WorkingSetMiB":  129.8,
+                                  "PrivateWorkingSetMiB":  110.6,
+                                  "PrivateBytesMiB":  392.7,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  21340,
+                                  "Name":  "chrome",
+                                  "Application":  "Google Chrome",
+                                  "WorkingSetMiB":  122.3,
+                                  "PrivateWorkingSetMiB":  101.4,
+                                  "PrivateBytesMiB":  489.9,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  21344,
+                                  "Name":  "Code",
+                                  "Application":  "Visual Studio Code",
+                                  "WorkingSetMiB":  118.5,
+                                  "PrivateWorkingSetMiB":  96,
+                                  "PrivateBytesMiB":  994,
+                                  "Category":  "Other Windows"
+                              },
+                              {
+                                  "PID":  7932,
+                                  "Name":  "Code",
+                                  "Application":  "Visual Studio Code",
+                                  "WorkingSetMiB":  116,
+                                  "PrivateWorkingSetMiB":  101.2,
+                                  "PrivateBytesMiB":  240.1,
+                                  "Category":  "Other Windows"
+                              }
+                          ],
+    "GroupsByPrivateWorkingSet":  [
+                                      {
+                                          "Name":  "chrome",
+                                          "Count":  20,
+                                          "PrivateWorkingSetMiB":  1040.8,
+                                          "WorkingSetSumMiB":  1346.8
+                                      },
+                                      {
+                                          "Name":  "Code",
+                                          "Count":  16,
+                                          "PrivateWorkingSetMiB":  778.7,
+                                          "WorkingSetSumMiB":  951
+                                      },
+                                      {
+                                          "Name":  "Memory Compression",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  469.4,
+                                          "WorkingSetSumMiB":  469.4
+                                      },
+                                      {
+                                          "Name":  "svchost",
+                                          "Count":  90,
+                                          "PrivateWorkingSetMiB":  177.2,
+                                          "WorkingSetSumMiB":  473
+                                      },
+                                      {
+                                          "Name":  "MsMpEng",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  110.6,
+                                          "WorkingSetSumMiB":  129.8
+                                      },
+                                      {
+                                          "Name":  "Zalo",
+                                          "Count":  8,
+                                          "PrivateWorkingSetMiB":  107,
+                                          "WorkingSetSumMiB":  177.7
+                                      },
+                                      {
+                                          "Name":  "agy",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  57.2,
+                                          "WorkingSetSumMiB":  64.4
+                                      },
+                                      {
+                                          "Name":  "msedge",
+                                          "Count":  9,
+                                          "PrivateWorkingSetMiB":  51.8,
+                                          "WorkingSetSumMiB":  123.2
+                                      },
+                                      {
+                                          "Name":  "WmiPrvSE",
+                                          "Count":  3,
+                                          "PrivateWorkingSetMiB":  48.1,
+                                          "WorkingSetSumMiB":  81.3
+                                      },
+                                      {
+                                          "Name":  "codex",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  46.4,
+                                          "WorkingSetSumMiB":  90.6
+                                      },
+                                      {
+                                          "Name":  "NitroSense",
+                                          "Count":  4,
+                                          "PrivateWorkingSetMiB":  38.1,
+                                          "WorkingSetSumMiB":  74.4
+                                      },
+                                      {
+                                          "Name":  "explorer",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  34.7,
+                                          "WorkingSetSumMiB":  88
+                                      },
+                                      {
+                                          "Name":  "powershell",
+                                          "Count":  3,
+                                          "PrivateWorkingSetMiB":  34.5,
+                                          "WorkingSetSumMiB":  88.5
+                                      },
+                                      {
+                                          "Name":  "dwm",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  28.5,
+                                          "WorkingSetSumMiB":  46.1
+                                      },
+                                      {
+                                          "Name":  "steamwebhelper",
+                                          "Count":  7,
+                                          "PrivateWorkingSetMiB":  24.8,
+                                          "WorkingSetSumMiB":  51.7
+                                      },
+                                      {
+                                          "Name":  "copilotapp",
+                                          "Count":  9,
+                                          "PrivateWorkingSetMiB":  19.9,
+                                          "WorkingSetSumMiB":  44.1
+                                      },
+                                      {
+                                          "Name":  "msedgewebview2",
+                                          "Count":  6,
+                                          "PrivateWorkingSetMiB":  17.5,
+                                          "WorkingSetSumMiB":  39.5
+                                      },
+                                      {
+                                          "Name":  "GooglePlayGamesServices",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  15,
+                                          "WorkingSetSumMiB":  18.1
+                                      },
+                                      {
+                                          "Name":  "cloudcode_cli",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  13,
+                                          "WorkingSetSumMiB":  14.9
+                                      },
+                                      {
+                                          "Name":  "copilotapphost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  11.5,
+                                          "WorkingSetSumMiB":  18.5
+                                      },
+                                      {
+                                          "Name":  "RuntimeBroker",
+                                          "Count":  6,
+                                          "PrivateWorkingSetMiB":  10,
+                                          "WorkingSetSumMiB":  34.7
+                                      },
+                                      {
+                                          "Name":  "TextInputHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  8,
+                                          "WorkingSetSumMiB":  23.6
+                                      },
+                                      {
+                                          "Name":  "SearchIndexer",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  7.7,
+                                          "WorkingSetSumMiB":  16.7
+                                      },
+                                      {
+                                          "Name":  "vmware-vmx",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  6.1,
+                                          "WorkingSetSumMiB":  37.2
+                                      },
+                                      {
+                                          "Name":  "backgroundTaskHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  6,
+                                          "WorkingSetSumMiB":  17.3
+                                      },
+                                      {
+                                          "Name":  "audiodg",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  5.7,
+                                          "WorkingSetSumMiB":  13.1
+                                      },
+                                      {
+                                          "Name":  "lsass",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  5.2,
+                                          "WorkingSetSumMiB":  12.6
+                                      },
+                                      {
+                                          "Name":  "codex-code-mode-host",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  5.1,
+                                          "WorkingSetSumMiB":  12
+                                      },
+                                      {
+                                          "Name":  "AcerEZService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  5,
+                                          "WorkingSetSumMiB":  6.1
+                                      },
+                                      {
+                                          "Name":  "StartMenuExperienceHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  4.8,
+                                          "WorkingSetSumMiB":  11.6
+                                      },
+                                      {
+                                          "Name":  "CrossDeviceService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  4.6,
+                                          "WorkingSetSumMiB":  13.2
+                                      },
+                                      {
+                                          "Name":  "steam",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  4.2,
+                                          "WorkingSetSumMiB":  12.1
+                                      },
+                                      {
+                                          "Name":  "SearchHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  4.2,
+                                          "WorkingSetSumMiB":  9.9
+                                      },
+                                      {
+                                          "Name":  "OneDrive",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  4.1,
+                                          "WorkingSetSumMiB":  13.7
+                                      },
+                                      {
+                                          "Name":  "sihost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  3.9,
+                                          "WorkingSetSumMiB":  13.6
+                                      },
+                                      {
+                                          "Name":  "RtkAudUService64",
+                                          "Count":  3,
+                                          "PrivateWorkingSetMiB":  3.6,
+                                          "WorkingSetSumMiB":  13
+                                      },
+                                      {
+                                          "Name":  "services",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  3.4,
+                                          "WorkingSetSumMiB":  6.9
+                                      },
+                                      {
+                                          "Name":  "vmware",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  3.4,
+                                          "WorkingSetSumMiB":  8.6
+                                      },
+                                      {
+                                          "Name":  "WidgetBoard",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  3.1,
+                                          "WorkingSetSumMiB":  8.5
+                                      },
+                                      {
+                                          "Name":  "MpDefenderCoreService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  3,
+                                          "WorkingSetSumMiB":  10.2
+                                      },
+                                      {
+                                          "Name":  "OneDrive.Sync.Service",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  2.9,
+                                          "WorkingSetSumMiB":  6.8
+                                      },
+                                      {
+                                          "Name":  "ctfmon",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  2.9,
+                                          "WorkingSetSumMiB":  10.5
+                                      },
+                                      {
+                                          "Name":  "NVDisplay.Container",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  2.9,
+                                          "WorkingSetSumMiB":  6.4
+                                      },
+                                      {
+                                          "Name":  "UBTService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  2.8,
+                                          "WorkingSetSumMiB":  6.2
+                                      },
+                                      {
+                                          "Name":  "AppActions",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  2.2,
+                                          "WorkingSetSumMiB":  5.3
+                                      },
+                                      {
+                                          "Name":  "OfficeClickToRun",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  2,
+                                          "WorkingSetSumMiB":  4.9
+                                      },
+                                      {
+                                          "Name":  "WmiApSrv",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.9,
+                                          "WorkingSetSumMiB":  12
+                                      },
+                                      {
+                                          "Name":  "AppMonitorPlugIn",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.9,
+                                          "WorkingSetSumMiB":  6
+                                      },
+                                      {
+                                          "Name":  "SecurityHealthService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.9,
+                                          "WorkingSetSumMiB":  4.3
+                                      },
+                                      {
+                                          "Name":  "IntelGraphicsSoftware.Service.Graphics",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.9,
+                                          "WorkingSetSumMiB":  6.3
+                                      },
+                                      {
+                                          "Name":  "MicrosoftStartFeedProvider",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.9,
+                                          "WorkingSetSumMiB":  4.4
+                                      },
+                                      {
+                                          "Name":  "NisSrv",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.8,
+                                          "WorkingSetSumMiB":  5.2
+                                      },
+                                      {
+                                          "Name":  "taskhostw",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  1.8,
+                                          "WorkingSetSumMiB":  5.4
+                                      },
+                                      {
+                                          "Name":  "mksSandbox",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.8,
+                                          "WorkingSetSumMiB":  3.5
+                                      },
+                                      {
+                                          "Name":  "Registry",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.6,
+                                          "WorkingSetSumMiB":  9.2
+                                      },
+                                      {
+                                          "Name":  "MicUsage",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.5,
+                                          "WorkingSetSumMiB":  4.1
+                                      },
+                                      {
+                                          "Name":  "AcerQAAgent",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.5,
+                                          "WorkingSetSumMiB":  4.5
+                                      },
+                                      {
+                                          "Name":  "csrss",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  1.4,
+                                          "WorkingSetSumMiB":  2.6
+                                      },
+                                      {
+                                          "Name":  "IntelAudioService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.4,
+                                          "WorkingSetSumMiB":  4.4
+                                      },
+                                      {
+                                          "Name":  "AcerService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.4,
+                                          "WorkingSetSumMiB":  1.9
+                                      },
+                                      {
+                                          "Name":  "CamUsage",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.4,
+                                          "WorkingSetSumMiB":  4.1
+                                      },
+                                      {
+                                          "Name":  "unsecapp",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  1.3,
+                                          "WorkingSetSumMiB":  5.9
+                                      },
+                                      {
+                                          "Name":  "IntelGraphicsSoftware.Service",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.3,
+                                          "WorkingSetSumMiB":  4.4
+                                      },
+                                      {
+                                          "Name":  "conhost",
+                                          "Count":  12,
+                                          "PrivateWorkingSetMiB":  1.3,
+                                          "WorkingSetSumMiB":  8.6
+                                      },
+                                      {
+                                          "Name":  "AggregatorHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.3,
+                                          "WorkingSetSumMiB":  3.8
+                                      },
+                                      {
+                                          "Name":  "ShellHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.2,
+                                          "WorkingSetSumMiB":  4.4
+                                      },
+                                      {
+                                          "Name":  "StorPSCTL",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.1,
+                                          "WorkingSetSumMiB":  1.8
+                                      },
+                                      {
+                                          "Name":  "DataExchangeHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.1,
+                                          "WorkingSetSumMiB":  3.9
+                                      },
+                                      {
+                                          "Name":  "FileSyncHelper",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1.1,
+                                          "WorkingSetSumMiB":  3.4
+                                      },
+                                      {
+                                          "Name":  "CrossDeviceResume",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  1,
+                                          "WorkingSetSumMiB":  3.4
+                                      },
+                                      {
+                                          "Name":  "mysqld",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  1,
+                                          "WorkingSetSumMiB":  1.8
+                                      },
+                                      {
+                                          "Name":  "ZaloCap",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.9,
+                                          "WorkingSetSumMiB":  3.8
+                                      },
+                                      {
+                                          "Name":  "AQAUserPS",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.9,
+                                          "WorkingSetSumMiB":  2.9
+                                      },
+                                      {
+                                          "Name":  "AcerCentralService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.9,
+                                          "WorkingSetSumMiB":  3.2
+                                      },
+                                      {
+                                          "Name":  "AcerCCAgent",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.9,
+                                          "WorkingSetSumMiB":  3.1
+                                      },
+                                      {
+                                          "Name":  "AcerHardwareService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.9,
+                                          "WorkingSetSumMiB":  2.9
+                                      },
+                                      {
+                                          "Name":  "spoolsv",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.8,
+                                          "WorkingSetSumMiB":  3.1
+                                      },
+                                      {
+                                          "Name":  "AcerGAICameraW",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.8,
+                                          "WorkingSetSumMiB":  2.5
+                                      },
+                                      {
+                                          "Name":  "AcerPixyService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.8,
+                                          "WorkingSetSumMiB":  2.9
+                                      },
+                                      {
+                                          "Name":  "WidgetService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.7,
+                                          "WorkingSetSumMiB":  2.6
+                                      },
+                                      {
+                                          "Name":  "WUDFHost",
+                                          "Count":  3,
+                                          "PrivateWorkingSetMiB":  0.7,
+                                          "WorkingSetSumMiB":  0.9
+                                      },
+                                      {
+                                          "Name":  "ApplicationFrameHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.7,
+                                          "WorkingSetSumMiB":  2.8
+                                      },
+                                      {
+                                          "Name":  "ipf_helper",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.7,
+                                          "WorkingSetSumMiB":  4.2
+                                      },
+                                      {
+                                          "Name":  "wlanext",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.6,
+                                          "WorkingSetSumMiB":  1.8
+                                      },
+                                      {
+                                          "Name":  "DtsApo4Service",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.6,
+                                          "WorkingSetSumMiB":  1.9
+                                      },
+                                      {
+                                          "Name":  "Intel_PIE_Service",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.6,
+                                          "WorkingSetSumMiB":  2.1
+                                      },
+                                      {
+                                          "Name":  "vmware-usbarbitrator64",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.6,
+                                          "WorkingSetSumMiB":  1.9
+                                      },
+                                      {
+                                          "Name":  "ZaloCall",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.4,
+                                          "WorkingSetSumMiB":  1.1
+                                      },
+                                      {
+                                          "Name":  "PresentMonService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.4,
+                                          "WorkingSetSumMiB":  0.8
+                                      },
+                                      {
+                                          "Name":  "AcerDIAgent",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.4,
+                                          "WorkingSetSumMiB":  1.2
+                                      },
+                                      {
+                                          "Name":  "AcerServiceWrapper",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.4,
+                                          "WorkingSetSumMiB":  1.2
+                                      },
+                                      {
+                                          "Name":  "AcerSystemCentralService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.4,
+                                          "WorkingSetSumMiB":  1.3
+                                      },
+                                      {
+                                          "Name":  "steamservice",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.3,
+                                          "WorkingSetSumMiB":  0.7
+                                      },
+                                      {
+                                          "Name":  "DefenderSessionHelper",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.3,
+                                          "WorkingSetSumMiB":  1
+                                      },
+                                      {
+                                          "Name":  "wininit",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.5
+                                      },
+                                      {
+                                          "Name":  "OpenConsole",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.4
+                                      },
+                                      {
+                                          "Name":  "vmware-tray",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.6
+                                      },
+                                      {
+                                          "Name":  "AcerSysHardwareService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.3
+                                      },
+                                      {
+                                          "Name":  "winlogon",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.5
+                                      },
+                                      {
+                                          "Name":  "vmnat",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.5
+                                      },
+                                      {
+                                          "Name":  "vmnetdhcp",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.4
+                                      },
+                                      {
+                                          "Name":  "JSRtMon2",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.2,
+                                          "WorkingSetSumMiB":  0.5
+                                      },
+                                      {
+                                          "Name":  "wslservice",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "FileCoAuth",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.3
+                                      },
+                                      {
+                                          "Name":  "vmware-unity-helper",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.4
+                                      },
+                                      {
+                                          "Name":  "ACCUserPS",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "putty",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.4
+                                      },
+                                      {
+                                          "Name":  "AcerLightingService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "copilot-runtime",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.2
+                                      },
+                                      {
+                                          "Name":  "RstMwService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "AcerDeviceInfoAgentService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.3
+                                      },
+                                      {
+                                          "Name":  "AcerAgentService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.2
+                                      },
+                                      {
+                                          "Name":  "AcerSysMonitorService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.2
+                                      },
+                                      {
+                                          "Name":  "fontdrvhost",
+                                          "Count":  2,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.2
+                                      },
+                                      {
+                                          "Name":  "ipf_uf",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0.1,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "ssh-agent",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "AAADSvc",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "vmware-authd",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "smss",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "IntelCpHDCPSvc",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "DefenderAiPlatformHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "LockApp",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "NetworkconnectionV2",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "MoNotificationUx",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "ADESv2BW",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "ACCSvc",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "ADESv2Svc",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "AcerGAICameraService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "ARTAimmxService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "ipfsvc",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "crashpad_handler",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "jhi_service",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "pet",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "pageant",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "ShellExperienceHost",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0.1
+                                      },
+                                      {
+                                          "Name":  "SecurityHealthSystray",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "System",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  5.7
+                                      },
+                                      {
+                                          "Name":  "WMIRegistrationService",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      },
+                                      {
+                                          "Name":  "UserOOBEBroker",
+                                          "Count":  1,
+                                          "PrivateWorkingSetMiB":  0,
+                                          "WorkingSetSumMiB":  0
+                                      }
+                                  ],
+    "VMwareProcesses":  [
+                            {
+                                "PID":  6840,
+                                "Name":  "vmnat",
+                                "Application":  null,
+                                "WorkingSetMiB":  0.5,
+                                "PrivateWorkingSetMiB":  0.2,
+                                "PrivateBytesMiB":  3.1,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  6768,
+                                "Name":  "vmnetdhcp",
+                                "Application":  null,
+                                "WorkingSetMiB":  0.4,
+                                "PrivateWorkingSetMiB":  0.2,
+                                "PrivateBytesMiB":  7.7,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  20728,
+                                "Name":  "vmware",
+                                "Application":  "VMware Workstation",
+                                "WorkingSetMiB":  8.6,
+                                "PrivateWorkingSetMiB":  3.4,
+                                "PrivateBytesMiB":  35.9,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  6700,
+                                "Name":  "vmware-authd",
+                                "Application":  null,
+                                "WorkingSetMiB":  0,
+                                "PrivateWorkingSetMiB":  0,
+                                "PrivateBytesMiB":  4.2,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  9992,
+                                "Name":  "vmware-tray",
+                                "Application":  "VMware Tray Process",
+                                "WorkingSetMiB":  0.6,
+                                "PrivateWorkingSetMiB":  0.2,
+                                "PrivateBytesMiB":  4,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  9488,
+                                "Name":  "vmware-unity-helper",
+                                "Application":  "VMware Unity Helper",
+                                "WorkingSetMiB":  0.4,
+                                "PrivateWorkingSetMiB":  0.1,
+                                "PrivateBytesMiB":  6.8,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  6784,
+                                "Name":  "vmware-usbarbitrator64",
+                                "Application":  null,
+                                "WorkingSetMiB":  1.9,
+                                "PrivateWorkingSetMiB":  0.6,
+                                "PrivateBytesMiB":  3.3,
+                                "Category":  "VMware"
+                            },
+                            {
+                                "PID":  24092,
+                                "Name":  "vmware-vmx",
+                                "Application":  null,
+                                "WorkingSetMiB":  37.2,
+                                "PrivateWorkingSetMiB":  6.1,
+                                "PrivateBytesMiB":  105.8,
+                                "Category":  "VMware"
+                            }
+                        ],
+    "VMIdentities":  [
+                         {
+                             "PID":  24092,
+                             "VMConfigBasename":  [
+
+                                                  ]
+                         }
+                     ],
+    "Note":  "Read-only. Working sets include shared pages; do not sum as physical total. PrivateBytes are committed private virtual memory, not resident RAM. Samples are sequential."
+}

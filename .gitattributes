@@ -1,0 +1,7 @@
+# Giữ nguyên byte, đặc biệt log/cấu hình có SHA-256 trong báo cáo minh chứng.
+* -text
+*.docx binary
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.pdf binary

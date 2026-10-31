@@ -1,0 +1,40 @@
+{
+  "host_log_received_windows": {
+    "host-before.json": "2026-11-01T00:37:23.825327+07:00",
+    "host-after.json": "2026-11-01T01:05:17.343604+07:00"
+  },
+  "basis": "Windows file write immediately after SSH collection finished; guest timestamps not trusted",
+  "guest_log_transfer": {
+    "bytes": 27228,
+    "sha256": "39af9d11a4195482a62fae9a1e8326b4c7ee3a5cb1698970f37f56a375b7e662",
+    "verified_against_guest_console": true,
+    "collector_start": "2026-11-01T01:08:50.128003+07:00",
+    "collector_end": "2026-11-01T01:13:06.074607+07:00",
+    "files": [
+      "preapply.json",
+      "after.json",
+      "flows.txt",
+      "applied-transaction.json",
+      "commands.jsonl",
+      "attempt1-apply.log",
+      "attempt1-preapply.json",
+      "before.json",
+      "attempt1-failure.json",
+      "attempt1-rollback-result.json",
+      "networkctl.txt",
+      "restored.json",
+      "prepare.log",
+      "apply.log",
+      "rollback.sh",
+      "datapath.txt",
+      "attempt1-after.json",
+      "failure.json",
+      "backup-metadata.json",
+      "network-manager-summary.json",
+      "result.json",
+      "rollback-result.json",
+      "services.txt",
+      "attempt1-restored.json"
+    ]
+  }
+}

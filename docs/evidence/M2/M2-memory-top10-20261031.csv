@@ -1,0 +1,11 @@
+Application,Process,PID,WorkingSetMiB,PrivateWorkingSetMiB
+Google Chrome,chrome,23240,553.4,512
+Visual Studio Code,Code,20308,373.4,338.1
+Visual Studio Code,Code,19664,210.3,181.3
+Memory Compression,Memory Compression,4340,179.3,179.3
+MsMpEng,MsMpEng,6792,139.1,121.4
+Microsoft Edge,msedge,3016,130.3,72.4
+Visual Studio Code,Code,21344,120.1,98.2
+codex,codex,20712,102.3,55.9
+Google Chrome,chrome,18356,99.3,56.8
+Google Chrome,chrome,21340,97.8,80

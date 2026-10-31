@@ -1,0 +1,44 @@
+Reading package lists...
+Building dependency tree...
+The following additional packages will be installed:
+  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1
+  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2
+  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8
+  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0
+  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g
+  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal
+  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common
+  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0
+  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl
+  openvswitch-common passwd procps python3 python3-minimal python3-netifaces
+  python3-openvswitch python3-sortedcontainers python3.12 python3.12-minimal
+  readline-common tar tzdata uuid-runtime zlib1g
+Suggested packages:
+  liblocale-gettext-perl perl cron quota ecryptfs-utils debconf-doc
+  debconf-kde-helper debconf-utils libgtk3-perl libnet-ldap-perl
+  libterm-readline-gnu-perl whiptail | dialog apt debsig-verify glibc-doc
+  locales libnss-nis libnss-nisplus rng-tools libpam-doc ca-certificates
+  ethtool openvswitch-doc python3-doc python3-tk python3-venv python3-netaddr
+  python3-pyparsing python-sortedcontainers-doc python3.12-venv python3.12-doc
+  binutils binfmt-support readline-doc bzip2 ncompress xz-utils tar-scripts
+  tar-doc
+Recommended packages:
+  apt-utils debconf-i18n libidn2-0 libgpg-error-l10n libgpm2 sensible-utils
+  psmisc ca-certificates
+The following NEW packages will be installed:
+  adduser debconf dpkg gcc-14-base init-system-helpers kmod libacl1
+  libaudit-common libaudit1 libbpf1 libbz2-1.0 libc6 libcap-ng0 libcap2
+  libcrypt1 libdb5.3t64 libelf1t64 libevent-2.1-7t64 libexpat1 libffi8
+  libgcc-s1 libgcrypt20 libgpg-error0 libkmod2 liblz4-1 liblzma5 libmd0
+  libncursesw6 libnuma1 libpam-modules libpam-modules-bin libpam0g
+  libpcre2-8-0 libproc2-0 libpython3-stdlib libpython3.12-minimal
+  libpython3.12-stdlib libreadline8t64 libselinux1 libsemanage-common
+  libsemanage2 libsepol2 libsmartcols1 libsqlite3-0 libssl3t64 libsystemd0
+  libtinfo6 libunbound8 libuuid1 libxdp1 libzstd1 media-types netbase openssl
+  openvswitch-common openvswitch-switch passwd procps python3 python3-minimal
+  python3-netifaces python3-openvswitch python3-sortedcontainers python3.12
+  python3.12-minimal readline-common tar tzdata uuid-runtime zlib1g
+0 upgraded, 70 newly installed, 0 to remove and 0 not upgraded.
+After this operation, 90.4 MB of additional disk space will be used.
+Download complete and in download only mode
+W: Unable to read /opt/unetlab/soc-core-preparation-20261031/apt-root/etc/preferences.d/ - DirectoryExists (2: No such file or directory)

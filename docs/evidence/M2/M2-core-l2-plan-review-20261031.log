@@ -1,0 +1,67 @@
+SOC M2 - TIEN KIEM TRA LAP KE HOACH CORE L2 - 2026-10-31
+
+Loai minh chung: tom tat cac lenh doc va ma nguon tren EVE; khong phai anh man hinh.
+Moc Windows tham chieu: 2026-10-31T18:56:12.7526142+07:00.
+Ket thuc doc EVE duoc ghi nhan tren Windows truoc 19:06:45+07:00.
+Khong dung gio EVE chua dong bo NTP de lam timestamp thu thap chinh thuc.
+Nguon day du: M2-core-l2-plan-readonly-20261031T1856+0700.json.
+Kiem tra cuoi: M2-core-l2-plan-final-check-20261031.json.
+
+QUYEN:
+- Nguoi dung dong y thiet ke so bo OVS/8 vNIC, CHUA cho phep thay doi he thong.
+- Chi doc qua SSH public key, StrictHostKeyChecking=yes, BatchMode=yes.
+- Khong goi EVE API login/POST, khoi tao PHP Node, QEMU phu, console guest.
+- Chi tao tai lieu va log tren D:\SOC.
+
+DA XAC MINH:
+- EVE-NG 6.2.0-4; host Ubuntu 22.04.4 Jammy; guest Ubuntu da kiem chung 24.04.
+- Template Linux Intel ethernet=1 mac dinh, CPU=2/RAM=4096; per-node override co trong code.
+- api_nodes.php:585-590: ethernet input cho qemu.
+- __node.php:344-350: qemu constructor nhan ethernet integer.
+- __node.php:725-735: qemu edit nhan ethernet duong.
+- __node.php:1933-1952: linux lap i<ethernet, sinh e<i>, MAC, netdev TAP.
+- functions.js:3695-3701: GUI cho sua Ethernet, khac VPCS readonly.
+- Ket luan: co co so tinh cho 8 NIC rieng node; CHUA kiem thu API create, boot 8 NIC, PCI/guest.
+- Khong gan truoc ens3/ens4/eth0; nhan EVE e0-e7 khac ten NIC guest.
+- Base SHA256 khop 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94.
+- Base virtual size 3758096384 bytes; target image directory chua co.
+- Ubuntu-Test PID 287703; Ubuntu-Console-Test PID 297601; ca hai van chay cung UUID o cuoi phien.
+- Test lab van 2 node / 0 network / 0 link; hash XML khong doi dau-cuoi phien.
+- Hash hai template va hai cdrom.iso cu khong doi dau-cuoi phien.
+- M2.unl hien doc khong co node/network, khac inventory cu; khong sua/phuc hoi file nay.
+
+TAI NGUYEN:
+- Windows 8 physical cores/12 logical CPUs, total visible memory 16473976 KiB.
+- Windows FreePhysicalMemory 498116 KiB o mau 18:56 (~486 MiB); mau truoc ~550 MiB.
+- EVE 4 CPU; load 1.20/1.08/1.12; vmstat mau tuc thoi CPU idle 98%, 96%.
+- EVE RAM total 7897 MiB / available 5370 MiB; swap total 4095 MiB.
+- EVE disk available 43426328 KiB (~41.4 GiB).
+- Hai guest cu khai bao 4 GiB RAM tong; RSS khong phai muc tieu thu toi da.
+- Khong ket luan host du tai nguyen chi tu MemAvailable trong EVE.
+- De xuat do lai va cho host co headroom truoc boot; khong tu dung guest cu.
+
+OVS/OFFLINE:
+- OVS upstream ho tro access/trunk, mirroring va bond/LACP; guest chua duoc cai/kiem thu.
+- De xuat package Noble amd64, dependency closure co kiem chung, chuyen qua ISO rieng Core.
+- Khong dung apt cache/solver Jammy cua host de suy ra dependency cua guest Noble.
+- Cache /var/cache/apt/archives/*.deb rong trong lan doc; chua co bundle da xac minh.
+- Host khong co /usr/bin/apt-offline; khong suy ra trang thai apt-offline trong guest.
+- Trang package Ubuntu khong truy xuat day du; chua chot version/dependency tu web.
+
+DE XUAT - CHUA LAM:
+- Lab SOC-M2-Core-L2, node SOC-Core-L2, CPU1/RAM2048MiB/8NIC, giu tat truoc duyet boot.
+- Full copy base sang image directory rieng; neu duyet, tang virtual disk rieng len 8GiB.
+- Seed/user/instance-id rieng; user soc-core-admin; khong dua password/hash vao chat/repo/log.
+- 5 access (30/40/50/60/99), 2 trunk doc lap, 1 mirror.
+- Hai trunk toi firewall HA khong la bond LACP; Core khong routing/NAT.
+- WAN/SYNC/VIP, HA M3 chua trien khai; Core don van SPOF.
+
+MINH CHUNG ANH:
+- Khong tao anh moi cho node/OVS/VLAN chua ton tai.
+- Ke hoach anh duoc ghi trong muc 10 tai lieu, tat ca anh runtime moi deu cho trien khai.
+- Hinh 2.1/2.2 buoc Ubuntu cu giu nguyen, khong thay bang anh gia lap.
+
+DA LUU:
+- docs/M2/core-l2-implementation-plan.md
+- JSON raw read-only, JSON doi chieu cuoi, log nay va danh muc rieng cho phien ke hoach.
+- Khong ghi de manifest/danh muc/anh cu cua buoc cloud-init.

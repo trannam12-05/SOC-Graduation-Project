@@ -1,0 +1,168 @@
+Script started on 2026-10-31 23:53:32+00:00 [TERM="linux" TTY="/dev/pts/0" COLUMNS="80" LINES="25"]
+[?2004hroot@soc-core-l2:/home/soc-core-admin# [H[Jroot@soc-core-l2:/home/soc-core-admin# umask 022; mkdir /tmp/m2-ovs-apt-2353; cd  /tmp/m2-ovs-apt-2353; cp /var/lib/dpkg/status status.before; cp /etc/apt/source s.list.d/soc-ovs-offline.list source.before; hostname; dpkg --audit
+[?2004lcp: cannot stat '/etc/apt/sources.list.d/soc-ovs-offline.list': No such file or directory
+soc-core-l2
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# for s in noble noble-updates noble-securi ty; do echo "deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] file :/opt/ovs-offline $s main universe"; done > offline.list; cat offline.list
+[?2004ldeb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] file:/opt/ovs-offline noble main universe
+deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] file:/opt/ovs-offline noble-updates main universe
+deb [signed-by=/usr/share/keyrings/ubuntu-archive-keyring.gpg] file:/opt/ovs-offline noble-security main universe
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# mkdir -p lists/partial; O="-o Dir::Etc::s ourcelist=$PWD/offline.list -o Dir::Etc::sourceparts=- -o Dir::State::lists=$PWD /lists -o Acquire::Languages=none"; apt-get $O -o APT::Update::Error-Mode=any up date > update.log 2>&1; echo UPDATE_RC=$?; tail -n 12 update.log
+[?2004lUPDATE_RC=100
+Get:17 file:/opt/ovs-offline noble-security/main amd64 Components [58.9 kB]
+Ign:17 file:/opt/ovs-offline noble-security/main amd64 Components
+Get:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata [49.1 kB]
+Err:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata
+  File not found - /opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64 (2: No such file or directory)
+Get:20 file:/opt/ovs-offline noble-security/universe amd64 Components [97.3 kB]
+Ign:20 file:/opt/ovs-offline noble-security/universe amd64 Components
+Reading package lists...
+E: Failed to fetch file:/opt/ovs-offline/dists/noble/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-updates/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble-updates/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# O="$O -o Acquire::IndexTargets::deb::CNF: :DefaultEnabled=false"; apt-get $O -o APT::Update::Error-Mode=any update > updat e2.log 2>&1; echo UPDATE_RC=$?; tail -n 8 update2.log
+[?2004lUPDATE_RC=100
+  File not found - /opt/ovs-offline/dists/noble-security/main/dep11/Components-amd64.yml (2: No such file or directory)
+Get:15 file:/opt/ovs-offline noble-security/universe amd64 Components [285 kB]
+Ign:15 file:/opt/ovs-offline noble-security/universe amd64 Components
+Reading package lists...
+E: Failed to fetch file:/opt/ovs-offline/dists/noble/main/dep11/Components-amd64.yml  File not found - /opt/ovs-offline/dists/noble/main/dep11/Components-amd64.yml (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-updates/main/dep11/Components-amd64.yml  File not found - /opt/ovs-offline/dists/noble-updates/main/dep11/Components-amd64.yml (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-security/main/dep11/Components-amd64.yml  File not found - /opt/ovs-offline/dists/noble-security/main/dep11/Components-amd64.yml (2: No such file or directory)
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# V=3.3.9-0ubuntu0.24.04.1; apt-cache $O po licy openvswitch-switch; apt-get $O -s --no-install-recommends --no-remove insta ll openvswitch-switch=$V > simulate.log 2>&1; echo SIM_RC=$?; cat simulate.log
+[?2004lopenvswitch-switch:
+  Installed: (none)
+  Candidate: (none)
+  Version table:
+SIM_RC=100
+Reading package lists...
+Building dependency tree...
+Reading state information...
+Package openvswitch-switch is not available, but is referred to by another package.
+This may mean that the package is missing, has been obsoleted, or
+is only available from another source
+
+E: Version '3.3.9-0ubuntu0.24.04.1' for 'openvswitch-switch' was not found
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# O="$O -o Acquire::IndexTargets::deb::DEP- 11::DefaultEnabled=false"; apt-get $O -o APT::Update::Error-Mode=any update > up date3.log 2>&1; echo UPDATE_RC=$?; tail -n 6 update3.log
+[?2004lUPDATE_RC=0
+Ign:8 file:/opt/ovs-offline noble-security/main amd64 Packages
+Get:9 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Ign:9 file:/opt/ovs-offline noble-security/universe amd64 Packages
+Get:8 file:/opt/ovs-offline noble-security/main amd64 Packages [1146 kB]
+Get:9 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Reading package lists...
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# V=3.3.9-0ubuntu0.24.04.1; apt-get $O -s - -no-install-recommends --no-remove install openvswitch-switch=$V > simulate2.log  2>&1; echo SIM_RC=$?; cat simulate2.log
+[?2004lSIM_RC=0
+Reading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common python3-openvswitch
+  python3-sortedcontainers
+Suggested packages:
+  openvswitch-doc python-sortedcontainers-doc
+The following NEW packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common openvswitch-switch
+  python3-openvswitch python3-sortedcontainers
+0 upgraded, 7 newly installed, 0 to remove and 18 not upgraded.
+Inst libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libunbound8 (1.19.2-1ubuntu3.12 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst openvswitch-common (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst python3-sortedcontainers (2.4.0-2 Ubuntu:24.04/noble [all])
+Inst libxdp1 (1.4.2-1ubuntu4 Ubuntu:24.04/noble [amd64])
+Inst python3-openvswitch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst openvswitch-switch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf libunbound8 (1.19.2-1ubuntu3.12 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Conf openvswitch-common (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf python3-sortedcontainers (2.4.0-2 Ubuntu:24.04/noble [all])
+Conf libxdp1 (1.4.2-1ubuntu4 Ubuntu:24.04/noble [amd64])
+Conf python3-openvswitch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Conf openvswitch-switch (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# head -n 17 simulate2.log; find /opt/ovs-o ffline/pool -type f -name '*.deb' -exec sha256sum {} + > guest-sha256.txt; echo  HASH_RC=$?; wc -l guest-sha256.txt
+[?2004lReading package lists...
+Building dependency tree...
+Reading state information...
+The following additional packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common python3-openvswitch
+  python3-sortedcontainers
+Suggested packages:
+  openvswitch-doc python-sortedcontainers-doc
+The following NEW packages will be installed:
+  libevent-2.1-7t64 libunbound8 libxdp1 openvswitch-common openvswitch-switch
+  python3-openvswitch python3-sortedcontainers
+0 upgraded, 7 newly installed, 0 to remove and 18 not upgraded.
+Inst libevent-2.1-7t64 (2.1.12-stable-9ubuntu2.2 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst libunbound8 (1.19.2-1ubuntu3.12 Ubuntu:24.04/noble-updates, Ubuntu:24.04/noble-security [amd64])
+Inst openvswitch-common (3.3.9-0ubuntu0.24.04.1 Ubuntu:24.04/noble-updates [amd64])
+Inst python3-sortedcontainers (2.4.0-2 Ubuntu:24.04/noble [all])
+Inst libxdp1 (1.4.2-1ubuntu4 Ubuntu:24.04/noble [amd64])
+HASH_RC=0
+70 guest-sha256.txt
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# apt-get $O --yes --no-install-recommends  --no-remove install openvswitch-switch=$V > install.log 2>&1; echo INSTALL_RC=$? ; tail -n 8 install.log
+[?2004lINSTALL_RC=0
+
+No services need to be restarted.
+
+No containers need to be restarted.
+
+No user sessions are running outdated binaries.
+
+No VM guests are running outdated hypervisor (qemu) binaries on this host.
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# ovs-vsctl --version; echo VERSION_RC=$?;  systemctl is-active openvswitch-switch ovsdb-server ovs-vswitchd; ovs-vsctl --ti meout=10 show; echo SHOW_RC=$?; dpkg --audit
+[?2004lovs-vsctl (Open vSwitch) 3.3.9
+DB Schema 8.5.1
+VERSION_RC=0
+active
+active
+active
+36956952-09d5-4916-acf4-a3be3e891166
+    ovs_version: "3.3.9"
+SHOW_RC=0
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# systemctl --no-pager --full status openvs witch-switch ovsdb-server ovs-vswitchd > services.log; journalctl --no-pager -b  -u openvswitch-switch -u ovsdb-server -u ovs-vswitchd > journal.log; tail -n 12  journal.log
+[?2004lOct 31 23:58:30 soc-core-l2 ovs-vsctl[1898]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait set Open_vSwitch . ovs-version=3.3.9 "external-ids:system-id=\"cec0bf80-d936-429d-8baa-3f3b79212bd9\"" "external-ids:rundir=\"/var/run/openvswitch\"" "system-type=\"ubuntu\"" "system-version=\"24.04\""
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Configuring Open vSwitch system IDs
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Enabling remote OVSDB managers
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Started ovsdb-server.service - Open vSwitch Database Unit.
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Starting ovs-vswitchd.service - Open vSwitch Forwarding Unit...
+Oct 31 23:58:30 soc-core-l2 (ovs-ctl)[1903]: ovs-vswitchd.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1933]:  * Inserting openvswitch module
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Starting ovs-vswitchd
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Enabling remote OVSDB managers
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Started ovs-vswitchd.service - Open vSwitch Forwarding Unit.
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Starting openvswitch-switch.service - Open vSwitch...
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Finished openvswitch-switch.service - Open vSwitch.
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# find /opt/ovs-offline/dists -name Package s.xz -exec sha256sum {} + > indexes-sha256.txt; for s in noble noble-updates nob le-security; do gpgv --keyring /usr/share/keyrings/ubuntu-archive-keyring.gpg /o pt/ovs-offline/dists/$s/InRelease; done > signatures.log 2>&1; tail -n 12 signat ures.log
+[?2004lgpgv: Signature made Thu Apr 25 15:11:21 2024 UTC
+gpgv:                using RSA key F6ECB3762474EDA9D21B7022871920D1991BC93C
+gpgv: Good signature from "Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>"
+gpgv: Signature made Sat Oct 31 07:37:52 2026 UTC
+gpgv:                using RSA key F6ECB3762474EDA9D21B7022871920D1991BC93C
+gpgv: Good signature from "Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>"
+gpgv: Signature made Sat Oct 31 02:44:22 2026 UTC
+gpgv:                using RSA key F6ECB3762474EDA9D21B7022871920D1991BC93C
+gpgv: Good signature from "Ubuntu Archive Automatic Signing Key (2018) <ftpmaster@ubuntu.com>"
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# (ovs-vsctl --version; ovs-vsctl --timeout =10 show; systemctl is-active openvswitch-switch ovsdb-server ovs-vswitchd; dpkg -query -W openvswitch-switch openvswitch-common python3-openvswitch; dpkg --audi t; lsmod | grep openvswitch) > verification.log 2>&1; cat verification.log; ip - j link > guest-links.json
+[?2004lovs-vsctl (Open vSwitch) 3.3.9
+DB Schema 8.5.1
+36956952-09d5-4916-acf4-a3be3e891166
+    ovs_version: "3.3.9"
+active
+active
+active
+openvswitch-common	3.3.9-0ubuntu0.24.04.1
+openvswitch-switch	3.3.9-0ubuntu0.24.04.1
+python3-openvswitch	3.3.9-0ubuntu0.24.04.1
+openvswitch           217088  0
+nsh                    12288  1 openvswitch
+nf_conncount           24576  1 openvswitch
+nf_nat                 61440  1 openvswitch
+nf_conntrack          196608  3 nf_nat,openvswitch,nf_conncount
+libcrc32c              12288  5 nf_conntrack,nf_nat,openvswitch,btrfs,raid456
+[?2004hroot@soc-core-l2:/tmp/m2-ovs-apt-2353# [H[Jroot@soc-core-l2:/tmp/m2-ovs-apt-2353# journalctl --no-pager -b -u openvswitch-s witch -u ovsdb-server -u ovs-vswitchd -p warning > warnings.log; cat warnings.lo g; printf '%s\n' "$O" > apt-options.txt; exit
+[?2004lOct 31 23:58:29 soc-core-l2 (ovs-ctl)[1856]: ovsdb-server.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:30 soc-core-l2 (ovs-ctl)[1903]: ovs-vswitchd.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+exit
+
+Script done on 2026-11-01 00:00:53+00:00 [COMMAND_EXIT_CODE="0"]

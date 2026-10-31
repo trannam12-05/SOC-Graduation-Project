@@ -1,0 +1,14 @@
+IDX LINK       TYPE     OPERATIONAL SETUP
+  1 lo         loopback carrier     unmanaged
+  2 ens3       ether    carrier     configured
+  3 ens4       ether    carrier     configured
+  4 ens5       ether    carrier     configured
+  5 ens6       ether    carrier     configured
+  6 ens7       ether    carrier     configured
+  7 ens8       ether    carrier     configured
+  8 ens9       ether    carrier     configured
+  9 ens10      ether    carrier     configured
+ 12 ovs-system ether    off         unmanaged
+ 13 br-core-l2 ether    carrier     unmanaged
+
+11 links listed.

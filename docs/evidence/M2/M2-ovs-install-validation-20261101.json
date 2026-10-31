@@ -1,0 +1,49 @@
+{
+  "collected_at": "2026-11-01T00:10:43.917482+07:00",
+  "guest_packages_sha256_verified": 70,
+  "guest_indexes_sha256_verified": 6,
+  "good_ubuntu_signatures": 3,
+  "simulated_actions": [
+    [
+      "libevent-2.1-7t64",
+      "2.1.12-stable-9ubuntu2.2"
+    ],
+    [
+      "libunbound8",
+      "1.19.2-1ubuntu3.12"
+    ],
+    [
+      "openvswitch-common",
+      "3.3.9-0ubuntu0.24.04.1"
+    ],
+    [
+      "python3-sortedcontainers",
+      "2.4.0-2"
+    ],
+    [
+      "libxdp1",
+      "1.4.2-1ubuntu4"
+    ],
+    [
+      "python3-openvswitch",
+      "3.3.9-0ubuntu0.24.04.1"
+    ],
+    [
+      "openvswitch-switch",
+      "3.3.9-0ubuntu0.24.04.1"
+    ]
+  ],
+  "guest_dependency_plan_matches_bundle": true,
+  "protected_lab_image_seed_unchanged": true,
+  "ovs_version": "3.3.9",
+  "package_version": "3.3.9-0ubuntu0.24.04.1",
+  "services_active": [
+    "openvswitch-switch",
+    "ovsdb-server",
+    "ovs-vswitchd"
+  ],
+  "bridge_created": false,
+  "vlan_trunk_mirror_tested": false,
+  "warning": "OVS_CTL_OPTS unset; startup succeeded; see warnings.log",
+  "guest_transport_sha256": "d064b8dbdecf43a2ed2927ac3d924c6e66c0d88c7f7c3627532bd55d700ca9f2"
+}

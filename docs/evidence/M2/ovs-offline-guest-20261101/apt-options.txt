@@ -1,0 +1,1 @@
+-o Dir::Etc::sourcelist=/tmp/m2-ovs-apt-2353/offline.list -o Dir::Etc::sourceparts=- -o Dir::State::lists=/tmp/m2-ovs-apt-2353/lists -o Acquire::Languages=none -o Acquire::IndexTargets::deb::CNF::DefaultEnabled=false -o Acquire::IndexTargets::deb::DEP-11::DefaultEnabled=false

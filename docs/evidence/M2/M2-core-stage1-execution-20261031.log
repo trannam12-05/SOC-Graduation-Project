@@ -1,0 +1,54 @@
+SOC M2 - CORE STAGE 1 - 31/10/2026 UTC+07:00
+Nguồn: thao tác SSH có kiểm tra host key, các JSON/ảnh thật đính kèm.
+Đã được duyệt: chuẩn bị bundle, image mới, đĩa riêng 8 GiB, seed, node tắt 8 NIC.
+Không được duyệt và chưa làm: boot Core, cài OVS guest, VLAN/trunk/mirror, sửa mạng.
+
+Core image: /opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/virtioa.qcow2
+QCOW2 virtual-size: 8589934592 bytes; không có backing-file.
+Disk SHA256: 0de140dda997a09b6d72230ae74b68612fdc2cfbc59949d7e2021561246ac718
+Base SHA256 trước/sau: 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94
+qemu-img check: returncode 0, check-errors 0.
+qemu-img compare với base: returncode 0, Images are identical.
+Cảnh báo Image size mismatch là do 3.5 -> 8 GiB; vùng tăng thêm zero, không chứng minh rootfs đã grow.
+Lab: /opt/unetlab/labs/SOC-M2-Core-L2.unl; lab UUID f39cfc8c-5eaf-461e-bb0c-60b5fde848b7.
+Node SOC-Core-L2 ID3 / UUID 2b295168-b72e-4de7-b364-37298252dd9f / status0 stopped / CPU1 RAM2048MiB Ethernet8.
+8 interface EVE e0-e7, MAC 02:53:45:f2:19:00..07, network_id=0, 0 network object, 0 link.
+Core process không tồn tại, runtime overlay chưa được tạo; guest NIC names chưa kiểm chứng.
+
+Sự cố kiểm tra trạng thái: ID1 ban đầu trong lab mới bị EVE getStatus suy ra console port
+trùng Ubuntu-Test ID1 đang chạy. Assertion dừng; kiểm tra UUID/runtime xác nhận Core chưa boot.
+Chỉ node mới được đổi sang ID3 còn trống; native EVE status trả về 0; không stop/wipe node nào.
+
+Seed: /opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso; owner root, mode 0600.
+Seed SHA256: f4aea1d849fff37e272d0efbb117a670582751504cb5b8042a9e10c018258dbd; bytes 48996352.
+Instance-id: iid-soc-core-l2-da130c3e-4cfe-4e11-91cb-254581c02547; account soc-core-admin; hostname soc-core-l2.
+NoCloud cidata; user-data/meta-data/network-config đúng tên cả Rock Ridge và Joliet.
+Console hash được người dùng nhập trực tiếp qua getpass TTY, không lưu plaintext/chat/repo/log.
+SSH password authentication=false; root login disabled; password account unlocked trong seed.
+Network-config match 8 MAC, DHCP4/DHCP6/RA off, không IP, optional=true; chưa áp dụng guest.
+Kiểm tra cấu trúc YAML bằng PHP YAML; không khẳng định cloud-init schema/runtime đã đạt trên Core.
+
+Bundle: /opt/unetlab/soc-core-preparation-20261031/ovs-noble-amd64-offline-20261031.tar
+Bundle SHA256: f65ddae0f71bee455760ddb209153bfbc2377de3f0989af3475ad86061e4c03e; archive bytes 48619520.
+70 .deb, tổng byte package 25963666; Ubuntu Noble/Noble Updates/Noble Security amd64/all.
+OVS/openvswitch-common/python3-openvswitch: 3.3.9-0ubuntu0.24.04.1.
+GPG signatures hợp lệ: Ubuntu Archive key F6ECB3762474EDA9D21B7022871920D1991BC93C.
+Đối chiếu SHA256 indexes theo InRelease, SHA256 từng deb theo index, control Package/Version/Architecture.
+APT sources/status/cache/Etc tách riêng; chỉ file repository Noble, không dùng host Jammy status/cache.
+Kiểm tra APT --download-only --no-download: rc0, Download complete and in download only mode.
+Thông báo 70 newly installed trong kế hoạch APT KHÔNG phải cài thật.
+Host /var/lib/dpkg/status và /etc/apt không đổi; status APT cô lập vẫn rỗng.
+Chưa kiểm tra tương thích kernel/installed-state bên trong Core vì Core chưa boot.
+
+RAM Windows 2026-10-31T20:00:08.3518594+07:00: free physical 841768 KiB,
+khoảng 822.0 MiB; tổng 16473976 KiB.
+EVE snapshot 19:57: available5332MiB; lần free -m lúc20:00 available5352MiB, swap4095MiB/used0.
+Không tự đóng ứng dụng/VM hoặc đổi cấu hình Windows/VMware. Chưa đạt ngưỡng Windows2GiB
+đã đề xuất trong kế hoạch; chỉ đề nghị người dùng tự lưu công việc và đóng cửa sổ/tab không cần.
+
+Đối chiếu cuối: 9 file template/image/seed/lab cũ đều giữ nguyên SHA256.
+Hai QEMU cũ PID287703 và297601 vẫn chạy; không tác động overlay của chúng.
+Ảnh thật: M2-core-seed-ready-real-terminal-20261031.png (19:55:46+07),
+M2-core-stopped-eight-nics-real-terminal-20261031.png (19:57:58+07).
+Ảnh lấy Win32 PrintWindow cửa sổ terminal thật, không sửa nội dung; không phải ảnh GUI topology.
+Giới hạn GUI topology/settings: cần người dùng chụp thủ công nếu không có công cụ browser phù hợp.

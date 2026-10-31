@@ -1,0 +1,66 @@
+{
+  "remote_utc_untrusted": "2026-10-31T16:35:33.870113+00:00",
+  "protected_files": [
+    {
+      "path": "/opt/unetlab/html/templates/intel/linux.yml",
+      "sha256": "ce0c2a0979695727c1b84235c6ac5075f35129b0f51a8b0ef68112e285ae5803",
+      "mtime_ns": 1717019741000000000
+    },
+    {
+      "path": "/opt/unetlab/html/templates/amd/linux.yml",
+      "sha256": "b28853200c3b23101ea2609222f66ff0f8c74d60b5ea0c6a7730333024fa9902",
+      "mtime_ns": 1717019741000000000
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "sha256": "84ef91478d3647ee61c2fb3eaab8afb0efefc7a141537480b258b8b50490e0ed",
+      "mtime_ns": 1793462182384507400
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso",
+      "sha256": "5f454921f7c183a0971a8694fe55c064713261fcfac418c94abc206a8f8dd1c1",
+      "mtime_ns": 1793456996492350700
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/cdrom.iso",
+      "sha256": "372cf2d7107e79211c10541f9f04d0f66774b5cd77e5af2fc194351b38f353ca",
+      "mtime_ns": 1793459303752420400
+    }
+  ],
+  "qemu_pids": [
+    {
+      "pid": "287703",
+      "name": "Ubuntu-Test",
+      "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab"
+    },
+    {
+      "pid": "297601",
+      "name": "Ubuntu-Console-Test",
+      "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582"
+    }
+  ],
+  "soc_core_nodes": [],
+  "target_image_exists": false,
+  "comparison": [
+    {
+      "path": "/opt/unetlab/html/templates/intel/linux.yml",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/html/templates/amd/linux.yml",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso",
+      "unchanged": true
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/cdrom.iso",
+      "unchanged": true
+    }
+  ]
+}

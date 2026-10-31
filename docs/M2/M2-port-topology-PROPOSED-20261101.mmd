@@ -1,0 +1,13 @@
+flowchart LR
+  DC["Data Center • VLAN 30"] ---|"ens3 • access"| CORE["SOC-Core-L2<br/>br-core-l2<br/>DỰ KIẾN — chưa tạo"]
+  EMP["Employee • VLAN 40"] ---|"ens4 • access"| CORE
+  GUEST["Guest • VLAN 50"] ---|"ens5 • access"| CORE
+  DMZ["DMZ • VLAN 60"] ---|"ens6 • access"| CORE
+  MGMT["Management • VLAN 99"] ---|"ens7 • access"| CORE
+  CORE ---|"ens8 • trunk 30/40/50/60/99"| FW1["OPNsense Primary<br/>peer LAN chưa có trong EVE"]
+  CORE ---|"ens9 • trunk 30/40/50/60/99"| FW2["OPNsense Secondary<br/>peer LAN chưa có trong EVE"]
+  CORE -->|"ens10 • mirror output"| CAP["Suricata capture<br/>không IP • peer chưa có"]
+  FW1 <-.->|"SYNC riêng • pfsync/config sync"| FW2
+  FW1 -.-> VIP["CARP VIP mỗi VLAN<br/>gateway trên OPNsense"]
+  FW2 -.-> VIP
+  CAP -.->|"NIC quản trị riêng"| MGMT

@@ -1,0 +1,18 @@
+Oct 31 23:58:29 soc-core-l2 systemd[1]: Starting ovsdb-server.service - Open vSwitch Database Unit...
+Oct 31 23:58:29 soc-core-l2 (ovs-ctl)[1856]: ovsdb-server.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * /etc/openvswitch/conf.db does not exist
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Creating empty database /etc/openvswitch/conf.db
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Starting ovsdb-server
+Oct 31 23:58:30 soc-core-l2 ovs-vsctl[1892]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait -- init -- set Open_vSwitch . db-version=8.5.1
+Oct 31 23:58:30 soc-core-l2 ovs-vsctl[1898]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait set Open_vSwitch . ovs-version=3.3.9 "external-ids:system-id=\"cec0bf80-d936-429d-8baa-3f3b79212bd9\"" "external-ids:rundir=\"/var/run/openvswitch\"" "system-type=\"ubuntu\"" "system-version=\"24.04\""
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Configuring Open vSwitch system IDs
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Enabling remote OVSDB managers
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Started ovsdb-server.service - Open vSwitch Database Unit.
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Starting ovs-vswitchd.service - Open vSwitch Forwarding Unit...
+Oct 31 23:58:30 soc-core-l2 (ovs-ctl)[1903]: ovs-vswitchd.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1933]:  * Inserting openvswitch module
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Starting ovs-vswitchd
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Enabling remote OVSDB managers
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Started ovs-vswitchd.service - Open vSwitch Forwarding Unit.
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Starting openvswitch-switch.service - Open vSwitch...
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Finished openvswitch-switch.service - Open vSwitch.

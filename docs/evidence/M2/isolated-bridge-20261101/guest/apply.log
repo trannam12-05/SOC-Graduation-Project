@@ -1,0 +1,204 @@
+$ hostname
+soc-core-l2
+RC=0
+$ ovs-vsctl --version
+ovs-vsctl (Open vSwitch) 3.3.9
+DB Schema 8.5.1
+RC=0
+$ systemctl is-active openvswitch-switch ovsdb-server ovs-vswitchd
+active
+active
+active
+RC=0
+$ ip -j link show
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00"},{"ifindex":2,"ifname":"ens3","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:00","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s3"]},{"ifindex":3,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:01","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s4"]},{"ifindex":4,"ifname":"ens5","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:02","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s5"]},{"ifindex":5,"ifname":"ens6","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:03","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s6"]},{"ifindex":6,"ifname":"ens7","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:04","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s7"]},{"ifindex":7,"ifname":"ens8","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:05","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s8"]},{"ifindex":8,"ifname":"ens9","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:06","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s9"]},{"ifindex":9,"ifname":"ens10","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:07","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s10"]}]
+RC=0
+$ ip -j address show
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8,"scope":"host","label":"lo","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"ifname":"ens3","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:00","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s3"],"addr_info":[]},{"ifindex":3,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:01","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s4"],"addr_info":[]},{"ifindex":4,"ifname":"ens5","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:02","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s5"],"addr_info":[]},{"ifindex":5,"ifname":"ens6","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:03","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s6"],"addr_info":[]},{"ifindex":6,"ifname":"ens7","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:04","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s7"],"addr_info":[]},{"ifindex":7,"ifname":"ens8","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:05","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s8"],"addr_info":[]},{"ifindex":8,"ifname":"ens9","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:06","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s9"],"addr_info":[]},{"ifindex":9,"ifname":"ens10","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:07","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s10"],"addr_info":[]}]
+RC=0
+$ ip -j route show table all
+[{"type":"local","dst":"127.0.0.0/8","dev":"lo","table":"local","protocol":"kernel","scope":"host","prefsrc":"127.0.0.1","flags":[]},{"type":"local","dst":"127.0.0.1","dev":"lo","table":"local","protocol":"kernel","scope":"host","prefsrc":"127.0.0.1","flags":[]},{"type":"broadcast","dst":"127.255.255.255","dev":"lo","table":"local","protocol":"kernel","scope":"link","prefsrc":"127.0.0.1","flags":[]},{"type":"local","dst":"::1","dev":"lo","table":"local","protocol":"kernel","metric":0,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens3","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens4","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens5","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens6","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens7","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens8","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens9","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens10","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+RC=0
+$ ip -j -6 route show table all
+[{"type":"local","dst":"::1","dev":"lo","table":"local","protocol":"kernel","metric":0,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens3","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens4","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens5","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens6","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens7","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens8","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens9","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens10","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=name,datapath_type,fail_mode,ports,mirrors,controller list Bridge
+{"data":[],"headings":["name","datapath_type","fail_mode","ports","mirrors","controller"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=_uuid,name,vlan_mode,tag,trunks,interfaces list Port
+{"data":[],"headings":["_uuid","name","vlan_mode","tag","trunks","interfaces"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=_uuid,name,type,ofport,error,admin_state,link_state list Interface
+{"data":[],"headings":["_uuid","name","type","ofport","error","admin_state","link_state"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=name list Mirror
+{"data":[],"headings":["name"]}
+RC=0
+$ ovs-vsctl --timeout=10 show
+020cf56d-a904-4ee4-a1be-f5090b62b556
+    ovs_version: "3.3.9"
+RC=0
+$ ovs-vsctl --timeout=15 -- add-br br-core-l2 -- set Bridge br-core-l2 datapath_type=system fail_mode=standalone -- set Port br-core-l2 vlan_mode=access tag=99 -- add-port br-core-l2 ens3 -- set Port ens3 vlan_mode=access tag=30 -- add-port br-core-l2 ens4 -- set Port ens4 vlan_mode=access tag=40 -- add-port br-core-l2 ens5 -- set Port ens5 vlan_mode=access tag=50 -- add-port br-core-l2 ens6 -- set Port ens6 vlan_mode=access tag=60 -- add-port br-core-l2 ens7 -- set Port ens7 vlan_mode=access tag=99 -- add-port br-core-l2 ens8 -- set Port ens8 vlan_mode=trunk trunks=30,40,50,60,99 -- add-port br-core-l2 ens9 -- set Port ens9 vlan_mode=trunk trunks=30,40,50,60,99
+RC=0
+$ ip link set dev br-core-l2 addrgenmode none
+RC=0
+$ sysctl -w net.ipv6.conf.br-core-l2.disable_ipv6=1
+net.ipv6.conf.br-core-l2.disable_ipv6 = 1
+RC=0
+$ ip -j address show dev br-core-l2
+[{"ifindex":13,"ifname":"br-core-l2","flags":["BROADCAST","MULTICAST"],"mtu":1500,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ether","address":"2a:de:e5:91:5a:40","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[]}]
+RC=0
+$ ip link set dev br-core-l2 up
+RC=0
+$ hostname
+soc-core-l2
+RC=0
+$ ovs-vsctl --version
+ovs-vsctl (Open vSwitch) 3.3.9
+DB Schema 8.5.1
+RC=0
+$ systemctl is-active openvswitch-switch ovsdb-server ovs-vswitchd
+active
+active
+active
+RC=0
+$ ip -j link show
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00"},{"ifindex":2,"ifname":"ens3","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:00","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s3"]},{"ifindex":3,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:01","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s4"]},{"ifindex":4,"ifname":"ens5","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:02","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s5"]},{"ifindex":5,"ifname":"ens6","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:03","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s6"]},{"ifindex":6,"ifname":"ens7","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:04","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s7"]},{"ifindex":7,"ifname":"ens8","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:05","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s8"]},{"ifindex":8,"ifname":"ens9","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:06","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s9"]},{"ifindex":9,"ifname":"ens10","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:07","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s10"]},{"ifindex":12,"ifname":"ovs-system","flags":["BROADCAST","MULTICAST"],"mtu":1500,"qdisc":"noop","operstate":"DOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"8e:43:b7:f2:cb:90","broadcast":"ff:ff:ff:ff:ff:ff"},{"ifindex":13,"ifname":"br-core-l2","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"noqueue","operstate":"UNKNOWN","linkmode":"DEFAULT","group":"default","txqlen":1000,"link_type":"ether","address":"2a:de:e5:91:5a:40","broadcast":"ff:ff:ff:ff:ff:ff"}]
+RC=0
+$ ip -j address show
+[{"ifindex":1,"ifname":"lo","flags":["LOOPBACK","UP","LOWER_UP"],"mtu":65536,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"loopback","address":"00:00:00:00:00:00","broadcast":"00:00:00:00:00:00","addr_info":[{"family":"inet","local":"127.0.0.1","prefixlen":8,"scope":"host","label":"lo","valid_life_time":4294967295,"preferred_life_time":4294967295},{"family":"inet6","local":"::1","prefixlen":128,"scope":"host","noprefixroute":true,"valid_life_time":4294967295,"preferred_life_time":4294967295}]},{"ifindex":2,"ifname":"ens3","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:00","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s3"],"addr_info":[]},{"ifindex":3,"ifname":"ens4","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:01","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s4"],"addr_info":[]},{"ifindex":4,"ifname":"ens5","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:02","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s5"],"addr_info":[]},{"ifindex":5,"ifname":"ens6","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:03","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s6"],"addr_info":[]},{"ifindex":6,"ifname":"ens7","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:04","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s7"],"addr_info":[]},{"ifindex":7,"ifname":"ens8","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:05","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s8"],"addr_info":[]},{"ifindex":8,"ifname":"ens9","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","master":"ovs-system","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:06","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s9"],"addr_info":[]},{"ifindex":9,"ifname":"ens10","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"fq_codel","operstate":"UP","group":"default","txqlen":1000,"link_type":"ether","address":"02:53:45:f2:19:07","broadcast":"ff:ff:ff:ff:ff:ff","altnames":["enp0s10"],"addr_info":[]},{"ifindex":12,"ifname":"ovs-system","flags":["BROADCAST","MULTICAST"],"mtu":1500,"qdisc":"noop","operstate":"DOWN","group":"default","txqlen":1000,"link_type":"ether","address":"8e:43:b7:f2:cb:90","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[]},{"ifindex":13,"ifname":"br-core-l2","flags":["BROADCAST","MULTICAST","UP","LOWER_UP"],"mtu":1500,"qdisc":"noqueue","operstate":"UNKNOWN","group":"default","txqlen":1000,"link_type":"ether","address":"2a:de:e5:91:5a:40","broadcast":"ff:ff:ff:ff:ff:ff","addr_info":[]}]
+RC=0
+$ ip -j route show table all
+[{"type":"local","dst":"127.0.0.0/8","dev":"lo","table":"local","protocol":"kernel","scope":"host","prefsrc":"127.0.0.1","flags":[]},{"type":"local","dst":"127.0.0.1","dev":"lo","table":"local","protocol":"kernel","scope":"host","prefsrc":"127.0.0.1","flags":[]},{"type":"broadcast","dst":"127.255.255.255","dev":"lo","table":"local","protocol":"kernel","scope":"link","prefsrc":"127.0.0.1","flags":[]},{"type":"local","dst":"::1","dev":"lo","table":"local","protocol":"kernel","metric":0,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens3","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens4","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens5","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens6","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens7","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens8","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens9","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens10","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+RC=0
+$ ip -j -6 route show table all
+[{"type":"local","dst":"::1","dev":"lo","table":"local","protocol":"kernel","metric":0,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens3","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens4","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens5","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens6","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens7","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens8","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens9","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"},{"type":"multicast","dst":"ff00::/8","dev":"ens10","table":"local","protocol":"kernel","metric":256,"flags":[],"pref":"medium"}]
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=name,datapath_type,fail_mode,ports,mirrors,controller list Bridge
+{"data":[["br-core-l2","system","standalone",["set",[["uuid","564d0824-4a66-49fa-b52d-c642b2abeb68"],["uuid","8a71920d-676f-4d01-8451-f2ea00bc93c4"],["uuid","90ec285e-e44b-45b4-ba77-5ccd6a1fbf57"],["uuid","941fbc03-4b59-43e2-954d-46f2475a0a84"],["uuid","d4e7ac82-cc64-4ffe-8079-3d84d66e3d31"],["uuid","d8245d47-775e-4e07-b56e-59418c6d2c3d"],["uuid","d890b5fd-362c-47ae-b571-bb89b11f4e4d"],["uuid","de198363-80be-4aa7-a530-17d1c7764d12"]]],["set",[]],["set",[]]]],"headings":["name","datapath_type","fail_mode","ports","mirrors","controller"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=_uuid,name,vlan_mode,tag,trunks,interfaces list Port
+{"data":[[["uuid","d4e7ac82-cc64-4ffe-8079-3d84d66e3d31"],"ens5","access",50,["set",[]],["uuid","b4e53d11-6356-4515-bfd1-a9d171158ff5"]],[["uuid","941fbc03-4b59-43e2-954d-46f2475a0a84"],"ens9","trunk",["set",[]],["set",[30,40,50,60,99]],["uuid","8c498356-9643-43b2-aeac-066a1bc4f010"]],[["uuid","de198363-80be-4aa7-a530-17d1c7764d12"],"ens8","trunk",["set",[]],["set",[30,40,50,60,99]],["uuid","a577116f-cec2-4c09-a122-57a5ee3cda0d"]],[["uuid","564d0824-4a66-49fa-b52d-c642b2abeb68"],"br-core-l2","access",99,["set",[]],["uuid","a39809d1-ae6d-4f64-910f-6017bddd5df1"]],[["uuid","8a71920d-676f-4d01-8451-f2ea00bc93c4"],"ens7","access",99,["set",[]],["uuid","f6038e96-7fb4-48d6-810a-81085d532638"]],[["uuid","d890b5fd-362c-47ae-b571-bb89b11f4e4d"],"ens4","access",40,["set",[]],["uuid","bf72bb1c-bf10-4365-bc48-e0fcd466d34b"]],[["uuid","90ec285e-e44b-45b4-ba77-5ccd6a1fbf57"],"ens6","access",60,["set",[]],["uuid","03c48a60-5330-4e4b-b49d-7c261b46fd8d"]],[["uuid","d8245d47-775e-4e07-b56e-59418c6d2c3d"],"ens3","access",30,["set",[]],["uuid","0f508599-2796-49db-b97c-76b3e38b1df4"]]],"headings":["_uuid","name","vlan_mode","tag","trunks","interfaces"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=_uuid,name,type,ofport,error,admin_state,link_state list Interface
+{"data":[[["uuid","03c48a60-5330-4e4b-b49d-7c261b46fd8d"],"ens6","",4,["set",[]],"up","up"],[["uuid","a39809d1-ae6d-4f64-910f-6017bddd5df1"],"br-core-l2","internal",65534,["set",[]],"up","up"],[["uuid","0f508599-2796-49db-b97c-76b3e38b1df4"],"ens3","",7,["set",[]],"up","up"],[["uuid","b4e53d11-6356-4515-bfd1-a9d171158ff5"],"ens5","",5,["set",[]],"up","up"],[["uuid","bf72bb1c-bf10-4365-bc48-e0fcd466d34b"],"ens4","",2,["set",[]],"up","up"],[["uuid","f6038e96-7fb4-48d6-810a-81085d532638"],"ens7","",3,["set",[]],"up","up"],[["uuid","8c498356-9643-43b2-aeac-066a1bc4f010"],"ens9","",1,["set",[]],"up","up"],[["uuid","a577116f-cec2-4c09-a122-57a5ee3cda0d"],"ens8","",6,["set",[]],"up","up"]],"headings":["_uuid","name","type","ofport","error","admin_state","link_state"]}
+RC=0
+$ ovs-vsctl --timeout=10 --format=json --columns=name list Mirror
+{"data":[],"headings":["name"]}
+RC=0
+$ ovs-vsctl --timeout=10 show
+020cf56d-a904-4ee4-a1be-f5090b62b556
+    Bridge br-core-l2
+        fail_mode: standalone
+        datapath_type: system
+        Port br-core-l2
+            tag: 99
+            Interface br-core-l2
+                type: internal
+        Port ens7
+            tag: 99
+            Interface ens7
+        Port ens6
+            tag: 60
+            Interface ens6
+        Port ens9
+            trunks: [30, 40, 50, 60, 99]
+            Interface ens9
+        Port ens5
+            tag: 50
+            Interface ens5
+        Port ens3
+            tag: 30
+            Interface ens3
+        Port ens4
+            tag: 40
+            Interface ens4
+        Port ens8
+            trunks: [30, 40, 50, 60, 99]
+            Interface ens8
+    ovs_version: "3.3.9"
+RC=0
+$ ovs-appctl dpif/show
+system@ovs-system: hit:0 missed:0
+  br-core-l2:
+    br-core-l2 65534/7: (internal)
+    ens3 7/8: (system)
+    ens4 2/2: (system)
+    ens5 5/5: (system)
+    ens6 4/4: (system)
+    ens7 3/3: (system)
+    ens8 6/6: (system)
+    ens9 1/1: (system)
+RC=0
+$ ovs-ofctl dump-flows br-core-l2
+NXST_FLOW reply (xid=0x4):
+ cookie=0x0, duration=2.438s, table=0, n_packets=0, n_bytes=0, idle_age=2, priority=0 actions=NORMAL
+RC=0
+$ systemctl --no-pager status openvswitch-switch ovsdb-server ovs-vswitchd
+* openvswitch-switch.service - Open vSwitch
+     Loaded: loaded (/usr/lib/systemd/system/openvswitch-switch.service; enabled; preset: enabled)
+     Active: active (exited) since Sat 2026-10-31 23:58:31 UTC; 1h 0min ago
+    Process: 1956 ExecStart=/bin/true (code=exited, status=0/SUCCESS)
+   Main PID: 1956 (code=exited, status=0/SUCCESS)
+        CPU: 23ms
+
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Starting openvswitch-switch.service - Open vSwitch...
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Finished openvswitch-switch.service - Open vSwitch.
+
+* ovsdb-server.service - Open vSwitch Database Unit
+     Loaded: loaded (/usr/lib/systemd/system/ovsdb-server.service; static)
+     Active: active (running) since Sat 2026-10-31 23:58:30 UTC; 1h 0min ago
+    Process: 1856 ExecStart=/usr/share/openvswitch/scripts/ovs-ctl --no-ovs-vswitchd --no-monitor --system-id=random --no-record-hostname start $OVS_CTL_OPTS (code=exited, status=0/SUCCESS)
+   Main PID: 1891 (ovsdb-server)
+      Tasks: 1 (limit: 2315)
+     Memory: 2.1M (peak: 4.2M)
+        CPU: 1.379s
+     CGroup: /system.slice/ovsdb-server.service
+             `-1891 ovsdb-server /etc/openvswitch/conf.db -vconsole:emer -vsyslog:err -vfile:info --remote=punix:/var/run/openvswitch/db.sock --private-key=db:Open_vSwitch,SSL,private_key --certificate=db:Open_vSwitch,SSL,certificate --bootstrap-ca-cert=db:Open_vSwitch,SSL,ca_cert --no-chdir --log-file=/var/log/openvswitch/ovsdb-server.log --pidfile=/var/run/openvswitch/ovsdb-server.pid --detach
+
+Oct 31 23:58:29 soc-core-l2 systemd[1]: Starting ovsdb-server.service - Open vSwitch Database Unit...
+Oct 31 23:58:29 soc-core-l2 (ovs-ctl)[1856]: ovsdb-server.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * /etc/openvswitch/conf.db does not exist
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Creating empty database /etc/openvswitch/conf.db
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Starting ovsdb-server
+Oct 31 23:58:30 soc-core-l2 ovs-vsctl[1892]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait -- init -- set Open_vSwitch . db-version=8.5.1
+Oct 31 23:58:30 soc-core-l2 ovs-vsctl[1898]: ovs|00001|vsctl|INFO|Called as ovs-vsctl --no-wait set Open_vSwitch . ovs-version=3.3.9 "external-ids:system-id=\"cec0bf80-d936-429d-8baa-3f3b79212bd9\"" "external-ids:rundir=\"/var/run/openvswitch\"" "system-type=\"ubuntu\"" "system-version=\"24.04\""
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Configuring Open vSwitch system IDs
+Oct 31 23:58:30 soc-core-l2 ovs-ctl[1856]:  * Enabling remote OVSDB managers
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Started ovsdb-server.service - Open vSwitch Database Unit.
+
+* ovs-vswitchd.service - Open vSwitch Forwarding Unit
+     Loaded: loaded (/usr/lib/systemd/system/ovs-vswitchd.service; static)
+     Active: active (running) since Sat 2026-10-31 23:58:31 UTC; 1h 0min ago
+    Process: 1903 ExecStart=/usr/share/openvswitch/scripts/ovs-ctl --no-ovsdb-server --no-monitor --system-id=random --no-record-hostname start $OVS_CTL_OPTS (code=exited, status=0/SUCCESS)
+   Main PID: 1944 (ovs-vswitchd)
+      Tasks: 4 (limit: 2315)
+     Memory: 28.2M (peak: 28.5M)
+        CPU: 1.848s
+     CGroup: /system.slice/ovs-vswitchd.service
+             `-1944 ovs-vswitchd unix:/var/run/openvswitch/db.sock -vconsole:emer -vsyslog:err -vfile:info --mlockall --no-chdir --log-file=/var/log/openvswitch/ovs-vswitchd.log --pidfile=/var/run/openvswitch/ovs-vswitchd.pid --detach
+
+Oct 31 23:58:30 soc-core-l2 systemd[1]: Starting ovs-vswitchd.service - Open vSwitch Forwarding Unit...
+Oct 31 23:58:30 soc-core-l2 (ovs-ctl)[1903]: ovs-vswitchd.service: Referenced but unset environment variable evaluates to an empty string: OVS_CTL_OPTS
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1933]:  * Inserting openvswitch module
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Starting ovs-vswitchd
+Oct 31 23:58:31 soc-core-l2 ovs-ctl[1903]:  * Enabling remote OVSDB managers
+Oct 31 23:58:31 soc-core-l2 systemd[1]: Started ovs-vswitchd.service - Open vSwitch Forwarding Unit.
+RC=0
+$ networkctl list --no-pager
+IDX LINK       TYPE     OPERATIONAL SETUP
+  1 lo         loopback carrier     unmanaged
+  2 ens3       ether    carrier     configured
+  3 ens4       ether    carrier     configured
+  4 ens5       ether    carrier     configured
+  5 ens6       ether    carrier     configured
+  6 ens7       ether    carrier     configured
+  7 ens8       ether    carrier     configured
+  8 ens9       ether    carrier     configured
+  9 ens10      ether    carrier     configured
+ 12 ovs-system ether    off         unmanaged
+ 13 br-core-l2 ether    carrier     unmanaged
+
+11 links listed.
+RC=0
+VERIFY_OK: isolated bridge; 5 access, 2 trunk; ens10 untouched; no traffic test

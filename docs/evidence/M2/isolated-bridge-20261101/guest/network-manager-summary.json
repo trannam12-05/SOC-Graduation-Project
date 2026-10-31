@@ -1,0 +1,159 @@
+[
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-7.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:07"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-6.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:06"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-5.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:05"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-4.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:04"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-3.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:03"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-2.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:02"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-1.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:01"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/run/systemd/network/10-netplan-core-port-0.network",
+    "match": {
+      "permanentmacaddress": "02:53:45:f2:19:00"
+    },
+    "network": {
+      "linklocaladdressing": "no",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-wifi-adhoc.network",
+    "match": {
+      "type": "wlan",
+      "wlaninterfacetype": "ad-hoc"
+    },
+    "network": {
+      "linklocaladdressing": "yes",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-container-ve.network",
+    "match": {
+      "kind": "veth",
+      "name": "ve-*"
+    },
+    "network": {
+      "address": "0.0.0.0/28",
+      "linklocaladdressing": "yes",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-vm-vt.network",
+    "match": {
+      "kind": "tun",
+      "name": "vt-*"
+    },
+    "network": {
+      "address": "0.0.0.0/28",
+      "linklocaladdressing": "yes",
+      "ipv6acceptra": "no"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-6rd-tunnel.network",
+    "match": {
+      "kind": "sit",
+      "name": "6rd-*"
+    },
+    "network": {}
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-container-host0.network",
+    "match": {
+      "kind": "veth",
+      "name": "host0",
+      "virtualization": "container"
+    },
+    "network": {
+      "dhcp": "yes",
+      "linklocaladdressing": "yes"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-container-vb.network",
+    "match": {
+      "kind": "veth",
+      "name": "vb-*"
+    },
+    "network": {
+      "linklocaladdressing": "no"
+    }
+  },
+  {
+    "path": "/usr/lib/systemd/network/80-container-vz.network",
+    "match": {
+      "kind": "bridge",
+      "name": "vz-*"
+    },
+    "network": {
+      "address": "0.0.0.0/24",
+      "linklocaladdressing": "yes",
+      "ipv6acceptra": "no"
+    }
+  }
+]

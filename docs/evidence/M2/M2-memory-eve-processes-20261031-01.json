@@ -1,0 +1,48 @@
+{
+  "meminfo": "MemTotal:        8087324 kB\nMemFree:          481980 kB\nMemAvailable:    5458800 kB\nBuffers:          226812 kB\nCached:          4752212 kB\nSwapCached:           88 kB\nActive:          3539436 kB\nInactive:        3407736 kB\nActive(anon):    1983104 kB\nInactive(anon):      692 kB\nActive(file):    1556332 kB\nInactive(file):  3407044 kB\nUnevictable:       27808 kB\nMlocked:           27808 kB\nSwapTotal:       4194300 kB\nSwapFree:        4193776 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               864 kB\nWriteback:             0 kB\nAnonPages:       1995908 kB\nMapped:           253716 kB\nShmem:              6584 kB\nKReclaimable:     318900 kB\nSlab:             448764 kB\nSReclaimable:     318900 kB\nSUnreclaim:       129864 kB\nKernelStack:        8724 kB\nPageTables:        13148 kB\nSecPageTables:      1860 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8237960 kB\nCommitted_AS:    7076752 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       35756 kB\nVmallocChunk:          0 kB\nPercpu:            91136 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:    157696 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      186176 kB\nDirectMap2M:     4007936 kB\nDirectMap1G:     6291456 kB\n",
+  "qemu": [
+    {
+      "pid": "287703",
+      "name": "Ubuntu-Test",
+      "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab",
+      "configured_ram": "2048",
+      "memory_status": [
+        "VmSize:\t 3952540 kB",
+        "VmRSS:\t  589304 kB",
+        "RssAnon:\t  551032 kB",
+        "RssFile:\t   38272 kB",
+        "RssShmem:\t       0 kB",
+        "VmSwap:\t       0 kB"
+      ],
+      "smaps_rollup": [
+        "Rss:              589624 kB",
+        "Pss:              427391 kB",
+        "Private_Clean:       412 kB",
+        "Private_Dirty:    343492 kB",
+        "Swap:                  0 kB"
+      ]
+    },
+    {
+      "pid": "297601",
+      "name": "Ubuntu-Console-Test",
+      "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582",
+      "configured_ram": "2048",
+      "memory_status": [
+        "VmSize:\t 3821228 kB",
+        "VmRSS:\t  692880 kB",
+        "RssAnon:\t  654352 kB",
+        "RssFile:\t   38528 kB",
+        "RssShmem:\t       0 kB",
+        "VmSwap:\t       0 kB"
+      ],
+      "smaps_rollup": [
+        "Rss:              693060 kB",
+        "Pss:              517192 kB",
+        "Private_Clean:       636 kB",
+        "Private_Dirty:    422512 kB",
+        "Swap:                  0 kB"
+      ]
+    }
+  ],
+  "collector_time": "2026-10-31T20:24:20.761670+07:00"
+}

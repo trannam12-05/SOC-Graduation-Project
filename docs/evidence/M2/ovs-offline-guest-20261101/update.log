@@ -1,0 +1,120 @@
+Get:1 file:/opt/ovs-offline noble InRelease [256 kB]
+Get:1 file:/opt/ovs-offline noble InRelease [256 kB]
+Get:2 file:/opt/ovs-offline noble-updates InRelease [126 kB]
+Get:3 file:/opt/ovs-offline noble-security InRelease [126 kB]
+Get:2 file:/opt/ovs-offline noble-updates InRelease [126 kB]
+Get:3 file:/opt/ovs-offline noble-security InRelease [126 kB]
+Get:4 file:/opt/ovs-offline noble/main amd64 Packages [1401 kB]
+Ign:4 file:/opt/ovs-offline noble/main amd64 Packages
+Get:5 file:/opt/ovs-offline noble/main amd64 Components [464 kB]
+Ign:5 file:/opt/ovs-offline noble/main amd64 Components
+Get:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata [30.5 kB]
+Ign:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata
+Get:7 file:/opt/ovs-offline noble/universe amd64 Packages [15.0 MB]
+Ign:7 file:/opt/ovs-offline noble/universe amd64 Packages
+Get:8 file:/opt/ovs-offline noble/universe amd64 Components [3871 kB]
+Ign:8 file:/opt/ovs-offline noble/universe amd64 Components
+Get:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata [301 kB]
+Ign:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata
+Get:4 file:/opt/ovs-offline noble/main amd64 Packages [1401 kB]
+Get:5 file:/opt/ovs-offline noble/main amd64 Components [464 kB]
+Ign:5 file:/opt/ovs-offline noble/main amd64 Components
+Get:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata [30.5 kB]
+Ign:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata
+Get:7 file:/opt/ovs-offline noble/universe amd64 Packages [15.0 MB]
+Get:8 file:/opt/ovs-offline noble/universe amd64 Components [3871 kB]
+Ign:8 file:/opt/ovs-offline noble/universe amd64 Components
+Get:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata [301 kB]
+Ign:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata
+Get:5 file:/opt/ovs-offline noble/main amd64 Components [665 kB]
+Ign:5 file:/opt/ovs-offline noble/main amd64 Components
+Get:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata [116 kB]
+Ign:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata
+Get:10 file:/opt/ovs-offline noble-updates/main amd64 Packages [1408 kB]
+Ign:10 file:/opt/ovs-offline noble-updates/main amd64 Packages
+Get:11 file:/opt/ovs-offline noble-updates/main amd64 Components [181 kB]
+Ign:11 file:/opt/ovs-offline noble-updates/main amd64 Components
+Get:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata [17.7 kB]
+Ign:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata
+Get:13 file:/opt/ovs-offline noble-updates/universe amd64 Packages [1708 kB]
+Ign:13 file:/opt/ovs-offline noble-updates/universe amd64 Packages
+Get:14 file:/opt/ovs-offline noble-updates/universe amd64 Components [388 kB]
+Ign:14 file:/opt/ovs-offline noble-updates/universe amd64 Components
+Get:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata [34.9 kB]
+Ign:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata
+Get:8 file:/opt/ovs-offline noble/universe amd64 Components [5943 kB]
+Ign:8 file:/opt/ovs-offline noble/universe amd64 Components
+Get:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata [1402 kB]
+Ign:9 file:/opt/ovs-offline noble/universe amd64 c-n-f Metadata
+Get:5 file:/opt/ovs-offline noble/main amd64 Components [665 kB]
+Ign:5 file:/opt/ovs-offline noble/main amd64 Components
+Get:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata [116 kB]
+Err:6 file:/opt/ovs-offline noble/main amd64 c-n-f Metadata
+  File not found - /opt/ovs-offline/dists/noble/main/cnf/Commands-amd64 (2: No such file or directory)
+Get:10 file:/opt/ovs-offline noble-updates/main amd64 Packages [1408 kB]
+Get:11 file:/opt/ovs-offline noble-updates/main amd64 Components [181 kB]
+Ign:11 file:/opt/ovs-offline noble-updates/main amd64 Components
+Get:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata [17.7 kB]
+Ign:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata
+Get:13 file:/opt/ovs-offline noble-updates/universe amd64 Packages [1708 kB]
+Get:14 file:/opt/ovs-offline noble-updates/universe amd64 Components [388 kB]
+Ign:14 file:/opt/ovs-offline noble-updates/universe amd64 Components
+Get:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata [34.9 kB]
+Ign:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata
+Get:11 file:/opt/ovs-offline noble-updates/main amd64 Components [243 kB]
+Ign:11 file:/opt/ovs-offline noble-updates/main amd64 Components
+Get:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata [68.4 kB]
+Ign:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata
+Get:14 file:/opt/ovs-offline noble-updates/universe amd64 Components [536 kB]
+Ign:14 file:/opt/ovs-offline noble-updates/universe amd64 Components
+Get:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata [302 kB]
+Ign:15 file:/opt/ovs-offline noble-updates/universe amd64 c-n-f Metadata
+Get:11 file:/opt/ovs-offline noble-updates/main amd64 Components [243 kB]
+Ign:11 file:/opt/ovs-offline noble-updates/main amd64 Components
+Get:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata [68.4 kB]
+Err:12 file:/opt/ovs-offline noble-updates/main amd64 c-n-f Metadata
+  File not found - /opt/ovs-offline/dists/noble-updates/main/cnf/Commands-amd64 (2: No such file or directory)
+Get:14 file:/opt/ovs-offline noble-updates/universe amd64 Components [536 kB]
+Ign:14 file:/opt/ovs-offline noble-updates/universe amd64 Components
+Get:16 file:/opt/ovs-offline noble-security/main amd64 Packages [1146 kB]
+Ign:16 file:/opt/ovs-offline noble-security/main amd64 Packages
+Get:17 file:/opt/ovs-offline noble-security/main amd64 Components [46.4 kB]
+Ign:17 file:/opt/ovs-offline noble-security/main amd64 Components
+Get:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata [11.9 kB]
+Ign:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata
+Get:19 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Ign:19 file:/opt/ovs-offline noble-security/universe amd64 Packages
+Get:20 file:/opt/ovs-offline noble-security/universe amd64 Components [76.3 kB]
+Ign:20 file:/opt/ovs-offline noble-security/universe amd64 Components
+Get:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata [24.2 kB]
+Ign:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata
+Get:16 file:/opt/ovs-offline noble-security/main amd64 Packages [1146 kB]
+Get:17 file:/opt/ovs-offline noble-security/main amd64 Components [46.4 kB]
+Ign:17 file:/opt/ovs-offline noble-security/main amd64 Components
+Get:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata [11.9 kB]
+Ign:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata
+Get:19 file:/opt/ovs-offline noble-security/universe amd64 Packages [1223 kB]
+Get:20 file:/opt/ovs-offline noble-security/universe amd64 Components [76.3 kB]
+Ign:20 file:/opt/ovs-offline noble-security/universe amd64 Components
+Get:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata [24.2 kB]
+Ign:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata
+Get:17 file:/opt/ovs-offline noble-security/main amd64 Components [58.9 kB]
+Ign:17 file:/opt/ovs-offline noble-security/main amd64 Components
+Get:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata [49.1 kB]
+Ign:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata
+Get:20 file:/opt/ovs-offline noble-security/universe amd64 Components [97.3 kB]
+Ign:20 file:/opt/ovs-offline noble-security/universe amd64 Components
+Get:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata [206 kB]
+Ign:21 file:/opt/ovs-offline noble-security/universe amd64 c-n-f Metadata
+Get:17 file:/opt/ovs-offline noble-security/main amd64 Components [58.9 kB]
+Ign:17 file:/opt/ovs-offline noble-security/main amd64 Components
+Get:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata [49.1 kB]
+Err:18 file:/opt/ovs-offline noble-security/main amd64 c-n-f Metadata
+  File not found - /opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64 (2: No such file or directory)
+Get:20 file:/opt/ovs-offline noble-security/universe amd64 Components [97.3 kB]
+Ign:20 file:/opt/ovs-offline noble-security/universe amd64 Components
+Reading package lists...
+E: Failed to fetch file:/opt/ovs-offline/dists/noble/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-updates/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble-updates/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Failed to fetch file:/opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64  File not found - /opt/ovs-offline/dists/noble-security/main/cnf/Commands-amd64 (2: No such file or directory)
+E: Some index files failed to download. They have been ignored, or old ones used instead.

@@ -1,0 +1,10 @@
+system@ovs-system: hit:0 missed:0
+  br-core-l2:
+    br-core-l2 65534/7: (internal)
+    ens3 7/8: (system)
+    ens4 2/2: (system)
+    ens5 5/5: (system)
+    ens6 4/4: (system)
+    ens7 3/3: (system)
+    ens8 6/6: (system)
+    ens9 1/1: (system)

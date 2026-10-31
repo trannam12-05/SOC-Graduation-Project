@@ -1,0 +1,29 @@
+{
+  "meta_data": "instance-id: iid-soc-core-l2-da130c3e-4cfe-4e11-91cb-254581c02547\nlocal-hostname: soc-core-l2\n",
+  "network_config": "version: 2\nethernets:\n  core-port-0:\n    match:\n      macaddress: 02:53:45:f2:19:00\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-1:\n    match:\n      macaddress: 02:53:45:f2:19:01\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-2:\n    match:\n      macaddress: 02:53:45:f2:19:02\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-3:\n    match:\n      macaddress: 02:53:45:f2:19:03\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-4:\n    match:\n      macaddress: 02:53:45:f2:19:04\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-5:\n    match:\n      macaddress: 02:53:45:f2:19:05\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-6:\n    match:\n      macaddress: 02:53:45:f2:19:06\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n  core-port-7:\n    match:\n      macaddress: 02:53:45:f2:19:07\n    dhcp4: false\n    dhcp6: false\n    accept-ra: false\n    optional: true\n    link-local: []\n",
+  "iso_description": [
+    "Volume id: cidata",
+    "Joliet with UCS level 3 found",
+    "Rock Ridge signatures version 1 found"
+  ],
+  "joliet_names": [
+    "/meta-data",
+    "/network-config",
+    "/ovs-noble-amd64-offline-20261031.tar",
+    "/user-data"
+  ],
+  "user_data_redacted": {
+    "account": "soc-core-admin",
+    "hostname": "soc-core-l2",
+    "groups": [
+      "adm",
+      "sudo"
+    ],
+    "lock_passwd": false,
+    "hashed_passwd": "REDACTED - never copied into repository",
+    "ssh_pwauth": false,
+    "disable_root": true,
+    "ssh_key_fingerprint": "SHA256:NmKKtOy8jUJd/x2Zg9xzrdGLCRAHCFfdNejRnrJ+ne4",
+    "no_packages_or_runcmd": true
+  }
+}

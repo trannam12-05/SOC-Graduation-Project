@@ -1,0 +1,55 @@
+THIẾT KẾ DỰ KIẾN — CHƯA THỰC THI — CHƯA ĐƯỢC PHÉP ÁP DỤNG
+
+1. Điều kiện: phê duyệt riêng; xác minh lại MAC bảng mapping; bridge chưa tồn tại;
+   backup OVSDB root-only trong guest; giữ console; NIC và quản lý mạng đã kiểm tra.
+2. Đây là mẫu để review, không phải script tự động. Không chạy trong phiên thiết kế.
+3. Một giao dịch mẫu; không nối EVE link, không bật VM, không gán IP/gateway:
+
+sudo ovs-vsctl \
+  -- add-br br-core-l2 \
+  -- set Bridge br-core-l2 datapath_type=system fail_mode=standalone \
+  -- set Port br-core-l2 vlan_mode=access tag=99 \
+  -- add-port br-core-l2 ens3 \
+  -- set Port ens3 vlan_mode=access tag=30 \
+  -- add-port br-core-l2 ens4 \
+  -- set Port ens4 vlan_mode=access tag=40 \
+  -- add-port br-core-l2 ens5 \
+  -- set Port ens5 vlan_mode=access tag=50 \
+  -- add-port br-core-l2 ens6 \
+  -- set Port ens6 vlan_mode=access tag=60 \
+  -- add-port br-core-l2 ens7 \
+  -- set Port ens7 vlan_mode=access tag=99 \
+  -- add-port br-core-l2 ens8 \
+  -- set Port ens8 vlan_mode=trunk trunks=30,40,50,60,99 \
+  -- add-port br-core-l2 ens9 \
+  -- set Port ens9 vlan_mode=trunk trunks=30,40,50,60,99 \
+  -- add-port br-core-l2 ens10 \
+  -- set Port ens10 vlan_mode=trunk trunks=30,40,50,60,99 \
+  -- --id=@a30 get Port ens3 \
+  -- --id=@a40 get Port ens4 \
+  -- --id=@a50 get Port ens5 \
+  -- --id=@a60 get Port ens6 \
+  -- --id=@a99 get Port ens7 \
+  -- --id=@t1 get Port ens8 \
+  -- --id=@t2 get Port ens9 \
+  -- --id=@cap get Port ens10 \
+  -- --id=@mon create Mirror name=span-suricata select_all=false \
+       select_src_port=@a30,@a40,@a50,@a60,@a99,@t1,@t2 \
+       select_dst_port=[] select_vlan=30,40,50,60,99 output_port=@cap \
+  -- set Bridge br-core-l2 mirrors=@mon
+
+Giải thích:
+- add-br tạo bridge Layer 2 mới; không dùng may-exist để tránh sửa âm thầm bridge cũ.
+- datapath system dùng datapath kernel; standalone dùng normal switching, không có
+  controller trong thiết kế này. Không cấu hình định tuyến hoặc firewall trên Core.
+- local Port br-core-l2 thuộc VLAN 99, không gán IP hoặc gateway; không chiếm vNIC.
+- ens3–ens7 là access, gán frame endpoint vào đúng VLAN 30/40/50/60/99.
+- ens8/ens9 là trunk riêng, chỉ cho 5 VLAN; không native VLAN hoặc bond/LACP.
+- ens10 được gắn Mirror cùng giao dịch. output_port làm cổng capture chuyên dụng;
+  không dùng làm NIC quản trị hoặc đường chuyển tiếp bình thường.
+- select_src_port chọn ingress 7 port dữ liệu, select_dst_port rỗng, select_vlan
+  giới hạn 5 VLAN. Không dùng mẫu select-all cũ; nguồn/hướng đã đề xuất cụ thể.
+- Đây là giao dịch DB dự kiến; vẫn cần xác minh trạng thái datapath và Interface.error.
+  Chưa bật link, chưa đổi quản lý NIC, chưa kiểm chứng persistence, tag hoặc mirror.
+- Việc bật interface, nối link, tạo peer, cấp IP/firewall và restart cần phạm vi duyệt
+  riêng; không được suy ra quyền từ việc lưu tệp thiết kế này.

@@ -1,0 +1,219 @@
+{
+  "commands": [
+    {
+      "cmd": [
+        "free",
+        "-m"
+      ],
+      "rc": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:            7897        2205         558           6        5134        5378\nSwap:           4095           0        4095\n",
+      "stderr": ""
+    },
+    {
+      "cmd": [
+        "df",
+        "-Pk",
+        "/opt/unetlab/addons/qemu"
+      ],
+      "rc": 0,
+      "stdout": "Filesystem                        1024-blocks     Used Available Capacity Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv    59674748 13497048  43424936      24% /\n",
+      "stderr": ""
+    },
+    {
+      "cmd": [
+        "dpkg-query",
+        "-W",
+        "eve-ng",
+        "apt",
+        "gpgv",
+        "ubuntu-keyring"
+      ],
+      "rc": 0,
+      "stdout": "apt\t2.4.11\neve-ng\t6.2.0-4\ngpgv\t2.2.27-3ubuntu2.5\nubuntu-keyring\t2021.03.26\n",
+      "stderr": ""
+    },
+    {
+      "cmd": [
+        "which",
+        "apt-get",
+        "gpgv",
+        "genisoimage",
+        "openssl"
+      ],
+      "rc": 0,
+      "stdout": "/usr/bin/apt-get\n/usr/bin/gpgv\n/usr/bin/genisoimage\n/usr/bin/openssl\n",
+      "stderr": ""
+    }
+  ],
+  "protected": [
+    {
+      "path": "/opt/unetlab/html/templates/intel/linux.yml",
+      "sha256": "ce0c2a0979695727c1b84235c6ac5075f35129b0f51a8b0ef68112e285ae5803",
+      "bytes": 1910
+    },
+    {
+      "path": "/opt/unetlab/html/templates/amd/linux.yml",
+      "sha256": "b28853200c3b23101ea2609222f66ff0f8c74d60b5ea0c6a7730333024fa9902",
+      "bytes": 1889
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2",
+      "sha256": "04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94",
+      "bytes": 621284352
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso",
+      "sha256": "5f454921f7c183a0971a8694fe55c064713261fcfac418c94abc206a8f8dd1c1",
+      "bytes": 374784
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2",
+      "sha256": "8c98ce7c8cade137a0d9682220c2d50809e0a4ae28e4a6a5cbdc191cb83215ca",
+      "bytes": 196664
+    },
+    {
+      "path": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/cdrom.iso",
+      "sha256": "372cf2d7107e79211c10541f9f04d0f66774b5cd77e5af2fc194351b38f353ca",
+      "bytes": 374784
+    },
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "sha256": "31eb884959b33e20ef48e0d6a1595c16a3e61ac056ff2e2c1a48f23694869dff",
+      "bytes": 205
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "sha256": "437651e437e7897a29a3e0724ccead621e12aa3ea77b4fd9395a27f024f40ee2",
+      "bytes": 687
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "sha256": "84ef91478d3647ee61c2fb3eaab8afb0efefc7a141537480b258b8b50490e0ed",
+      "bytes": 1436
+    }
+  ],
+  "labs": [
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "attrs": {
+        "name": "M2",
+        "id": "6950cf3d-4dc4-40ac-9d27-da32823d1935",
+        "version": "1",
+        "scripttimeout": "300",
+        "lock": "0"
+      },
+      "nodes": [],
+      "networks": []
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "attrs": {
+        "name": "M2_Core_L3",
+        "id": "63b4a248-3c28-4b6b-b1c8-be41865b9452",
+        "version": "1",
+        "scripttimeout": "300",
+        "lock": "0"
+      },
+      "nodes": [
+        {
+          "id": "1",
+          "name": "R1",
+          "type": "iol",
+          "template": "iol",
+          "image": "i86bi-linux-l3-jk9s-15.0.1.bin",
+          "ethernet": "1",
+          "nvram": "1024",
+          "ram": "1024",
+          "serial": "0",
+          "console": "",
+          "delay": "0",
+          "icon": "Router-2D-Gen-White-S.svg",
+          "config": "0",
+          "left": "477",
+          "top": "84"
+        }
+      ],
+      "networks": [
+        {
+          "id": "1",
+          "type": "pnet1",
+          "name": "Link_OPNsense",
+          "left": "729",
+          "top": "93",
+          "visibility": "1",
+          "icon": "01-Cloud-Default.svg"
+        }
+      ]
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "attrs": {
+        "name": "SOC-Ubuntu-Image-Test",
+        "id": "459ae313-d464-454d-a219-b096bf8d2cfe",
+        "version": "1",
+        "scripttimeout": "600",
+        "lock": "0",
+        "author": "SOC Project"
+      },
+      "nodes": [
+        {
+          "id": "1",
+          "name": "Ubuntu-Test",
+          "type": "qemu",
+          "template": "linux",
+          "image": "linux-ubuntu-24.04-ovs",
+          "console": "vnc",
+          "cpu": "1",
+          "cpulimit": "1",
+          "ram": "2048",
+          "ethernet": "1",
+          "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab",
+          "firstmac": "00:50:00:00:01:00",
+          "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+          "qemu_version": "2.12.0",
+          "qemu_arch": "x86_64",
+          "qemu_nic": "virtio-net-pci",
+          "delay": "0",
+          "icon": "Server-2D-Linux-S.svg",
+          "config": "0",
+          "left": "512",
+          "top": "384"
+        },
+        {
+          "id": "2",
+          "name": "Ubuntu-Console-Test",
+          "type": "qemu",
+          "template": "linux",
+          "image": "linux-ubuntu-24.04-soc-console-test",
+          "console": "vnc",
+          "cpu": "1",
+          "cpulimit": "1",
+          "ram": "2048",
+          "ethernet": "1",
+          "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582",
+          "firstmac": "00:50:00:00:02:00",
+          "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+          "qemu_version": "2.12.0",
+          "qemu_arch": "x86_64",
+          "qemu_nic": "virtio-net-pci",
+          "delay": "0",
+          "icon": "Server-2D-Linux-S.svg",
+          "config": "0",
+          "left": "714",
+          "top": "384"
+        }
+      ],
+      "networks": []
+    }
+  ],
+  "target_exists": {
+    "/opt/unetlab/labs/SOC-M2-Core-L2.unl": false,
+    "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2": false,
+    "/opt/unetlab/soc-core-preparation-20261031": false
+  },
+  "windows_memory_initial": {
+    "CollectedAt": "2026-10-31T19:41:04.8802800+07:00",
+    "TotalVisibleMemoryKiB": 16473976,
+    "FreePhysicalMemoryKiB": 529800
+  }
+}

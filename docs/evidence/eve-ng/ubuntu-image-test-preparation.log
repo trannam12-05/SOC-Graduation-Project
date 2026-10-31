@@ -1,0 +1,60 @@
+SOC Ubuntu image test preparation log
+Time: 2026-10-31 14:31:42 +07:00
+EVE API: Community official API through SSH loopback tunnel; session logged out and temporary cookie removed
+Lab create: success; /SOC-Ubuntu-Image-Test.unl
+Node create: success; id=1 name=Ubuntu-Test template=linux image=linux-ubuntu-24.04-ovs cpu=1 ramMiB=2048 ethernet=1 status=0 (stopped)
+Lab topology: 0 network objects; 0 links; NIC unconnected
+Image SHA-256: 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94
+Cloud-init: separate NoCloud CD-ROM /opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/cdrom.iso; label=cidata; sha256=5f454921f7c183a0971a8694fe55c064713261fcfac418c94abc206a8f8dd1c1
+User: soc-test; SSH Ed25519 public key; password auth disabled; account password locked; root login disabled
+Firmware: template default PC/SeaBIOS; no OVMF/pflash selected
+Node booted: no
+OVS/network config: unchanged
+Passwords/private key/session cookie: not logged
+Screenshot: unavailable; no browser screenshot tool
+Diagnostics (2026-10-31 14:32:09 +07:00): Initial Windows WebRequest API session did not persist cookie and returned HTTP 401; no lab mutation was attempted through that path. Switched to EVE-documented local API cookie flow over SSH loopback tunnel, which succeeded; temporary cookie was logged out and removed. A later optional process-check shell fragment had a syntax error after the lab XML/image/seed facts had already printed; API node status remained 0 (stopped), and no start request was issued.
+Boot verification (2026-10-31 14:36:57 +07:00):
+- User approved starting only Ubuntu-Test in SOC-Ubuntu-Image-Test.
+- Windows OpenSSH BatchMode connection to root@192.168.220.143 succeeded using configured key; no password used.
+- Read-only remote check at 2026-10-31 14:36:47 UTC found QEMU wrapper/process for UUID b589f4b1-39d2-4f77-a6e9-96f6cdb004ab running for 03:08; args included -smp 1, -m 2048, -machine type=pc,accel=kvm, cdrom.iso, virtioa.qcow2. No OVMF/pflash. Filesystem /: 57G total, 42G available.
+- Console screenshots show kernel/systemd startup and root ext4 remount, followed by repeated fd0 read I/O errors. Later frame still had no login prompt. Boot completion and cloud-init are NOT verified; no guest SSH test.
+- Actual screenshots: docs/evidence/eve-ng/ubuntu-test-console.png; docs/evidence/eve-ng/ubuntu-test-console-after-boot.png.
+- No EVE/VMware/template/network/image changes beyond previously approved isolated node start; no credentials/tokens logged. Node left running.
+Console diagnosis (2026-10-31 14:43 +07:00):
+- Read-only OpenSSH inspection: exact QEMU process UUID b589f4b1-39d2-4f77-a6e9-96f6cdb004ab remains running. Args: 1 vCPU, 2048 MiB, virtioa.qcow2, cdrom.iso, machine pc/accel=kvm, VGA std, VNC :26869. No serial/nographic/monitor nor explicit floppy device/disk args; no OVMF/pflash. Runtime wrapper.txt is 0 bytes.
+- RFB console was accessed through an SSH local tunnel; framebuffer 720x400. Before Enter it showed Ubuntu 24.04.5 LTS on tty1. Sent one Enter key only; subsequent screenshot showed `ubuntu login:`. No credentials entered.
+- Guest reached tty1 login. No visible kernel panic/emergency mode in available console evidence. Earlier fd0 read errors did not prevent reaching login; likely legacy PC floppy probe since no floppy device was explicitly configured. Inference, not direct guest dmesg confirmation.
+- Checked cloud-config and metadata without printing key material: cloud-config header/user configuration, SSH authorized-keys directive, ssh_pwauth false, locked-password directive, instance-id. EVE ISO volume label confirmed `cidata`; QEMU args attach this CD-ROM. Seed attachment/datasource format is confirmed, cloud-init processing/completion is not. No guest login, serial log, cloud-init log, or guest agent was available.
+- Screenshots: docs/evidence/eve-ng/ubuntu-test-console-diagnostic-before-enter.png; docs/evidence/eve-ng/ubuntu-test-console-diagnostic-after-enter.png.
+- No network link, extra node, OVS, image/template/firmware/VMware edits. Node remains running.
+Account/cloud-init seed inspection (2026-10-31 14:48 +07:00):
+- Sanitized field inspection only: user-data has cloud-config and one configured user `soc-test`; lock_passwd=true; one ssh-ed25519 public key directive; ssh_pwauth=false; no passwd/hashed_passwd/plain_text_passwd/chpasswd fields; no default user item. Public key bytes and credentials not logged.
+- Metadata has instance-id/local-hostname. Remote seed ISO SHA256 remains 5f454921f7c183a0971a8694fe55c064713261fcfac418c94abc206a8f8dd1c1, label cidata, root files USER_DAT.YAM and META_DAT.YAM; QEMU still attaches it.
+- Console tty1 login prompt exists, but `ubuntu` is hostname text, not proof of an ubuntu user. soc-test is password-locked/no password configured, so no console password is available. SSH public-key auth is intended; NIC is unconnected.
+- Cloud-init guest completion remains unverified: no guest status/log access, QEMU wrapper log is empty. Host cloud-init logs were not treated as guest evidence. Windows YAML parser unavailable; no schema validation performed.
+- No node/seed/network/image/template changes. Proposed only: isolated SSH-key path to inspect status, or a fresh test node/overlay with new instance-id and hashed_passwd for console login. No action taken.
+- Official references: https://docs.cloud-init.io/en/latest/reference/modules.html and https://docs.cloud-init.io/en/latest/reference/datasources/nocloud.html
+SSH-isolated-network planning (2026-10-31 14:52 +07:00):
+- Read-only scan found 3 labs: SOC-Ubuntu-Image-Test (1 node, 0 nets, 0 links); M2 (5 bridge networks, 5 nodes, 0 links); M2_Core_L3 (1 pnet1 network, 1 node, 0 links). Avoid pnet1 because EVE docs map pnet1/Cloud1 to second EVE adapter/external bridge.
+- Only installed QEMU Linux image dir: linux-ubuntu-24.04-ovs. Current template attaches shared cdrom.iso; duplicate client must have distinct seed/instance-id.
+- EVE effective sshd allowagentforwarding=yes. This alone does not make host agent available inside an isolated lab bridge.
+- Seed has no network-config/static/DHCP/subnet directives and no separate network-config file. No guest IP is known; a bridge is L2 only. Cloud-init may default to DHCP but no DHCP/IP evidence exists.
+- Proposed only: new bridge object inside SOC-Ubuntu-Image-Test with Ubuntu-Test NIC0 and a separate SSH client NIC0; not connected to pnet/Cloud/NAT/VMware/real network or other lab. Estimate client 1 vCPU/1GiB; test plus client ~2 vCPU/3GiB before EVE overhead.
+- Key constraint: Linux client requires matching private-key signing. Private key must stay off EVE. No validated agent relay/host path currently exists. Alternatives to approve/design: Windows OpenSSH via isolated host-side relay or secured agent relay to client node. Two-node bridge alone does not satisfy key auth without private key on client. No current seed reused for a second node.
+- No bridge/node/link/IP/config change. Ubuntu-Test remains running. Decisions pending: client path, subnet/static-vs-DHCP, unique client seed/image/resources, NIC link and lifecycle approval, relay approval.
+- Official refs: EVE Cookbook 5.4 Bridge Network; EVE PE Cookbook 5.11 pnet mapping; cloud-init NoCloud docs.
+Console cloud-init safe plan (2026-10-31 15:00 +07:00; no implementation):
+- Existing Ubuntu-Test remains running. Read-only qemu-img info: node overlay /opt/unetlab/tmp/0/459ae313-d464-454d-a219-b096bf8d2cfe/1/virtioa.qcow2 is qcow2, virtual size 3,758,096,384 bytes, actual ~22.4MB, backing source /opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs/virtioa.qcow2. Source is independent qcow2, actual ~621MB. Base image not modified.
+- QEMU uses shared image-dir cdrom.iso; do not replace it. EVE tools qemu-img/genisoimage/openssl 3.0.2 available; mkpasswd unavailable; openssl passwd -6 supported. EVE disk free ~42GB.
+- Plan only: retain current node; make a separate EVE image variant directory (global catalogue entry, referenced only by new node in this lab), full copy of base QCOW2 + unique cdrom.iso seed (new instance-id), add Ubuntu-Console-Test 1 vCPU/2048MiB/1 unconnected NIC. Keep original image and seed unchanged. EVE automatically creates runtime overlay; copy SHA verification before start. Need separate approval because variant directory is global library.
+- Seed plan: soc-test, same Ed25519 public key (not logged), hashed_passwd SHA-512 crypt, lock_passwd false, ssh_pwauth false. Password entered interactively for hash and console; no plaintext in logs/script/repo/chat. Hash stays only in dedicated seed ISO.
+- Verification after separate start approval: console login; cloud-init status --long, datasource/instance-id, cloud-init and journal errors, id/getent passwd/passwd -S. Never read /etc/shadow. Verify sshd effective password auth remains disabled.
+- Recovery: preserve new node overlay before any wipe; EVE Wipe erases node temp snapshot and restores from base. Stop/wipe/delete or removing global variant all require separate approval. Current node and source image remain untouched.
+- No stop, wipe, overlay creation, seed edit, image copy, node add, start, network connection or config change performed.
+- Official refs as linked in ubuntu-image-test-preflight.md (EVE Community Cookbook/API/QEMU naming; cloud-init docs; OpenSSL docs).Image-reference scan: among the three existing .unl files, linux-ubuntu-24.04-ovs is referenced only by Ubuntu-Test in SOC-Ubuntu-Image-Test.
+Staging progress 2026-10-31 15:06 +07:00:
+- Pre-check found variant directory absent, 42GiB free. Source SHA before and after remained 04e8f2461a16a44e78a370284471f29616cdd9baf1893df25807b71f985b6c94.
+- Created /opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test/virtioa.qcow2 with EVE QEMU 2.12 qemu-img as QCOW2 backing overlay to original. Chain info valid, qemu-img check reports no errors; overlay virtual 3.5GiB, actual ~196KiB. Dir 755 root:root, disk 644 root:root. Original unchanged.
+- Host memory 7.7GiB total, ~5.7GiB available; only Ubuntu-Test QEMU node running (RSS ~589MiB; configured 2GiB). Will recheck before starting new node; will not stop old node now.
+- Current seed public key extraction safely found one ssh-ed25519 key; no key content printed. New ISO/node not yet created. mkpasswd unavailable; OpenSSL 3.0.2 supports passwd -6. Awaiting user to enter console password directly in PuTTY for hash generation; no secret/hash in chat or logs.
+- Only new variant directory/QCOW2 created. No seed, node, node lifecycle, network, template, VMware or other-lab changes.

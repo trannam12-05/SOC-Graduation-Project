@@ -1,0 +1,20 @@
+{
+  "configuration_verified": true,
+  "traffic_tested": false,
+  "mirror_created": false,
+  "ens10_unchanged": true,
+  "forwarding_unchanged": true,
+  "no_core_ip_or_route": true,
+  "restart_tested": false,
+  "port_count_excluding_local": 7,
+  "collector_time": "2026-11-01T01:13:53.595456+07:00",
+  "protected_host_files_unchanged": true,
+  "no_new_qemu": true,
+  "old_report_unchanged_sha256": "c7161d843fe11b5bfd380685f3140954f96716189757ee2badc90340caefc061",
+  "new_report_sha256": "6f9e741f1e7ef7524e72dfb20620f27f3b4f9c1a934080c524986c6bb1315adc",
+  "embedded_images": 20,
+  "backup_schema": "8.5.1",
+  "backup_sha256": "09afc9da76c632f14c24e4754f499b620c8c3042f235b02144198a8f50a99081",
+  "first_attempt_rolled_back_and_verified": true,
+  "docx_validation": "ZIP/XML/A4/margins/TNR and exact image bytes; GUI pagination not reviewed"
+}
