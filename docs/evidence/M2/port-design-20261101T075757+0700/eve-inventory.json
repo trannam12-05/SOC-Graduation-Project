@@ -1,0 +1,270 @@
+{
+  "labs": [
+    {
+      "path": "/opt/unetlab/labs/M2.unl",
+      "lab_id": "6950cf3d-4dc4-40ac-9d27-da32823d1935",
+      "sha256": "31eb884959b33e20ef48e0d6a1595c16a3e61ac056ff2e2c1a48f23694869dff",
+      "nodes": [],
+      "networks": []
+    },
+    {
+      "path": "/opt/unetlab/labs/M2_Core_L3.unl",
+      "lab_id": "63b4a248-3c28-4b6b-b1c8-be41865b9452",
+      "sha256": "437651e437e7897a29a3e0724ccead621e12aa3ea77b4fd9395a27f024f40ee2",
+      "nodes": [
+        {
+          "attributes": {
+            "id": "1",
+            "name": "R1",
+            "type": "iol",
+            "template": "iol",
+            "image": "i86bi-linux-l3-jk9s-15.0.1.bin",
+            "ethernet": "1",
+            "nvram": "1024",
+            "ram": "1024",
+            "serial": "0",
+            "console": "",
+            "delay": "0",
+            "icon": "Router-2D-Gen-White-S.svg",
+            "config": "0",
+            "left": "477",
+            "top": "84"
+          },
+          "interfaces": [
+            {
+              "id": "0",
+              "name": "e0/0",
+              "type": "ethernet",
+              "network_id": "1"
+            }
+          ]
+        }
+      ],
+      "networks": [
+        {
+          "id": "1",
+          "type": "pnet1",
+          "name": "Link_OPNsense",
+          "left": "729",
+          "top": "93",
+          "visibility": "1",
+          "icon": "01-Cloud-Default.svg"
+        }
+      ]
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+      "lab_id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+      "sha256": "350031fbcd79934244edfb8e1396b85a12752b7333e37fb4e1eb621bf13c1d33",
+      "nodes": [
+        {
+          "attributes": {
+            "id": "3",
+            "name": "SOC-Core-L2",
+            "type": "qemu",
+            "template": "linux",
+            "image": "linux-ubuntu-24.04-soc-core-l2",
+            "console": "vnc",
+            "cpu": "1",
+            "cpulimit": "1",
+            "ram": "2048",
+            "ethernet": "8",
+            "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+            "firstmac": "02:53:45:f2:19:00",
+            "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+            "qemu_version": "2.12.0",
+            "qemu_arch": "x86_64",
+            "qemu_nic": "virtio-net-pci",
+            "delay": "0",
+            "icon": "Server-2D-Linux-S.svg",
+            "config": "0",
+            "left": "537",
+            "top": "204"
+          },
+          "interfaces": []
+        }
+      ],
+      "networks": []
+    },
+    {
+      "path": "/opt/unetlab/labs/SOC-Ubuntu-Image-Test.unl",
+      "lab_id": "459ae313-d464-454d-a219-b096bf8d2cfe",
+      "sha256": "84ef91478d3647ee61c2fb3eaab8afb0efefc7a141537480b258b8b50490e0ed",
+      "nodes": [
+        {
+          "attributes": {
+            "id": "1",
+            "name": "Ubuntu-Test",
+            "type": "qemu",
+            "template": "linux",
+            "image": "linux-ubuntu-24.04-ovs",
+            "console": "vnc",
+            "cpu": "1",
+            "cpulimit": "1",
+            "ram": "2048",
+            "ethernet": "1",
+            "uuid": "b589f4b1-39d2-4f77-a6e9-96f6cdb004ab",
+            "firstmac": "00:50:00:00:01:00",
+            "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+            "qemu_version": "2.12.0",
+            "qemu_arch": "x86_64",
+            "qemu_nic": "virtio-net-pci",
+            "delay": "0",
+            "icon": "Server-2D-Linux-S.svg",
+            "config": "0",
+            "left": "512",
+            "top": "384"
+          },
+          "interfaces": []
+        },
+        {
+          "attributes": {
+            "id": "2",
+            "name": "Ubuntu-Console-Test",
+            "type": "qemu",
+            "template": "linux",
+            "image": "linux-ubuntu-24.04-soc-console-test",
+            "console": "vnc",
+            "cpu": "1",
+            "cpulimit": "1",
+            "ram": "2048",
+            "ethernet": "1",
+            "uuid": "09ac16f0-1614-48c5-8d01-ee1ab1b29582",
+            "firstmac": "00:50:00:00:02:00",
+            "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+            "qemu_version": "2.12.0",
+            "qemu_arch": "x86_64",
+            "qemu_nic": "virtio-net-pci",
+            "delay": "0",
+            "icon": "Server-2D-Linux-S.svg",
+            "config": "0",
+            "left": "714",
+            "top": "384"
+          },
+          "interfaces": []
+        }
+      ],
+      "networks": []
+    }
+  ],
+  "qemu_processes": [],
+  "qemu_image_inventory": [
+    {
+      "directory": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-ovs",
+      "files": [
+        {
+          "name": "virtioa.qcow2",
+          "bytes": 621284352
+        },
+        {
+          "name": "cdrom.iso",
+          "bytes": 374784
+        }
+      ]
+    },
+    {
+      "directory": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-console-test",
+      "files": [
+        {
+          "name": "virtioa.qcow2",
+          "bytes": 196664
+        },
+        {
+          "name": "cdrom.iso",
+          "bytes": 374784
+        }
+      ]
+    },
+    {
+      "directory": "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2",
+      "files": [
+        {
+          "name": "virtioa.qcow2",
+          "bytes": 621346944
+        },
+        {
+          "name": "cdrom.iso",
+          "bytes": 48996352
+        }
+      ]
+    }
+  ],
+  "host_links": {
+    "args": [
+      "ip",
+      "-j",
+      "link",
+      "show"
+    ],
+    "returncode": 0,
+    "stdout": "[{\"ifindex\":1,\"ifname\":\"lo\",\"flags\":[\"LOOPBACK\",\"UP\",\"LOWER_UP\"],\"mtu\":65536,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"loopback\",\"address\":\"00:00:00:00:00:00\",\"broadcast\":\"00:00:00:00:00:00\"},{\"ifindex\":2,\"ifname\":\"eth0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"pnet0\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"00:0c:29:67:da:ad\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp2s1\",\"ens33\"]},{\"ifindex\":3,\"ifname\":\"pnet0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"00:0c:29:67:da:ad\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":4,\"ifname\":\"pnet1\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"36:54:69:ec:49:44\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":5,\"ifname\":\"pnet2\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ca:48:b0:8a:51:0a\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":6,\"ifname\":\"pnet3\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"7a:a5:7a:ef:0b:58\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":7,\"ifname\":\"pnet4\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"6a:20:a1:66:96:ba\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":8,\"ifname\":\"pnet5\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"c6:e1:01:82:ec:c0\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":9,\"ifname\":\"pnet6\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ae:39:58:4f:72:b8\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":10,\"ifname\":\"pnet7\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"a6:67:6e:0d:f2:b1\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":11,\"ifname\":\"pnet8\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"fe:a2:2f:fb:03:23\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":12,\"ifname\":\"pnet9\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"0a:f0:bf:f4:f6:33\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"}]\n",
+    "stderr": ""
+  },
+  "memory": {
+    "args": [
+      "free",
+      "-m"
+    ],
+    "returncode": 0,
+    "stdout": "               total        used        free      shared  buff/cache   available\nMem:            7897        1113        6248           6         535        6531\nSwap:           4095           0        4095\n",
+    "stderr": ""
+  },
+  "meminfo": "MemTotal:        8087292 kB\nMemFree:         6398064 kB\nMemAvailable:    6688524 kB\nBuffers:           46144 kB\nCached:           458344 kB\nSwapCached:            0 kB\nActive:          1169444 kB\nInactive:         236108 kB\nActive(anon):     916464 kB\nInactive(anon):        0 kB\nActive(file):     252980 kB\nInactive(file):   236108 kB\nUnevictable:       27792 kB\nMlocked:           27792 kB\nSwapTotal:       4194300 kB\nSwapFree:        4194300 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               304 kB\nWriteback:             0 kB\nAnonPages:        928732 kB\nMapped:           162616 kB\nShmem:              6316 kB\nKReclaimable:      44048 kB\nSlab:             123116 kB\nSReclaimable:      44048 kB\nSUnreclaim:        79068 kB\nKernelStack:        8000 kB\nPageTables:         8088 kB\nSecPageTables:         0 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8237944 kB\nCommitted_AS:    1910588 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       30248 kB\nVmallocChunk:          0 kB\nPercpu:            74240 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:         0 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      163648 kB\nDirectMap2M:     4030464 kB\nDirectMap1G:     6291456 kB\n",
+  "cpu": {
+    "args": [
+      "lscpu"
+    ],
+    "returncode": 0,
+    "stdout": "Architecture:                       x86_64\nCPU op-mode(s):                     32-bit, 64-bit\nAddress sizes:                      45 bits physical, 48 bits virtual\nByte Order:                         Little Endian\nCPU(s):                             4\nOn-line CPU(s) list:                0-3\nVendor ID:                          GenuineIntel\nModel name:                         13th Gen Intel(R) Core(TM) i5-13420H\nCPU family:                         6\nModel:                              186\nThread(s) per core:                 1\nCore(s) per socket:                 2\nSocket(s):                          2\nStepping:                           2\nBogoMIPS:                           5222.39\nFlags:                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nopl xtopology tsc_reliable nonstop_tsc cpuid tsc_known_freq pni pclmulqdq vmx ssse3 fma cx16 sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf_lm abm 3dnowprefetch ssbd ibrs ibpb stibp ibrs_enhanced tpr_shadow ept vpid ept_ad fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sha_ni xsaveopt xsavec xgetbv1 xsaves user_shstk avx_vnni arat vnmi umip pku ospke gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear serialize flush_l1d arch_capabilities\nVirtualization:                     VT-x\nHypervisor vendor:                  VMware\nVirtualization type:                full\nL1d cache:                          192 KiB (4 instances)\nL1i cache:                          128 KiB (4 instances)\nL2 cache:                           5 MiB (4 instances)\nL3 cache:                           24 MiB (2 instances)\nNUMA node(s):                       1\nNUMA node0 CPU(s):                  0-3\nVulnerability Gather data sampling: Not affected\nVulnerability Itlb multihit:        KVM: Mitigation: VMX disabled\nVulnerability L1tf:                 Not affected\nVulnerability Mds:                  Not affected\nVulnerability Meltdown:             Not affected\nVulnerability Mmio stale data:      Unknown: No mitigations\nVulnerability Retbleed:             Not affected\nVulnerability Spec rstack overflow: Not affected\nVulnerability Spec store bypass:    Vulnerable\nVulnerability Spectre v1:           Mitigation; usercopy/swapgs barriers and __user pointer sanitization\nVulnerability Spectre v2:           Vulnerable, IBPB: disabled, STIBP: disabled, PBRSB-eIBRS: Vulnerable\nVulnerability Srbds:                Not affected\nVulnerability Tsx async abort:      Not affected\n",
+    "stderr": ""
+  },
+  "load": "0.27 0.50 0.42 2/372 3918\n",
+  "vmstat": {
+    "args": [
+      "vmstat",
+      "1",
+      "3"
+    ],
+    "returncode": 0,
+    "stdout": "procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st\n 1  0      0 6397824  46144 502392    0    0   207    71  172  220  4  6 89  0  0\n 0  0      0 6397824  46144 502688    0    0     0     0  367  559  0  1 99  0  0\n 0  0      0 6397824  46144 502688    0    0     0     0  346  591  0  0 100  0  0\n",
+    "stderr": ""
+  },
+  "disk": {
+    "args": [
+      "df",
+      "-h",
+      "/",
+      "/opt/unetlab"
+    ],
+    "returncode": 0,
+    "stdout": "Filesystem                         Size  Used Avail Use% Mounted on\n/dev/mapper/ubuntu--vg-ubuntu--lv   57G   15G   40G  28% /\n/dev/mapper/ubuntu--vg-ubuntu--lv   57G   15G   40G  28% /\n",
+    "stderr": ""
+  },
+  "clock_untrusted": {
+    "args": [
+      "timedatectl",
+      "show",
+      "-p",
+      "Timezone",
+      "-p",
+      "NTPSynchronized"
+    ],
+    "returncode": 0,
+    "stdout": "Timezone=Etc/UTC\nNTPSynchronized=no\n",
+    "stderr": ""
+  },
+  "vpcs_binary": {
+    "args": [
+      "stat",
+      "-c",
+      "%a %U %G %n",
+      "/opt/vpcsu/bin/vpcs"
+    ],
+    "returncode": 0,
+    "stdout": "777 root root /opt/vpcsu/bin/vpcs\n",
+    "stderr": ""
+  },
+  "collector_time_start": "2026-11-01T07:57:57.297205+07:00",
+  "collector_time_end": "2026-11-01T07:58:00.299557+07:00",
+  "scope": "Read-only host inventory; no guest commands, lifecycle, network, image or configuration changes"
+}

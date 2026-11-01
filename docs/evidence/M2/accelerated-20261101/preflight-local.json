@@ -1,0 +1,9 @@
+﻿{
+    "CollectedAt":  "2026-11-01T07:57:52.8855682+07:00",
+    "FreePhysicalMemoryKiB":  382012,
+    "TotalVisibleMemoryKiB":  16473976,
+    "LogicalProcessors":  12,
+    "SshAgentStatus":  "Running",
+    "SshResult":  "Permission denied (publickey,password)",
+    "ChangesToWindows":  false
+}

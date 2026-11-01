@@ -1,6 +1,23 @@
 # Tiến độ dự án SOC
 
-Checkpoint ngày **01/11/2026, UTC+07:00 (Asia/Saigon)**. Dự kiến tiếp tục ngày 02/11/2026. Đọc `AGENTS.md` trước mọi thao tác; các giới hạn quyền trong phiên trước vẫn có hiệu lực.
+Checkpoint ngày **01/11/2026, UTC+07:00 (Asia/Saigon)**; hạn nộp **05/11/2026**. Đọc `AGENTS.md` trước mọi thao tác.
+
+## 0. Cập nhật ưu tiên: chế độ nhẹ trong khi người dùng học Labtainer
+
+**Giữ tất cả VM SOC tắt. Chỉ tiếp tục triển khai VM sau khi người dùng xác nhận đã học xong Labtainer và tài nguyên sẵn sàng.** Không reboot, không tải image OPNsense, không đổi EVE/VMware/Windows/Labtainer, không chạy kiểm thử frame hoặc mirror trong thời gian này. Phê duyệt tăng tốc trước đó không thay thế giới hạn mới.
+
+- SSH đã được người dùng khôi phục bằng ssh-agent; Codex kết nối lại thành công. Không đổi sudoers hoặc yêu cầu bí mật.
+- Kiểm kê 07:57–07:58: không có QEMU chạy; lab Core vẫn một node/không network/link. Windows khoảng 0,5 GiB available, có mẫu tiếp theo dưới 0,1 GiB; EVE available 6531/7897 MiB. Đây là số đo lịch sử, phải đo lại sau thông báo sẵn sàng. Không coi dịch vụ OVS đang active khi Core tắt.
+- Trước chuyển sang chế độ nhẹ, đã backup overlay khi Core tắt: `/root/m2-stopped-backup-20261101T075852Z/core-overlay.qcow2`, 712310784 byte; ba hash nguồn trước/sau và bản sao khớp `7a31bfb3a08d2c64bd8397b00290e419c277fb2a2359593df7a307a2f991df17`. Không ghi QCOW2 nguồn; raw backup giữ trên EVE, chưa thử restore. [Metadata](evidence/M2/accelerated-20261101/stopped-backup.json).
+- [Báo cáo M2 hợp nhất mới](M2/M2-report-consolidated-review-20261101.docx), [bản Markdown](M2/M2-report-consolidated-review-20261101.md): 12 ảnh thật nhúng nguyên byte, bảng trạng thái và giải thích kỹ thuật; các báo cáo cũ giữ nguyên. Chưa kiểm tra phân trang qua GUI Word.
+- [Kịch bản kiểm thử và rollback](M2/M2-test-and-rollback-PREPARED-20261101.md), [bảng CSV](M2/M2-test-cases-PREPARED-20261101.csv): 31 case frame trước mirror/32 khi mirror, tất cả chưa chạy; bảng L00–L13 bao gồm tài nguyên, baseline, capture, persistence và rollback.
+- Script mới: `automation/m2_tap_frame_test.py` (phát/thu frame trên TAP riêng, không thêm VM hoặc host bridge), `automation/m2_mirror_guest_prepared.py` (backup/mirror/rollback trong guest), mẫu `configs/M2/soc-core-l2-noip.service` và `.sh`. **Chỉ chuẩn bị, chưa triển khai/thử runtime.** Đã kiểm tra cú pháp Python cục bộ; không coi là PASS chuyển mạch.
+- [Thiết kế M3 OPNsense HA](M3/M3-OPNsense-HA-PROPOSED-20261101.md): Primary/Secondary, CARP VIP, pfsync/XMLRPC, VLAN gateway, chính sách firewall và kế hoạch tuần tự. Chưa tải image/chạy OPNsense. Core + hai firewall tối thiểu 8192 MiB vượt tổng EVE 7897 MiB trước overhead; một firewall là phương án demo tối thiểu sau khi đủ RAM, không nghiệm thu HA bằng hai máy chạy lần lượt.
+- [Danh mục ảnh/log bản hợp nhất](evidence/M2/light-documentation-20261101/evidence-index.csv), [kiểm tra DOCX](evidence/M2/light-documentation-20261101/validation.json). Không có ảnh console mới hoặc PCAP thử nghiệm trong đợt nhẹ.
+
+Sau thông báo tài nguyên sẵn sàng: đo lại RAM/commit Windows và RAM/swap EVE; bật duy nhất Core nếu an toàn; đọc baseline sau boot trước sửa; tạo snapshot OVSDB mới có bridge hiện hữu; thử frame không mirror, cấu hình mirror ens10 rồi thử/capture; xử lý persistence có rollback và thử lại sau reboot. Không chạy lại prepare/apply tạo bridge từ baseline rỗng. Chốt địa chỉ/WAN/MAC firewall trước M3. Mọi nghiệm thu lưu lượng, mirror, persistence và HA vẫn chờ bằng chứng thực tế.
+
+Các mục 1–6 dưới đây giữ chi tiết checkpoint triển khai trước đó; phát biểu active/runtime áp dụng tại mốc thu cũ, phải đọc cùng cập nhật mục 0.
 
 ## 1. Trạng thái đã triển khai và kiểm chứng
 
@@ -52,13 +69,13 @@ Tên cổng GUI EVE và MAC/cổng peer chưa được xác minh. Không suy s�
 
 Phiên tiếp theo bắt đầu bằng kiểm tra chỉ đọc: đúng node/UUID, MAC, `ovs-vsctl show`, Port/Interface/Mirror, địa chỉ/route/forwarding, trạng thái dịch vụ, kết nối EVE và RAM Windows/EVE. Không chạy lại cài OVS, seed/cloud-init hoặc tạo bridge đã có. Script `m2_isolated_bridge_guest.py prepare/apply` dành cho baseline rỗng, **không chạy lại** trên cấu hình hiện hành.
 
-Sau đó chuẩn bị và trình phạm vi riêng cho các bước chưa được duyệt:
+Các bước dưới đây là kế hoạch của checkpoint cũ. Đợt tăng tốc đã phê duyệt kiểm thử/mirror/persistence trong M2 cô lập có rollback, nhưng **hiện tạm giữ theo yêu cầu Labtainer ở mục 0**. Sau xác nhận tài nguyên sẵn sàng, tiếp tục thao tác an toàn đã được giao; chỉ xin quyền mới cho phần vượt phạm vi hoặc ảnh hưởng host:
 
 1. Chọn endpoint VLAN-aware/capture, image hợp lệ, MAC/cổng hai đầu, số NIC và ngân sách RAM; xác minh node/peer thực tế.
 2. Chốt mapping GUI EVE/network_id và kế hoạch nối từng link. Hai trunk firewall phải là hai segment riêng, không LACP xuyên cặp HA; WAN/SYNC thiết kế riêng.
 3. Khi được duyệt, thử T02–T09 với hai peer độc lập, capture nguồn/đích, FDB/counter và đối chứng dương. Endpoint chung EVE bridge có thể đi tắt ngoài OVS nên không đủ để chứng minh switching/mirror.
-4. Duyệt SPAN riêng trước khi đưa ens10 vào OVS/Mirror và chuẩn bị Suricata capture + NIC quản trị riêng.
-5. Duyệt đợt restart/persistence riêng; chưa dừng hoặc restart node trong checkpoint này.
+4. Kiểm thử SPAN ens10 theo thiết kế trong M2 sau khi sẵn sàng, có snapshot mới; không cần chạy Suricata đầy đủ. Triển khai sensor thật và mạng quản trị riêng cần chốt tài nguyên/topology.
+5. Kiểm tra boot/persistence có backup và rollback khi tài nguyên sẵn sàng; chưa thực hiện trong checkpoint này.
 
 Ở lần kiểm kê 00:14 ngày 01/11/2026, Windows còn khoảng 2,22 GiB và EVE khoảng 5,47 GiB available, chỉ Core đang chạy; không thấy image/node OPNsense/Suricata trong kho EVE đã khảo sát. Đây là số đo lịch sử, phải đo lại trước khi bật VM. Chưa có ngân sách chạy đồng thời cặp firewall, sensor và endpoint.
 

@@ -1,0 +1,24 @@
+{
+  "collector_time": "2026-11-01T08:06:41.466531+07:00",
+  "report": "docs\\M2\\M2-report-consolidated-review-20261101.docx",
+  "sha256": "35ae9ae00bb86d0786e2b378c3801098ceeaca6ad426f4030570cfb902b79ef2",
+  "embedded_images": 12,
+  "exact_image_bytes": true,
+  "previous_reports_unchanged": {
+    "docs\\M2\\M2-cloud-init-validation-20261031.docx": "2c38c6f8085a1202a3e0882d516e5b3c4015f7188b63a5c703b9e92daa7719ff",
+    "docs\\M2\\M2-report-isolated-bridge-configured-20261101.docx": "6f9e741f1e7ef7524e72dfb20620f27f3b4f9c1a934080c524986c6bb1315adc",
+    "docs\\M2\\M2-report-ovs-offline-installed-20261101.docx": "e56082e52f591384aa03e40a599fccb9ee80c087000dba0138a810b7a54c467b",
+    "docs\\M2\\M2-report-port-mapping-and-ovs-design-20261101.docx": "c7161d843fe11b5bfd380685f3140954f96716189757ee2badc90340caefc061",
+    "docs\\M2\\M2-report-stage1-core-preparation-20261031-final.docx": "de2c6561b48f404603d998a5428a0f5b501af8c005c7892584347dcc4ba840a9",
+    "docs\\M2\\M2-report-stage1-core-preparation-20261031.docx": "5b025f3a6fd6131cc7a08d581f4132ea148a4a42a113a4a3cc0f124c5937dc14",
+    "docs\\M2\\M2-report-stage2-after-cleanup-20261031.docx": "ef1b8a0e9642af1a9b263ba847e83b6bd2c719f9e5a484ad148f12e3d251bcdc",
+    "docs\\M2\\M2-report-stage2-preflight-20261031T2015+0700.docx": "84045fd7d06f8bb6cb0d4e1b7c12efe40ecb5e3ade9759802ff727258a48bc3f"
+  },
+  "validation": "ZIP/XML/A4/TNR 13pt body/12pt tables, required margins; GUI pagination not inspected",
+  "frame_tests_executed": false,
+  "new_mirror_applied": false,
+  "persistence_tested": false,
+  "vm_started": false,
+  "new_evidence_images_created": false,
+  "mode": "Light documentation only after user instruction"
+}

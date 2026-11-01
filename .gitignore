@@ -50,12 +50,17 @@ id_ed25519*
 *.ovsdb
 ovsdb.before
 ovsdb.backup-validated
+ovsdb.validated
 conf.db
 *.db
 *.sqlite
 *.sqlite3
 *.pcap
 *.pcapng
+# Bản xuất cấu hình firewall đầy đủ có thể chứa thông tin xác thực.
+config-OPNsense*.xml
+/opnsense/private/
+/docs/evidence/**/private-backups/
 
 # Staging, cache, file tạm và bản sao dự phòng trùng nội dung.
 /staging/

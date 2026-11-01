@@ -41,3 +41,8 @@ HEAD phải khớp SHA của refs/heads/main. Repository cần tiếp tục là 
 Trên máy khác, đăng nhập GitHub bằng cơ chế riêng của người quản trị, clone repository private rồi đọc AGENTS.md và PROGRESS.md. Không nhập secret vào file dự án. Không tự suy ra quyền bật VM, nối EVE link, sửa image/seed, firewall/NAT hoặc chạy lại apply từ việc clone/checkpoint GitHub.
 
 Nhật ký rà soát đầy đủ, manifest toàn bộ tệp và kết quả OCR thô nằm tại `staging/github-backup/` trên máy này, không đưa lên Git để tránh xuất bản nội dung rà soát thô có thể nhạy cảm. Báo cáo này chỉ chứa kết luận và phương pháp đã thực hiện.
+# Cập nhật chế độ nhẹ ngày 01/11/2026
+
+Đợt mới chỉ bổ sung báo cáo M2 hợp nhất, 12 ảnh cũ được nhúng lại nguyên byte, bảng ca kiểm thử chưa chạy, script chuẩn bị, thiết kế M3 và log tiền kiểm tra/metadata backup an toàn. Không có ảnh mới, frame test, mirror hoặc persistence đã nghiệm thu. Chỉ tiếp tục VM sau khi người dùng xác nhận tài nguyên sẵn sàng sau Labtainer.
+
+Không chạy lại OCR trong lúc thiếu RAM: dùng kết quả OCR checkpoint trước cho các ảnh có SHA-256 giống hệt; kiểm tra bao phủ hash trong audit. Vẫn rà văn bản/DOCX và Git blobs trước commit, kiểm tra repository PRIVATE qua API có xác thực và không đưa credential vào URL/log. .gitignore bổ sung ovsdb.validated và bản xuất cấu hình OPNsense nhạy cảm; raw backup vẫn chỉ nằm trên EVE.

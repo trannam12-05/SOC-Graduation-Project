@@ -1,0 +1,13 @@
+# PREPARED ONLY: not installed/enabled. Review runbook before deployment.
+[Unit]
+Description=SOC Core Layer 2 internal interface without host IP
+Requires=openvswitch-switch.service
+After=openvswitch-switch.service ovs-vswitchd.service
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/soc-core-l2-noip.sh
+RemainAfterExit=yes
+
+[Install]
+WantedBy=multi-user.target
