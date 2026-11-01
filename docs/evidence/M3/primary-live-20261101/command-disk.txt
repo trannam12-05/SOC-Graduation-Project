@@ -1,0 +1,1 @@
+gpart show vtbd0; diskinfo vtbd0; mount | head -5

@@ -15,9 +15,9 @@
 
 | Netdev | TAP | MAC | Tên guest | Vai trò |
 |---|---|---|---|---|
-| net0 | vunl0_1_0 | 50:00:00:01:00:00 | Chờ đối chiếu ifconfig | Chưa chốt |
-| net1 | vunl0_1_1 | 50:00:00:01:00:01 | Chờ đối chiếu ifconfig | Chưa chốt |
-| net2 | vunl0_1_2 | 50:00:00:01:00:02 | Chờ đối chiếu ifconfig | Chưa chốt |
+| net0 | vunl0_1_0 | 50:00:00:01:00:00 | vtnet0 — đã đối chiếu | LAN hiện tại; dự kiến LAN trunk |
+| net1 | vunl0_1_1 | 50:00:00:01:00:01 | vtnet1 — đã đối chiếu | WAN hiện tại; chưa nối upstream |
+| net2 | vunl0_1_2 | 50:00:00:01:00:02 | vtnet2 — đã đối chiếu | Chưa gán; dự kiến SYNC |
 
 ## 3.3. Bước tiếp tục
 
@@ -36,3 +36,31 @@ Hình 3.1: `../evidence/M3/primary-live-20261101/primary-initial-20261101T125710
 Mục đích: xác định trạng thái khởi động trước khi cài. Nội dung: màn hình Live OPNsense 26.7, root filesystem ISO, tên LAN/WAN và login. Kết quả: chưa chứng minh cài đặt vào đĩa. Ý nghĩa: tránh cấu hình Live rồi nhầm là cấu hình persistent. Ảnh framebuffer thật, không chỉnh sửa; metadata cùng tên JSON ghi UUID, cấu hình QEMU, thời điểm và SHA-256.
 
 Các ca cài ổ, boot ổ, gateway, routing, firewall, NAT, HA và IDS: **NOT_RUN trong phiên này**. M2 đã có 95/95 ca frame thật và persistence trong báo cáo riêng; không quy đổi thành PASS của M3.
+
+## 3.5. Kiểm tra shell thực tế 12:59–13:00 UTC+07:00
+
+Người dùng đăng nhập root, chọn shell. Chỉ gửi lệnh chẩn đoán cố định bằng `automation/m3_inspect_guest_console.py`; không gửi thông tin xác thực. `diskinfo vtbd0` trả 17179869184 byte (16 GiB), sector 512 byte, 33554432 sector. `gpart show vtbd0` trả `No such geom: vtbd0`: không có bảng phân vùng được GEOM nhận diện, **không phải chứng minh toàn bộ ổ không chứa dữ liệu**. Mount `/` vẫn là ISO read-only. Chưa chạy installer hoặc ghi ổ.
+
+Ảnh `primary-disk-20261101T125957+0700.png` là Hình 3.2: xác minh đích và root filesystem để tránh chọn nhầm. Ảnh `primary-nics-20261101T130009+0700.png` và `primary-nic-summary-20261101T130025+0700.png` cùng xác nhận mapping trên; ảnh đầu thiếu dòng tiêu đề vtnet0 do màn hình hữu hạn nên dùng ảnh thứ hai bổ sung, không sửa/cắt ảnh gốc. Đây là Hình 3.3–3.4 về định danh cổng trước cấu hình VLAN. Link `active` của vNIC không chứng minh đã có peer; lab vẫn không nối link.
+
+RAM Windows đo lại sau thông báo giải phóng là 0,49 GiB available, commit available 2,93 GiB. Installer bị tạm chặn do dưới dự phòng 1 GiB đã thông báo; yêu cầu giải phóng thêm RAM, không thay đổi Windows/VMware hoặc tự dừng VM. Không bật Core. Kết quả đo kế tiếp lưu `resource-before-install.json`; đây là mẫu tại thời điểm thu, không thay các số đo lịch sử.
+
+Checkpoint M2 và trạng thái Live ban đầu đã push lên GitHub PRIVATE tại commit `3eae637fbfeba2d9b56647364292938091a50cf6`. Các kiểm tra shell bổ sung được lưu sau checkpoint đó.
+
+## 3.6. Sao lưu an toàn và trạng thái mới nhất 13:03 UTC+07:00
+
+Mẫu đo 13:01:16 lên 1,27 GiB RAM available/3,42 GiB commit available. Đã gửi `shutdown -p now` trong shell Primary để tạo backup nhất quán trước installer. Lần guard đầu phát hiện QEMU còn đang shutdown và chặn sao lưu; không đọc/ghi đĩa bằng qemu-img khi còn chạy. Lần sau xác nhận không còn QEMU rồi mới sao chép ổ runtime và lab XML.
+
+**Primary hiện TẮT, Core vẫn TẮT; chưa chạy installer.** Backup `/root/m3-primary-preinstall-20261101T1302/virtioa.qcow2`, 197120 byte; SHA-256 `c09a6c5e5ac5090ab3bcefaccd0a97b6fc318f2f50cc1893aaaa1edac8f2ae83` khớp nguồn trước/sau và bản sao. Metadata ở `stopped-backup.json`; backing image gốc giữ nguyên. Ảnh `primary-graceful-poweroff-20261101T130147+0700.png` ghi shutdown mềm thực tế, không phải Reset.
+
+Rollback dự kiến: chỉ khi Primary tắt và đã xác minh không còn tiến trình giữ ổ, bảo toàn runtime lỗi vào tên mới rồi phục hồi overlay đã sao lưu về đúng đường dẫn nguồn trong metadata; không thay image gốc. Chưa thử restore, không gọi rollback là PASS.
+
+Sau tắt VM Windows vẫn chỉ 1,13 GiB available/3,41 GiB commit available. Chưa bật lại VM 3 GiB; yêu cầu dự phòng khoảng 4 GiB RAM available để khởi động lại an toàn. Mức 1 GiB trước đó dành cho VM đã chạy, không phải ngưỡng khởi động VM mới. Bước tiếp tục: đo lại tài nguyên, start đúng node ID 1, vào installer và xác minh đúng vtbd0; giữ mọi node khác tắt.
+
+### 3.6.1. Quyết định tài nguyên được điều chỉnh và khởi động lại
+
+Ngưỡng 4 GiB Windows nêu trên được đánh giá lại là quá bảo thủ cho QEMU lồng trong EVE đã được cấp 8 GiB; đây không phải tạo thêm VM Windows 3 GiB. Số đo khi tắt Primary cho thấy RAM Windows gần như không đổi, trong khi EVE available tăng. Chỉ bật lại Primary sau guard: Windows available ≥1 GiB, commit available ≥2 GiB; EVE available ≥4 GiB, swap chưa dùng và không có QEMU khác. Đây là ngưỡng vận hành tạm của phiên, không bảo đảm mọi tải tương lai an toàn.
+
+**Trạng thái mới nhất: Primary đã bật lại, Core tắt; chưa chạy installer.** Receipt `start-primary-after-backup.json` lưu Windows available 1,128 GiB, commit available 3,421 GiB; EVE available 6354 MiB trước start. Ảnh `primary-restarted-20261101T130415+0700.png` là màn hình boot thực tế, không chứng minh cài đặt. Chờ người dùng đăng nhập `installer` trực tiếp, dừng tại Keymap. Đã chuẩn bị `m3_installer_keys.py`, chỉ gửi phím điều hướng sau khi xem từng màn hình; chưa chạy script này, không chứa thông tin xác thực.
+
+Mẫu sau start có Windows available 0,86 GiB, commit available 3,33 GiB; EVE available 6175 MiB, swap 0. Tiếp tục theo dõi, không bật Core hoặc tăng tải khi RAM dưới ngưỡng. Việc bật Primary không tự đồng nghĩa đã đủ tài nguyên để bật thêm VM hay nghiệm thu gateway.

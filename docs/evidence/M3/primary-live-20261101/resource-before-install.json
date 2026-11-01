@@ -1,0 +1,7 @@
+﻿{
+    "scope":  "Windows read-only resource check; Core remains stopped",
+    "time":  "2026-11-01T13:01:16.8116469+07:00",
+    "commit_available_GiB":  3.42,
+    "available_GiB":  1.27,
+    "installer_started":  false
+}

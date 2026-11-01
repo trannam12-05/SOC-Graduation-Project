@@ -2,9 +2,15 @@
 
 ## Mốc tiếp quản khẩn cấp — 01/11/2026, 12:57 UTC+07:00
 
+**Cập nhật sau sao lưu:** đã bật lại duy nhất Primary qua wrapper EVE, Core giữ tắt. Điều chỉnh ngưỡng 4 GiB Windows trước đó vì quá bảo thủ cho QEMU lồng trong EVE đã cấp 8 GiB: guard thực thi Windows available ≥1 GiB, commit available ≥2 GiB; EVE available ≥4 GiB, swap chưa dùng, không QEMU khác. Số đo trước start: Windows 1,128 GiB/commit 3,421 GiB, EVE 6354 MiB. Receipt `evidence/M3/primary-live-20261101/start-primary-after-backup.json`. Không đổi RAM VMware; vẫn chưa chạy installer. Đây là trạng thái mới hơn dòng cả hai VM tắt phía dưới.
+
+**Mới nhất 13:03: cả Primary và Core đều TẮT.** Sau khi RAM tạm lên 1,27 GiB, đã shutdown mềm Primary để sao lưu ổ runtime trước installer; guard xác minh QEMU dừng, backup overlay và lab XML thành công, checksum khớp. Backup `/root/m3-primary-preinstall-20261101T1302/`; chưa cài, chưa phân vùng hoặc đổi mạng. Sau dừng Windows vẫn chỉ 1,13 GiB available/3,41 GiB commit available, chưa bật lại VM 3 GiB. Chờ khoảng 4 GiB available rồi start riêng Primary. Các dòng dưới là diễn biến trước mốc mới nhất này.
+
 Người dùng giao ưu tiên OPNsense Primary với thời gian còn 9 giờ 30 phút. **Trạng thái runtime mới thay dòng Core đang chạy ở checkpoint M2 phía dưới:** Core hiện tắt; duy nhất Primary ID 1 đang chạy Live ISO OPNsense 26.7, chưa xác minh cài ổ. SSH đã khôi phục; EVE available 5114 MiB, swap 0. Windows chỉ khoảng 0,40 GiB available, chưa đủ dự phòng tăng tải/bật Core. Không có link EVE. Đang chờ shell Live đã xác thực để đọc partition và MAC trước installer, đồng thời người dùng giải phóng RAM. [Nhật ký và ảnh thật M3](M3/M3-primary-live-status-20261101.md).
 
 M2 vẫn giữ **95/95 ca frame thật PASS**, mirror và persistence đã có bằng chứng; không chạy lại hoặc phủ nhận kết quả cũ do mô tả đầu vào chưa cập nhật. Chưa có nghiệm thu gateway/firewall/HA/IDS. Bộ công cụ `capture_m3_primary_readonly.py` đã chụp đúng Primary; không gửi phím hoặc thay VM.
+
+Cập nhật 13:00: shell Primary đã xác thực; kiểm tra nhẹ xác nhận vtbd0 16 GiB, chưa có bảng phân vùng được gpart nhận diện, root vẫn Live ISO. MAC net0/net1/net2 lần lượt khớp vtnet0/vtnet1/vtnet2; hiện LAN=vtnet0, WAN=vtnet1, vtnet2 chưa gán. Chưa chạy installer vì Windows vẫn chỉ 0,49 GiB RAM available sau lần giải phóng, dưới dự phòng 1 GiB; chờ thêm RAM. M2 và ảnh Live ban đầu đã push PRIVATE commit `3eae637fbfeba2d9b56647364292938091a50cf6`, remote/local khớp. Ảnh/lệnh kiểm tra shell bổ sung nằm trong thư mục minh chứng M3, chưa phải PASS cài đặt.
 
 Checkpoint ngày **01/11/2026, UTC+07:00 (Asia/Saigon)**; hạn nộp **05/11/2026**. Đọc `AGENTS.md` trước mọi thao tác.
 
