@@ -1,0 +1,19 @@
+{
+  "status": "PROPOSED_NOT_CONFIRMED_NOT_APPLIED",
+  "source": "network/ip-plan/vlan-ip-plan.md, examples from M1",
+  "confirmed": false,
+  "vlans": [
+    {"vid": 30, "zone": "Data Center", "subnet": "192.168.30.0/24", "primary": "192.168.30.2", "secondary": "192.168.30.3", "vip": "192.168.30.1", "dhcp_proposed": null},
+    {"vid": 40, "zone": "Employee", "subnet": "192.168.40.0/24", "primary": "192.168.40.2", "secondary": "192.168.40.3", "vip": "192.168.40.1", "dhcp_proposed": ["192.168.40.100", "192.168.40.199"]},
+    {"vid": 50, "zone": "Guest", "subnet": "192.168.50.0/24", "primary": "192.168.50.2", "secondary": "192.168.50.3", "vip": "192.168.50.1", "dhcp_proposed": ["192.168.50.100", "192.168.50.199"]},
+    {"vid": 60, "zone": "DMZ", "subnet": "192.168.60.0/24", "primary": "192.168.60.2", "secondary": "192.168.60.3", "vip": "192.168.60.1", "dhcp_proposed": null},
+    {"vid": 99, "zone": "Management", "subnet": "192.168.99.0/24", "primary": "192.168.99.2", "secondary": "192.168.99.3", "vip": "192.168.99.1", "dhcp_proposed": null}
+  ],
+  "sync_proposed": {"subnet": "10.255.255.0/30", "primary": "10.255.255.1", "secondary": "10.255.255.2", "confirmed": false},
+  "wan": {"subnet": null, "primary": null, "secondary": null, "vip": null, "gateway": null, "confirmed": false},
+  "interfaces": {"primary_lan": null, "secondary_lan": null, "primary_wan": null, "secondary_wan": null, "primary_sync": null, "secondary_sync": null},
+  "dns": null,
+  "dhcp_backend": null,
+  "forbidden_known_networks": ["192.168.220.0/24"],
+  "unverified_networks": ["Labtainer networks", "Windows VPN networks", "Other EVE lab subnets"]
+}

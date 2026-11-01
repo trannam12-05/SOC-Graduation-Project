@@ -1,13 +1,15 @@
 """PREPARED, NOT RUN. Guest root only: snapshot / add ingress mirror / rollback.
 
 Do not execute until the user confirms resources are ready. Does not boot a VM,
-assign IPs, change forwarding, install packages, configure persistence or EVE links.
+assign IPs, change forwarding, install packages or EVE links. Persistence installs
+only the reviewed no-IP unit/helper when explicitly invoked in a future run.
 """
 import argparse
 import hashlib
 import json
 import os
 from pathlib import Path
+import re
 import subprocess
 import time
 
@@ -19,7 +21,12 @@ WORK = None
 
 
 def run(args, check=True, **kwargs):
-    r = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30, **kwargs)
+    try:
+        r = subprocess.run(args, stdout=subprocess.PIPE, stderr=subprocess.PIPE, timeout=30, **kwargs)
+    except subprocess.TimeoutExpired:
+        with (WORK/'commands.jsonl').open('a') as f:
+            f.write(json.dumps({'args':args,'error':'timeout','time_untrusted':time.time()})+'\n')
+        raise
     record = {'time_untrusted': time.time(), 'args': args, 'rc': r.returncode,
               'stdout': r.stdout.decode(errors='replace'), 'stderr': r.stderr.decode(errors='replace')}
     with (WORK/'commands.jsonl').open('a') as f:
@@ -50,6 +57,9 @@ def state():
             'services': run(['systemctl','is-active','openvswitch-switch','ovsdb-server','ovs-vswitchd']).decode(),
             'links': json.loads(run(['ip','-j','link'])),
             'addresses': json.loads(run(['ip','-j','address'])),
+            'routes4': json.loads(run(['ip','-j','route','show','table','all'])),
+            'routes6': json.loads(run(['ip','-j','-6','route','show','table','all'])),
+            'boot_id': Path('/proc/sys/kernel/random/boot_id').read_text().strip(),
             'forward4': Path('/proc/sys/net/ipv4/ip_forward').read_text().strip(),
             'forward6': Path('/proc/sys/net/ipv6/conf/all/forwarding').read_text().strip(),
             'ports': table('Port', '_uuid,name,vlan_mode,tag,trunks'),
@@ -66,6 +76,8 @@ def check(s, mirror=False):
     assert {x['ifname']:x['address'] for x in s['links'] if x['ifname'].startswith('ens')} == {
         'ens'+str(i+3): '02:53:45:f2:19:'+format(i, '02x') for i in range(8)}
     assert all(not x['addr_info'] for x in s['addresses'] if x['ifname'] in DATA+['ens10', BR])
+    assert 'UP' in next(x['flags'] for x in s['links'] if x['ifname']==BR), 'Bridge not administratively UP'
+    assert all(r.get('dst')!='default' and not r.get('gateway') for r in s.get('routes4',[])+s.get('routes6',[])), 'Unexpected gateway/default route'
     assert len(s['bridges']) == 1 and s['bridges'][0]['name'] == BR
     assert s['bridges'][0]['datapath_type'] == 'system' and s['bridges'][0]['fail_mode'] == 'standalone'
     ports = {x['name']:x for x in s['ports']}
@@ -75,6 +87,7 @@ def check(s, mirror=False):
     for name in ['ens8','ens9']:
         assert ports[name]['vlan_mode'] == 'trunk' and ports[name]['tag'] == []
         assert sorted(ports[name]['trunks']) == VLAN
+    assert {x['name'] for x in s['interfaces']} == set(ports)
     assert all(isinstance(x['ofport'], int) and x['ofport'] > 0 and x['error'] == [] for x in s['interfaces'])
     assert len(s['mirrors']) == int(mirror)
     if mirror:
@@ -118,6 +131,7 @@ def restore():
     assert {x['name'] for x in current['bridges']} == {BR}, 'Unexpected bridge; stop rollback'
     assert {x['name'] for x in current['ports']} <= set(DATA+[BR,'ens10']), 'Unexpected port; stop rollback'
     save('before-rollback.json',current)
+    restore_persistence()
     raw = (WORK/'ovsdb.before').read_bytes()
     meta = json.loads((WORK/'backup-metadata.json').read_text())
     assert hashlib.sha256(raw).hexdigest() == meta['sha256']
@@ -129,12 +143,18 @@ def restore():
     save('restored.json',after)
     check(after)
     assert before['forward4'] == after['forward4'] and before['forward6'] == after['forward6']
+    for key in ['addresses','routes4','routes6']:
+        assert before[key]==after[key], 'Rollback network state mismatch: '+key
     save('rollback-result.json', {'configuration_restored':True, 'note':'OVS row UUIDs may change; network persistence files not changed by this script'})
 
 
 def mirror():
     assert (WORK/'backup-metadata.json').is_file()
-    check(state())
+    current = state()
+    check(current)
+    before = json.loads((WORK/'before.json').read_text())
+    for key in ['addresses','routes4','routes6','forward4','forward6']:
+        assert current[key] == before[key], 'Baseline changed since backup: '+key
     command = ['ovs-vsctl','--timeout=10','--','add-port',BR,'ens10','--','set','Port','ens10',
                'vlan_mode=trunk','trunks=30,40,50,60,99']
     for i, name in enumerate(DATA+['ens10']):
@@ -150,26 +170,94 @@ def mirror():
         save('after.json',s)
         check(s,mirror=True)
         save('result.json',{'static_mirror_verified':True,'traffic_tested':False})
+    except Exception as exc:
+        save('mirror-failure.json',{'error_type':type(exc).__name__,'rollback_attempted':True})
+        try:
+            restore()
+        except Exception as rollback_error:
+            save('rollback-failure.json',{'error_type':type(rollback_error).__name__,'manual_console_required':True})
+            raise RuntimeError('Mirror failed and rollback could not be verified; stop, preserve logs') from exc
+        raise
+
+
+def restore_persistence():
+    registry = WORK/'persistence-files.json'
+    if not registry.exists():
+        return
+    data = json.loads(registry.read_text())
+    for entry in data:
+        path=Path(entry['target'])
+        if path.exists():
+            assert hashlib.sha256(path.read_bytes()).hexdigest()==entry['sha256'], 'Persistence file changed; stop before disabling'
+    run(['systemctl','disable','--now','soc-core-l2-noip.service'],check=False)
+    for entry in data:
+        path = Path(entry['target'])
+        if path.exists():
+            assert hashlib.sha256(path.read_bytes()).hexdigest() == entry['sha256'], 'Persistence file changed; manual rollback needed'
+            destination = WORK/('retained-'+path.name)
+            assert not destination.exists()
+            path.rename(destination)
+    run(['systemctl','daemon-reload'])
+
+
+def persist():
+    s = state()
+    check(s,mirror=True)
+    sources = [(Path(__file__).parent/'soc-core-l2-noip.service',Path('/etc/systemd/system/soc-core-l2-noip.service'),0o644),
+               (Path(__file__).parent/'soc-core-l2-noip.sh',Path('/usr/local/sbin/soc-core-l2-noip.sh'),0o755)]
+    assert not (WORK/'persistence-files.json').exists()
+    for source,target,mode in sources:
+        assert source.is_file() and not target.exists() and not target.is_symlink(), 'Existing persistence file; stop'
+    save('before-persistence.json',s)
+    entries=[]
+    try:
+        for source,target,mode in sources:
+            # Record ownership/hash before creation, so partial failure is recoverable.
+            entries.append({'target':str(target),'sha256':hashlib.sha256(source.read_bytes()).hexdigest()})
+            save('persistence-files.json',entries)
+            with target.open('xb') as f:
+                f.write(source.read_bytes())
+            os.chmod(target,mode)
+        run(['sh','-n','/usr/local/sbin/soc-core-l2-noip.sh'])
+        run(['systemctl','daemon-reload'])
+        run(['systemctl','enable','--now','soc-core-l2-noip.service'])
+        check(state(),mirror=True)
     except Exception:
-        restore()
+        restore_persistence()
         raise
 
 
 def main():
     global WORK
     parser = argparse.ArgumentParser(description=__doc__)
-    parser.add_argument('action',choices=['backup','mirror','verify','rollback'])
+    parser.add_argument('action',choices=['backup','mirror','verify','baseline','persist','rollback'])
     parser.add_argument('--work',type=Path,required=True)
     args = parser.parse_args()
-    assert os.geteuid() == 0 and str(args.work).startswith('/root/m2-traffic-')
+    if not __debug__:
+        raise RuntimeError('Do not run with Python -O')
+    assert os.geteuid() == 0
+    assert args.work.parent == Path('/root') and re.fullmatch(r'm2-traffic-[A-Za-z0-9_-]+',args.work.name)
+    assert not args.work.is_symlink(), 'Refuse symlink work directory'
     WORK = args.work
-    if args.action == 'backup':
+    if args.action in ['backup','baseline']:
         WORK.mkdir(mode=0o700,exist_ok=False)
     assert WORK.is_dir() and WORK.stat().st_uid == 0 and WORK.stat().st_mode & 0o077 == 0
     if args.action == 'backup': backup()
     elif args.action == 'mirror': mirror()
     elif args.action == 'rollback': restore()
-    else: save('verify.json',state())
+    elif args.action == 'persist': persist()
+    elif args.action == 'baseline':
+        s = state()
+        save('baseline.json',s)
+        check(s)
+    else:
+        s = state()
+        save('verify.json',s)
+        check(s,mirror=bool(s['mirrors']))
+    public = {'action':args.action,'state':state(),'traffic_tested':False}
+    if (WORK/'backup-metadata.json').is_file():
+        public['backup'] = json.loads((WORK/'backup-metadata.json').read_text())
+    print(json.dumps(public))
 
 
 if __name__ == '__main__':

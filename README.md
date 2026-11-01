@@ -10,6 +10,8 @@ M2 đã cài OVS 3.3.9 và cấu hình bridge cô lập với năm access, hai t
 
 Checkpoint 01/11/2026: Core đang tắt, chỉ làm tài liệu/script trong khi người dùng học Labtainer. Chỉ bật VM sau thông báo tài nguyên sẵn sàng. Xem [báo cáo M2 hợp nhất](docs/M2/M2-report-consolidated-review-20261101.docx), [kịch bản thử và rollback chưa chạy](docs/M2/M2-test-and-rollback-PREPARED-20261101.md) và [thiết kế OPNsense HA dự kiến](docs/M3/M3-OPNsense-HA-PROPOSED-20261101.md).
 
+Để triển khai tiếp theo nhóm: [runbook bộ điều phối M2](docs/M2/M2-sequential-runbook-PREPARED-20261101.md), [M3 địa chỉ và checklist](docs/M3/M3-deployment-matrix-and-tests-PREPARED-20261101.md), [M4 sensor/mirror/log](docs/M4/M4-Suricata-mirror-PREPARED-20261101.md), [kế hoạch đến05/11](docs/SOC-execution-resource-plan-20261101.md). Script mặc định không thực thi; không có tự khởi động lúc10 giờ.
+
 ## Nhiệm vụ của Nam
 
 Nam phụ trách phối hợp xây dựng và hoàn thiện đồ án: rà soát yêu cầu, chuẩn bị sơ đồ và kế hoạch địa chỉ mạng, ghi lại quyết định thiết kế, triển khai các thành phần theo kế hoạch được thống nhất, kiểm thử kết nối và chức năng an ninh, đồng thời cập nhật tài liệu tiếng Việt để nhóm có thể tái hiện và đánh giá kết quả.

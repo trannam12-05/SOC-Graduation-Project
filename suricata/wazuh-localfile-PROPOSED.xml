@@ -1,0 +1,6 @@
+<!-- Fragment only: review/merge into sensor agent ossec.conf after validation.
+     Not a complete config; not installed; no credentials. -->
+<localfile>
+  <log_format>json</log_format>
+  <location>/var/log/suricata/eve.json</location>
+</localfile>

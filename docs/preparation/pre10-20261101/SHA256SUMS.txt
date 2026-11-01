@@ -1,0 +1,5 @@
+35af0916ea46963a31aa84c4a8f2928ed0b08a5c91e6ff2cb5943b9c2390308a  docs/M2/M2-report-execution-ready-PREPARED-20261101.md
+20a797b41507d4a7d23fe7d01773bba4b8abbb779d0a839bf5a3af95f21bdd96  docs/M2/M2-report-execution-ready-PREPARED-20261101.docx
+fdb1148256d45c76f3b47c4d18e55d1ea403145fd8675ac27c9aa14e8c1c9b7b  docs/preparation/pre10-20261101/static-tests.log
+a6436b843fa88481fa72d08dd4f11f58e107f594a555df03e2d274b9d78d9427  docs/preparation/pre10-20261101/docx-review.json
+20f706f40fea8caa9b420ab3a56a4877535a9d139fe43a77aab008e04a29fe6b  docs/preparation/pre10-20261101/static-review.json

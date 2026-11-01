@@ -25,6 +25,21 @@ LAB = '/opt/unetlab/labs/SOC-M2-Core-L2.unl'
 UUID = '2b295168-b72e-4de7-b364-37298252dd9f'
 
 
+def verify_qemu_mapping(args):
+    netdevs={};devices={}
+    for i,arg in enumerate(args[:-1]):
+        if arg not in ['-netdev','-device']:continue
+        fields=dict(piece.split('=',1) for piece in args[i+1].split(',') if '=' in piece)
+        if arg=='-netdev' and fields.get('id','').startswith('net'):
+            assert fields['id'] not in netdevs, 'Duplicate netdev ID'
+            netdevs[fields['id']]=fields.get('ifname')
+        if arg=='-device' and 'netdev' in fields:
+            assert fields['netdev'] not in devices, 'Duplicate device attachment'
+            devices[fields['netdev']]=fields.get('mac','').lower()
+    assert netdevs=={'net'+str(i):tap for i,tap in enumerate(TAPS)}, 'QEMU netdev to TAP mapping changed'
+    assert devices=={'net'+str(i):'02:53:45:f2:19:'+format(i,'02x') for i in range(8)}, 'QEMU device to MAC mapping changed'
+
+
 def guard():
     root = ET.parse(LAB).getroot()
     nodes = root.findall('.//node')
@@ -41,9 +56,7 @@ def guard():
             matches.append([x.decode() for x in args if x])
     assert len(matches) == 1, 'Expected exactly one designated Core VM'
     args = matches[0]
-    for i, tap in enumerate(TAPS):
-        assert any('ifname=' + tap + ',' in a for a in args), 'Unexpected QEMU TAP'
-        assert any('mac=02:53:45:f2:19:' + format(i, '02x') in a.lower() for a in args)
+    verify_qemu_mapping(args)
     links = json.loads(subprocess.check_output(['ip', '-j', 'link', 'show']))
     selected = [x for x in links if x['ifname'] in TAPS]
     assert len(selected) == 8
@@ -53,6 +66,8 @@ def guard():
 
 
 def main():
+    if not __debug__:
+        raise RuntimeError('Do not run with Python -O: safety assertions are required')
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--guest-ready', action='store_true', required=True)
     p.add_argument('--mirror', action='store_true', help='Only after ens10 mirror verified')
@@ -76,6 +91,8 @@ def main():
         f.write(struct.pack('<IHHIIII', 0xa1b2c3d4, 2, 4, 0, 0, 65535, 1))
     events = []
     results = []
+    expected_count = 32 if a.mirror else 31
+    complete = False
 
     def receive(seconds, test_marker=None):
         deadline = time.monotonic() + seconds
@@ -143,6 +160,7 @@ def main():
         if a.mirror:
             case('mirror-no-ingress-switching', 7, 30, {})
         case('positive-control-final', 0, None, {5: 30, 6: 30}, a.mirror)
+        complete = len(results) == expected_count
     finally:
         for f in captures.values():
             f.close()
@@ -156,10 +174,12 @@ def main():
             guard_error = str(exc)
         report = {'run_id': run_id, 'method': 'AF_PACKET separate TAP injection; guest egress only; no host bridge',
                   'mirror_enabled_expected': a.mirror, 'initial': initial, 'final': final, 'final_guard_error':guard_error,
-                  'cases': results, 'events': events, 'clock': 'EVE time untrusted; collector must timestamp receipt',
+                  'cases': results, 'events': events, 'expected_case_count':expected_count,
+                  'completed':complete, 'all_cases_passed':complete and not guard_error and all(r['status']=='PASS' for r in results),
+                  'clock': 'EVE time untrusted; collector must timestamp receipt',
                   'limitations': 'Synthetic L2 broadcast tests, not IP routing, unicast performance, reboot or HA tests'}
         (a.output/'result.json').write_text(json.dumps(report, indent=2)+'\n')
-    assert not guard_error and results and all(r['status'] == 'PASS' for r in results), 'Frame test failed; inspect evidence'
+    assert complete and not guard_error and all(r['status'] == 'PASS' for r in results), 'Frame test failed/incomplete; inspect evidence'
 
 
 if __name__ == '__main__':

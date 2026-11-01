@@ -1,0 +1,2 @@
+# PREPARED ONLY: benign marker, no external probing, not deployed.
+alert icmp any any -> any any (msg:"SOC M4 benign ICMP marker"; content:"SOC-M4-TEST-20261101"; sid:1000001; rev:1;)

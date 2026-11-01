@@ -1,0 +1,4 @@
+file_name,content,collector_time_with_timezone,path,report_position,sha256,collection_method,scope,limitations
+TO_BE_CAPTURED,Actual OVS VLAN trunk mirror output,,docs/evidence/M2/SESSION/,Chapter2,,Actual console framebuffer,NOT_COLLECTED,Do not mark collected before actual capture
+TO_BE_CAPTURED,Actual CARP roles and failover timeline,,docs/evidence/M3/SESSION/,Chapter3,,Actual GUI and command log,NOT_COLLECTED,Needs two running firewalls
+TO_BE_CAPTURED,Actual Suricata marker alert,,docs/evidence/M4/SESSION/,Chapter4,,Actual eve.json and console,NOT_COLLECTED,Do not substitute a simulated alert

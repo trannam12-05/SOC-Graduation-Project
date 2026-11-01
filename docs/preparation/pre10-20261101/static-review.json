@@ -1,0 +1,19 @@
+{
+  "collector_time": "2026-11-01T08:48:57.938762+07:00",
+  "scope": "LOCAL_STATIC_AND_MOCK_ONLY_NOT_NETWORK_ACCEPTANCE",
+  "tests_run": 12,
+  "errors": 0,
+  "failures": 0,
+  "vm_started": false,
+  "network_frame_sent": false,
+  "ssh_to_eve_used": false,
+  "qcow2_accessed": false,
+  "new_screenshots_or_pcap_created": false,
+  "old_reports_unchanged": true,
+  "new_docx_images_exactly_match_prior": true,
+  "runtime_limitations": [
+    "New console/queue/persistence paths not yet tested on running guest",
+    "Requires actual console login and sudo access",
+    "VLAN/mirror/reboot/HA/IDS NOT RUN"
+  ]
+}

@@ -1,0 +1,30 @@
+{
+  "collector_time": "2026-11-01T08:53:29.753608+07:00",
+  "command": [
+    "C:\\Users\\ACER\\AppData\\Local\\Programs\\Python\\Python312\\python.exe",
+    "-X",
+    "utf8",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests",
+    "-p",
+    "test_m2_preparation.py"
+  ],
+  "returncode": 0,
+  "tests_run": 13,
+  "scope": "LOCAL_STATIC_MOCK_ONLY_NOT_NETWORK_PASS",
+  "vm_started": false,
+  "eve_ssh_used": false,
+  "frames_sent": false,
+  "script_sha256": {
+    "automation/m2_run_queue.py": "f4e8bb9734dc09e15917186a736c83174852660362e5b6ec882313dbf4ec8ab3",
+    "automation/m2_console_job.py": "62cf1f64bad6cd1c1361693260a1812d58d3e9b87f61ef2b709c25a8caebd86e",
+    "automation/m2_mirror_guest_prepared.py": "4fd0f80ad947048b03bc3d4d5f4b6e0e1f39446476a1eb7ea5cbac1895ba004c",
+    "automation/m2_tap_frame_test.py": "5f0a67beb238778aaccdc62ce33b491ef65c0565cd760ed4291385ce0091b83b",
+    "automation/m4_benign_frame.py": "bb5ed90a4f24d5abd240e0966111e53d8ffa76c9b0a103c2421ea376450eaa32",
+    "automation/validate_m3_plan.py": "23942d969a34a14ea0dea67061b8562bf29b259f342c9e4572fdf1beb3ac7b2e",
+    "tests/test_m2_preparation.py": "a261ca077e1f31f4e84ea3bd33e11fe4980e270dc7366a0d9b2f80a8443d71ef"
+  }
+}

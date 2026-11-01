@@ -4,6 +4,19 @@ Checkpoint ngày **01/11/2026, UTC+07:00 (Asia/Saigon)**; hạn nộp **05/11/20
 
 ## 0. Cập nhật ưu tiên: chế độ nhẹ trong khi người dùng học Labtainer
 
+### 0.1. Chuẩn bị tăng tốc trước 10 giờ ngày 01/11
+
+**Không có lịch tự khởi động VM lúc 10:00. Chờ thông báo tài nguyên sẵn sàng từ người dùng.** Đợt này không SSH tới EVE, không bật VM, không chạm QCOW2 hoặc Labtainer.
+
+- [Runbook tuần tự](M2/M2-sequential-runbook-PREPARED-20261101.md): bộ điều phối `automation/m2_run_queue.py` mặc định chỉ lập kế hoạch; future execution gom tài nguyên/start/baseline/backup/frame/mirror/persistence/thu kết quả. Chỉ giữ điểm dừng đăng nhập/sudo sau boot và kiểm tra trước reboot, không hỏi từng lệnh. Queue và nhật ký append-only cho phép tiếp tục mà không chạy lại nhóm đã DONE; phiên đã rollback yêu cầu review và phiên mới.
+- Adapter `automation/m2_console_job.py`: chuẩn bị truyền script/nhận JSON bằng console, kiểm payload/reply SHA-256, không SSH trực tiếp guest hoặc nhận bí mật. **Chưa chạy trên console thật.** Sửa guard đường dẫn backup, stale baseline, lưu lỗi/rollback, final case count, resume sau reboot và bảo toàn log console khi tiếp tục.
+- [Báo cáo M2 mới có phụ lục điều phối](M2/M2-report-execution-ready-PREPARED-20261101.docx), [Markdown](M2/M2-report-execution-ready-PREPARED-20261101.md): giữ12 ảnh cũ nguyên byte, không ghi đè báo cáo trước. [Rà DOCX/static](preparation/pre10-20261101/) ghi rõ không nghiệm thu mạng, chưa kiểm GUI phân trang.
+- [M3 địa chỉ/chính sách/checklist](M3/M3-deployment-matrix-and-tests-PREPARED-20261101.md), `configs/M3/address-proposal.json`: IP Primary/Secondary/VIP từ ví dụ M1, đề xuất mới SYNC /30 và DHCP40/50 ghi riêng, mọi giá trị chưa xác nhận. `validate_m3_plan.py` chỉ kiểm nhất quán; `m3_collect_readonly.sh` chưa chạy trên firewall.
+- [M4 Suricata](M4/M4-Suricata-mirror-PREPARED-20261101.md): mapping capture/management tách biệt, capture tag/drop, rule ICMP marker, offline PCAP rồi live khi đủ RAM, log EVE→Wazuh. `automation/m4_benign_frame.py`, `suricata/soc-lab.rules` và fragment Wazuh chỉ chuẩn bị; chưa gửi frame/cài sensor/tích hợp.
+- [Kế hoạch tài nguyên và hạn05/11](SOC-execution-resource-plan-20261101.md), [mẫu kết quả](templates/SOC-test-result-template.csv), [mẫu danh mục ảnh/log](templates/SOC-evidence-template.csv). NOT_RUN là mặc định; một firewall không thay nghiệm thu HA, Suricata offline không thay live IDS.
+
+### 0.2. Checkpoint triển khai trước và phần chưa thực hiện
+
 **Giữ tất cả VM SOC tắt. Chỉ tiếp tục triển khai VM sau khi người dùng xác nhận đã học xong Labtainer và tài nguyên sẵn sàng.** Không reboot, không tải image OPNsense, không đổi EVE/VMware/Windows/Labtainer, không chạy kiểm thử frame hoặc mirror trong thời gian này. Phê duyệt tăng tốc trước đó không thay thế giới hạn mới.
 
 - SSH đã được người dùng khôi phục bằng ssh-agent; Codex kết nối lại thành công. Không đổi sudoers hoặc yêu cầu bí mật.

@@ -1,0 +1,17 @@
+test_backup_binary_not_in_command_log (test_m2_preparation.Preparation.test_backup_binary_not_in_command_log) ... ok
+test_benign_frame_checksums_without_sending (test_m2_preparation.Preparation.test_benign_frame_checksums_without_sending) ... ok
+test_clock_or_execute_flag_alone_cannot_start (test_m2_preparation.Preparation.test_clock_or_execute_flag_alone_cannot_start) ... ok
+test_console_quote_and_hash_validation (test_m2_preparation.Preparation.test_console_quote_and_hash_validation) ... ok
+test_default_plan_does_not_call_remote_or_start_process (test_m2_preparation.Preparation.test_default_plan_does_not_call_remote_or_start_process) ... ok
+test_frame_case_generation_without_sockets (test_m2_preparation.Preparation.test_frame_case_generation_without_sockets) ... ok
+test_guest_rejects_wrong_tag_and_mirror_destination (test_m2_preparation.Preparation.test_guest_rejects_wrong_tag_and_mirror_destination) ... ok
+test_mirror_created_atomically_and_capture_not_a_source (test_m2_preparation.Preparation.test_mirror_created_atomically_and_capture_not_a_source) ... ok
+test_mirror_failure_attempts_rollback_and_retains_error (test_m2_preparation.Preparation.test_mirror_failure_attempts_rollback_and_retains_error) ... ok
+test_proposed_address_plan_rejects_vip_in_dhcp_pool (test_m2_preparation.Preparation.test_proposed_address_plan_rejects_vip_in_dhcp_pool) ... ok
+test_requested_reboot_is_verified_without_requesting_another (test_m2_preparation.Preparation.test_requested_reboot_is_verified_without_requesting_another) ... ok
+test_resource_gate_rejects_low_host_memory_and_other_vm (test_m2_preparation.Preparation.test_resource_gate_rejects_low_host_memory_and_other_vm) ... ok
+
+----------------------------------------------------------------------
+Ran 12 tests in 0.101s
+
+OK

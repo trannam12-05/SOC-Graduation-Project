@@ -1,0 +1,6 @@
+stage,test_id,objective,preconditions,status,scope,collector_time_UTC+0700,command_log,pcap_or_event,screenshot,expected,observed,error_or_blocker,rollback_status
+M2,L03,Access VLAN tagging,Baseline and backup verified,NOT_RUN,REAL_NETWORK_TEST_PENDING,,,,,Five VLANs mapped correctly,,,NOT_NEEDED_YET
+M2,L10,Mirror observation,Mirror mapping and baseline tests verified,NOT_RUN,REAL_NETWORK_TEST_PENDING,,,,,Marker on dedicated capture port,,,NOT_NEEDED_YET
+M2,L11,Persistence,Backup console and resources ready,NOT_RUN,REAL_REBOOT_TEST_PENDING,,,,,Changed boot_id and unchanged VLAN/noIP policy,,,NOT_NEEDED_YET
+M3,M3-06,CARP failover,Both firewalls and Core running within budget,NOT_RUN,REAL_HA_TEST_PENDING,,,,,VIP takeover with measured interruption,,,NOT_NEEDED_YET
+M4,M4-05,Benign marker detection,Real mirror PCAP and validated Suricata configuration,NOT_RUN,REAL_IDS_TEST_PENDING,,,,,SID1000001 for marker and negative control,,,NOT_NEEDED_YET

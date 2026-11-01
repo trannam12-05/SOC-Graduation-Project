@@ -1,0 +1,17 @@
+PREPARED ONLY: no SSH, no VM, no frame generation. Queue: C:\Users\ACER\AppData\Local\Temp\tmpkja3t2h2\offline-plan\queue.json
+..........E..
+======================================================================
+ERROR: test_qemu_tap_swap_rejected_even_if_all_macs_still_exist (test_m2_preparation.Preparation.test_qemu_tap_swap_rejected_even_if_all_macs_still_exist)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "D:\SOC\tests\test_m2_preparation.py", line 130, in test_qemu_tap_swap_rejected_even_if_all_macs_still_exist
+    recorded=json.loads((ROOT/'docs/evidence/M2/isolated-bridge-20261101/host-before.json').read_text())
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\ACER\AppData\Local\Programs\Python\Python312\Lib\json\__init__.py", line 335, in loads
+    raise JSONDecodeError("Unexpected UTF-8 BOM (decode using utf-8-sig)",
+json.decoder.JSONDecodeError: Unexpected UTF-8 BOM (decode using utf-8-sig): line 1 column 1 (char 0)
+
+----------------------------------------------------------------------
+Ran 13 tests in 0.124s
+
+FAILED (errors=1)

@@ -43,6 +43,8 @@ Trên máy khác, đăng nhập GitHub bằng cơ chế riêng của người qu
 Nhật ký rà soát đầy đủ, manifest toàn bộ tệp và kết quả OCR thô nằm tại `staging/github-backup/` trên máy này, không đưa lên Git để tránh xuất bản nội dung rà soát thô có thể nhạy cảm. Báo cáo này chỉ chứa kết luận và phương pháp đã thực hiện.
 # Cập nhật chế độ nhẹ ngày 01/11/2026
 
+Đợt chuẩn bị trước10 giờ bổ sung bộ điều phối/console adapter chưa chạy VM, kiểm tra mock, ma trận M3 và kế hoạch M4. Rà thay đổi mới cùng XML DOCX và hash ảnh dựa trên parent e4a8b79897696a5d20ade91aec1c122e61c4744d đã kiểm trước đó; không chạy lại OCR hoặc quét lại image VM. Stage mặc định NOT_RUN, không tạo kết quả mạng giả. Repository phải được xác minh PRIVATE trước commit/push; không force-push.
+
 Đợt mới chỉ bổ sung báo cáo M2 hợp nhất, 12 ảnh cũ được nhúng lại nguyên byte, bảng ca kiểm thử chưa chạy, script chuẩn bị, thiết kế M3 và log tiền kiểm tra/metadata backup an toàn. Không có ảnh mới, frame test, mirror hoặc persistence đã nghiệm thu. Chỉ tiếp tục VM sau khi người dùng xác nhận tài nguyên sẵn sàng sau Labtainer.
 
 Không chạy lại OCR trong lúc thiếu RAM: dùng kết quả OCR checkpoint trước cho các ảnh có SHA-256 giống hệt; kiểm tra bao phủ hash trong audit. Vẫn rà văn bản/DOCX và Git blobs trước commit, kiểm tra repository PRIVATE qua API có xác thực và không đưa credential vào URL/log. .gitignore bổ sung ovsdb.validated và bản xuất cấu hình OPNsense nhạy cảm; raw backup vẫn chỉ nằm trên EVE.
