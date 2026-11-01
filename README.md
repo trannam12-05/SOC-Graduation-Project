@@ -6,6 +6,8 @@ Xây dựng và mô phỏng một kiến trúc Security Operations Center (SOC) 
 
 ## Trạng thái hiện hành
 
+Ngày 01/11/2026: **M2 đạt 95/95 ca frame thật**, mirror ens10 và persistence sau reboot đã kiểm chứng; Core đang chạy, không IP/gateway và forwarding 0/0. Xem [báo cáo kết quả mới](docs/M2/M2-report-functional-tests-verified-20261101.docx), [bảng ca thực tế](docs/evidence/M2/live-tests-20261101/final-collection/frame-cases.csv) và [PROGRESS](docs/PROGRESS.md). Chưa triển khai gateway/HA/Suricata; các đoạn checkpoint chuẩn bị dưới đây giữ làm lịch sử.
+
 M2 đã cài OVS 3.3.9 và cấu hình bridge cô lập với năm access, hai trunk; ens10 chưa mirror. Chưa nối peer/link và chưa nghiệm thu chuyển mạch bằng lưu lượng thực tế. Đọc [docs/PROGRESS.md](docs/PROGRESS.md) để tiếp quản và [docs/GITHUB_BACKUP.md](docs/GITHUB_BACKUP.md) để hiểu phạm vi lưu GitHub; không chạy lại cấu hình đã hoàn thành.
 
 Checkpoint 01/11/2026: Core đang tắt, chỉ làm tài liệu/script trong khi người dùng học Labtainer. Chỉ bật VM sau thông báo tài nguyên sẵn sàng. Xem [báo cáo M2 hợp nhất](docs/M2/M2-report-consolidated-review-20261101.docx), [kịch bản thử và rollback chưa chạy](docs/M2/M2-test-and-rollback-PREPARED-20261101.md) và [thiết kế OPNsense HA dự kiến](docs/M3/M3-OPNsense-HA-PROPOSED-20261101.md).

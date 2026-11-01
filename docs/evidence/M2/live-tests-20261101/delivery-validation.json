@@ -1,0 +1,15 @@
+{
+  "collector_time": "2026-11-01T11:46:34.957468+07:00",
+  "frame_tests": 95,
+  "pass": 95,
+  "fail": 0,
+  "real_frame_tests": true,
+  "boot_id_before": "3060cddc-e143-4e13-b739-76f4f2b96deb",
+  "boot_id_after": "6b7326c8-146a-45f7-b373-1a014d0021e2",
+  "postboot_suite_passed": true,
+  "old_reports_unchanged": true,
+  "images_embedded_exact_bytes": 8,
+  "report_sha256": "7aff2b336e0bae06e1b4136a8a60a1ecfff98f182275be254a044ab62f5fa019",
+  "word_gui_pagination_reviewed": false,
+  "journal_warning_recorded": "OVS_CTL_OPTS unset; services active, no failed frame cases"
+}

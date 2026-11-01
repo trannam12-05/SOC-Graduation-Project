@@ -1,0 +1,5 @@
+{
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/tmp/m2-bundle-m2-bootfix-20261101a/guest.py\", line 65, in <module>\n    if __name__=='__main__':main()\n                            ^^^^^^\n  File \"/tmp/m2-bundle-m2-bootfix-20261101a/guest.py\", line 54, in main\n    assert before['addresses']==after['addresses']\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError\n"
+}

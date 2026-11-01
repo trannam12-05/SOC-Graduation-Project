@@ -1,0 +1,2195 @@
+{
+  "run_id": "db4d699806ac49a3bfc55bc11828c16e",
+  "method": "AF_PACKET separate TAP injection; guest egress only; no host bridge",
+  "mirror_enabled_expected": true,
+  "initial": {
+    "qemu_args": [
+      "/opt/qemu-2.12.0/bin/qemu-system-x86_64",
+      "-device",
+      "virtio-net-pci,netdev=net0,mac=02:53:45:f2:19:00",
+      "-netdev",
+      "tap,id=net0,ifname=vunl0_3_0,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net1,mac=02:53:45:f2:19:01",
+      "-netdev",
+      "tap,id=net1,ifname=vunl0_3_1,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net2,mac=02:53:45:f2:19:02",
+      "-netdev",
+      "tap,id=net2,ifname=vunl0_3_2,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net3,mac=02:53:45:f2:19:03",
+      "-netdev",
+      "tap,id=net3,ifname=vunl0_3_3,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net4,mac=02:53:45:f2:19:04",
+      "-netdev",
+      "tap,id=net4,ifname=vunl0_3_4,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net5,mac=02:53:45:f2:19:05",
+      "-netdev",
+      "tap,id=net5,ifname=vunl0_3_5,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net6,mac=02:53:45:f2:19:06",
+      "-netdev",
+      "tap,id=net6,ifname=vunl0_3_6,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net7,mac=02:53:45:f2:19:07",
+      "-netdev",
+      "tap,id=net7,ifname=vunl0_3_7,script=no",
+      "-smp",
+      "1",
+      "-m",
+      "2048",
+      "-name",
+      "SOC-Core-L2",
+      "-uuid",
+      "2b295168-b72e-4de7-b364-37298252dd9f",
+      "-vnc",
+      ":26871",
+      "-cdrom",
+      "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso",
+      "-drive",
+      "file=virtioa.qcow2,if=virtio,bus=0,unit=0,cache=none",
+      "-machine",
+      "type=pc,accel=kvm",
+      "-vga",
+      "std",
+      "-usbdevice",
+      "tablet",
+      "-boot",
+      "order=cd",
+      "-cpu",
+      "host,vmx=off,svm=off"
+    ],
+    "links": [
+      {
+        "ifindex": 13,
+        "ifname": "vunl0_3_0",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "1a:c3:46:f6:b6:44",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 14,
+        "ifname": "vunl0_3_1",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "f6:45:38:fa:9b:d2",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 15,
+        "ifname": "vunl0_3_2",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "2e:3c:20:7d:f6:07",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 16,
+        "ifname": "vunl0_3_3",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "de:48:9e:0b:2b:32",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 17,
+        "ifname": "vunl0_3_4",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "7a:65:fd:a8:29:79",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 18,
+        "ifname": "vunl0_3_5",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "f6:71:99:d8:e0:a4",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 19,
+        "ifname": "vunl0_3_6",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "12:93:d1:41:42:49",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 20,
+        "ifname": "vunl0_3_7",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "4e:18:80:f8:02:db",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      }
+    ]
+  },
+  "final": {
+    "qemu_args": [
+      "/opt/qemu-2.12.0/bin/qemu-system-x86_64",
+      "-device",
+      "virtio-net-pci,netdev=net0,mac=02:53:45:f2:19:00",
+      "-netdev",
+      "tap,id=net0,ifname=vunl0_3_0,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net1,mac=02:53:45:f2:19:01",
+      "-netdev",
+      "tap,id=net1,ifname=vunl0_3_1,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net2,mac=02:53:45:f2:19:02",
+      "-netdev",
+      "tap,id=net2,ifname=vunl0_3_2,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net3,mac=02:53:45:f2:19:03",
+      "-netdev",
+      "tap,id=net3,ifname=vunl0_3_3,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net4,mac=02:53:45:f2:19:04",
+      "-netdev",
+      "tap,id=net4,ifname=vunl0_3_4,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net5,mac=02:53:45:f2:19:05",
+      "-netdev",
+      "tap,id=net5,ifname=vunl0_3_5,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net6,mac=02:53:45:f2:19:06",
+      "-netdev",
+      "tap,id=net6,ifname=vunl0_3_6,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net7,mac=02:53:45:f2:19:07",
+      "-netdev",
+      "tap,id=net7,ifname=vunl0_3_7,script=no",
+      "-smp",
+      "1",
+      "-m",
+      "2048",
+      "-name",
+      "SOC-Core-L2",
+      "-uuid",
+      "2b295168-b72e-4de7-b364-37298252dd9f",
+      "-vnc",
+      ":26871",
+      "-cdrom",
+      "/opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso",
+      "-drive",
+      "file=virtioa.qcow2,if=virtio,bus=0,unit=0,cache=none",
+      "-machine",
+      "type=pc,accel=kvm",
+      "-vga",
+      "std",
+      "-usbdevice",
+      "tablet",
+      "-boot",
+      "order=cd",
+      "-cpu",
+      "host,vmx=off,svm=off"
+    ],
+    "links": [
+      {
+        "ifindex": 13,
+        "ifname": "vunl0_3_0",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "1a:c3:46:f6:b6:44",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 14,
+        "ifname": "vunl0_3_1",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "f6:45:38:fa:9b:d2",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 15,
+        "ifname": "vunl0_3_2",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "2e:3c:20:7d:f6:07",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 16,
+        "ifname": "vunl0_3_3",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "de:48:9e:0b:2b:32",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 17,
+        "ifname": "vunl0_3_4",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "7a:65:fd:a8:29:79",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 18,
+        "ifname": "vunl0_3_5",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "f6:71:99:d8:e0:a4",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 19,
+        "ifname": "vunl0_3_6",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "12:93:d1:41:42:49",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      },
+      {
+        "ifindex": 20,
+        "ifname": "vunl0_3_7",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 9000,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "linkmode": "DEFAULT",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "4e:18:80:f8:02:db",
+        "broadcast": "ff:ff:ff:ff:ff:ff"
+      }
+    ]
+  },
+  "final_guard_error": null,
+  "cases": [
+    {
+      "case": "access-30",
+      "tx_time_untrusted": "2026-11-01T11:07:49.909904+00:00",
+      "ingress": "vunl0_3_0",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000088b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          30
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          30
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531269.9264402,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531269.932538,
+          "tap": "vunl0_3_6",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531269.9326265,
+          "tap": "vunl0_3_5",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "access-40",
+      "tx_time_untrusted": "2026-11-01T11:07:50.442282+00:00",
+      "ingress": "vunl0_3_1",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000188b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          40
+        ],
+        [
+          "vunl0_3_6",
+          40
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          40
+        ],
+        [
+          "vunl0_3_6",
+          40
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531270.4455557,
+          "tap": "vunl0_3_7",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531270.445679,
+          "tap": "vunl0_3_5",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531270.4457135,
+          "tap": "vunl0_3_6",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "access-50",
+      "tx_time_untrusted": "2026-11-01T11:07:50.974183+00:00",
+      "ingress": "vunl0_3_2",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          50
+        ],
+        [
+          "vunl0_3_6",
+          50
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          50
+        ],
+        [
+          "vunl0_3_6",
+          50
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531270.9772313,
+          "tap": "vunl0_3_5",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531270.9772809,
+          "tap": "vunl0_3_6",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531270.9772964,
+          "tap": "vunl0_3_7",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "access-60",
+      "tx_time_untrusted": "2026-11-01T11:07:51.506007+00:00",
+      "ingress": "vunl0_3_3",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          60
+        ],
+        [
+          "vunl0_3_6",
+          60
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          60
+        ],
+        [
+          "vunl0_3_6",
+          60
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531271.5099316,
+          "tap": "vunl0_3_7",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531271.5100064,
+          "tap": "vunl0_3_6",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531271.5106094,
+          "tap": "vunl0_3_5",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "access-99",
+      "tx_time_untrusted": "2026-11-01T11:07:52.038047+00:00",
+      "ingress": "vunl0_3_4",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000488b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          99
+        ],
+        [
+          "vunl0_3_6",
+          99
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          99
+        ],
+        [
+          "vunl0_3_6",
+          99
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531272.0408883,
+          "tap": "vunl0_3_6",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531272.0409346,
+          "tap": "vunl0_3_7",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531272.0409985,
+          "tap": "vunl0_3_5",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-30",
+      "tx_time_untrusted": "2026-11-01T11:07:52.569781+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 30,
+      "tx_hex": "ffffffffffff02534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_0",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_0",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531272.5710886,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531272.5711977,
+          "tap": "vunl0_3_6",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531272.571711,
+          "tap": "vunl0_3_0",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-40",
+      "tx_time_untrusted": "2026-11-01T11:07:53.101231+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 40,
+      "tx_hex": "ffffffffffff02534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_1",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          40
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_1",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          40
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531273.1023211,
+          "tap": "vunl0_3_7",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531273.1048503,
+          "tap": "vunl0_3_1",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531273.1053445,
+          "tap": "vunl0_3_6",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-50",
+      "tx_time_untrusted": "2026-11-01T11:07:53.632533+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 50,
+      "tx_hex": "ffffffffffff02534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_2",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          50
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_2",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          50
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531273.634653,
+          "tap": "vunl0_3_7",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531273.6351342,
+          "tap": "vunl0_3_6",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531273.635194,
+          "tap": "vunl0_3_2",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-60",
+      "tx_time_untrusted": "2026-11-01T11:07:54.165948+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 60,
+      "tx_hex": "ffffffffffff02534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_3",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          60
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_3",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          60
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531274.1679993,
+          "tap": "vunl0_3_3",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531274.1680646,
+          "tap": "vunl0_3_7",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531274.1688483,
+          "tap": "vunl0_3_6",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-99",
+      "tx_time_untrusted": "2026-11-01T11:07:54.697541+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 99,
+      "tx_hex": "ffffffffffff02534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_4",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          99
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_4",
+          null
+        ],
+        [
+          "vunl0_3_6",
+          99
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531274.7001958,
+          "tap": "vunl0_3_7",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531274.7003298,
+          "tap": "vunl0_3_6",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531274.7029839,
+          "tap": "vunl0_3_4",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk5-denied100",
+      "tx_time_untrusted": "2026-11-01T11:07:55.228546+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 100,
+      "tx_hex": "ffffffffffff02534f4300058100006488b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d64656e696564313030212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "trunk5-untagged",
+      "tx_time_untrusted": "2026-11-01T11:07:55.763479+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d756e746167676564212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "trunk6-30",
+      "tx_time_untrusted": "2026-11-01T11:07:56.294702+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 30,
+      "tx_hex": "ffffffffffff02534f4300068100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_0",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          30
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_0",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          30
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531276.2970057,
+          "tap": "vunl0_3_0",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531276.2970476,
+          "tap": "vunl0_3_5",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531276.2970674,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk6-40",
+      "tx_time_untrusted": "2026-11-01T11:07:56.826370+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 40,
+      "tx_hex": "ffffffffffff02534f4300068100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_1",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          40
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_1",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          40
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531276.8282642,
+          "tap": "vunl0_3_1",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531276.8283134,
+          "tap": "vunl0_3_5",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531276.8283527,
+          "tap": "vunl0_3_7",
+          "vlan": 40,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk6-50",
+      "tx_time_untrusted": "2026-11-01T11:07:57.358013+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 50,
+      "tx_hex": "ffffffffffff02534f4300068100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_2",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          50
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_2",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          50
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531277.3638093,
+          "tap": "vunl0_3_2",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531277.3638823,
+          "tap": "vunl0_3_5",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531277.3639574,
+          "tap": "vunl0_3_7",
+          "vlan": 50,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk6-60",
+      "tx_time_untrusted": "2026-11-01T11:07:57.888963+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 60,
+      "tx_hex": "ffffffffffff02534f4300068100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_3",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          60
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_3",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          60
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531277.8908942,
+          "tap": "vunl0_3_3",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531277.8909428,
+          "tap": "vunl0_3_7",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531277.8909855,
+          "tap": "vunl0_3_5",
+          "vlan": 60,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk6-99",
+      "tx_time_untrusted": "2026-11-01T11:07:58.420805+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 99,
+      "tx_hex": "ffffffffffff02534f4300068100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_4",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          99
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_4",
+          null
+        ],
+        [
+          "vunl0_3_5",
+          99
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531278.4362636,
+          "tap": "vunl0_3_4",
+          "vlan": null,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531278.4363177,
+          "tap": "vunl0_3_7",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531278.437947,
+          "tap": "vunl0_3_5",
+          "vlan": 99,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300068100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "trunk6-denied100",
+      "tx_time_untrusted": "2026-11-01T11:07:58.952809+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": 100,
+      "tx_hex": "ffffffffffff02534f4300068100006488b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d64656e696564313030212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "trunk6-untagged",
+      "tx_time_untrusted": "2026-11-01T11:07:59.484924+00:00",
+      "ingress": "vunl0_3_6",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d756e746167676564212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "access30-wrongtag40",
+      "tx_time_untrusted": "2026-11-01T11:08:00.016405+00:00",
+      "ingress": "vunl0_3_0",
+      "tx_vlan": 40,
+      "tx_hex": "ffffffffffff02534f4300008100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d61636365737333302d77726f6e677461673430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "known-unicast-trunk-to-access-30",
+      "tx_time_untrusted": "2026-11-01T11:08:00.549846+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 30,
+      "tx_hex": "02534f43000002534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_0",
+          null
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_0",
+          null
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531280.5531583,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 3,
+          "hex": "02534f43000002534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531280.5547457,
+          "tap": "vunl0_3_0",
+          "vlan": null,
+          "packet_type": 3,
+          "hex": "02534f43000002534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-access-to-trunk-30",
+      "tx_time_untrusted": "2026-11-01T11:08:01.082059+00:00",
+      "ingress": "vunl0_3_0",
+      "tx_vlan": null,
+      "tx_hex": "02534f43000502534f43000088b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          30
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          30
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531281.0843258,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531281.0845313,
+          "tap": "vunl0_3_5",
+          "vlan": 30,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-trunk-to-access-40",
+      "tx_time_untrusted": "2026-11-01T11:08:01.614709+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 40,
+      "tx_hex": "02534f43000102534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_1",
+          null
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_1",
+          null
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531281.616634,
+          "tap": "vunl0_3_7",
+          "vlan": 40,
+          "packet_type": 3,
+          "hex": "02534f43000102534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531281.616752,
+          "tap": "vunl0_3_1",
+          "vlan": null,
+          "packet_type": 3,
+          "hex": "02534f43000102534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-access-to-trunk-40",
+      "tx_time_untrusted": "2026-11-01T11:08:02.146647+00:00",
+      "ingress": "vunl0_3_1",
+      "tx_vlan": null,
+      "tx_hex": "02534f43000502534f43000188b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          40
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          40
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531282.1480827,
+          "tap": "vunl0_3_5",
+          "vlan": 40,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531282.14814,
+          "tap": "vunl0_3_7",
+          "vlan": 40,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-trunk-to-access-50",
+      "tx_time_untrusted": "2026-11-01T11:08:02.679193+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 50,
+      "tx_hex": "02534f43000202534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_2",
+          null
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_2",
+          null
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531282.6831543,
+          "tap": "vunl0_3_7",
+          "vlan": 50,
+          "packet_type": 3,
+          "hex": "02534f43000202534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531282.6832674,
+          "tap": "vunl0_3_2",
+          "vlan": null,
+          "packet_type": 3,
+          "hex": "02534f43000202534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-access-to-trunk-50",
+      "tx_time_untrusted": "2026-11-01T11:08:03.210966+00:00",
+      "ingress": "vunl0_3_2",
+      "tx_vlan": null,
+      "tx_hex": "02534f43000502534f43000288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          50
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          50
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531283.2140856,
+          "tap": "vunl0_3_7",
+          "vlan": 50,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531283.2142036,
+          "tap": "vunl0_3_5",
+          "vlan": 50,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-trunk-to-access-60",
+      "tx_time_untrusted": "2026-11-01T11:08:03.742791+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 60,
+      "tx_hex": "02534f43000302534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_3",
+          null
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_3",
+          null
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531283.74408,
+          "tap": "vunl0_3_7",
+          "vlan": 60,
+          "packet_type": 3,
+          "hex": "02534f43000302534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531283.7441752,
+          "tap": "vunl0_3_3",
+          "vlan": null,
+          "packet_type": 3,
+          "hex": "02534f43000302534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-access-to-trunk-60",
+      "tx_time_untrusted": "2026-11-01T11:08:04.274633+00:00",
+      "ingress": "vunl0_3_3",
+      "tx_vlan": null,
+      "tx_hex": "02534f43000502534f43000388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          60
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          60
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531284.277865,
+          "tap": "vunl0_3_7",
+          "vlan": 60,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531284.278065,
+          "tap": "vunl0_3_5",
+          "vlan": 60,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-trunk-to-access-99",
+      "tx_time_untrusted": "2026-11-01T11:08:04.806141+00:00",
+      "ingress": "vunl0_3_5",
+      "tx_vlan": 99,
+      "tx_hex": "02534f43000402534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_4",
+          null
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_4",
+          null
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531284.807318,
+          "tap": "vunl0_3_7",
+          "vlan": 99,
+          "packet_type": 3,
+          "hex": "02534f43000402534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531284.8075652,
+          "tap": "vunl0_3_4",
+          "vlan": null,
+          "packet_type": 3,
+          "hex": "02534f43000402534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "known-unicast-access-to-trunk-99",
+      "tx_time_untrusted": "2026-11-01T11:08:05.338297+00:00",
+      "ingress": "vunl0_3_4",
+      "tx_vlan": null,
+      "tx_hex": "02534f43000502534f43000488b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          99
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          99
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531285.3406293,
+          "tap": "vunl0_3_7",
+          "vlan": 99,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531285.3407037,
+          "tap": "vunl0_3_5",
+          "vlan": 99,
+          "packet_type": 3,
+          "hex": "02534f43000502534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    },
+    {
+      "case": "mirror-no-ingress-switching",
+      "tx_time_untrusted": "2026-11-01T11:08:05.869355+00:00",
+      "ingress": "vunl0_3_7",
+      "tx_vlan": 30,
+      "tx_hex": "ffffffffffff02534f4300078100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6d6972726f722d6e6f2d696e67726573732d737769746368696e67212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [],
+      "observed": [],
+      "mirror_frames": 0,
+      "status": "PASS",
+      "received": []
+    },
+    {
+      "case": "positive-control-final",
+      "tx_time_untrusted": "2026-11-01T11:08:06.401093+00:00",
+      "ingress": "vunl0_3_0",
+      "tx_vlan": null,
+      "tx_hex": "ffffffffffff02534f43000088b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e",
+      "expected": [
+        [
+          "vunl0_3_5",
+          30
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "observed": [
+        [
+          "vunl0_3_5",
+          30
+        ],
+        [
+          "vunl0_3_6",
+          30
+        ]
+      ],
+      "mirror_frames": 1,
+      "status": "PASS",
+      "received": [
+        {
+          "time_untrusted": 1793531286.4033022,
+          "tap": "vunl0_3_7",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531286.4035122,
+          "tap": "vunl0_3_6",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        },
+        {
+          "time_untrusted": 1793531286.4035425,
+          "tap": "vunl0_3_5",
+          "vlan": 30,
+          "packet_type": 1,
+          "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+        }
+      ]
+    }
+  ],
+  "events": [
+    {
+      "time_untrusted": 1793531269.9264402,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531269.932538,
+      "tap": "vunl0_3_6",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531269.9326265,
+      "tap": "vunl0_3_5",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.4455557,
+      "tap": "vunl0_3_7",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.445679,
+      "tap": "vunl0_3_5",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.4457135,
+      "tap": "vunl0_3_6",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.9772313,
+      "tap": "vunl0_3_5",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.9772809,
+      "tap": "vunl0_3_6",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531270.9772964,
+      "tap": "vunl0_3_7",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531271.5099316,
+      "tap": "vunl0_3_7",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531271.5100064,
+      "tap": "vunl0_3_6",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531271.5106094,
+      "tap": "vunl0_3_5",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.0408883,
+      "tap": "vunl0_3_6",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.0409346,
+      "tap": "vunl0_3_7",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.0409985,
+      "tap": "vunl0_3_5",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.5710886,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.5711977,
+      "tap": "vunl0_3_6",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531272.571711,
+      "tap": "vunl0_3_0",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.1023211,
+      "tap": "vunl0_3_7",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.1048503,
+      "tap": "vunl0_3_1",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.1053445,
+      "tap": "vunl0_3_6",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.634653,
+      "tap": "vunl0_3_7",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.6351342,
+      "tap": "vunl0_3_6",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531273.635194,
+      "tap": "vunl0_3_2",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.1679993,
+      "tap": "vunl0_3_3",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.1680646,
+      "tap": "vunl0_3_7",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.1688483,
+      "tap": "vunl0_3_6",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.7001958,
+      "tap": "vunl0_3_7",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.7003298,
+      "tap": "vunl0_3_6",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531274.7029839,
+      "tap": "vunl0_3_4",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b352d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.2970057,
+      "tap": "vunl0_3_0",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.2970476,
+      "tap": "vunl0_3_5",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.2970674,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.8282642,
+      "tap": "vunl0_3_1",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.8283134,
+      "tap": "vunl0_3_5",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531276.8283527,
+      "tap": "vunl0_3_7",
+      "vlan": 40,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.3638093,
+      "tap": "vunl0_3_2",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.3638823,
+      "tap": "vunl0_3_5",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.3639574,
+      "tap": "vunl0_3_7",
+      "vlan": 50,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.8908942,
+      "tap": "vunl0_3_3",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.8909428,
+      "tap": "vunl0_3_7",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531277.8909855,
+      "tap": "vunl0_3_5",
+      "vlan": 60,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531278.4362636,
+      "tap": "vunl0_3_4",
+      "vlan": null,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f43000688b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531278.4363177,
+      "tap": "vunl0_3_7",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531278.437947,
+      "tap": "vunl0_3_5",
+      "vlan": 99,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300068100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d7472756e6b362d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531280.5531583,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 3,
+      "hex": "02534f43000002534f4300058100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531280.5547457,
+      "tap": "vunl0_3_0",
+      "vlan": null,
+      "packet_type": 3,
+      "hex": "02534f43000002534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531281.0843258,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531281.0845313,
+      "tap": "vunl0_3_5",
+      "vlan": 30,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3330212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531281.616634,
+      "tap": "vunl0_3_7",
+      "vlan": 40,
+      "packet_type": 3,
+      "hex": "02534f43000102534f4300058100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531281.616752,
+      "tap": "vunl0_3_1",
+      "vlan": null,
+      "packet_type": 3,
+      "hex": "02534f43000102534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531282.1480827,
+      "tap": "vunl0_3_5",
+      "vlan": 40,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531282.14814,
+      "tap": "vunl0_3_7",
+      "vlan": 40,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300018100002888b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3430212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531282.6831543,
+      "tap": "vunl0_3_7",
+      "vlan": 50,
+      "packet_type": 3,
+      "hex": "02534f43000202534f4300058100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531282.6832674,
+      "tap": "vunl0_3_2",
+      "vlan": null,
+      "packet_type": 3,
+      "hex": "02534f43000202534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531283.2140856,
+      "tap": "vunl0_3_7",
+      "vlan": 50,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531283.2142036,
+      "tap": "vunl0_3_5",
+      "vlan": 50,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300028100003288b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3530212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531283.74408,
+      "tap": "vunl0_3_7",
+      "vlan": 60,
+      "packet_type": 3,
+      "hex": "02534f43000302534f4300058100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531283.7441752,
+      "tap": "vunl0_3_3",
+      "vlan": null,
+      "packet_type": 3,
+      "hex": "02534f43000302534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531284.277865,
+      "tap": "vunl0_3_7",
+      "vlan": 60,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531284.278065,
+      "tap": "vunl0_3_5",
+      "vlan": 60,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300038100003c88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3630212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531284.807318,
+      "tap": "vunl0_3_7",
+      "vlan": 99,
+      "packet_type": 3,
+      "hex": "02534f43000402534f4300058100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531284.8075652,
+      "tap": "vunl0_3_4",
+      "vlan": null,
+      "packet_type": 3,
+      "hex": "02534f43000402534f43000588b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d7472756e6b2d746f2d6163636573732d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531285.3406293,
+      "tap": "vunl0_3_7",
+      "vlan": 99,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531285.3407037,
+      "tap": "vunl0_3_5",
+      "vlan": 99,
+      "packet_type": 3,
+      "hex": "02534f43000502534f4300048100006388b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d6b6e6f776e2d756e69636173742d6163636573732d746f2d7472756e6b2d3939212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531286.4033022,
+      "tap": "vunl0_3_7",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531286.4035122,
+      "tap": "vunl0_3_6",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    },
+    {
+      "time_untrusted": 1793531286.4035425,
+      "tap": "vunl0_3_5",
+      "vlan": 30,
+      "packet_type": 1,
+      "hex": "ffffffffffff02534f4300008100001e88b5534f432d4d322d64623464363939383036616334396133626663353562633131383238633136652d706f7369746976652d636f6e74726f6c2d66696e616c212e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e2e"
+    }
+  ],
+  "expected_case_count": 32,
+  "completed": true,
+  "all_cases_passed": true,
+  "clock": "EVE time untrusted; collector must timestamp receipt",
+  "limitations": "Synthetic L2 broadcast tests, not IP routing, unicast performance, reboot or HA tests"
+}

@@ -1,0 +1,96 @@
+﻿stage,case,status,run_completed,ingress,tx_vlan,expected,observed,mirror_frames,evidence
+vlan-trunk,access-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,access-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]","[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,access-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]","[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,access-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]","[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,access-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]","[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-denied100,PASS,True,vunl0_3_5,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk5-untagged,PASS,True,vunl0_3_5,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-30,PASS,True,vunl0_3_6,30,"[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-40,PASS,True,vunl0_3_6,40,"[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-50,PASS,True,vunl0_3_6,50,"[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-60,PASS,True,vunl0_3_6,60,"[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-99,PASS,True,vunl0_3_6,99,"[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-denied100,PASS,True,vunl0_3_6,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,trunk6-untagged,PASS,True,vunl0_3_6,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,access30-wrongtag40,PASS,True,vunl0_3_0,40,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-trunk-to-access-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null]]","[[""vunl0_3_0"", null]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-access-to-trunk-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30]]","[[""vunl0_3_5"", 30]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-trunk-to-access-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null]]","[[""vunl0_3_1"", null]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-access-to-trunk-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40]]","[[""vunl0_3_5"", 40]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-trunk-to-access-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null]]","[[""vunl0_3_2"", null]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-access-to-trunk-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50]]","[[""vunl0_3_5"", 50]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-trunk-to-access-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null]]","[[""vunl0_3_3"", null]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-access-to-trunk-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60]]","[[""vunl0_3_5"", 60]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-trunk-to-access-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null]]","[[""vunl0_3_4"", null]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,known-unicast-access-to-trunk-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99]]","[[""vunl0_3_5"", 99]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+vlan-trunk,positive-control-final,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",0,docs\evidence\M2\live-tests-20261101\final-collection\vlan-trunk\result.json
+mirror-traffic,access-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,access-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]","[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,access-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]","[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,access-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]","[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,access-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]","[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-denied100,PASS,True,vunl0_3_5,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk5-untagged,PASS,True,vunl0_3_5,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-30,PASS,True,vunl0_3_6,30,"[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-40,PASS,True,vunl0_3_6,40,"[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-50,PASS,True,vunl0_3_6,50,"[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-60,PASS,True,vunl0_3_6,60,"[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-99,PASS,True,vunl0_3_6,99,"[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-denied100,PASS,True,vunl0_3_6,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,trunk6-untagged,PASS,True,vunl0_3_6,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,access30-wrongtag40,PASS,True,vunl0_3_0,40,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-trunk-to-access-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null]]","[[""vunl0_3_0"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-access-to-trunk-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30]]","[[""vunl0_3_5"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-trunk-to-access-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null]]","[[""vunl0_3_1"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-access-to-trunk-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40]]","[[""vunl0_3_5"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-trunk-to-access-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null]]","[[""vunl0_3_2"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-access-to-trunk-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50]]","[[""vunl0_3_5"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-trunk-to-access-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null]]","[[""vunl0_3_3"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-access-to-trunk-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60]]","[[""vunl0_3_5"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-trunk-to-access-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null]]","[[""vunl0_3_4"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,known-unicast-access-to-trunk-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99]]","[[""vunl0_3_5"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,mirror-no-ingress-switching,PASS,True,vunl0_3_7,30,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+mirror-traffic,positive-control-final,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\mirror-traffic\result.json
+postboot-traffic,access-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,access-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]","[[""vunl0_3_5"", 40], [""vunl0_3_6"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,access-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]","[[""vunl0_3_5"", 50], [""vunl0_3_6"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,access-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]","[[""vunl0_3_5"", 60], [""vunl0_3_6"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,access-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]","[[""vunl0_3_5"", 99], [""vunl0_3_6"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_6"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_6"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_6"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_6"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-denied100,PASS,True,vunl0_3_5,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk5-untagged,PASS,True,vunl0_3_5,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-30,PASS,True,vunl0_3_6,30,"[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]","[[""vunl0_3_0"", null], [""vunl0_3_5"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-40,PASS,True,vunl0_3_6,40,"[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]","[[""vunl0_3_1"", null], [""vunl0_3_5"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-50,PASS,True,vunl0_3_6,50,"[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]","[[""vunl0_3_2"", null], [""vunl0_3_5"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-60,PASS,True,vunl0_3_6,60,"[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]","[[""vunl0_3_3"", null], [""vunl0_3_5"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-99,PASS,True,vunl0_3_6,99,"[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]","[[""vunl0_3_4"", null], [""vunl0_3_5"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-denied100,PASS,True,vunl0_3_6,100,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,trunk6-untagged,PASS,True,vunl0_3_6,,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,access30-wrongtag40,PASS,True,vunl0_3_0,40,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-trunk-to-access-30,PASS,True,vunl0_3_5,30,"[[""vunl0_3_0"", null]]","[[""vunl0_3_0"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-access-to-trunk-30,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30]]","[[""vunl0_3_5"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-trunk-to-access-40,PASS,True,vunl0_3_5,40,"[[""vunl0_3_1"", null]]","[[""vunl0_3_1"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-access-to-trunk-40,PASS,True,vunl0_3_1,,"[[""vunl0_3_5"", 40]]","[[""vunl0_3_5"", 40]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-trunk-to-access-50,PASS,True,vunl0_3_5,50,"[[""vunl0_3_2"", null]]","[[""vunl0_3_2"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-access-to-trunk-50,PASS,True,vunl0_3_2,,"[[""vunl0_3_5"", 50]]","[[""vunl0_3_5"", 50]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-trunk-to-access-60,PASS,True,vunl0_3_5,60,"[[""vunl0_3_3"", null]]","[[""vunl0_3_3"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-access-to-trunk-60,PASS,True,vunl0_3_3,,"[[""vunl0_3_5"", 60]]","[[""vunl0_3_5"", 60]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-trunk-to-access-99,PASS,True,vunl0_3_5,99,"[[""vunl0_3_4"", null]]","[[""vunl0_3_4"", null]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,known-unicast-access-to-trunk-99,PASS,True,vunl0_3_4,,"[[""vunl0_3_5"", 99]]","[[""vunl0_3_5"", 99]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,mirror-no-ingress-switching,PASS,True,vunl0_3_7,30,[],[],0,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json
+postboot-traffic,positive-control-final,PASS,True,vunl0_3_0,,"[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]","[[""vunl0_3_5"", 30], [""vunl0_3_6"", 30]]",1,docs\evidence\M2\live-tests-20261101\final-collection\postboot-traffic\result.json

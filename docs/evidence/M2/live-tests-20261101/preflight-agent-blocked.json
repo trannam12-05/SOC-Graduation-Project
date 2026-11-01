@@ -1,0 +1,11 @@
+﻿{
+    "CollectorTime":  "2026-11-01T10:36:57.7021329+07:00",
+    "WindowsAvailableKiB":  3572668,
+    "WindowsVirtualAvailableKiB":  7367204,
+    "SshAgentStatus":  "Stopped",
+    "EveSshAttemptResult":  "Permission denied (publickey,password) at first queue attempt",
+    "CoreStartRequested":  false,
+    "NetworkTestsRun":  false,
+    "Queue":  "staging/m2-live-20261101a/queue.json",
+    "Scope":  "Actual local preflight; EVE runtime not yet accessible"
+}

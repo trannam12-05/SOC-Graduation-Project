@@ -119,6 +119,26 @@ class Preparation(unittest.TestCase):
             with patch.object(job,'command',side_effect=fake_command),patch.object(transport,'decode',side_effect=[bad,blob[:-1]+'A']):
                 with self.assertRaises(RuntimeError):job.run('verify','/root/m2-traffic-mock')
 
+    def test_console_bundle_preserves_utf8_bytes_without_double_base64(self):
+        with tempfile.TemporaryDirectory() as tmp:
+            job=transport.ConsoleJob(Path(tmp),'mock-bundle',True)
+            commands=[]
+            def hash_screen(image,size):
+                if commands[-1].startswith('printf %s '):return hashlib.sha256(shlex.split(commands[-1])[2].encode()).hexdigest()
+                return job.payload_sha
+            with patch.object(job,'command',side_effect=lambda text:commands.append(text)),patch.object(transport,'decode',side_effect=hash_screen):
+                job.stage({'guest.py':'# kiem tra UTF-8: \u0111\u1ed3 \u00e1n\n'.encode('utf-8')})
+            chunks=[shlex.split(c)[2] for c in commands if c.startswith('printf %s ')]
+            raw=zlib.decompress(base64.b64decode(''.join(chunks)))
+            self.assertEqual(json.loads(raw)['guest.py'].encode('utf-8'),'# kiem tra UTF-8: \u0111\u1ed3 \u00e1n\n'.encode('utf-8'))
+            self.assertEqual(hashlib.sha256(raw).hexdigest(),job.payload_sha)
+            compile(shlex.split(commands[-1])[2],'prepared-unpack-command','exec')
+            token=base64.b64encode(bytes.fromhex(job.payload_sha)).decode()
+            with patch.object(job,'command',return_value=Path(tmp)/'mock.png'),patch.object(transport,'decode',return_value=token):
+                self.assertTrue(job.reuse({'guest.py':json.loads(raw)['guest.py'].encode('utf-8')}))
+            with patch.object(job,'command',return_value=Path(tmp)/'mock.png'),patch.object(transport,'decode',return_value='A'*44):
+                self.assertFalse(job.reuse({'guest.py':b'changed source'}))
+
     def test_proposed_address_plan_rejects_vip_in_dhcp_pool(self):
         data=json.loads((ROOT/'configs/M3/address-proposal.json').read_text())
         self.assertTrue(validate(data)['design_checks_ok'])
@@ -160,6 +180,7 @@ class Preparation(unittest.TestCase):
             win=SimpleNamespace(stdout=json.dumps({'available_kib':4000000,'virtual_available_kib':4000000}))
             args=SimpleNamespace(resources_ready=True,console_shell_ready=True,reboot_ready=True)
             with patch.object(queue,'ssh',return_value=eve),patch.object(queue.subprocess,'run',return_value=win),patch.object(queue,'ConsoleJob') as adapter:
+                adapter.return_value.session='mock-session'
                 adapter.return_value.run.return_value={'stdout':json.dumps({'state':{'boot_id':'new-boot'}})}
                 queue.execute(q,args)
                 adapter.return_value.command.assert_not_called()

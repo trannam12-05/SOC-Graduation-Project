@@ -1,0 +1,109 @@
+{
+  "created_at": "2026-11-01T10:36:21.060950+07:00",
+  "session": "m2-live-20261101a",
+  "mode": "EXECUTION_REQUESTED",
+  "stages": {
+    "resources": {
+      "status": "DONE",
+      "time": "2026-11-01T11:16:55.973250+07:00",
+      "evidence": "staging\\m2-live-20261101a\\resource-111655.json",
+      "detail": ""
+    },
+    "start-core": {
+      "status": "DONE",
+      "time": "2026-11-01T11:16:55.974446+07:00",
+      "evidence": "staging\\m2-live-20261101a\\resource-111655.json",
+      "detail": "Existing Core already running; no duplicate start"
+    },
+    "baseline": {
+      "status": "DONE",
+      "time": "2026-11-01T11:04:15.239684+07:00",
+      "evidence": "",
+      "detail": ""
+    },
+    "backup": {
+      "status": "DONE",
+      "time": "2026-11-01T11:05:51.098222+07:00",
+      "evidence": "",
+      "detail": "OVSDB raw kept root-only in /root/m2-traffic-m2-live-20261101a"
+    },
+    "vlan-trunk": {
+      "status": "DONE",
+      "time": "2026-11-01T11:06:08.658103+07:00",
+      "evidence": "staging\\m2-live-20261101a\\vlan-trunk.json",
+      "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-vlan-trunk"
+    },
+    "mirror": {
+      "status": "DONE",
+      "time": "2026-11-01T11:07:48.956159+07:00",
+      "evidence": "",
+      "detail": ""
+    },
+    "mirror-traffic": {
+      "status": "DONE",
+      "time": "2026-11-01T11:08:07.053663+07:00",
+      "evidence": "staging\\m2-live-20261101a\\mirror-traffic.json",
+      "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-mirror-traffic"
+    },
+    "persist": {
+      "status": "DONE",
+      "time": "2026-11-01T11:43:11.067489+07:00",
+      "evidence": "postboot-readonly-console/export-5-verified-reply.json",
+      "detail": "Verified enabled/active after changed boot ID and 32 real cases; earlier active-stage error was console transport, not unit failure"
+    },
+    "reboot": {
+      "status": "DONE",
+      "time": "2026-11-01T11:41:18.900174+07:00",
+      "evidence": "staging\\m2-live-20261101a\\postboot-readonly-console\\export-5-verified-reply.json",
+      "detail": "Changed boot ID, complete actual state and enabled/active no-IP unit verified"
+    },
+    "postboot-baseline": {
+      "status": "DONE",
+      "time": "2026-11-01T11:41:18.901174+07:00",
+      "evidence": "staging\\m2-live-20261101a\\postboot-readonly-console\\export-5-verified-reply.json",
+      "detail": "Same strict MAC/OVS/VLAN/Mirror/noIP/forwarding guards; read-only fallback"
+    },
+    "postboot-traffic": {
+      "status": "DONE",
+      "time": "2026-11-01T11:41:37.058503+07:00",
+      "evidence": "staging\\m2-live-20261101a\\postboot-traffic.json",
+      "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-postboot-traffic"
+    },
+    "collect": {
+      "status": "DONE",
+      "time": "2026-11-01T11:41:37.060569+07:00",
+      "evidence": "staging\\m2-live-20261101a",
+      "detail": "95 actual frame cases complete; collect PCAP/log separately; not routing/HA/IDS acceptance"
+    }
+  },
+  "network_functional_acceptance": true,
+  "updated_at": "2026-11-01T11:45:02.706251+07:00",
+  "historical_errors": [
+    {
+      "type": "RuntimeError",
+      "message": "EVE action failed: root@192.168.220.143: Permission denied (publickey,password).\n",
+      "at": "2026-11-01T10:36:22.708472+07:00"
+    },
+    {
+      "type": "RuntimeError",
+      "message": "Guest action failed; inspect staging\\m2-live-20261101a\\console-transfer\\baseline-13-verified-reply.json (sudo -n failure requires local authentication, never sudoers changes)",
+      "at": "2026-11-01T10:50:33.994028+07:00"
+    }
+  ],
+  "active_stage": "postboot-traffic",
+  "bundle_cache_provenance": "Original transferred bundle; next resume must probe exact payload and per-file hashes before use",
+  "initial_boot_id": "3060cddc-e143-4e13-b739-76f4f2b96deb",
+  "backup": {
+    "path": "/root/m2-traffic-m2-live-20261101a/ovsdb.before",
+    "sha256": "2d3a1e60ce73b7bb2172ba657b4901caafe8c7c550156835f391febd60cb56a3",
+    "bytes": 24112,
+    "schema": "8.5.1"
+  },
+  "historical_bundle_sessions": [
+    "m2-live-20261101a-1793506654"
+  ],
+  "transport_interrupted": false,
+  "transport_note": "Resolved by checksum-verified read-only export using retained source hash; last real suite executed by controller",
+  "controlled_m2_suite_verified": true,
+  "network_functional_acceptance_scope": "Controlled M2 Ethernet VLAN/trunk/mirror suites and reboot only; not routing/HA/IDS/performance"
+}

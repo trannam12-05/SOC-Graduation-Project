@@ -1,0 +1,148 @@
+[
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_5.pcap",
+    "packets": 16,
+    "vlan_counts": {
+      "30": 4,
+      "40": 3,
+      "50": 3,
+      "60": 3,
+      "99": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_1.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_0.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_6.pcap",
+    "packets": 11,
+    "vlan_counts": {
+      "30": 3,
+      "40": 2,
+      "50": 2,
+      "60": 2,
+      "99": 2
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_3.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_2.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_4.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "vlan-trunk",
+    "file": "vunl0_3_7.pcap",
+    "packets": 0,
+    "vlan_counts": {}
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_5.pcap",
+    "packets": 16,
+    "vlan_counts": {
+      "30": 4,
+      "40": 3,
+      "50": 3,
+      "60": 3,
+      "99": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_1.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_0.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_6.pcap",
+    "packets": 11,
+    "vlan_counts": {
+      "30": 3,
+      "40": 2,
+      "50": 2,
+      "60": 2,
+      "99": 2
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_3.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_2.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_4.pcap",
+    "packets": 3,
+    "vlan_counts": {
+      "untagged": 3
+    }
+  },
+  {
+    "stage": "mirror-traffic",
+    "file": "vunl0_3_7.pcap",
+    "packets": 26,
+    "vlan_counts": {
+      "30": 6,
+      "40": 5,
+      "50": 5,
+      "60": 5,
+      "99": 5
+    }
+  }
+]

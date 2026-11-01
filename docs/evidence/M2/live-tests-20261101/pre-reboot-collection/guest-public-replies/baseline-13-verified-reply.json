@@ -1,0 +1,5 @@
+{
+  "rc": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/tmp/m2-bundle-m2-live-20261101a-1793504538/guest.py\", line 264, in <module>\n    main()\n  File \"/tmp/m2-bundle-m2-live-20261101a-1793504538/guest.py\", line 252, in main\n    check(s)\n  File \"/tmp/m2-bundle-m2-live-20261101a-1793504538/guest.py\", line 79, in check\n    assert 'UP' in next(x['flags'] for x in s['links'] if x['ifname']==BR), 'Bridge not administratively UP'\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nAssertionError: Bridge not administratively UP\n"
+}

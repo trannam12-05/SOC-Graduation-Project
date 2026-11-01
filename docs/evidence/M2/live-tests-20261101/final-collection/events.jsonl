@@ -1,0 +1,25 @@
+{"stage": "resources", "status": "DONE", "time": "2026-11-01T10:38:06.470976+07:00", "evidence": "staging\\m2-live-20261101a\\resource-103806.json", "detail": ""}
+{"stage": "start-core", "status": "REQUESTED", "time": "2026-11-01T10:38:09.072742+07:00", "evidence": "staging\\m2-live-20261101a\\resource-103806.json", "detail": "Wrapper accepted start for Core ID3; boot not yet verified"}
+{"stage": "baseline", "status": "WAIT_CONSOLE", "time": "2026-11-01T10:38:09.083302+07:00", "evidence": "", "detail": "Wait boot; inspect actual screen, log in and sudo -v locally, then resume with --console-shell-ready. Never send credentials to the script."}
+{"stage": "resources", "status": "DONE", "time": "2026-11-01T10:42:18.767185+07:00", "evidence": "staging\\m2-live-20261101a\\resource-104218.json", "detail": ""}
+{"stage": "start-core", "status": "DONE", "time": "2026-11-01T10:42:18.769677+07:00", "evidence": "staging\\m2-live-20261101a\\resource-104218.json", "detail": "Existing Core already running; no duplicate start"}
+{"stage": "baseline", "status": "FAILED_OR_BLOCKED", "time": "2026-11-01T10:50:33.990704+07:00", "evidence": "", "detail": "See queue error and saved guest/host output; not a networking PASS"}
+{"stage": "resources", "status": "DONE", "time": "2026-11-01T11:01:56.684217+07:00", "evidence": "staging\\m2-live-20261101a\\resource-110156.json", "detail": ""}
+{"stage": "start-core", "status": "DONE", "time": "2026-11-01T11:01:56.686058+07:00", "evidence": "staging\\m2-live-20261101a\\resource-110156.json", "detail": "Existing Core already running; no duplicate start"}
+{"stage": "baseline", "status": "DONE", "time": "2026-11-01T11:04:15.239684+07:00", "evidence": "", "detail": ""}
+{"stage": "backup", "status": "DONE", "time": "2026-11-01T11:05:51.098222+07:00", "evidence": "", "detail": "OVSDB raw kept root-only in /root/m2-traffic-m2-live-20261101a"}
+{"stage": "vlan-trunk", "status": "DONE", "time": "2026-11-01T11:06:08.658103+07:00", "evidence": "staging\\m2-live-20261101a\\vlan-trunk.json", "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-vlan-trunk"}
+{"stage": "mirror", "status": "DONE", "time": "2026-11-01T11:07:48.956159+07:00", "evidence": "", "detail": ""}
+{"stage": "mirror-traffic", "status": "DONE", "time": "2026-11-01T11:08:07.053663+07:00", "evidence": "staging\\m2-live-20261101a\\mirror-traffic.json", "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-mirror-traffic"}
+{"stage": "persist", "status": "DONE", "time": "2026-11-01T11:09:44.345127+07:00", "evidence": "", "detail": ""}
+{"stage": "reboot", "status": "WAIT_REBOOT_CHECKPOINT", "time": "2026-11-01T11:09:44.346291+07:00", "evidence": "", "detail": "Save logs and ensure no other guest task is running; resume --reboot-ready after checking actual console"}
+{"stage": "resources", "status": "DONE", "time": "2026-11-01T11:12:30.049530+07:00", "evidence": "staging\\m2-live-20261101a\\resource-111230.json", "detail": ""}
+{"stage": "start-core", "status": "DONE", "time": "2026-11-01T11:12:30.050093+07:00", "evidence": "staging\\m2-live-20261101a\\resource-111230.json", "detail": "Existing Core already running; no duplicate start"}
+{"stage": "reboot", "status": "REQUESTED", "time": "2026-11-01T11:13:18.077652+07:00", "evidence": "", "detail": "Not yet verified; reboot is NOT DONE until boot_id changes"}
+{"stage": "resources", "status": "DONE", "time": "2026-11-01T11:16:55.973250+07:00", "evidence": "staging\\m2-live-20261101a\\resource-111655.json", "detail": ""}
+{"stage": "start-core", "status": "DONE", "time": "2026-11-01T11:16:55.974446+07:00", "evidence": "staging\\m2-live-20261101a\\resource-111655.json", "detail": "Existing Core already running; no duplicate start"}
+{"stage": "reboot", "status": "DONE", "time": "2026-11-01T11:41:18.900174+07:00", "evidence": "staging\\m2-live-20261101a\\postboot-readonly-console\\export-5-verified-reply.json", "detail": "Changed boot ID, complete actual state and enabled/active no-IP unit verified"}
+{"stage": "postboot-baseline", "status": "DONE", "time": "2026-11-01T11:41:18.901174+07:00", "evidence": "staging\\m2-live-20261101a\\postboot-readonly-console\\export-5-verified-reply.json", "detail": "Same strict MAC/OVS/VLAN/Mirror/noIP/forwarding guards; read-only fallback"}
+{"stage": "postboot-traffic", "status": "DONE", "time": "2026-11-01T11:41:37.058503+07:00", "evidence": "staging\\m2-live-20261101a\\postboot-traffic.json", "detail": "Real frame result required; PCAP on EVE at /root/m2-frame-m2-live-20261101a-postboot-traffic"}
+{"stage": "collect", "status": "DONE", "time": "2026-11-01T11:41:37.060569+07:00", "evidence": "staging\\m2-live-20261101a", "detail": "95 actual frame cases complete; collect PCAP/log separately; not routing/HA/IDS acceptance"}
+{"stage": "persist", "status": "DONE", "time": "2026-11-01T11:43:11.067489+07:00", "evidence": "postboot-readonly-console/export-5-verified-reply.json", "detail": "Verified enabled/active after changed boot ID and 32 real cases; earlier active-stage error was console transport, not unit failure"}

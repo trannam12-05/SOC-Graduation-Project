@@ -15,7 +15,7 @@ from pathlib import Path
 import subprocess
 import sys
 import time
-from m2_console_job import ConsoleJob
+from m2_console_job import ConsoleJob, ConsoleTransportError
 
 ROOT=Path(__file__).resolve().parents[1]
 STAGES=['resources','start-core','baseline','backup','vlan-trunk','mirror','mirror-traffic','persist','reboot','postboot-baseline','postboot-traffic','collect']
@@ -117,6 +117,8 @@ def execute(q,args):
         '$o=Get-CimInstance Win32_OperatingSystem; @{available_kib=[long]$o.FreePhysicalMemory;virtual_available_kib=[long]$o.FreeVirtualMemory}|ConvertTo-Json'],capture_output=True,text=True,check=True)
     windows=json.loads(r.stdout);eve=ssh(REMOTE)
     running=require_resources(windows,eve)
+    if q.data.get('error'):
+        q.data.setdefault('historical_errors',[]).append(q.data.pop('error'))
     p=q.path/('resource-'+dt.datetime.now().strftime('%H%M%S')+'.json')
     p.write_text(json.dumps({'collector_time':now(),'windows':windows,'eve':eve},indent=2)+'\n')
     q.mark('resources','DONE',str(p))
@@ -131,16 +133,21 @@ def execute(q,args):
         q.mark('baseline','WAIT_CONSOLE',detail='Verified idle guest shell + sudo -n access required once per boot')
         return
     work='/root/m2-traffic-'+q.data['session']
-    adapter=ConsoleJob(q.path/'console-transfer',q.data['session']+'-'+str(int(time.time())),shell_ready=True)
+    session=q.data.get('bundle_session',q.data['session']+'-'+str(int(time.time())))
+    adapter=ConsoleJob(q.path/'console-transfer',session,shell_ready=True)
     files={'guest.py':(ROOT/'automation/m2_mirror_guest_prepared.py').read_bytes(),
            'soc-core-l2-noip.service':(ROOT/'configs/M2/soc-core-l2-noip.service').read_bytes(),
            'soc-core-l2-noip.sh':(ROOT/'configs/M2/soc-core-l2-noip.sh').read_bytes()}
-    adapter.stage(files)
+    if not q.data.get('bundle_session') or not adapter.reuse(files):
+        if q.data.get('bundle_session'):
+            adapter=ConsoleJob(q.path/'console-transfer',q.data['session']+'-'+str(int(time.time())),shell_ready=True)
+        adapter.stage(files)
+    q.data['bundle_session']=adapter.session;q.write()
     mutated=q.done('mirror')
     try:
         if not q.done('baseline'):
             q.data['active_stage']='baseline';q.write()
-            reply=parse_public(adapter.run('baseline',work+'-baseline'))
+            reply=parse_public(adapter.run('baseline',work+'-baseline-'+str(int(time.time()))))
             q.data['initial_boot_id']=reply['state']['boot_id'];q.mark('baseline','DONE')
         if not q.done('backup'):
             q.data['active_stage']='backup';q.write()
@@ -175,7 +182,14 @@ def execute(q,args):
             raise RuntimeError('Boot ID did not change; persistence not verified')
         q.mark('postboot-baseline','DONE')
         if not q.done('postboot-traffic'):frame_test(q,'postboot-traffic',True)
+        q.data['network_functional_acceptance']=True
+        q.data['network_functional_acceptance_scope']='Controlled M2 Ethernet frame suites and reboot; not routing/HA/IDS/performance'
         q.mark('collect','DONE',str(q.path),'Verified public JSON/screenshots local; raw DB/PCAP remain EVE/guest; no complete SOC/HA acceptance')
+    except ConsoleTransportError:
+        q.data['transport_interrupted']=True
+        q.data['transport_note']='Inspect actual shell and guest process state; do not start rollback while outcome/console is unknown'
+        q.write()
+        raise
     except Exception:
         active=q.data.get('active_stage')
         if active:q.mark(active,'FAILED_OR_BLOCKED',detail='See queue error and saved guest/host output; not a networking PASS')

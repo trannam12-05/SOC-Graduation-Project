@@ -1,0 +1,56 @@
+{
+  "collector_time": "2026-11-01T11:51:21.319016+07:00",
+  "all_previous_tracked_m2_reports_unchanged": [
+    {
+      "file": "docs/M2/M2-cloud-init-validation-20261031.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-consolidated-review-20261101.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+      "unchanged": true
+    },
+    {
+      "file": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+      "unchanged": true
+    }
+  ],
+  "docx_zip_xml_a4_tnr_margins_images_verified": true,
+  "embedded_images": 8,
+  "actual_frame_cases": 95,
+  "pass": 95,
+  "fail": 0,
+  "received_frames_total": 178,
+  "final_pcap_files": 24,
+  "nonempty_final_pcaps": 23,
+  "core_qemu_count": 1,
+  "remaining_known_warning": "OVS_CTL_OPTS unset, nonfatal in observed services/tests",
+  "word_gui_pagination_reviewed": false
+}

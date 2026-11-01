@@ -1,0 +1,66 @@
+[
+  {
+    "name": "runtime-backup-20261101T110014+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:00:14.610176+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\runtime-backup-20261101T110014+0700.png",
+    "report_position": "2.9",
+    "sha256": "3bd6c1535742e7742253cedb3f9164db0997ae199a2a1b7ab4a620068203f390"
+  },
+  {
+    "name": "runtime-restored-up-20261101T110115+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:01:15.659243+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\runtime-restored-up-20261101T110115+0700.png",
+    "report_position": "2.9",
+    "sha256": "35c1eecab0535ddb44a1fbaef2340b82c049d23149040f50e916d81d62744f48"
+  },
+  {
+    "name": "preboot-ports-20261101T111038+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:10:38.283403+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\preboot-ports-20261101T111038+0700.png",
+    "report_position": "2.9",
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "name": "preboot-mirror-20261101T111048+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:10:48.040914+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\preboot-mirror-20261101T111048+0700.png",
+    "report_position": "2.9",
+    "sha256": "cd09dfc6bd8692b90f527269df93e719957ad1aa241b01a99ceaf950dbf98faf"
+  },
+  {
+    "name": "postboot-ports-20261101T114351+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:43:51.646607+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\postboot-ports-20261101T114351+0700.png",
+    "report_position": "2.9",
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "name": "postboot-l2-20261101T113530+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:35:30.276640+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\postboot-l2-20261101T113530+0700.png",
+    "report_position": "2.9",
+    "sha256": "d17acbd09ece7ff402f3b0e2ade8771c87e21c97db59fc6f7fbc08004abfe324"
+  },
+  {
+    "name": "postboot-services-20261101T114408+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:44:08.251825+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\postboot-services-20261101T114408+0700.png",
+    "report_position": "2.9",
+    "sha256": "a507bbbae0ae2e83e414894bd8b43cb9957022e523e6000e048147bb5ed3f85b"
+  },
+  {
+    "name": "postboot-datapath-20261101T114419+0700.png",
+    "content": "Actual console screenshot",
+    "collector_time": "2026-11-01T11:44:19.168018+07:00",
+    "path": "docs\\evidence\\M2\\live-tests-20261101\\postboot-datapath-20261101T114419+0700.png",
+    "report_position": "2.9",
+    "sha256": "ef2e0bca748c2b0e3dacadf055eaf10d5e1ed6dd826739f6922f91ef22c6362e"
+  }
+]

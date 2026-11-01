@@ -1,8 +1,36 @@
 # Tiến độ dự án SOC
 
+## Mốc tiếp quản khẩn cấp — 01/11/2026, 12:57 UTC+07:00
+
+Người dùng giao ưu tiên OPNsense Primary với thời gian còn 9 giờ 30 phút. **Trạng thái runtime mới thay dòng Core đang chạy ở checkpoint M2 phía dưới:** Core hiện tắt; duy nhất Primary ID 1 đang chạy Live ISO OPNsense 26.7, chưa xác minh cài ổ. SSH đã khôi phục; EVE available 5114 MiB, swap 0. Windows chỉ khoảng 0,40 GiB available, chưa đủ dự phòng tăng tải/bật Core. Không có link EVE. Đang chờ shell Live đã xác thực để đọc partition và MAC trước installer, đồng thời người dùng giải phóng RAM. [Nhật ký và ảnh thật M3](M3/M3-primary-live-status-20261101.md).
+
+M2 vẫn giữ **95/95 ca frame thật PASS**, mirror và persistence đã có bằng chứng; không chạy lại hoặc phủ nhận kết quả cũ do mô tả đầu vào chưa cập nhật. Chưa có nghiệm thu gateway/firewall/HA/IDS. Bộ công cụ `capture_m3_primary_readonly.py` đã chụp đúng Primary; không gửi phím hoặc thay VM.
+
 Checkpoint ngày **01/11/2026, UTC+07:00 (Asia/Saigon)**; hạn nộp **05/11/2026**. Đọc `AGENTS.md` trước mọi thao tác.
 
-## 0. Cập nhật ưu tiên: chế độ nhẹ trong khi người dùng học Labtainer
+## 0. Trạng thái hiện hành và các mốc bàn giao
+
+### 0.0. Kết quả M2 thực tế đã hoàn thành ngày 01/11
+
+**Core đang chạy; bộ kiểm thử M2 cô lập đạt95/95 ca frame thật,0 FAIL.** Đây là trạng thái hiện hành thay cho các mốc NOT_RUN/giữ VM tắt ở dưới. Không cần cài lại OVS/tạo bridge hoặc chạy lại suite đã đạt nếu trạng thái chưa đổi. Chỉ một QEMU Core2048MiB được bật, không thêm VM/link, không sửa image/seed/mạng host.
+
+- [Báo cáo Word M2 thực tế](M2/M2-report-functional-tests-verified-20261101.docx), [Markdown](M2/M2-report-functional-tests-verified-20261101.md): mapping, nguyên lý, kết quả và8 ảnh console thật; các báo cáo cũ giữ nguyên. [Kiểm tra bàn giao](evidence/M2/live-tests-20261101/delivery-checks-final.json).
+- [Bảng95 ca](evidence/M2/live-tests-20261101/final-collection/frame-cases.csv): trước mirror31/31, sau mirror32/32, sau reboot32/32. Có178 frame guest trả ra,24 PCAP cuối lưu cục bộ trong ba thư mục stage; capture chỉ marker thử, không lấy PACKET_OUTGOING làm kết quả. Bản pre-reboot-collection là snapshot trùng của63 ca đầu, không cộng thêm vào95.
+- [Mapping sau reboot](evidence/M2/live-tests-20261101/configured-port-mapping-after-reboot.csv): ens3/30,ens4/40,ens5/50,ens6/60,ens7/99; ens8/ens9 trunk30,40,50,60,99; ens10 output Mirror span-suricata chọn ingress7 data ports/năm VLAN, không select_dst_port. Cổng mirror gửi ngược không chuyển tiếp. Mỗi suite mirror có26 bản sao: VID30=6, còn lại5 mỗi VLAN; chưa có Suricata VM.
+- **Persistence đạt:** soc-core-l2-noip.service enabled/active; boot_id3060cddc-e143-4e13-b739-76f4f2b96deb đổi thành6b7326c8-146a-45f7-b373-1a014d0021e2; cấu hình/VLAN/mirror, không IP/gateway và forwarding0/0 đều kiểm lại, rồi32 ca frame sau boot đạt.
+- Backup chính trước SPAN: `/root/m2-traffic-m2-live-20261101a/ovsdb.before`, schema8.5.1; metadata/hash trong queue-receipt.json và guest-public-replies của final-collection. Raw DB chỉ trong guest root-only. Registry tệp unit/helper và log lệnh đầy đủ vẫn trong cùng workdir guest; các JSON/ảnh/events/PCAP đã thu ở Windows được chỉ rõ trong danh mục. Không dùng snapshot OVS rỗng từ đợt đầu để rollback hiện tại.
+- Lỗi đã xử lý: ssh-agent bị dừng; bridge admin DOWN sau boot đầu; guard so nhầm cờ link và IPv6 link-local tự sinh khi rollback runtime; bundle/tmp bị dọn sau reboot và lỗi truyền/chuỗi console. Các lần lỗi giữ trong evidence, không tính thành FAIL của95 ca frame. Đã dừng đúng client điều phối của phiên và Ctrl+C dòng nhập dở, không Reset/dừng VM hoặc sửa sudoers.
+- Adapter hiện dùng literal JSON, hash từng chunk/toàn bộ và `/var/tmp`. Sau lỗi bundle lớn, `m2_postboot_readonly_export.py` dùng thư viện đã giữ trong/root với hash263c27f2… để lấy trạng thái thực; `m2_resume_verified_postboot.py` kiểm cùng guard rồi dùng chính controller/frame_test chạy32 ca cuối. `m2_recover_bridge_runtime.py` chỉ giữ lịch sử các lần thử lỗi, không tái chạy. Không coi mock/static hoặc dữ liệu xuất chỉ đọc là PASS lưu lượng.
+- Còn cảnh báo **OVS_CTL_OPTS chưa đặt** trong journal, dịch vụ vẫn active; chưa sửa unit OVS để bỏ cảnh báo. Chưa có ảnh GUI topology mới và chưa rà phân trang Word bằng GUI. Chưa thử tải cao, IPv6 payload, endpoint TCP/IP/firewall/HA hoặc IDS/Wazuh.
+- Tài nguyên cuối đợt: Windows khoảng2,13GiB available, EVE5922MiB available, một QEMU. Đây là số đo lịch sử, đo lại trước M3. Core tiếp tục chạy nhàn, không bật thêm VM trong đợt này.
+
+**Điều kiện M3 Primary:** giao phạm vi M3 riêng, image chính thức đã xác thực, đủ RAM/commit/đĩa và dự phòng, xác minh MAC/interface LAN-WAN-SYNC, subnet/VIP/DNS/WAN/upstream. Ưu tiên cài một firewall tuần tự; cặp HA + Core vượt RAM EVE hiện có. Không triển khai OPNsense/Suricata trong checkpoint này. Kế hoạch đến05/11 vẫn ở SOC-execution-resource-plan-20261101.md; M2 chức năng được giao đã đạt, chuyển ưu tiên sang Primary khi đủ điều kiện.
+
+### 0.0.1. Lịch sử tiếp tục sau Labtainer — 01/11, 10:36 UTC+07:00
+
+Người dùng xác nhận đã hoàn thành Labtainer và phê duyệt bật duy nhất Core2GiB, kiểm thử M2/mirror/persistence có backup và rollback. Không bật firewall/sensor, không sửa mạng host/image/seed. Giới hạn giữ VM tắt ở các mục lịch sử dưới đây đã được thay bằng phạm vi mới này khi đủ tài nguyên.
+
+Lần chạy bộ điều phối `staging/m2-live-20261101a` chưa tới bước start: SSH EVE bị `Permission denied (publickey,password)`, ssh-agent Windows Stopped và không kết nối agent. RAM đo10:36 là2,88GiB available, virtual available6,45GiB; cần đo lại và đạt ngưỡng bật Core3GiB. Đã yêu cầu người dùng tự khôi phục agent/khóa và giải phóng thêm ít RAM, không thay dịch vụ Windows. [Tiền kiểm tra thực tế](evidence/M2/live-tests-20261101/preflight-agent-blocked.json). Chưa phát lệnh start, chưa chạy ca frame hoặc thay cấu hình; không có PASS mới. Tiếp tục cùng queue sau khi khôi phục điều kiện, không cài lại OVS/tạo lại bridge.
 
 ### 0.1. Chuẩn bị tăng tốc trước 10 giờ ngày 01/11
 
