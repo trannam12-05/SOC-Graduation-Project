@@ -1,0 +1,64 @@
+{
+    "checked_at":  "2026-11-08T16:01:29.7313025+07:00",
+    "word":  {
+                 "pages":  226,
+                 "words":  77938,
+                 "images":  50,
+                 "tables":  89,
+                 "toc":  3,
+                 "normal_open":  true,
+                 "checked_at":  "2026-11-08T16:00:55.1816796+07:00",
+                 "saved_by":  "Word Save",
+                 "pdf_export":  "Không xuất PDF; kiểm tra trực tiếp trong Word."
+             },
+    "unchanged_nonempty_nodes":  1713,
+    "preserved_text_nodes":  1713,
+    "missing_text_nodes":  0,
+    "duplicate_caption_numbers":  [
+
+                                  ],
+    "original_photos_3_17_to_3_25":  [
+                                         {
+                                             "source_relationship":  "rId45",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId46",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId47",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId48",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId49",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId50",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId51",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId52",
+                                             "preserved_bytes":  true
+                                         },
+                                         {
+                                             "source_relationship":  "rId53",
+                                             "preserved_bytes":  true
+                                         }
+                                     ],
+    "credential_scan_signals":  [
+
+                                ],
+    "source_sha256":  "0EE4C096C29C28CFCEAF4E455301222023F1CE6BD04A16BE5C36E30AF0AFE329",
+    "backup_sha256":  "0EE4C096C29C28CFCEAF4E455301222023F1CE6BD04A16BE5C36E30AF0AFE329",
+    "output_sha256":  "4066853F7ACD253C6DA2AA2B55120EC470883476118CB9D87BD996A3FAF7FCF1"
+}
