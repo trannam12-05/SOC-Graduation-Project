@@ -1,0 +1,89 @@
+{
+  "model_save": {
+    "status": "SAVED",
+    "role": "secondary",
+    "added": 5,
+    "backup": "/root/soc-m3-todo-carp-20261103/config.before.xml",
+    "config_sha256_after": "5b457e7b36cc5a318f9b54eb8f2c96635dc5819c16b85e5306de612149b7c7c0",
+    "protected_sections_unchanged": true,
+    "rows": [
+      {
+        "interface": "opt1",
+        "mode": "carp",
+        "subnet": "192.168.30.1",
+        "subnet_bits": "24",
+        "vhid": "30",
+        "advbase": "1",
+        "advskew": "100",
+        "noexpand": "0",
+        "nobind": "0",
+        "nosync": "0",
+        "descr": "SOC CARP VLAN30"
+      },
+      {
+        "interface": "opt2",
+        "mode": "carp",
+        "subnet": "192.168.40.1",
+        "subnet_bits": "24",
+        "vhid": "40",
+        "advbase": "1",
+        "advskew": "100",
+        "noexpand": "0",
+        "nobind": "0",
+        "nosync": "0",
+        "descr": "SOC CARP VLAN40"
+      },
+      {
+        "interface": "opt3",
+        "mode": "carp",
+        "subnet": "192.168.50.1",
+        "subnet_bits": "24",
+        "vhid": "50",
+        "advbase": "1",
+        "advskew": "100",
+        "noexpand": "0",
+        "nobind": "0",
+        "nosync": "0",
+        "descr": "SOC CARP VLAN50"
+      },
+      {
+        "interface": "opt4",
+        "mode": "carp",
+        "subnet": "192.168.60.1",
+        "subnet_bits": "24",
+        "vhid": "60",
+        "advbase": "1",
+        "advskew": "100",
+        "noexpand": "0",
+        "nobind": "0",
+        "nosync": "0",
+        "descr": "SOC CARP VLAN60"
+      },
+      {
+        "interface": "opt5",
+        "mode": "carp",
+        "subnet": "192.168.99.1",
+        "subnet_bits": "24",
+        "vhid": "99",
+        "advbase": "1",
+        "advskew": "100",
+        "noexpand": "0",
+        "nobind": "0",
+        "nosync": "0",
+        "descr": "SOC CARP VLAN99"
+      }
+    ]
+  },
+  "vip_native": {
+    "rc": 0,
+    "stdout": "OK\n\n\n",
+    "stderr": ""
+  },
+  "filter_reload": {
+    "rc": 0,
+    "stdout": "OK\n\n\n",
+    "stderr": ""
+  },
+  "config_sha256_after": "5b457e7b36cc5a318f9b54eb8f2c96635dc5819c16b85e5306de612149b7c7c0",
+  "collector_time": "2026-11-03T23:32:07.495612+07:00"
+}

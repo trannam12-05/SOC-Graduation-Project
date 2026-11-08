@@ -1,0 +1,1 @@
+sha256 /conf/config.xml /root/soc-m33-restore-20261104/config.before.xml; /usr/local/sbin/pluginctl -c pfsync; echo native_rc=$?; sleep 5; ifconfig pfsync0; sysctl net.inet.carp.demotion; ifconfig -a | grep "carp:"

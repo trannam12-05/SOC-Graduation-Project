@@ -1,0 +1,8 @@
+﻿pf_positions,sequence,uuid,enabled,interface,direction,ipprotocol,protocol,source_net,source_not,source_port,destination_net,destination_not,destination_port,action,log,quick,statetype,nosync,description
+@89,1,6d82ceaf-98f2-4034-9ed9-8a0064805795,1,lan,in,inet,any,lan,0,,any,0,,pass,0,1,keep,0,Default allow LAN to any rule
+@90,10,16753480-1a6a-4902-b727-b1b2dffa03f7,1,opt6,in,inet,ICMP,10.255.255.2/32,0,,10.255.255.1/32,0,,pass,1,1,keep,1,SOC HA SYNC icmp
+@91,11,784f183a-a347-4510-a8e6-e217e124a647,1,opt6,in,inet,PFSYNC,10.255.255.2/32,0,,10.255.255.1/32,0,,pass,1,1,none,1,SOC HA SYNC pfsync
+"@92, @93",11,f5606cbe-bcaf-4ff4-9968-7b4a255bccbf,1,lan,in,inet6,any,lan,0,,any,0,,pass,0,1,keep,0,Default allow LAN IPv6 to any rule
+@94,12,1e26e86b-e922-49f0-a0ee-cd2432e2689d,1,opt6,in,inet,TCP,10.255.255.2/32,0,,10.255.255.1/32,0,443,pass,1,1,keep,1,SOC HA SYNC tcp
+@95,100,1346206b-5bbc-4fd7-bf9d-e01c02c13fb7,1,opt2,in,inet,ICMP,192.168.40.100/32,0,,192.168.40.2/32,0,,pass,1,1,keep,1,SOC DIAG EMPLOYEE GATEWAY
+@96,101,684c6853-1caa-4a3c-9433-b48f01624c84,1,opt2,in,inet,TCP,192.168.40.100/32,0,,192.168.30.10/32,0,8000,pass,1,1,keep,1,SOC TEST EMPLOYEE TO DC HTTP

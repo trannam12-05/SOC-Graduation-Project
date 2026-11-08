@@ -1,0 +1,30 @@
+{
+  "TODO": "M3.1",
+  "status": "DONE/PASS",
+  "scope": "Native pfsync attached and syncok1 after separate real guest reboots, boot-hook log matching new kern.boottime, SYNC ping and unchanged config; not stateful failover acceptance",
+  "collector_time": "2026-11-03T23:22:49.717195+07:00",
+  "evidence": [
+    {
+      "role": "primary",
+      "json": "primary-pfsync-postboot.json",
+      "new_boot_proved": true,
+      "hook_executed_this_boot": true,
+      "native_rc_from_boot_log": 0,
+      "syncok": 1,
+      "demotion": 0,
+      "config_unchanged": true,
+      "ready": true
+    },
+    {
+      "role": "secondary",
+      "json": "secondary-pfsync-postboot.json",
+      "new_boot_proved": true,
+      "hook_executed_this_boot": true,
+      "native_rc_from_boot_log": 0,
+      "syncok": 1,
+      "demotion": 0,
+      "config_unchanged": true,
+      "ready": true
+    }
+  ]
+}

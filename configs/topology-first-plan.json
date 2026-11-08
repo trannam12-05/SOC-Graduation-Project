@@ -1,0 +1,162 @@
+{
+  "source": "docs/M1/M1_Thiet_ke_SOC_Core_L2_OPNsense_Giai_thich_thuat_ngu.docx",
+  "source_sha256": "79953fd2f21f14928d7c3c1c58f0d09575c71252c76ff273defaa63163ebe703",
+  "source_figure": "docs/evidence/M1/topology-source-review-20261102/image1.png",
+  "lab": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+  "expected_before_sha256": "4352da1087c5fb9fe3e05f3b3fc471edb34cdb5fdc9c942378670cec1f42e7cb",
+  "nodes": [
+    {
+      "name": "OPNsense-Primary",
+      "zone": "Firewall",
+      "nic_count": 4,
+      "source_and_limit": "M1 hình 2.1; M3 mapping vtnet0 LAN, vtnet1 WAN1, vtnet2 SYNC; NIC bổ sung dành WAN2"
+    },
+    {
+      "name": "OPNsense-Secondary",
+      "zone": "Firewall",
+      "nic_count": 4,
+      "source_and_limit": "M1 hình 2.1 và bảng 2.1; cùng vai trò NIC Primary"
+    },
+    {
+      "name": "SOC-Core-L2",
+      "zone": "Core",
+      "nic_count": 8,
+      "source_and_limit": "M2 mapping đã kiểm chứng; giữ nguyên tám MAC và cấu hình guest"
+    },
+    {
+      "name": "Data-Center",
+      "zone": "VLAN 30",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 3.2; đại diện vùng, chưa xác định ứng dụng máy chủ"
+    },
+    {
+      "name": "Employee",
+      "zone": "VLAN 40",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 3.3; endpoint đại diện"
+    },
+    {
+      "name": "Guest",
+      "zone": "VLAN 50",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 3.3; endpoint đại diện"
+    },
+    {
+      "name": "DMZ",
+      "zone": "VLAN 60",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 3.2; chưa chốt Web/DNS là bao nhiêu máy riêng"
+    },
+    {
+      "name": "Management",
+      "zone": "VLAN 99",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 3.3; endpoint quản trị đại diện"
+    },
+    {
+      "name": "Suricata-NIDS",
+      "zone": "SOC",
+      "nic_count": 2,
+      "source_and_limit": "M1 hình 2.1; M4 mục 4.1/4.2: capture riêng, management riêng"
+    },
+    {
+      "name": "Wazuh-SOC",
+      "zone": "SOC",
+      "nic_count": 1,
+      "source_and_limit": "M1 hình 2.1 và bảng 2.1; VLAN/NIC vật lý tới mạng SOC chưa được chỉ định"
+    }
+  ],
+  "links": [
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 5,
+      "b": "OPNsense-Primary",
+      "b_interface": 0,
+      "purpose": "Trunk Primary",
+      "exists_before": true
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 6,
+      "b": "OPNsense-Secondary",
+      "b_interface": 0,
+      "purpose": "Trunk Secondary",
+      "exists_before": true
+    },
+    {
+      "a": "OPNsense-Primary",
+      "a_interface": 2,
+      "b": "OPNsense-Secondary",
+      "b_interface": 2,
+      "purpose": "HA SYNC riêng",
+      "exists_before": true
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 0,
+      "b": "Data-Center",
+      "b_interface": 0,
+      "purpose": "Access VLAN 30",
+      "exists_before": false
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 1,
+      "b": "Employee",
+      "b_interface": 0,
+      "purpose": "Access VLAN 40",
+      "exists_before": false
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 2,
+      "b": "Guest",
+      "b_interface": 0,
+      "purpose": "Access VLAN 50",
+      "exists_before": false
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 3,
+      "b": "DMZ",
+      "b_interface": 0,
+      "purpose": "Access VLAN 60",
+      "exists_before": false
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 4,
+      "b": "Management",
+      "b_interface": 0,
+      "purpose": "Access VLAN 99",
+      "exists_before": false
+    },
+    {
+      "a": "SOC-Core-L2",
+      "a_interface": 7,
+      "b": "Suricata-NIDS",
+      "b_interface": 0,
+      "purpose": "SPAN capture không IP",
+      "exists_before": false
+    },
+    {
+      "a": "Suricata-NIDS",
+      "a_interface": 1,
+      "b": "Management",
+      "b_interface": 0,
+      "purpose": "Cùng segment Management theo M4; không nối trực tiếp NIC đã dùng",
+      "exists_before": false
+    }
+  ],
+  "wan_segments": [
+    "WAN-ISP-1",
+    "WAN-ISP-2"
+  ],
+  "unresolved": [
+    "Internet/upstream chưa có node/image/interface chỉ định: giữ WAN bridge cô lập, không nối pnet/VMware",
+    "Wazuh VLAN/IP và đường vật lý chưa chỉ định: tạo node giữ tắt, chưa nối NIC, chưa mô phỏng mũi tên log thành dây trực tiếp",
+    "Automation có trong bảng 2.1 nhưng chưa xác định máy riêng: ghi thành phần logic, không tự tạo thêm node",
+    "Số lượng máy chủ DC, Web/DNS DMZ, client mỗi vùng và máy SOC chưa có danh sách vật lý; mỗi vùng chỉ một endpoint đại diện",
+    "Địa chỉ IP/VIP, policy, DHCP, WAN2/SYNC guest chưa xác nhận; không tự áp dụng IP dự kiến"
+  ]
+}

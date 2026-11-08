@@ -1,0 +1,84 @@
+{
+  "collected_at": "2026-11-03T17:29:00.762093+07:00",
+  "milestone": "M2",
+  "state": "COMPLETE",
+  "items": [
+    {
+      "item": "Core L2",
+      "status": "PASS",
+      "evidence": "95/95 ca lịch sử + ảnh runtime L2 mới"
+    },
+    {
+      "item": "Inter-VLAN Routing",
+      "status": "PASS",
+      "evidence": "HTTP200 + VLAN40→30, TTL64→63, MAC Primary"
+    },
+    {
+      "item": "ACL/firewall giữa VLAN",
+      "status": "PASS",
+      "evidence": "Một ca dương/hai ca âm + PCAP + counter"
+    },
+    {
+      "item": "Access/trunk",
+      "status": "PASS",
+      "evidence": "Suite năm VLAN lịch sử + PCAP mới access/trunk"
+    },
+    {
+      "item": "LACP",
+      "status": "N/A",
+      "evidence": "Hai trunk tới hai firewall riêng, không LAG chung"
+    },
+    {
+      "item": "SPAN/Port Mirroring",
+      "status": "PASS",
+      "evidence": "PCAP mirror có marker GET + counter tăng"
+    }
+  ],
+  "application_cases": [
+    {
+      "id": "M2-P01",
+      "status": "PASS",
+      "scope": "HTTP đúng nguồn .40.100 → .30.10 TCP8000"
+    },
+    {
+      "id": "M2-N01",
+      "status": "PASS",
+      "scope": "Sai nguồn .40.101 bị default deny"
+    },
+    {
+      "id": "M2-N02",
+      "status": "PASS",
+      "scope": "Kết nối mới .30.10 → .40.100 TCP8001 bị default deny; có dịch vụ đối chứng"
+    }
+  ],
+  "historical_frame_tests": {
+    "total": 95,
+    "PASS": 95,
+    "FAIL": 0,
+    "source": "docs\\evidence\\M2\\live-tests-20261101\\final-collection\\frame-cases.csv"
+  },
+  "new_application_tests": {
+    "total": 3,
+    "PASS": 3,
+    "FAIL": 0
+  },
+  "scope_limit": "Không nghiệm thu mọi cặp VLAN/port/IPv6, HA/CARP/NAT/DHCP hoặc SOC pipeline từ ba ca HTTP",
+  "firewall_rules_changed": 0,
+  "core_configuration_changed": false,
+  "temporary_client": "Linux namespace m2-client40 in DC, second NIC on existing VLAN40; removed after tests",
+  "final_nodes": [
+    {
+      "name": "OPNsense-Primary",
+      "uuid": "fe606d13-1542-490b-b651-5c1c6289afde",
+      "ram_mib": 3072
+    },
+    {
+      "name": "SOC-Core-L2",
+      "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+      "ram_mib": 2048
+    }
+  ],
+  "temporary_topology_restored": true,
+  "moved_to_M3": false,
+  "git_commit_or_push": false
+}

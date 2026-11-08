@@ -1,0 +1,896 @@
+[
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 8920,
+    "sha256": "3bd6c1535742e7742253cedb3f9164db0997ae199a2a1b7ab4a620068203f390"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 7245,
+    "sha256": "35c1eecab0535ddb44a1fbaef2340b82c049d23149040f50e916d81d62744f48"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 3899,
+    "sha256": "cd09dfc6bd8692b90f527269df93e719957ad1aa241b01a99ceaf950dbf98faf"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 6705,
+    "sha256": "d17acbd09ece7ff402f3b0e2ade8771c87e21c97db59fc6f7fbc08004abfe324"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 4375,
+    "sha256": "a507bbbae0ae2e83e414894bd8b43cb9957022e523e6000e048147bb5ed3f85b"
+  },
+  {
+    "document": "staging/m2-live-final-with-journal-note.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 6973,
+    "sha256": "ef2e0bca748c2b0e3dacadf055eaf10d5e1ed6dd826739f6922f91ef22c6362e"
+  },
+  {
+    "document": "docs/M1/M1_Thiet_ke_SOC_Core_L2_OPNsense_Giai_thich_thuat_ngu.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 227116,
+    "sha256": "dbb4360c236b8f1498568439f33a6c5030929f4e91183b7de538a7355f85958f"
+  },
+  {
+    "document": "docs/M2/M2-cloud-init-validation-20261031.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-cloud-init-validation-20261031.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 11804,
+    "sha256": "fbfc39927a278aca376a8f5d95ab1cc0caae01ddd3aa46fc4e1a665550e37a02"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 6216,
+    "sha256": "f5a60eb0cd35e07e3107a811d529cac8ede94b798ae3a105dd21d58968a5643b"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 3989,
+    "sha256": "4cd16345d75c58be7e35e0c9f7cc34b36b0220ac8c88bd43517d9254926d8010"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 5396,
+    "sha256": "42b0a9a19a01a4b1bdfcdf553bc1244d912a503d0c6f14bd8c81987e950c2216"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 7909,
+    "sha256": "05c8516276ac548500509ccb77d800cdf8236fb595d44ab05f08a0a2c8f5a5b1"
+  },
+  {
+    "document": "docs/M2/M2-report-consolidated-review-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 6034,
+    "sha256": "d3628ca609b89752a6b3410cbd1aedaffffdfcef410b6a8537ad78e0805e6eb5"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 11804,
+    "sha256": "fbfc39927a278aca376a8f5d95ab1cc0caae01ddd3aa46fc4e1a665550e37a02"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 6216,
+    "sha256": "f5a60eb0cd35e07e3107a811d529cac8ede94b798ae3a105dd21d58968a5643b"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 3989,
+    "sha256": "4cd16345d75c58be7e35e0c9f7cc34b36b0220ac8c88bd43517d9254926d8010"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 5396,
+    "sha256": "42b0a9a19a01a4b1bdfcdf553bc1244d912a503d0c6f14bd8c81987e950c2216"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 7909,
+    "sha256": "05c8516276ac548500509ccb77d800cdf8236fb595d44ab05f08a0a2c8f5a5b1"
+  },
+  {
+    "document": "docs/M2/M2-report-execution-ready-PREPARED-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 6034,
+    "sha256": "d3628ca609b89752a6b3410cbd1aedaffffdfcef410b6a8537ad78e0805e6eb5"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 8920,
+    "sha256": "3bd6c1535742e7742253cedb3f9164db0997ae199a2a1b7ab4a620068203f390"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 7245,
+    "sha256": "35c1eecab0535ddb44a1fbaef2340b82c049d23149040f50e916d81d62744f48"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 3899,
+    "sha256": "cd09dfc6bd8692b90f527269df93e719957ad1aa241b01a99ceaf950dbf98faf"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 6705,
+    "sha256": "d17acbd09ece7ff402f3b0e2ade8771c87e21c97db59fc6f7fbc08004abfe324"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 4375,
+    "sha256": "a507bbbae0ae2e83e414894bd8b43cb9957022e523e6000e048147bb5ed3f85b"
+  },
+  {
+    "document": "docs/M2/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 6973,
+    "sha256": "ef2e0bca748c2b0e3dacadf055eaf10d5e1ed6dd826739f6922f91ef22c6362e"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 107832,
+    "sha256": "307982e22ade361204318e09f2b68f68f1da58e4695a7349cf26dc777a2cfc8a"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 18495,
+    "sha256": "9e3910bd56e3738620be9ec487a05c1d64cbbcd4c143afdffd18ac4fd3d6481c"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image13.png",
+    "bytes": 8845,
+    "sha256": "90f5cbce02bd322203c7be2c3eb4fa7ff9d27d425f1e2d3fed43c67472949591"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image14.png",
+    "bytes": 5213,
+    "sha256": "331eafc961e30758df1e47d948b29a7b613f914b4a88b5c10b7f8e08fa94ef34"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image15.png",
+    "bytes": 11804,
+    "sha256": "fbfc39927a278aca376a8f5d95ab1cc0caae01ddd3aa46fc4e1a665550e37a02"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image16.png",
+    "bytes": 6216,
+    "sha256": "f5a60eb0cd35e07e3107a811d529cac8ede94b798ae3a105dd21d58968a5643b"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image17.png",
+    "bytes": 3989,
+    "sha256": "4cd16345d75c58be7e35e0c9f7cc34b36b0220ac8c88bd43517d9254926d8010"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image18.png",
+    "bytes": 5396,
+    "sha256": "42b0a9a19a01a4b1bdfcdf553bc1244d912a503d0c6f14bd8c81987e950c2216"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image19.png",
+    "bytes": 7909,
+    "sha256": "05c8516276ac548500509ccb77d800cdf8236fb595d44ab05f08a0a2c8f5a5b1"
+  },
+  {
+    "document": "docs/M2/M2-report-isolated-bridge-configured-20261101.docx",
+    "embedded_path": "word/media/image20.png",
+    "bytes": 6034,
+    "sha256": "d3628ca609b89752a6b3410cbd1aedaffffdfcef410b6a8537ad78e0805e6eb5"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 107832,
+    "sha256": "307982e22ade361204318e09f2b68f68f1da58e4695a7349cf26dc777a2cfc8a"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 18495,
+    "sha256": "9e3910bd56e3738620be9ec487a05c1d64cbbcd4c143afdffd18ac4fd3d6481c"
+  },
+  {
+    "document": "docs/M2/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 107832,
+    "sha256": "307982e22ade361204318e09f2b68f68f1da58e4695a7349cf26dc777a2cfc8a"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 18495,
+    "sha256": "9e3910bd56e3738620be9ec487a05c1d64cbbcd4c143afdffd18ac4fd3d6481c"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image13.png",
+    "bytes": 8845,
+    "sha256": "90f5cbce02bd322203c7be2c3eb4fa7ff9d27d425f1e2d3fed43c67472949591"
+  },
+  {
+    "document": "docs/M2/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image14.png",
+    "bytes": 5213,
+    "sha256": "331eafc961e30758df1e47d948b29a7b613f914b4a88b5c10b7f8e08fa94ef34"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031-final.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-stage1-core-preparation-20261031.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-after-cleanup-20261031.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 68697,
+    "sha256": "88aa6b944b46a273cfb852e45726deb5ddf814e34e0b1914d3b08b3d05d0078b"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M3/M3-report-primary-installed-verified-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 5934,
+    "sha256": "9bf8f4f5cf7e856becaad27ecc58510d5e630e8d2323b8418304db1f1103fc42"
+  },
+  {
+    "document": "docs/M3/M3-report-primary-installed-verified-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 6053,
+    "sha256": "ea6fae7fe52274a942c35e524f61d6c727c7e95b7b3e500fbe3877ca1bbe87a7"
+  },
+  {
+    "document": "docs/M3/M3-report-primary-installed-verified-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 8244,
+    "sha256": "d0d0d4d44dcb82cccdbbc6d1eef6907c8ae5b9a4c842311db26b7ceb2d5b4e8b"
+  },
+  {
+    "document": "docs/M3/M3-report-primary-installed-verified-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 7319,
+    "sha256": "035a6b3f90713db415477d4eaeb17581749cb6ee39c63eb0cc50ce35139be99f"
+  },
+  {
+    "document": "docs/M3/M3-report-primary-installed-verified-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 4112,
+    "sha256": "fa172b478f1b2f41df9ba4853dc5fd9d4e53c1ae751a3e2b181ac52aecf09d14"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 8920,
+    "sha256": "3bd6c1535742e7742253cedb3f9164db0997ae199a2a1b7ab4a620068203f390"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 7245,
+    "sha256": "35c1eecab0535ddb44a1fbaef2340b82c049d23149040f50e916d81d62744f48"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 3899,
+    "sha256": "cd09dfc6bd8692b90f527269df93e719957ad1aa241b01a99ceaf950dbf98faf"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 5793,
+    "sha256": "4ea7aea0d8d702255f02d5e643b92472edc152bd87ef2c9d7e7d825f28610174"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 6705,
+    "sha256": "d17acbd09ece7ff402f3b0e2ade8771c87e21c97db59fc6f7fbc08004abfe324"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 4375,
+    "sha256": "a507bbbae0ae2e83e414894bd8b43cb9957022e523e6000e048147bb5ed3f85b"
+  },
+  {
+    "document": "docs/M2/backups/live-report-before-journal-note-20261101/M2-report-functional-tests-verified-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 6973,
+    "sha256": "ef2e0bca748c2b0e3dacadf055eaf10d5e1ed6dd826739f6922f91ef22c6362e"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 107832,
+    "sha256": "307982e22ade361204318e09f2b68f68f1da58e4695a7349cf26dc777a2cfc8a"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 18495,
+    "sha256": "9e3910bd56e3738620be9ec487a05c1d64cbbcd4c143afdffd18ac4fd3d6481c"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image13.png",
+    "bytes": 8845,
+    "sha256": "90f5cbce02bd322203c7be2c3eb4fa7ff9d27d425f1e2d3fed43c67472949591"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-isolated-bridge-20261101/M2-report-port-mapping-and-ovs-design-20261101.docx",
+    "embedded_path": "word/media/image14.png",
+    "bytes": 5213,
+    "sha256": "331eafc961e30758df1e47d948b29a7b613f914b4a88b5c10b7f8e08fa94ef34"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-ovs-install-20261101/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-ovs-install-20261101/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-ovs-install-20261101/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-ovs-install-20261101/M2-report-stage2-preflight-20261031T2015+0700.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image1.png",
+    "bytes": 4683,
+    "sha256": "595f16c3b10a3273e4e49e67b59c16d46eabd7724d7de99d159c6c12af05512e"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image2.png",
+    "bytes": 5691,
+    "sha256": "60504462e903cf4293f709f22db58a51f7cedefaf46939bc88c5e02e92725e85"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image3.png",
+    "bytes": 53021,
+    "sha256": "a0b9589598d448b0018b5580bc4993e199139cae66a4038afb1bc60c164b67cf"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image4.png",
+    "bytes": 71451,
+    "sha256": "cd623d1094e3fee9ba253c7dad392b8f8f28f7edca774ff1ad4b3c901289fbbd"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image5.png",
+    "bytes": 159359,
+    "sha256": "6b39d8056e3d36135bd2a534d430bbb1d1687fd52c3a8143f2b189941267b1ae"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image6.png",
+    "bytes": 62190,
+    "sha256": "c4e6286d60b96ecfe4e5505cf9899a923d777e1abc584da5a00ca65cd4553d74"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image7.png",
+    "bytes": 107832,
+    "sha256": "307982e22ade361204318e09f2b68f68f1da58e4695a7349cf26dc777a2cfc8a"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image8.png",
+    "bytes": 9998,
+    "sha256": "63688822b04af7311d3af33ccdbd277cb02cf1a62abdd754a0513ac28d16a2e1"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image9.png",
+    "bytes": 15158,
+    "sha256": "f52431a0cda217b8215aabbb95ab15fe21ae4b89bb94989a5129514abf7e80c8"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image10.png",
+    "bytes": 6111,
+    "sha256": "52d17465515cc1f251dcc109174a5d18472e488a209ce0359f0629ff3b936a77"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image11.png",
+    "bytes": 18495,
+    "sha256": "9e3910bd56e3738620be9ec487a05c1d64cbbcd4c143afdffd18ac4fd3d6481c"
+  },
+  {
+    "document": "docs/M2/backups/M2-before-port-design-20261101/M2-report-ovs-offline-installed-20261101.docx",
+    "embedded_path": "word/media/image12.png",
+    "bytes": 14059,
+    "sha256": "b7afd9b74f3114f3fdec5d5a208a3f352db2c0ab8ef702d7122eb216fe5da0b8"
+  }
+]

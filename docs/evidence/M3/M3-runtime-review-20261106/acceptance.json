@@ -1,0 +1,112 @@
+﻿{
+    "status":  "PARTIAL",
+    "recorded_at":  "2026-11-06T19:48:19.4518931+07:00",
+    "transport":  "PASS: PowerShell SSH + Python 3.10.12 có sẵn trên EVE; không cài đặt",
+    "xmlrpc_configuration":  "PASS: đối chiếu đầy đủ XML tám rule và ba pool DHCP, gồm UUID và mọi trường con; kết hợp log sync đã có",
+    "rules_equal":  true,
+    "pools_equal":  true,
+    "runtime_rules":  [
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "ccbbe825-4c5e-40cc-90fc-bea18cb460a6",
+                              "description":  "SOC M35 EMPLOYEE DNS UDP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "efb0145c-dba9-4ff7-b2ce-6e124b4ae1e1",
+                              "description":  "SOC M35 EMPLOYEE DNS TCP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "076d581f-f419-4727-b738-e3715e1e0725",
+                              "description":  "SOC M35 EMPLOYEE CARP PING",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "47242411-c455-421a-bc14-8659f2da3837",
+                              "description":  "SOC M35 EMPLOYEE TO DC HTTP8000",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "2bdbf0b8-df09-4ae4-9804-ca8665906af2",
+                              "description":  "SOC M35 GUEST DNS UDP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "42c79a2e-eadf-492c-addf-49956864ec42",
+                              "description":  "SOC M35 GUEST DNS TCP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "80c0195c-5f11-45ca-9b5d-b1736eb339c9",
+                              "description":  "SOC M35 GUEST CARP PING",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Primary",
+                              "uuid":  "f495a3f9-172f-4f4c-8bb5-b2ee8ada70af",
+                              "description":  "SOC M35 MANAGEMENT CARP PING",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "ccbbe825-4c5e-40cc-90fc-bea18cb460a6",
+                              "description":  "SOC M35 EMPLOYEE DNS UDP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "efb0145c-dba9-4ff7-b2ce-6e124b4ae1e1",
+                              "description":  "SOC M35 EMPLOYEE DNS TCP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "076d581f-f419-4727-b738-e3715e1e0725",
+                              "description":  "SOC M35 EMPLOYEE CARP PING",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "47242411-c455-421a-bc14-8659f2da3837",
+                              "description":  "SOC M35 EMPLOYEE TO DC HTTP8000",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "2bdbf0b8-df09-4ae4-9804-ca8665906af2",
+                              "description":  "SOC M35 GUEST DNS UDP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "42c79a2e-eadf-492c-addf-49956864ec42",
+                              "description":  "SOC M35 GUEST DNS TCP",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "80c0195c-5f11-45ca-9b5d-b1736eb339c9",
+                              "description":  "SOC M35 GUEST CARP PING",
+                              "loaded":  true
+                          },
+                          {
+                              "node":  "OPNsense-Secondary",
+                              "uuid":  "f495a3f9-172f-4f4c-8bb5-b2ee8ada70af",
+                              "description":  "SOC M35 MANAGEMENT CARP PING",
+                              "loaded":  true
+                          }
+                      ],
+    "kea":  "PASS: DHCPv4 và control agent running trên hai máy; không nghiệm thu failover DHCP",
+    "ha":  "PASS tại ảnh cuối 19:48 UTC+07:00: Primary MASTER, Secondary BACKUP đủ năm VHID, syncok1 hai bên; snapshot 19:30–19:36 bất thường giữ nguyên, nguyên nhân chưa xác minh; không thao tác phục hồi",
+    "nat":  "BLOCKED: WAN không có IPv4, không có default route; pfctl -sn không có outbound NAT dịch địa chỉ; WAN cô lập",
+    "previous_pass":  "Giữ nguyên M3.5 và các nghiệm thu HA lịch sử; kết quả mới là sai lệch runtime hiện tại",
+    "changes":  "Không thay cấu hình hoặc vòng đời node; chỉ ghi tệp dữ liệu tạm phục vụ đọc console",
+    "source":  "results-20261106T193630+0700.json"
+}

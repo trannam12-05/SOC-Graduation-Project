@@ -1,0 +1,1 @@
+dmesg | grep -E 'pfsync bulk|pfsync:|carp: demoted' | tail -10

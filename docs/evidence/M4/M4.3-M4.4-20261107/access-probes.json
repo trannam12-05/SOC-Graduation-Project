@@ -1,0 +1,4 @@
+﻿[
+ {"collected_at":"2026-11-07T12:09:50.1020027+07:00","source":"Windows workspace host","destination":"192.168.220.146","port":22,"result":"CONNECTED"},
+ {"collected_at":"2026-11-07T12:09:50.1690541+07:00","source":"Windows workspace host","destination":"192.168.220.143","port":443,"result":"TIMEOUT"}
+]

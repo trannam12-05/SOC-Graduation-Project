@@ -1,0 +1,39 @@
+﻿{
+    "status":  "BLOCKED_BEFORE_NETWORK_CHANGES",
+    "m3_overall":  "PARTIAL",
+    "recorded_at":  "2026-11-06T20:41:25.5460510+07:00",
+    "topology_backup":  "/root/soc-m3-nat-20261106T202914Z",
+    "topology_hash_matches":  true,
+    "config_backups":  [
+                           {
+                               "node":  "OPNsense-Primary",
+                               "path":  "/root/soc-m3-nat-prechange-20261106T203235Z/config.before.xml",
+                               "mode":  "0o600",
+                               "sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                               "matches":  true
+                           },
+                           {
+                               "node":  "OPNsense-Secondary",
+                               "path":  "/root/soc-m3-nat-prechange-20261106T203421Z/config.before.xml",
+                               "mode":  "0o600",
+                               "sha256":  "5be86d0ea5faebaa54d5b4e9c721e724ac8380a06a419e12f2480a76cdb91eff",
+                               "matches":  true
+                           }
+                       ],
+    "upstream":  "pnet0 192.168.220.143/24; default gateway192.168.220.2 giữ nguyên. Không xác nhận Internet hoặc guest lease.",
+    "blockers":  [
+                     "Đường API connectNode/linkInterface/Interfc.edit đọc được chỉ cập nhật metadata; chưa xác minh phương thức đổi link runtime không gián đoạn trên bản này. Không kết luận chắc chắn phải stop node.",
+                     "Employee là VPCS node5 và không có tiến trình VPCS; chưa xác minh IP nguồn hiện tại hoặc client HTTPS đúng nguồn. Không tự boot/thay node."
+                 ],
+    "steps":  {
+                  "firewall_nat":  "NOT_APPLIED",
+                  "employee_ip":  "NOT_VERIFIED",
+                  "rollback":  "NOT_NEEDED: no network/config changes",
+                  "move_wan":  "NOT_RUN",
+                  "upstream_readonly":  "PASS về địa chỉ/route host",
+                  "https":  "NOT_RUN",
+                  "backup":  "PASS"
+              },
+    "preserved":  "Giữ PASS trước, không đổi HA/CARP/pfsync/hook/Core/VLAN",
+    "next":  "Cần xác nhận cách chuyển WAN live được hỗ trợ hoặc duyệt kế hoạch bảo trì riêng nếu cần; duyệt chuẩn bị endpoint Employee hỗ trợ HTTPS và xác minh IP trước thực thi rule."
+}

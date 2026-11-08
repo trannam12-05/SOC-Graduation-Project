@@ -1,0 +1,8 @@
+{
+  "status": "DONE",
+  "rc": 0,
+  "stdout": "{\"syncitems\":\"aliases,rules,kea,dnsforwarder\"}",
+  "stderr": "",
+  "config_sha256": "7225b64ec12c59fa0661e6dff755d936797fa748e0f30aacf11c0386f50b6bd3",
+  "collector_time": "2026-11-06T18:44:46.356909+07:00"
+}

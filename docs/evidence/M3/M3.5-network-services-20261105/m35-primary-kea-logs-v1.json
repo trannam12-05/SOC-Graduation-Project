@@ -1,0 +1,28 @@
+{
+  "logs": {
+    "rc": 0,
+    "stdout": "/var/log/audit/audit_20261101.log\n/var/log/audit/audit_20261102.log\n/var/log/audit/audit_20261103.log\n/var/log/audit/audit_20261104.log\n/var/log/audit/audit_20261105.log\n/var/log/boot.log\n/var/log/configd/configd_20261101.log\n/var/log/configd/configd_20261102.log\n/var/log/configd/configd_20261103.log\n/var/log/configd/configd_20261104.log\n/var/log/configd/configd_20261105.log\n/var/log/dnsmasq/dnsmasq_20261101.log\n/var/log/dnsmasq/dnsmasq_20261102.log\n/var/log/dnsmasq/dnsmasq_20261103.log\n/var/log/dnsmasq/dnsmasq_20261104.log\n/var/log/dnsmasq/dnsmasq_20261105.log\n/var/log/filter/filter_20261101.log\n/var/log/filter/filter_20261102.log\n/var/log/filter/filter_20261103.log\n/var/log/filter/filter_20261104.log\n/var/log/filter/filter_20261105.log\n/var/log/hostwatch/hostwatch_20261101.log\n/var/log/hostwatch/hostwatch_20261102.log\n/var/log/hostwatch/hostwatch_20261103.log\n/var/log/hostwatch/hostwatch_20261104.log\n/var/log/hostwatch/hostwatch_20261105.log\n/var/log/installer.log\n/var/log/kea/kea_20261105.log\n/var/log/lighttpd/lighttpd_20261101.log\n/var/log/lighttpd/lighttpd_20261102.log\n/var/log/lighttpd/lighttpd_20261103.log\n/var/log/lighttpd/lighttpd_20261104.log\n/var/log/lighttpd/lighttpd_20261105.log\n/var/log/ntpd/ntpd_20261101.log\n/var/log/ntpd/ntpd_20261102.log\n/var/log/ntpd/ntpd_20261103.log\n/var/log/ntpd/ntpd_20261104.log\n/var/log/ntpd/ntpd_20261105.log\n/var/log/resolver/resolver_20261101.log\n/var/log/resolver/resolver_20261102.log\n/var/log/resolver/resolver_20261103.log\n/var/log/resolver/resolver_20261104.log\n/var/log/resolver/resolver_20261105.log\n/var/log/soc-pfsync-start.log\n/var/log/system/system_20261101.log\n/var/log/system/system_20261102.log\n/var/log/system/system_20261103.log\n/var/log/system/system_20261104.log\n/var/log/system/system_20261105.log\n/var/log/userlog\n/var/log/utx.lastlogin\n/var/log/utx.log\n",
+    "stderr": ""
+  },
+  "kea_messages": {
+    "rc": 0,
+    "stdout": "/var/log/system/system_20261105.log:<13>1 2026-11-05T10:07:56+00:00 OPNsense.internal opnsense 17915 - [meta sequenceId=\"3\"] /usr/local/sbin/pluginctl: plugins_configure kea_sync (1)\n/var/log/system/system_20261105.log:<13>1 2026-11-05T10:07:56+00:00 OPNsense.internal opnsense 17915 - [meta sequenceId=\"4\"] /usr/local/sbin/pluginctl: plugins_configure kea_sync (execute task : kea_configure_do(1))\n",
+    "stderr": ""
+  },
+  "dnsmasq_config": {
+    "rc": 0,
+    "stdout": "7:port=53053\n13:interface=vtnet0\n17:dhcp-fqdn\n52:dhcp-range=tag:vtnet0,192.168.1.100,192.168.1.199,86400\n54:dhcp-range=tag:vtnet0,::1000,::2000,constructor:vtnet0,slaac,64,86400\n62:dhcp-option=6,0.0.0.0\n64:dhcp-option=option6:23,[::]\n71:dhcp-name-match=set:wpad-ignore,wpad\n72:dhcp-ignore-names=tag:wpad-ignore\n",
+    "stderr": ""
+  },
+  "ifconfig40": {
+    "rc": 0,
+    "stdout": "vtnet0_vlan40: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.40.2 netmask 0xffffff00 broadcast 192.168.40.255\n\tinet 192.168.40.1 netmask 0xffffff00 broadcast 192.168.40.255 vhid 40\n\tgroups: vlan\n\tcarp: MASTER vhid 40 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "stderr": ""
+  },
+  "carp": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "collector_time": "2026-11-05T10:18:18.213646+07:00"
+}

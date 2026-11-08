@@ -1,0 +1,26 @@
+{
+  "operation": {
+    "operation": "connectNode",
+    "node_id": 10,
+    "port": 0,
+    "network_id": 10,
+    "return_code": 0
+  },
+  "backup_directory": "/root/soc-m1-wazuh-link-20261105T091550Z",
+  "before_sha256": "3a228544ae38c43703b495c6f4022a83112578936cd1d90f5b72c895a9fd53b2",
+  "after_sha256": "94e4c6380f776ca9b154c5c068a3b2ee20f1f90c03005e9790e94543300e7a6f",
+  "added_interface": {
+    "id": "0",
+    "name": "e0",
+    "type": "ethernet",
+    "network_id": "10"
+  },
+  "only_expected_semantic_change": true,
+  "node_count": 10,
+  "network_count": 11,
+  "running_node_processes": [],
+  "guest_configuration_changed": false,
+  "power_operations": false,
+  "raw_backup_local_downloaded": false,
+  "collector_time": "2026-11-05T09:15:50.327633+07:00"
+}

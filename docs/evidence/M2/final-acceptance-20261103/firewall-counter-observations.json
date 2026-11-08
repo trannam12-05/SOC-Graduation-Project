@@ -1,0 +1,35 @@
+{
+  "recorded_at": "2026-11-03T17:29:00.762093+07:00",
+  "method": "Trích đọc có đối chiếu từ ảnh console gốc, không phải JSON native pfctl/OVS",
+  "config_sha256_before": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "config_sha256_after": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "before_image": "primary-rule-before-tests-20261103T171719+0700.png",
+  "after_image": "primary-rule-after-tests-20261103T171843+0700.png",
+  "default_deny_ipv4": {
+    "PF_index": 10,
+    "before_packets": 0,
+    "after_packets": 12,
+    "after_bytes": 720
+  },
+  "HTTP_allow": {
+    "PF_index": 96,
+    "UUID": "684c6853-1caa-4a3c-9433-b48f01624c84",
+    "before_packets": 0,
+    "after_packets": 10,
+    "after_bytes": 1005,
+    "state_creations": 1
+  },
+  "mirror": {
+    "before_image": "core-mirror-runtime-20261103T171747+0700.png",
+    "after_image": "core-mirror-after-tests-20261103T171916+0700.png",
+    "before_packets": 0,
+    "after_packets": 48,
+    "after_bytes": 4278
+  },
+  "core": {
+    "source_image": "core-runtime-root-20261103T171628+0700.png",
+    "ipv4_forwarding": 0,
+    "ipv6_forwarding": 0,
+    "non_loopback_IPs": []
+  }
+}

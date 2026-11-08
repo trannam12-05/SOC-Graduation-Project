@@ -1,0 +1,146 @@
+{
+  "role": "primary",
+  "rows": [
+    {
+      "vlan": 30,
+      "state": [
+        "MASTER"
+      ],
+      "physical_ip_ok": true,
+      "vip_ok": true,
+      "up": true,
+      "active": true,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt1",
+        "subnet": "192.168.30.1",
+        "subnet_bits": "24",
+        "vhid": "30",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "carp": [
+        "carp: MASTER vhid 30 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 40,
+      "state": [
+        "MASTER"
+      ],
+      "physical_ip_ok": true,
+      "vip_ok": true,
+      "up": true,
+      "active": true,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt2",
+        "subnet": "192.168.40.1",
+        "subnet_bits": "24",
+        "vhid": "40",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "carp": [
+        "carp: MASTER vhid 40 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 50,
+      "state": [
+        "MASTER"
+      ],
+      "physical_ip_ok": true,
+      "vip_ok": true,
+      "up": true,
+      "active": true,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt3",
+        "subnet": "192.168.50.1",
+        "subnet_bits": "24",
+        "vhid": "50",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "carp": [
+        "carp: MASTER vhid 50 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 60,
+      "state": [
+        "MASTER"
+      ],
+      "physical_ip_ok": true,
+      "vip_ok": true,
+      "up": true,
+      "active": true,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt4",
+        "subnet": "192.168.60.1",
+        "subnet_bits": "24",
+        "vhid": "60",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "carp": [
+        "carp: MASTER vhid 60 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 99,
+      "state": [
+        "MASTER"
+      ],
+      "physical_ip_ok": true,
+      "vip_ok": true,
+      "up": true,
+      "active": true,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt5",
+        "subnet": "192.168.99.1",
+        "subnet_bits": "24",
+        "vhid": "99",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "carp": [
+        "carp: MASTER vhid 99 advbase 1 advskew 0"
+      ]
+    }
+  ],
+  "pfsync": {
+    "rc": 0,
+    "out": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+  },
+  "demotion": {
+    "rc": 0,
+    "out": "0\n"
+  },
+  "sync": {
+    "rc": 0,
+    "out": "vtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:02\n\tinet 10.255.255.1 netmask 0xfffffffc broadcast 10.255.255.3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n"
+  },
+  "ping": {
+    "rc": 0,
+    "out": "PING 10.255.255.2 (10.255.255.2): 56 data bytes\n64 bytes from 10.255.255.2: icmp_seq=0 ttl=64 time=3.276 ms\n64 bytes from 10.255.255.2: icmp_seq=1 ttl=64 time=11.364 ms\n\n--- 10.255.255.2 ping statistics ---\n2 packets transmitted, 2 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 3.276/7.320/11.364/4.044 ms\n"
+  },
+  "boottime": {
+    "rc": 0,
+    "out": "{ sec = 1793811710, usec = 884231 } Wed Nov  4 17:01:50 2026\n"
+  },
+  "hook_this_boot": true,
+  "hook_native_rc0": true,
+  "config_sha256": "f2e62e02319a00831a72c4c610aa71781656f90130723df34b383e844e65e799",
+  "backup_path": "/root/soc-m34b-20261104/config.before.xml",
+  "backup_sha256": "f2e62e02319a00831a72c4c610aa71781656f90130723df34b383e844e65e799",
+  "config_unchanged": true,
+  "flow_policy": [
+    "pass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.100 to 192.168.40.2 keep state label \"1346206b-5bbc-4fd7-bf9d-e01c02c13fb7\"",
+    "pass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.100 to 192.168.30.10 port = 8000 flags S/SA keep state label \"684c6853-1caa-4a3c-9433-b48f01624c84\""
+  ],
+  "collector_time": "2026-11-04T17:08:07.650232+07:00"
+}

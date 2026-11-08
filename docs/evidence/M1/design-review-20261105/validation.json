@@ -1,0 +1,22 @@
+{
+  "review_time": "2026-11-05T09:11:36.571323+07:00",
+  "docx_zip_valid": true,
+  "page_size": {
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}w": "11906",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}h": "16838"
+  },
+  "margins": {
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}top": "1134",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}right": "1134",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}bottom": "1134",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}left": "1701",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}header": "567",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}footer": "567",
+    "{http://schemas.openxmlformats.org/wordprocessingml/2006/main}gutter": "0"
+  },
+  "new_runtime_screenshots": 0,
+  "system_changed": false,
+  "design_documentation": "COMPLETE",
+  "eve_topology_acceptance": "PENDING_WAZUH_LINK_AND_SCREENSHOT",
+  "word_gui_pagination_reviewed": false
+}

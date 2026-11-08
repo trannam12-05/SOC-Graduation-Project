@@ -1,0 +1,1 @@
+hostname; ifconfig -a | grep -E 'vlan[0-9]+:|inet 192.168.|carp:|syncdev:|syncpeer:|syncok:'; ifconfig pfsync0; sysctl net.inet.carp.demotion; ping -c 2 10.255.255.1

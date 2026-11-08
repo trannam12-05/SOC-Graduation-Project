@@ -1,0 +1,80 @@
+{
+  "flow": "192.168.40.100:44341 -> 192.168.30.10:8000",
+  "pfctl_rc": 0,
+  "blocks": [
+    {
+      "text": "all tcp 192.168.30.10:8000 <- 192.168.40.100:44341       ESTABLISHED:ESTABLISHED\n   [45026642 + 32768]  [69072911 + 64102]\n   age 00:00:30, expires in 23:59:50, 5:4 pkts, 338:164 bytes, rule 98\n   id: 075deb6a00000000 creatorid: d57c33f6\n   origif: vtnet0_vlan40",
+      "id": "075deb6a00000000",
+      "creatorid": "d57c33f6",
+      "established": true
+    },
+    {
+      "text": "all tcp 192.168.40.100:44341 -> 192.168.30.10:8000       ESTABLISHED:ESTABLISHED\n   [69072911 + 64102]  [45026642 + 32768]\n   age 00:00:30, expires in 23:59:50, 5:4 pkts, 338:164 bytes, rule 88, allow-opts\n   id: 085deb6a00000000 creatorid: d57c33f6\n   origif: vtnet0_vlan30",
+      "id": "085deb6a00000000",
+      "creatorid": "d57c33f6",
+      "established": true
+    }
+  ],
+  "carp_all": [
+    {
+      "vlan": 30,
+      "rc": 0,
+      "state": [
+        "MASTER"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: MASTER vhid 30 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 40,
+      "rc": 0,
+      "state": [
+        "MASTER"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: MASTER vhid 40 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 50,
+      "rc": 0,
+      "state": [
+        "MASTER"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: MASTER vhid 50 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 60,
+      "rc": 0,
+      "state": [
+        "MASTER"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: MASTER vhid 60 advbase 1 advskew 0"
+      ]
+    },
+    {
+      "vlan": 99,
+      "rc": 0,
+      "state": [
+        "MASTER"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: MASTER vhid 99 advbase 1 advskew 0"
+      ]
+    }
+  ],
+  "native_capture_started_monotonic": 1592.180579137,
+  "native_capture_finished_monotonic": 1592.36501981,
+  "guest_wall_clock_untrusted": 1793811135.8721318,
+  "local_sync_ip": "10.255.255.1",
+  "collector_time": "2026-11-04T16:53:08.768923+07:00"
+}

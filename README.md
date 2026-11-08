@@ -1,4 +1,16 @@
-﻿# Đồ án SOC trên EVE-NG
+# M2 đã hoàn thành — 03/11/2026, UTC+07:00
+
+Core L2, Inter-VLAN HTTP200 qua Primary, firewall ca dương/hai ca âm, access/trunk và SPAN đều PASS; LACP N/A theo kiến trúc hai trunk tới hai firewall riêng. [Tổng kết M2](docs/M2/M2-final-summary-20261103.md), [Word](docs/M2/M2-final-summary-20261103.docx), [SOC TO DO](docs/SOC_TO_DO.md), [evidence index](docs/evidence/M2/final-acceptance-20261103/evidence-index.csv). Core/Primary giữ chạy, DC tắt mềm, client/NIC tạm đã gỡ và lab phục hồi nguyên byte. Không chuyển M3. Các mốc cũ bên dưới giữ làm lịch sử.
+
+# Đồ án SOC trên EVE-NG
+
+## Cập nhật mới nhất — 02/11/2026
+
+M2 Nhóm 2A: Primary đã có đủ năm VLAN đúng parent vtnet0/tag/IP .2/24, enabled/UP; đã backup root-only và kiểm hash cấu hình trước/sau, không cần sửa. Core giữ Layer 2. Hiện Core + Primary chạy; Wazuh đã shutdown mềm theo quyền riêng để nhường RAM. Chưa thử lưu lượng hoặc cấu hình rules trong nhóm này; đang dừng chờ xác nhận. Xem [báo cáo Nhóm 2A](docs/M2/M2-group2a-primary-vlans-20261102.md).
+
+Mốc M5 trước đó: đã kiểm tra Wazuh-SOC theo phê duyệt. Manager 4.14.9-1 hoạt động sau khi khôi phục override timeout 300 giây vào `/etc`; chưa thử reboot sau sửa. Thu thập tự động đã sinh alert từ JSON mô phỏng (rule 100101 level 8) và replay cảnh báo Suricata thật VLAN 30 (rule 86601 level 3). **Chưa nghiệm thu toàn chuỗi live**; Wazuh chưa nối segment, Indexer/Dashboard/Filebeat chưa cài trên node này.
+
+Xem [báo cáo kiểm chứng M5](docs/M5-verification-and-demo-20261102.md), [kịch bản quay video 13 phút](docs/SOC-video-demo-20261102.md), [đề xuất đường log live chưa triển khai](docs/M5-live-pipeline-proposal-20261102.md) và [danh mục minh chứng mới](docs/evidence/M5/continuation-20261102/evidence-index-final.md). Các mốc ngày 01/11 và mô tả chuẩn bị bên dưới được giữ làm lịch sử.
 
 ## Mục tiêu
 
@@ -26,3 +38,10 @@ Nam phụ trách phối hợp xây dựng và hoàn thiện đồ án: rà soát
 - `eve-ng`, `suricata`, `wazuh`, `automation`, `tests`: khu vực dành cho mô hình, giám sát, tự động hóa và kiểm thử.
 
 Thiết kế M1 là cơ sở đề xuất. Các thông số cần được xác nhận trên mô hình EVE-NG trước khi xem là cấu hình chính thức.
+
+## Hồ sơ tổng hợp M1–M4 — 08/11/2026
+
+- [Báo cáo cá nhân Word M1–M4](docs/SOC_M1-M4_BaoCaoCaNhan.docx): 76 trang, 6 chương, 23 vị trí hình và 17 bảng.
+- [PowerPoint hiện tại](Thuyết%20trình%20nhóm%201.pptx): cập nhật topology/VLAN/HA/Suricata và ảnh minh chứng thật, ảnh terminal nền sáng.
+- [Tiến độ và phạm vi nghiệm thu](docs/SOC_TO_DO.md): M1–M3 PASS theo hạng mục; M4 còn PARTIAL/BLOCKED, chưa nghiệm thu truyền log live/Syslog.
+- [Phạm vi xuất bản an toàn](docs/publication-audit-20261108.md): loại trừ dữ liệu xác thực, VM và minh chứng thô chưa rà soát; các bản gốc giữ tại workspace.

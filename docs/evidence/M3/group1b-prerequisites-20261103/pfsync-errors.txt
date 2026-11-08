@@ -1,0 +1,1 @@
+uname -r; date -u; uptime; netstat -s -p pfsync | tail -17; sysctl net.pfsync

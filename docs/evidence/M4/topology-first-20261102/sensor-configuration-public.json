@@ -1,0 +1,50 @@
+{
+  "result": {
+    "role": "Suricata-NIDS",
+    "state": "CONFIGURED_NOT_TRAFFIC_VERIFIED",
+    "checks": {
+      "package_sha256": 103,
+      "suricata_configuration_test": "PASS",
+      "service_active": "active",
+      "capture_no_ip": "PASS"
+    },
+    "suricata_version": "This is Suricata version 7.0.3 RELEASE",
+    "interfaces": [
+      {
+        "name": "capture0",
+        "mac": "02:54:42:38:75:00",
+        "addresses": []
+      },
+      {
+        "name": "mgmt0",
+        "mac": "02:54:42:38:75:01",
+        "addresses": []
+      }
+    ],
+    "boot_id": "491b9c1b-b4d6-448e-9041-f67754db92aa"
+  },
+  "service": {
+    "returncode": 0,
+    "stdout": "active\n",
+    "stderr": ""
+  },
+  "packages": {
+    "returncode": 0,
+    "stdout": "suricata\t1:7.0.3-1build3\ntcpdump\t4.99.4-3ubuntu4.24.04.1\n",
+    "stderr": ""
+  },
+  "interfaces": {
+    "returncode": 0,
+    "stdout": "[{\"ifindex\":1,\"ifname\":\"lo\",\"flags\":[\"LOOPBACK\",\"UP\",\"LOWER_UP\"],\"mtu\":65536,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"loopback\",\"address\":\"00:00:00:00:00:00\",\"broadcast\":\"00:00:00:00:00:00\",\"addr_info\":[{\"family\":\"inet\",\"local\":\"127.0.0.1\",\"prefixlen\":8,\"scope\":\"host\",\"label\":\"lo\",\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295},{\"family\":\"inet6\",\"local\":\"::1\",\"prefixlen\":128,\"scope\":\"host\",\"noprefixroute\":true,\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295}]},{\"ifindex\":2,\"ifname\":\"capture0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:54:42:38:75:00\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s3\"],\"addr_info\":[]},{\"ifindex\":3,\"ifname\":\"mgmt0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:54:42:38:75:01\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s4\"],\"addr_info\":[]}]\n",
+    "stderr": ""
+  },
+  "unit": "[Unit]\nDescription=SOC Suricata IDS on dedicated mirror capture port\nAfter=network.target\n[Service]\nType=simple\nExecStart=/usr/bin/suricata --pcap=capture0 --runmode=single -c /etc/suricata/suricata.yaml -S /etc/suricata/rules/soc-lab.rules -l /var/log/suricata\nRestart=on-failure\nRestartSec=5\n[Install]\nWantedBy=multi-user.target\n",
+  "rules": "# PREPARED ONLY: benign marker, no external probing, not deployed.\nalert icmp any any -> any any (msg:\"SOC M4 benign ICMP marker\"; content:\"SOC-M4-TEST-20261101\"; sid:1000001; rev:1;)\n",
+  "boot_id": "491b9c1b-b4d6-448e-9041-f67754db92aa",
+  "journal": {
+    "returncode": 0,
+    "stdout": "Nov 02 13:28:06 suricata-nids systemd[1]: Started soc-suricata.service - SOC Suricata IDS on dedicated mirror capture port.\nNov 02 13:28:06 suricata-nids suricata[2151]: i: suricata: This is Suricata version 7.0.3 RELEASE running in SYSTEM mode\nNov 02 13:28:07 suricata-nids suricata[2151]: W: ioctl: capture0: failed to set SIOCETHTOOL ioctl: Operation not supported\nNov 02 13:28:08 suricata-nids suricata[2151]: W: ioctl: capture0: NIC offloading: RX SET TX unset. Run: ethtool -K capture0 rx off tx off\nNov 02 13:28:09 suricata-nids suricata[2151]: i: threads: Threads created -> W: 1 FM: 1 FR: 1   Engine started.\n",
+    "stderr": ""
+  },
+  "scope": "Configuration and live service state only; traffic detection and Wazuh delivery require separate tests"
+}

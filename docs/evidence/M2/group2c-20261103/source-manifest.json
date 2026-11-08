@@ -1,0 +1,60 @@
+{
+  "reviewed_at": "2026-11-03T16:56:57.460858+07:00",
+  "timezone": "Asia/Saigon UTC+07:00",
+  "scope": "LOCAL_DOCUMENT_REVIEW_ONLY_NO_DEVICE_ACCESS_NO_CONFIG_CHANGE_NO_TRAFFIC_TEST",
+  "sources": [
+    {
+      "path": "docs/evidence/M2/group2b2-20261103/firewall-current-public.json",
+      "sha256": "305900bddc4c0fd1ab1f16712146f3adfa4dadf6a1aefc5008475992d6ac948b"
+    },
+    {
+      "path": "docs/evidence/M2/group2b2-20261103/configured-firewall-rules.csv",
+      "sha256": "741ad7c4e5427f398486af4cce528044e9a8cb393d7d2021d26dbb2869004d39"
+    },
+    {
+      "path": "docs/evidence/M2/group2b2-20261103/pf-filter-rules-current.txt",
+      "sha256": "162605ae1901fd3825d08195688666a1ee6de66fbdbf42f3e35432d7ceb6d2fa"
+    },
+    {
+      "path": "docs/evidence/M2/group2b2-20261103/delivery-checks.json",
+      "sha256": "5f8ce9ec73e392cf7a4e46f77221612b64c8d932599acdc888ece63872eb9252"
+    },
+    {
+      "path": "automation/linux_role_bootstrap.py",
+      "sha256": "9809e416ccf45e12ab90c5250572d69cdb0bd0dcf7eb201127d0926bd5d21655"
+    },
+    {
+      "path": "automation/vpcs_live_tests.py",
+      "sha256": "93b9dcaec3af7cf3199616384fa56a2bca22e913f53e5db1087fde1cddd8b185"
+    },
+    {
+      "path": "automation/prepare_remaining_linux_roles.py",
+      "sha256": "f19562e13cd17df399af05f89698c3cdf3a5e1e9c948c626cc2e882a3f8505ca"
+    },
+    {
+      "path": "docs/evidence/M5/resume-20261102/data-center-bootstrap-public.json",
+      "sha256": "8e5fb64463431fc7004df0774156946eaeaecb0ebd74bfc19e3ef887d0194f5f"
+    },
+    {
+      "path": "docs/evidence/M2/resume-20261102/vpcs-configured.json",
+      "sha256": "9d150bb6284ab7ef20108abf76b30173de1fb06fdc6ce1bc5dd880f0516818a7"
+    },
+    {
+      "path": "docs/evidence/M4/resume-20261102/vpcs-inventory.json",
+      "sha256": "25c8838ee4667d7788f5ba9cb03b05ebd199b7ab11e6526f7319c7aa57e00d6e"
+    },
+    {
+      "path": "docs/evidence/M3/resume-20261102/primary-employee-diagnostic-rules-20261102T165019+0700.json",
+      "sha256": "da18226da9f9537001e464b8844a5f7d07bfc06928589c935ff7ca2a171ec973"
+    },
+    {
+      "path": "docs/M1/M1_Thiet_ke_SOC_Core_L2_OPNsense_Giai_thich_thuat_ngu.docx",
+      "sha256": "79953fd2f21f14928d7c3c1c58f0d09575c71252c76ff273defaa63163ebe703"
+    },
+    {
+      "path": "docs/M3/M3-deployment-matrix-and-tests-PREPARED-20261101.md",
+      "sha256": "ea501a01227f4376e15b750aea43c78ceb6bca0f97fc238a8d74b057e54cd9bc"
+    }
+  ],
+  "integration_acceptance": "NOT_RUN_NOT_PASS"
+}

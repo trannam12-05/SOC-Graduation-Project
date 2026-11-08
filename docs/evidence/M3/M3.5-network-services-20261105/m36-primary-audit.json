@@ -1,0 +1,182 @@
+{
+  "role": "Primary",
+  "hostname": {
+    "rc": 0,
+    "stdout": "OPNsense.internal\n",
+    "stderr": ""
+  },
+  "version": {
+    "rc": 0,
+    "stdout": "OPNsense 26.7 (amd64)\n",
+    "stderr": ""
+  },
+  "config_sha256": "245c699daa64ec33beda11a451eec1dffd5b19dc197dfa39e00f0dfe59f16cba",
+  "backup": "/root/soc-m36-20261106/config.before.xml",
+  "backup_sha256": "245c699daa64ec33beda11a451eec1dffd5b19dc197dfa39e00f0dfe59f16cba",
+  "backup_mode": "0o600",
+  "public_hasync": {
+    "pfsyncinterface": "opt6",
+    "pfsyncpeerip": "10.255.255.2",
+    "pfsyncversion": "1400",
+    "synchronizetoip": "10.255.255.2",
+    "syncitems": "aliases",
+    "disablepreempt": "0"
+  },
+  "kea": [
+    {
+      "subnet": "192.168.40.0/24",
+      "pools": "192.168.40.110 - 192.168.40.199",
+      "routers": "192.168.40.1",
+      "dns": "192.168.40.1",
+      "description": "SOC VLAN40 Employee"
+    },
+    {
+      "subnet": "192.168.50.0/24",
+      "pools": "192.168.50.110 - 192.168.50.199",
+      "routers": "192.168.50.1",
+      "dns": "192.168.50.1",
+      "description": "SOC VLAN50 Guest"
+    },
+    {
+      "subnet": "192.168.1.0/24",
+      "pools": "192.168.1.100 - 192.168.1.199",
+      "routers": "192.168.1.1",
+      "dns": "192.168.1.1",
+      "description": "Migrated existing LAN IPv4 DHCP"
+    }
+  ],
+  "rules": [
+    {
+      "description": "SOC HA SYNC icmp",
+      "enabled": "1",
+      "interface": "opt6",
+      "protocol": "ICMP",
+      "source": "10.255.255.2/32",
+      "destination": "10.255.255.1/32",
+      "port": ""
+    },
+    {
+      "description": "SOC HA SYNC pfsync",
+      "enabled": "1",
+      "interface": "opt6",
+      "protocol": "PFSYNC",
+      "source": "10.255.255.2/32",
+      "destination": "10.255.255.1/32",
+      "port": ""
+    },
+    {
+      "description": "SOC HA SYNC tcp",
+      "enabled": "1",
+      "interface": "opt6",
+      "protocol": "TCP",
+      "source": "10.255.255.2/32",
+      "destination": "10.255.255.1/32",
+      "port": "443"
+    },
+    {
+      "description": "SOC M35 EMPLOYEE DNS UDP",
+      "enabled": "1",
+      "interface": "opt2",
+      "protocol": "UDP",
+      "source": "192.168.40.0/24",
+      "destination": "192.168.40.1/32",
+      "port": "53"
+    },
+    {
+      "description": "SOC M35 EMPLOYEE DNS TCP",
+      "enabled": "1",
+      "interface": "opt2",
+      "protocol": "TCP",
+      "source": "192.168.40.0/24",
+      "destination": "192.168.40.1/32",
+      "port": "53"
+    },
+    {
+      "description": "SOC M35 EMPLOYEE CARP PING",
+      "enabled": "1",
+      "interface": "opt2",
+      "protocol": "ICMP",
+      "source": "192.168.40.0/24",
+      "destination": "192.168.40.1/32",
+      "port": ""
+    },
+    {
+      "description": "SOC M35 EMPLOYEE TO DC HTTP8000",
+      "enabled": "1",
+      "interface": "opt2",
+      "protocol": "TCP",
+      "source": "192.168.40.0/24",
+      "destination": "192.168.30.10/32",
+      "port": "8000"
+    },
+    {
+      "description": "SOC M35 GUEST DNS UDP",
+      "enabled": "1",
+      "interface": "opt3",
+      "protocol": "UDP",
+      "source": "192.168.50.0/24",
+      "destination": "192.168.50.1/32",
+      "port": "53"
+    },
+    {
+      "description": "SOC M35 GUEST DNS TCP",
+      "enabled": "1",
+      "interface": "opt3",
+      "protocol": "TCP",
+      "source": "192.168.50.0/24",
+      "destination": "192.168.50.1/32",
+      "port": "53"
+    },
+    {
+      "description": "SOC M35 GUEST CARP PING",
+      "enabled": "1",
+      "interface": "opt3",
+      "protocol": "ICMP",
+      "source": "192.168.50.0/24",
+      "destination": "192.168.50.1/32",
+      "port": ""
+    },
+    {
+      "description": "SOC M35 MANAGEMENT CARP PING",
+      "enabled": "1",
+      "interface": "opt5",
+      "protocol": "ICMP",
+      "source": "192.168.99.100/32",
+      "destination": "192.168.99.1/32",
+      "port": ""
+    }
+  ],
+  "hashes": {
+    "interfaces": "51b957b60b8e3e9c67b192b7e6afe06acf186dc66cf394a8ed054b4ab8585bb6",
+    "virtualip": "6aa1e3edce18fe6543a6b3073e15e05eb624739b608adcad39c78493bb66188e",
+    "hasync": "45fcfbefed87c7e2cafb348065ad831d7b175e18dc56e28f0f614d7608c9d594",
+    "OPNsense/Kea": "29a5be95201a325366470375ab3fc13fdf88d4b4e10890fd250dc23d4e6c68b5",
+    "OPNsense/Firewall": "f48e37d4dfd60e3b318475bf80c66d9e33e981988e7d914cdb8d8954d503a2f7"
+  },
+  "carp": {
+    "rc": 0,
+    "stdout": "vtnet0: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: LAN (lan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:00\n\tinet 192.168.1.1 netmask 0xffffff00 broadcast 192.168.1.255\n\tinet6 fe80::5200:ff:fe01:0%vtnet0 prefixlen 64 scopeid 0x1\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nvtnet1: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:01\n\tinet6 fe80::5200:ff:fe01:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>\nvtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:02\n\tinet 10.255.255.1 netmask 0xfffffffc broadcast 10.255.255.3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet3: flags=1008802<BROADCAST,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:03\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nlo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384\n\toptions=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>\n\tinet 127.0.0.1 netmask 0xff000000\n\tinet6 ::1 prefixlen 128\n\tinet6 fe80::1%lo0 prefixlen 64 scopeid 0x5\n\tgroups: lo\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nenc0: flags=0 metric 0 mtu 1536\n\toptions=0\n\tgroups: enc\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\npflog0: flags=0 metric 0 mtu 33152\n\toptions=0\n\tgroups: pflog\npfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\nvtnet0_vlan30: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT1 (opt1)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.30.2 netmask 0xffffff00 broadcast 192.168.30.255\n\tinet 192.168.30.1 netmask 0xffffff00 broadcast 192.168.30.255 vhid 30\n\tgroups: vlan\n\tcarp: MASTER vhid 30 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 30 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan40: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.40.2 netmask 0xffffff00 broadcast 192.168.40.255\n\tinet 192.168.40.1 netmask 0xffffff00 broadcast 192.168.40.255 vhid 40\n\tgroups: vlan\n\tcarp: MASTER vhid 40 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan50: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT3 (opt3)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.50.2 netmask 0xffffff00 broadcast 192.168.50.255\n\tinet 192.168.50.1 netmask 0xffffff00 broadcast 192.168.50.255 vhid 50\n\tgroups: vlan\n\tcarp: MASTER vhid 50 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan60: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT4 (opt4)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.60.2 netmask 0xffffff00 broadcast 192.168.60.255\n\tinet 192.168.60.1 netmask 0xffffff00 broadcast 192.168.60.255 vhid 60\n\tgroups: vlan\n\tcarp: MASTER vhid 60 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 60 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan99: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT5 (opt5)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.99.2 netmask 0xffffff00 broadcast 192.168.99.255\n\tinet 192.168.99.1 netmask 0xffffff00 broadcast 192.168.99.255 vhid 99\n\tgroups: vlan\n\tcarp: MASTER vhid 99 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 99 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "stderr": ""
+  },
+  "pfsync": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "kea_status": {
+    "rc": 0,
+    "stdout": "kea-dhcp[v4] is running as pid 31098.\n",
+    "stderr": ""
+  },
+  "pf_rules": {
+    "rc": 0,
+    "stdout": "om (self) to fe80::/10 icmp6-type neighbrsol keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to fe80::/10 icmp6-type neighbradv keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type echoreq keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type echorep keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type routersol keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type routeradv keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type neighbrsol keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass out log quick inet6 proto ipv6-icmp from (self) to ff02::/16 icmp6-type neighbradv keep state label \"80f90f0d4c5aba0c28d1c539e1e35766\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type echoreq keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type routersol keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type routeradv keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type neighbrsol keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type neighbradv keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type echoreq keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type routersol keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type routeradv keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type neighbrsol keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type neighbradv keep state label \"8fa5de02f1ff8cdd29bedb63b24cc7e0\"\npass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type echoreq keep state label \"e29b1b607bd6cd916cf6b598c41805d3\"\npass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type routersol keep state label \"e29b1b607bd6cd916cf6b598c41805d3\"\npass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type routeradv keep state label \"e29b1b607bd6cd916cf6b598c41805d3\"\npass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type neighbrsol keep state label \"e29b1b607bd6cd916cf6b598c41805d3\"\npass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type neighbradv keep state label \"e29b1b607bd6cd916cf6b598c41805d3\"\npass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type echoreq keep state label \"b242f2d3f6b4756fa468cfd0daa78cd4\"\npass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type routersol keep state label \"b242f2d3f6b4756fa468cfd0daa78cd4\"\npass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type routeradv keep state label \"b242f2d3f6b4756fa468cfd0daa78cd4\"\npass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type neighbrsol keep state label \"b242f2d3f6b4756fa468cfd0daa78cd4\"\npass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type neighbradv keep state label \"b242f2d3f6b4756fa468cfd0daa78cd4\"\nblock drop in log quick inet proto tcp from any port = 0 to any label \"b477ac1c8f5237a59ee416b9d819ce58\"\nblock drop in log quick inet proto udp from any port = 0 to any label \"b477ac1c8f5237a59ee416b9d819ce58\"\nblock drop in log quick inet6 proto tcp from any port = 0 to any label \"b477ac1c8f5237a59ee416b9d819ce58\"\nblock drop in log quick inet6 proto udp from any port = 0 to any label \"b477ac1c8f5237a59ee416b9d819ce58\"\nblock drop in log quick inet proto tcp from any to any port = 0 label \"b454844853f2346167ad77449b79ad8e\"\nblock drop in log quick inet proto udp from any to any port = 0 label \"b454844853f2346167ad77449b79ad8e\"\nblock drop in log quick inet6 proto tcp from any to any port = 0 label \"b454844853f2346167ad77449b79ad8e\"\nblock drop in log quick inet6 proto udp from any to any port = 0 label \"b454844853f2346167ad77449b79ad8e\"\npass log quick inet6 proto carp from any to ff02::12 keep state label \"cf439d72ef4d245e8ad4a1405df1f665\"\npass log quick inet proto carp from any to 224.0.0.18 keep state label \"2ffa978d51f7b3fbc9000c2895106ee7\"\nblock drop in log quick proto tcp from <sshlockout> to (self) port = ssh label \"8b59cf89872747f657c42f9e93dd52e0\"\nblock drop in log quick proto tcp from <sshlockout> to (self) port = https label \"27ad7dee30c19305dc0187bf0e87cd4e\"\nblock drop in log quick from <virusprot> to any label \"add09fc915886757c300419fc2ecc1e6\"\npass in log quick on vtnet1 inet6 proto udp from any to fe80::/10 port = dhcpv6-client keep state label \"c6e8fd0e915a27c129dc70c00a278a98\"\npass out log quick on vtnet1 inet6 proto udp from fe80::/10 port = dhcpv6-client to fe80::/10 port = dhcpv6-server keep state label \"2f2c37025cd02b5cd29fd330f8e48954\"\npass out log quick on vtnet1 inet6 proto udp from fe80::/10 port = dhcpv6-client to ff02::/16 port = dhcpv6-server keep state label \"2f2c37025cd02b5cd29fd330f8e48954\"\npass in log quick on vtnet1 proto udp from any port = bootps to any port = bootpc keep state label \"f994f615e00b8be0042263f86c79913f\"\npass out log quick on vtnet1 proto udp from any port = bootpc to any port = bootps keep state label \"5cf7ab808da1fcbca1ddb9ba9b46b669\"\npass in log quick on vtnet0 inet proto udp from any port = bootpc to 255.255.255.255 port = bootps keep state label \"56d97e04b8ce723a8524bdda932fe056\"\npass in log quick on vtnet0 proto udp from any port = bootpc to (self) port = bootps keep state label \"ac5d6855f1bc6d537c949fd7ce458587\"\npass out log quick on vtnet0 proto udp from (self) port = bootps to any port = bootpc keep state label \"4071f735e7cf9dcad8b9305970c17911\"\npass in log quick on vtnet0 inet6 proto udp from fe80::/10 to fe80::/10 port = dhcpv6-client keep state label \"600d48bc4d9a060084eea027fa54cfdc\"\npass in log quick on vtnet0 inet6 proto udp from fe80::/10 to ff02::/16 port = dhcpv6-client keep state label \"600d48bc4d9a060084eea027fa54cfdc\"\npass in log quick on vtnet0 inet6 proto udp from fe80::/10 to ff02::/16 port = dhcpv6-server keep state label \"0e8cdb22b7059277a934591353ae2214\"\npass in log quick on vtnet0 inet6 proto udp from ff02::/16 to fe80::/10 port = dhcpv6-server keep state label \"06e2b143a84862bc38acb6bac5090d14\"\npass in log quick on vtnet0 inet6 proto udp from fe80::/10 to (self) port = dhcpv6-client keep state label \"04bd2bc40ab1391b8ce89ff0fafd1e67\"\npass out log quick on vtnet0 inet6 proto udp from (self) port = dhcpv6-server to fe80::/10 keep state label \"0926e497e454bfe83d715b0d85fdfe3a\"\npass in log quick on vtnet0 inet proto udp from any port = bootpc to 255.255.255.255 port = bootps keep state label \"9a5ae4c7391ae65c139da21bf152637e\"\npass in log quick on vtnet0 proto udp from any port = bootpc to (self) port = bootps keep state label \"9a0443d67aca73b9884f8270d9e40e59\"\npass in log quick on vtnet0_vlan40 inet proto udp from any port = bootpc to 255.255.255.255 port = bootps keep state label \"3eed85023b0beb011d68a62cd0921c0e\"\npass in log quick on vtnet0_vlan40 proto udp from any port = bootpc to (self) port = bootps keep state label \"9edbb7af52fe76c33802ee2794b463b9\"\npass in log quick on vtnet0_vlan50 inet proto udp from any port = bootpc to 255.255.255.255 port = bootps keep state label \"6af2973127fa3d7b60c996267b173a18\"\npass in log quick on vtnet0_vlan50 proto udp from any port = bootpc to (self) port = bootps keep state label \"693355483694bdf7740a5f064e2ed011\"\nblock drop in log quick on vtnet1 inet from <bogons> to any label \"b7cd97a164650b538506fb551a0369e7\"\nblock drop in log quick on vtnet1 inet6 from <bogonsv6> to any label \"f140a48ddade668b9d6f5259669a1d5c\"\nblock drop in log quick on vtnet1 inet from 10.0.0.0/8 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet from 172.16.0.0/12 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet from 192.168.0.0/16 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet from 127.0.0.0/8 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet from 100.64.0.0/10 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet from 169.254.0.0/16 to any label \"3d399f8f89b68d684701badb48eab085\"\nblock drop in log quick on vtnet1 inet6 from fd00::/8 to any label \"6b231f0e90865b14cd918a141750d96a\"\nblock drop in log quick on vtnet1 inet6 from fe80::/10 to any label \"6b231f0e90865b14cd918a141750d96a\"\nblock drop in log quick on vtnet1 inet6 from :: to any label \"6b231f0e90865b14cd918a141750d96a\"\npass out log all flags S/SA keep state allow-opts label \"fae559338f65e11c53669fc3642c93c2\"\npass in log quick on vtnet0 proto tcp from any to (self) port = http flags S/SA keep state label \"01e83daa25c4483dee217a7ecd7c9a88\"\npass in log quick on vtnet0 proto tcp from any to (self) port = https flags S/SA keep state label \"3345e04986bd5750d23b77cbbb21271f\"\npass in quick on vtnet0 inet from (vtnet0:network) to any flags S/SA keep state label \"6d82ceaf-98f2-4034-9ed9-8a0064805795\"\npass in log quick on vtnet2 inet proto icmp from 10.255.255.2 to 10.255.255.1 keep state label \"16753480-1a6a-4902-b727-b1b2dffa03f7\"\npass in log quick on vtnet2 inet proto pfsync from 10.255.255.2 to 10.255.255.1 no state label \"784f183a-a347-4510-a8e6-e217e124a647\"\npass in quick on vtnet0 inet6 from (vtnet0:network) to any flags S/SA keep state label \"f5606cbe-bcaf-4ff4-9968-7b4a255bccbf\"\npass in quick on vtnet0 inet6 from fe80::/10 to any flags S/SA keep state label \"f5606cbe-bcaf-4ff4-9968-7b4a255bccbf\"\npass in log quick on vtnet2 inet proto tcp from 10.255.255.2 to 10.255.255.1 port = https flags S/SA keep state label \"1e26e86b-e922-49f0-a0ee-cd2432e2689d\"\npass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.100 to 192.168.40.2 keep state label \"1346206b-5bbc-4fd7-bf9d-e01c02c13fb7\"\npass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.100 to 192.168.30.10 port = 8000 flags S/SA keep state label \"684c6853-1caa-4a3c-9433-b48f01624c84\"\npass in log quick on vtnet0_vlan40 inet proto udp from 192.168.40.0/24 to 192.168.40.1 port = domain keep state label \"ccbbe825-4c5e-40cc-90fc-bea18cb460a6\"\npass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.0/24 to 192.168.40.1 port = domain flags S/SA keep state label \"efb0145c-dba9-4ff7-b2ce-6e124b4ae1e1\"\npass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.0/24 to 192.168.40.1 keep state label \"076d581f-f419-4727-b738-e3715e1e0725\"\npass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.0/24 to 192.168.30.10 port = 8000 flags S/SA keep state label \"47242411-c455-421a-bc14-8659f2da3837\"\npass in log quick on vtnet0_vlan50 inet proto udp from 192.168.50.0/24 to 192.168.50.1 port = domain keep state label \"2bdbf0b8-df09-4ae4-9804-ca8665906af2\"\npass in log quick on vtnet0_vlan50 inet proto tcp from 192.168.50.0/24 to 192.168.50.1 port = domain flags S/SA keep state label \"42c79a2e-eadf-492c-addf-49956864ec42\"\npass in log quick on vtnet0_vlan50 inet proto icmp from 192.168.50.0/24 to 192.168.50.1 keep state label \"80c0195c-5f11-45ca-9b5d-b1736eb339c9\"\npass in log quick on vtnet0_vlan99 inet proto icmp from 192.168.99.100 to 192.168.99.1 keep state label \"f495a3f9-172f-4f4c-8bb5-b2ee8ada70af\"\n",
+    "stderr": ""
+  },
+  "sync_ping": {
+    "rc": 0,
+    "stdout": "PING 10.255.255.2 (10.255.255.2) from 10.255.255.1: 56 data bytes\n64 bytes from 10.255.255.2: icmp_seq=0 ttl=64 time=4.412 ms\n64 bytes from 10.255.255.2: icmp_seq=1 ttl=64 time=3.536 ms\n\n--- 10.255.255.2 ping statistics ---\n2 packets transmitted, 2 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 3.536/3.974/4.412/0.438 ms\n",
+    "stderr": ""
+  },
+  "collector_time": "2026-11-06T18:02:15.909193+07:00"
+}

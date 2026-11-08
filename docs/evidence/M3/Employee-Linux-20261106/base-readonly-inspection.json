@@ -1,0 +1,1 @@
+﻿{"rc": 1, "stdout": "", "stderr": "guestfish: unrecognized option '--memsize=256'\nTry \u2018guestfish --help\u2019 for more information.\n", "scope": "offline base read-only; no mount of active guest overlays"}

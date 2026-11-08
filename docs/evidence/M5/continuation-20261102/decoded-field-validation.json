@@ -1,0 +1,75 @@
+{
+  "collected_at": "2026-11-02T20:59:38.299388+07:00",
+  "checks": {
+    "real_decoded_fields_match": true,
+    "synthetic_full_log_matches": true,
+    "rule_86601": true,
+    "level_3": true,
+    "source_sha256_matches": true,
+    "source_flow_id_equal": true,
+    "reject_wrong_source_ip": true,
+    "reject_wrong_sid": true
+  },
+  "scope": "Validate saved new alert against saved input; no new replay or live transport",
+  "real_alert": {
+    "timestamp": "2026-11-02T20:45:53.589+0000",
+    "rule": {
+      "level": 3,
+      "description": "Suricata: Alert - SOC M4 benign ICMP marker",
+      "id": "86601",
+      "firedtimes": 1,
+      "mail": false,
+      "groups": [
+        "ids",
+        "suricata"
+      ]
+    },
+    "agent": {
+      "id": "000",
+      "name": "wazuh-soc"
+    },
+    "manager": {
+      "name": "wazuh-soc"
+    },
+    "id": "1793652353.1198105",
+    "decoder": {
+      "name": "json"
+    },
+    "data": {
+      "timestamp": "2026-11-02T17:01:36.985227+0000",
+      "flow_id": "9396033340943.000000",
+      "in_iface": "capture0",
+      "event_type": "alert",
+      "vlan": [
+        30
+      ],
+      "src_ip": "192.168.30.101",
+      "src_port": "0",
+      "dest_ip": "192.168.30.102",
+      "dest_port": "0",
+      "proto": "ICMP",
+      "icmp_type": "8",
+      "icmp_code": "0",
+      "pkt_src": "wire/pcap",
+      "alert": {
+        "action": "allowed",
+        "gid": "1",
+        "signature_id": "1000001",
+        "rev": "1",
+        "signature": "SOC M4 benign ICMP marker",
+        "severity": "3"
+      },
+      "direction": "to_server",
+      "flow": {
+        "pkts_toserver": "1",
+        "pkts_toclient": "0",
+        "bytes_toserver": "82",
+        "bytes_toclient": "0",
+        "start": "2026-11-02T17:01:36.985227+0000",
+        "src_ip": "192.168.30.101",
+        "dest_ip": "192.168.30.102"
+      }
+    },
+    "location": "/var/log/soc-suricata-replay.json"
+  }
+}

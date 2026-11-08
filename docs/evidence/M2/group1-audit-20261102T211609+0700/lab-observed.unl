@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<lab name="SOC-M2-Core-L2" id="f39cfc8c-5eaf-461e-bb0c-60b5fde848b7" version="1" scripttimeout="600" lock="0" author="SOC Project">
+  <description>SOC Core L2 stage 1 - keep stopped, 8 unconnected NICs</description>
+  <topology>
+    <nodes>
+      <node id="3" name="SOC-Core-L2" type="qemu" template="linux" image="linux-ubuntu-24.04-soc-core-l2" console="vnc" cpu="1" cpulimit="1" ram="2048" ethernet="8" uuid="2b295168-b72e-4de7-b364-37298252dd9f" firstmac="02:53:45:f2:19:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="560" top="365">
+        <interface id="0" name="e0" type="ethernet" network_id="6"/>
+        <interface id="1" name="e1" type="ethernet" network_id="7"/>
+        <interface id="2" name="e2" type="ethernet" network_id="8"/>
+        <interface id="3" name="e3" type="ethernet" network_id="9"/>
+        <interface id="4" name="e4" type="ethernet" network_id="10"/>
+        <interface id="5" name="e5" type="ethernet" network_id="1"/>
+        <interface id="6" name="e6" type="ethernet" network_id="2"/>
+        <interface id="7" name="e7" type="ethernet" network_id="11"/>
+      </node>
+      <node id="1" name="OPNsense-Primary" type="qemu" template="opnsense" image="opnsense-26.7-soc" console="vnc" cpu="2" cpulimit="0" ram="3072" ethernet="4" uuid="fe606d13-1542-490b-b651-5c1c6289afde" qemu_options="-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Firewall-2D-Generic-S.svg" config="0" left="348" top="189">
+        <interface id="0" name="vtnet0" type="ethernet" network_id="1"/>
+        <interface id="1" name="vtnet1" type="ethernet" network_id="4"/>
+        <interface id="2" name="vtnet2" type="ethernet" network_id="3"/>
+        <interface id="3" name="vtnet3" type="ethernet" network_id="5"/>
+      </node>
+      <node id="2" name="OPNsense-Secondary" type="qemu" template="opnsense" image="opnsense-26.7-soc" console="vnc" cpu="2" cpulimit="0" ram="3072" ethernet="4" uuid="64b94195-c24d-4107-95d4-737e0a4b3016" qemu_options="-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Firewall-2D-Generic-S.svg" config="0" left="768" top="189">
+        <interface id="0" name="vtnet0" type="ethernet" network_id="2"/>
+        <interface id="1" name="vtnet1" type="ethernet" network_id="4"/>
+        <interface id="2" name="vtnet2" type="ethernet" network_id="3"/>
+        <interface id="3" name="vtnet3" type="ethernet" network_id="5"/>
+      </node>
+      <node id="4" name="Data-Center" type="qemu" template="linux" image="linux-soc-data-center" console="vnc" cpu="1" cpulimit="1" ram="1024" ethernet="1" uuid="bd24a0ca-57c8-488b-8ecf-9bb98d91739b" firstmac="02:54:bc:2f:0c:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="123" top="609">
+        <interface id="0" name="e0" type="ethernet" network_id="6"/>
+      </node>
+      <node id="5" name="Employee" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="PC-2D-Desktop-Generic-S.svg" config="0" left="330" top="609">
+        <interface id="0" name="eth0" type="ethernet" network_id="7"/>
+      </node>
+      <node id="6" name="Guest" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="PC-2D-Desktop-Generic-S.svg" config="0" left="534" top="609">
+        <interface id="0" name="eth0" type="ethernet" network_id="8"/>
+      </node>
+      <node id="7" name="DMZ" type="qemu" template="linux" image="linux-soc-dmz" console="vnc" cpu="1" cpulimit="1" ram="1024" ethernet="1" uuid="4ed38325-37bd-44e5-8b46-e4b093341139" firstmac="02:54:12:37:e0:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="740" top="610">
+        <interface id="0" name="e0" type="ethernet" network_id="9"/>
+      </node>
+      <node id="8" name="Management" type="vpcs" template="vpcs" image="" ethernet="1" delay="0" icon="PC-2D-Desktop-Generic-S.svg" config="0" left="945" top="609">
+        <interface id="0" name="eth0" type="ethernet" network_id="10"/>
+      </node>
+      <node id="9" name="Suricata-NIDS" type="qemu" template="linux" image="linux-soc-suricata-nids" console="vnc" cpu="1" cpulimit="1" ram="1024" ethernet="2" uuid="fc376eb8-8121-4fae-ba5c-c96e82c307fd" firstmac="02:54:42:38:75:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="1120" top="365">
+        <interface id="0" name="e0" type="ethernet" network_id="11"/>
+        <interface id="1" name="e1" type="ethernet" network_id="10"/>
+      </node>
+      <node id="10" name="Wazuh-SOC" type="qemu" template="linux" image="linux-soc-wazuh-soc" console="vnc" cpu="2" cpulimit="1" ram="4096" ethernet="1" uuid="ee01b238-4fdf-47a8-ae11-f29097126cc9" firstmac="02:54:1d:c7:d8:00" qemu_options="-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log" qemu_version="2.12.0" qemu_arch="x86_64" qemu_nic="virtio-net-pci" delay="0" icon="Server-2D-Linux-S.svg" config="0" left="1119" top="549"/>
+    </nodes>
+    <networks>
+      <network id="1" type="bridge" name="Net-SOC-Core-L2iface_5" left="603" top="217" visibility="0" icon="lan.png"/>
+      <network id="2" type="bridge" name="Net-SOC-Core-L2iface_6" left="597" top="232" visibility="0" icon="lan.png"/>
+      <network id="3" type="bridge" name="Net-OPNsense-Secondaryiface_2" left="594" top="319" visibility="0" icon="lan.png"/>
+      <network id="4" type="bridge" name="WAN-ISP-1" left="290" top="65" visibility="1" icon="lan.png"/>
+      <network id="5" type="bridge" name="WAN-ISP-2" left="820" top="65" visibility="1" icon="lan.png"/>
+      <network id="6" type="bridge" name="VLAN30-Data-Center" left="125" top="520" visibility="0" icon="lan.png"/>
+      <network id="7" type="bridge" name="VLAN40-Employee" left="330" top="520" visibility="0" icon="lan.png"/>
+      <network id="8" type="bridge" name="VLAN50-Guest" left="535" top="520" visibility="0" icon="lan.png"/>
+      <network id="9" type="bridge" name="VLAN60-DMZ" left="740" top="520" visibility="0" icon="lan.png"/>
+      <network id="10" type="bridge" name="VLAN99-Management" left="945" top="520" visibility="1" icon="lan.png"/>
+      <network id="11" type="bridge" name="SPAN-Capture" left="1000" top="365" visibility="0" icon="lan.png"/>
+    </networks>
+  </topology>
+  <objects>
+    <textobjects>
+      <textobject id="1" name="Internet-WAN" type="text">
+        <data>&lt;div id="customText20261102001" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:420px;top:0px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#263b53;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;INTERNET / WAN — upstream chưa xác định&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="2" name="Firewall" type="text">
+        <data>PGRpdiBpZD0iY3VzdG9tVGV4dDIiIGNsYXNzPSJjdXN0b21TaGFwZSBjdXN0b21UZXh0IGNvbnRleHQtbWVudSB1aS1yZXNpemFibGUganRrLWRyYWdnYWJsZSBkcmFnc3RvcHBlZCIgZGF0YS1wYXRoPSIyIiBzdHlsZT0iZGlzcGxheTogaW5saW5lOyBwb3NpdGlvbjogYWJzb2x1dGU7IGxlZnQ6IDUwMXB4OyB0b3A6IDE0N3B4OyBjdXJzb3I6IG1vdmU7IHotaW5kZXg6IDEwMDE7Ij48cCBhbGlnbj0iY2VudGVyIiBzdHlsZT0idmVydGljYWwtYWxpZ246dG9wO2NvbG9yOiNhNTMwMzY7YmFja2dyb3VuZC1jb2xvcjojZmZmZmZmO2ZvbnQtc2l6ZToxM3B4O2ZvbnQtd2VpZ2h0OmJvbGQ7Ij5GSVJFV0FMTCAvIEhBIOKAlCBjaMawYSBraeG7g20gdGjhu608L3A+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtcyIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PGRpdiBjbGFzcz0idWktcmVzaXphYmxlLWhhbmRsZSB1aS1yZXNpemFibGUtc2UgdWktaWNvbiB1aS1pY29uLWdyaXBzbWFsbC1kaWFnb25hbC1zZSIgc3R5bGU9InotaW5kZXg6IDkwOyI+PC9kaXY+PC9kaXY+</data>
+      </textobject>
+      <textobject id="3" name="Core" type="text">
+        <data>&lt;div id="customText20261102003" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:445px;top:315px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#205a9b;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;CORE L2 — cấu hình M2 giữ nguyên&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="4" name="DC-zone" type="text">
+        <data>&lt;div id="customText20261102004" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:65px;top:690px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#176642;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;DATA CENTER · VLAN 30&lt;br&gt;CREATED_NOT_INSTALLED&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="5" name="Employee-zone" type="text">
+        <data>&lt;div id="customText20261102005" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:280px;top:690px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#97630d;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;EMPLOYEE · VLAN 40&lt;br&gt;VPCS · chưa cấu hình&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="6" name="Guest-zone" type="text">
+        <data>&lt;div id="customText20261102006" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:485px;top:690px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#6d39a0;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;GUEST · VLAN 50&lt;br&gt;VPCS · chưa cấu hình&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="7" name="DMZ-zone" type="text">
+        <data>&lt;div id="customText20261102007" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:685px;top:690px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#176642;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;DMZ · VLAN 60&lt;br&gt;CREATED_NOT_INSTALLED&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="8" name="MGMT-zone" type="text">
+        <data>&lt;div id="customText20261102008" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:890px;top:690px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#176642;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;MANAGEMENT · VLAN 99&lt;br&gt;VPCS · chưa cấu hình&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="9" name="SOC-zone" type="text">
+        <data>&lt;div id="customText20261102009" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:1080px;top:290px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#6d39a0;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;SOC / GIÁM SÁT&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="10" name="Suricata-state" type="text">
+        <data>&lt;div id="customText20261102010" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:1055px;top:440px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#6d39a0;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;Suricata chưa cài&lt;br&gt;capture: NIC0 · quản trị: NIC1&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="11" name="Wazuh-state" type="text">
+        <data>&lt;div id="customText20261102011" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:1065px;top:620px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#a53036;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;Wazuh chưa cài&lt;br&gt;NIC chưa nối: cần xác nhận VLAN&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="12" name="Automation-note" type="text">
+        <data>&lt;div id="customText20261102012" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:1030px;top:745px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#526176;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;Automation: thành phần logic M1&lt;br&gt;Chưa có đặc tả máy riêng; chưa tạo node&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+      <textobject id="13" name="Scope-note" type="text">
+        <data>&lt;div id="customText20261102013" class="customShape customText context-menu" data-path="" style="display:inline;position:absolute;left:180px;top:785px;cursor:move;z-index:1001;"&gt;&lt;p align="center" style="vertical-align:top;color:#526176;background-color:#ffffff;font-size:13px;font-weight:bold;"&gt;WAN1/WAN2 là bridge cô lập · không nối mạng Windows/VMware&lt;br&gt;Topology từng phần đã dựng; chưa xác minh E2E / HA / SOC&lt;/p&gt;&lt;/div&gt;</data>
+      </textobject>
+    </textobjects>
+  </objects>
+</lab>

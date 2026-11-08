@@ -1,0 +1,239 @@
+{
+  "Primary": {
+    "role": "Primary",
+    "config_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+    "backup_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+    "backup_equal": true,
+    "sections_equal": {
+      "OPNsense": true,
+      "bridges": true,
+      "cert": true,
+      "dnsmasq": true,
+      "filter": true,
+      "gifs": true,
+      "gres": true,
+      "hasync": true,
+      "ifgroups": true,
+      "interfaces": true,
+      "laggs": true,
+      "nat": true,
+      "ntpd": true,
+      "openvpn": true,
+      "revision": true,
+      "staticroutes": true,
+      "sysctl": true,
+      "system": true,
+      "theme": true,
+      "trigger_initial_wizard": true,
+      "virtualip": true,
+      "vlans": true
+    },
+    "config_unchanged": true,
+    "vlans": [
+      {
+        "vlan": 30,
+        "interface": "vtnet0_vlan30",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.30.2"
+        ],
+        "expected": "192.168.30.2",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.30.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 40,
+        "interface": "vtnet0_vlan40",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.40.2"
+        ],
+        "expected": "192.168.40.2",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.40.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 50,
+        "interface": "vtnet0_vlan50",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.50.2"
+        ],
+        "expected": "192.168.50.2",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.50.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 60,
+        "interface": "vtnet0_vlan60",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.60.2"
+        ],
+        "expected": "192.168.60.2",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.60.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 99,
+        "interface": "vtnet0_vlan99",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.99.2"
+        ],
+        "expected": "192.168.99.2",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.99.1",
+        "carp_detail": null
+      }
+    ],
+    "sync": "vtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:02\n\tinet 10.255.255.1 netmask 0xfffffffc broadcast 10.255.255.3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "unexpected_interfaces": [],
+    "vips": [],
+    "pfsync": {
+      "status": "READY",
+      "runtime": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+      "demotion": 0
+    },
+    "probe_file_exists": false,
+    "runtime_deltas_vs_group1b_before_repair": {
+      "pfsync0": {
+        "changed": true,
+        "scope_note": "Group1B audit was BEFORE native pfsync repair; compare stable pfsync separately"
+      }
+    }
+  },
+  "Secondary": {
+    "role": "Secondary",
+    "config_sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+    "backup_sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+    "backup_equal": true,
+    "sections_equal": {
+      "OPNsense": true,
+      "aliases": true,
+      "bridges": true,
+      "cert": true,
+      "dnsmasq": true,
+      "filter": true,
+      "gifs": true,
+      "gres": true,
+      "hasync": true,
+      "ifgroups": true,
+      "interfaces": true,
+      "laggs": true,
+      "nat": true,
+      "ntpd": true,
+      "openvpn": true,
+      "revision": true,
+      "staticroutes": true,
+      "sysctl": true,
+      "system": true,
+      "theme": true,
+      "trigger_initial_wizard": true,
+      "virtualip": true,
+      "vlans": true
+    },
+    "config_unchanged": true,
+    "vlans": [
+      {
+        "vlan": 30,
+        "interface": "vtnet0_vlan30",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.30.3"
+        ],
+        "expected": "192.168.30.3",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.30.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 40,
+        "interface": "vtnet0_vlan40",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.40.3"
+        ],
+        "expected": "192.168.40.3",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.40.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 50,
+        "interface": "vtnet0_vlan50",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.50.3"
+        ],
+        "expected": "192.168.50.3",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.50.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 60,
+        "interface": "vtnet0_vlan60",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.60.3"
+        ],
+        "expected": "192.168.60.3",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.60.1",
+        "carp_detail": null
+      },
+      {
+        "vlan": 99,
+        "interface": "vtnet0_vlan99",
+        "exists": true,
+        "up": true,
+        "ips": [
+          "192.168.99.3"
+        ],
+        "expected": "192.168.99.3",
+        "vlan_match": true,
+        "carp_runtime": "ABSENT",
+        "vip": "192.168.99.1",
+        "carp_detail": null
+      }
+    ],
+    "sync": "vtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:02:00:02\n\tinet 10.255.255.2 netmask 0xfffffffc broadcast 10.255.255.3\n\tinet6 fe80::5200:ff:fe02:2%vtnet2 prefixlen 64 scopeid 0x3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\n",
+    "unexpected_interfaces": [],
+    "vips": [],
+    "pfsync": {
+      "status": "READY",
+      "runtime": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+      "demotion": 0
+    },
+    "probe_file_exists": false,
+    "runtime_deltas_vs_group1b_before_repair": {
+      "pfsync0": {
+        "changed": true,
+        "scope_note": "Group1B audit was BEFORE native pfsync repair; compare stable pfsync separately"
+      }
+    }
+  }
+}

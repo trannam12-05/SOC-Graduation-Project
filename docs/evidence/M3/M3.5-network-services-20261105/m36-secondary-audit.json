@@ -1,0 +1,47 @@
+{
+  "role": "Secondary",
+  "config_sha256": "5b457e7b36cc5a318f9b54eb8f2c96635dc5819c16b85e5306de612149b7c7c0",
+  "backup": "/root/soc-m36-20261106/config.before.xml",
+  "backup_sha256": "5b457e7b36cc5a318f9b54eb8f2c96635dc5819c16b85e5306de612149b7c7c0",
+  "backup_mode": "0o600",
+  "public_hasync": {
+    "pfsyncinterface": "opt6",
+    "pfsyncpeerip": "10.255.255.1",
+    "pfsyncversion": "1400",
+    "synchronizetoip": "",
+    "syncitems": "",
+    "disablepreempt": "0"
+  },
+  "kea_enabled": "0",
+  "kea_interfaces": "",
+  "kea_subnets": [],
+  "m35_rules": [],
+  "carp": [
+    "inet 192.168.30.1 netmask 0xffffff00 broadcast 192.168.30.255 vhid 30",
+    "carp: BACKUP vhid 30 advbase 1 advskew 100",
+    "inet 192.168.40.1 netmask 0xffffff00 broadcast 192.168.40.255 vhid 40",
+    "carp: BACKUP vhid 40 advbase 1 advskew 100",
+    "inet 192.168.50.1 netmask 0xffffff00 broadcast 192.168.50.255 vhid 50",
+    "carp: BACKUP vhid 50 advbase 1 advskew 100",
+    "inet 192.168.60.1 netmask 0xffffff00 broadcast 192.168.60.255 vhid 60",
+    "carp: BACKUP vhid 60 advbase 1 advskew 100",
+    "inet 192.168.99.1 netmask 0xffffff00 broadcast 192.168.99.255 vhid 99",
+    "carp: BACKUP vhid 99 advbase 1 advskew 100"
+  ],
+  "pfsync": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "kea_status": {
+    "rc": 0,
+    "stdout": "\n",
+    "stderr": ""
+  },
+  "sync_ping": {
+    "rc": 0,
+    "stdout": "PING 10.255.255.1 (10.255.255.1) from 10.255.255.2: 56 data bytes\n64 bytes from 10.255.255.1: icmp_seq=0 ttl=64 time=4.453 ms\n64 bytes from 10.255.255.1: icmp_seq=1 ttl=64 time=3.123 ms\n\n--- 10.255.255.1 ping statistics ---\n2 packets transmitted, 2 packets received, 0.0% packet loss\nround-trip min/avg/max/stddev = 3.123/3.788/4.453/0.665 ms\n",
+    "stderr": ""
+  },
+  "collector_time": "2026-11-06T18:05:06.834354+07:00"
+}

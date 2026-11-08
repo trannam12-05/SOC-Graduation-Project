@@ -1,0 +1,1 @@
+hostname; whoami; ip -br addr; ip route; systemctl is-active soc-lab-http; ss -lnt | grep 8000

@@ -1,0 +1,490 @@
+@0 scrub in all fragment reassemble
+  [ Evaluations: 8         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@0 block drop in log on ! vtnet0 inet from 192.168.1.0/24 to any
+  [ Evaluations: 6         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@1 block drop in log inet from <__automatic_d2115313_0:7> to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@2 block drop in log on ! vtnet0_vlan30 inet from 192.168.30.0/24 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@3 block drop in log on ! vtnet0_vlan40 inet from 192.168.40.0/24 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@4 block drop in log on ! vtnet0_vlan50 inet from 192.168.50.0/24 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@5 block drop in log on ! vtnet0_vlan60 inet from 192.168.60.0/24 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@6 block drop in log on ! vtnet0_vlan99 inet from 192.168.99.0/24 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@7 block drop in log on ! vtnet2 inet from 10.255.255.0/30 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@8 block drop in log on vtnet0 inet6 from fe80::5200:ff:fe01:0 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@9 block drop in log on vtnet1 inet6 from fe80::5200:ff:fe01:1 to any
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@10 block drop in log inet all label "02f4bab031b57d1e30553ce08e0ec131"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@11 block drop in log inet6 all label "02f4bab031b57d1e30553ce08e0ec131"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@12 pass in log quick inet6 proto ipv6-icmp all icmp6-type unreach keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@13 pass in log quick inet6 proto ipv6-icmp all icmp6-type toobig keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@14 pass in log quick inet6 proto ipv6-icmp all icmp6-type timex keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@15 pass in log quick inet6 proto ipv6-icmp all icmp6-type paramprob keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@16 pass in log quick inet6 proto ipv6-icmp all icmp6-type neighbrsol keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@17 pass in log quick inet6 proto ipv6-icmp all icmp6-type neighbradv keep state label "7355b5da99f40893221b6c4140de1006"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@18 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type echoreq keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 6         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@19 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type echorep keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@20 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type routersol keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@21 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type routeradv keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@22 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type neighbrsol keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@23 pass out log quick inet6 proto ipv6-icmp from (self:4) to fe80::/10 icmp6-type neighbradv keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@24 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type echoreq keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@25 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type echorep keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@26 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type routersol keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@27 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type routeradv keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@28 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type neighbrsol keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@29 pass out log quick inet6 proto ipv6-icmp from (self:4) to ff02::/16 icmp6-type neighbradv keep state label "80f90f0d4c5aba0c28d1c539e1e35766"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@30 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type echoreq keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@31 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type routersol keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@32 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type routeradv keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@33 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type neighbrsol keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@34 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to fe80::/10 icmp6-type neighbradv keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@35 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type echoreq keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@36 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type routersol keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@37 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type routeradv keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@38 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type neighbrsol keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@39 pass in log quick inet6 proto ipv6-icmp from fe80::/10 to ff02::/16 icmp6-type neighbradv keep state label "8fa5de02f1ff8cdd29bedb63b24cc7e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@40 pass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type echoreq keep state label "e29b1b607bd6cd916cf6b598c41805d3"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@41 pass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type routersol keep state label "e29b1b607bd6cd916cf6b598c41805d3"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@42 pass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type routeradv keep state label "e29b1b607bd6cd916cf6b598c41805d3"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@43 pass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type neighbrsol keep state label "e29b1b607bd6cd916cf6b598c41805d3"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@44 pass in log quick inet6 proto ipv6-icmp from ff02::/16 to fe80::/10 icmp6-type neighbradv keep state label "e29b1b607bd6cd916cf6b598c41805d3"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@45 pass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type echoreq keep state label "b242f2d3f6b4756fa468cfd0daa78cd4"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@46 pass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type routersol keep state label "b242f2d3f6b4756fa468cfd0daa78cd4"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@47 pass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type routeradv keep state label "b242f2d3f6b4756fa468cfd0daa78cd4"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@48 pass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type neighbrsol keep state label "b242f2d3f6b4756fa468cfd0daa78cd4"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@49 pass in log quick inet6 proto ipv6-icmp from :: to ff02::/16 icmp6-type neighbradv keep state label "b242f2d3f6b4756fa468cfd0daa78cd4"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@50 block drop in log quick inet proto tcp from any port = 0 to any label "b477ac1c8f5237a59ee416b9d819ce58"
+  [ Evaluations: 6         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@51 block drop in log quick inet proto udp from any port = 0 to any label "b477ac1c8f5237a59ee416b9d819ce58"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@52 block drop in log quick inet6 proto tcp from any port = 0 to any label "b477ac1c8f5237a59ee416b9d819ce58"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@53 block drop in log quick inet6 proto udp from any port = 0 to any label "b477ac1c8f5237a59ee416b9d819ce58"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@54 block drop in log quick inet proto tcp from any to any port = 0 label "b454844853f2346167ad77449b79ad8e"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@55 block drop in log quick inet proto udp from any to any port = 0 label "b454844853f2346167ad77449b79ad8e"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@56 block drop in log quick inet6 proto tcp from any to any port = 0 label "b454844853f2346167ad77449b79ad8e"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@57 block drop in log quick inet6 proto udp from any to any port = 0 label "b454844853f2346167ad77449b79ad8e"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@58 block drop in log quick proto tcp from <sshlockout:0> to (self:12) port = ssh label "8b59cf89872747f657c42f9e93dd52e0"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@59 block drop in log quick proto tcp from <sshlockout:0> to (self:12) port = https label "27ad7dee30c19305dc0187bf0e87cd4e"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@60 block drop in log quick from <virusprot:0> to any label "add09fc915886757c300419fc2ecc1e6"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@61 pass in log quick on vtnet1 inet6 proto udp from any to fe80::/10 port = dhcpv6-client keep state label "c6e8fd0e915a27c129dc70c00a278a98"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@62 pass out log quick on vtnet1 inet6 proto udp from fe80::/10 port = dhcpv6-client to fe80::/10 port = dhcpv6-server keep state label "2f2c37025cd02b5cd29fd330f8e48954"
+  [ Evaluations: 6         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@63 pass out log quick on vtnet1 inet6 proto udp from fe80::/10 port = dhcpv6-client to ff02::/16 port = dhcpv6-server keep state label "2f2c37025cd02b5cd29fd330f8e48954"
+  [ Evaluations: 6         Packets: 6         Bytes: 696         States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 6     ]
+  [ Last Active Time: Tue Nov  3 11:24:05 2026 ]
+@64 pass in log quick on vtnet1 proto udp from any port = bootps to any port = bootpc keep state label "f994f615e00b8be0042263f86c79913f"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@65 pass out log quick on vtnet1 proto udp from any port = bootpc to any port = bootps keep state label "5cf7ab808da1fcbca1ddb9ba9b46b669"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@66 pass in log quick on vtnet0 inet proto udp from any port = bootpc to 255.255.255.255 port = bootps keep state label "56d97e04b8ce723a8524bdda932fe056"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@67 pass in log quick on vtnet0 proto udp from any port = bootpc to (self:12) port = bootps keep state label "ac5d6855f1bc6d537c949fd7ce458587"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@68 pass out log quick on vtnet0 proto udp from (self:12) port = bootps to any port = bootpc keep state label "4071f735e7cf9dcad8b9305970c17911"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@69 pass in log quick on vtnet0 inet6 proto udp from fe80::/10 to fe80::/10 port = dhcpv6-client keep state label "600d48bc4d9a060084eea027fa54cfdc"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@70 pass in log quick on vtnet0 inet6 proto udp from fe80::/10 to ff02::/16 port = dhcpv6-client keep state label "600d48bc4d9a060084eea027fa54cfdc"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@71 pass in log quick on vtnet0 inet6 proto udp from fe80::/10 to ff02::/16 port = dhcpv6-server keep state label "0e8cdb22b7059277a934591353ae2214"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@72 pass in log quick on vtnet0 inet6 proto udp from ff02::/16 to fe80::/10 port = dhcpv6-server keep state label "06e2b143a84862bc38acb6bac5090d14"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@73 pass in log quick on vtnet0 inet6 proto udp from fe80::/10 to (self:4) port = dhcpv6-client keep state label "04bd2bc40ab1391b8ce89ff0fafd1e67"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@74 pass out log quick on vtnet0 inet6 proto udp from (self:4) port = dhcpv6-server to fe80::/10 keep state label "0926e497e454bfe83d715b0d85fdfe3a"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@75 block drop in log quick on vtnet1 inet from <bogons:10> to any label "b7cd97a164650b538506fb551a0369e7"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@76 block drop in log quick on vtnet1 inet6 from <bogonsv6:76> to any label "f140a48ddade668b9d6f5259669a1d5c"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@77 block drop in log quick on vtnet1 inet from 10.0.0.0/8 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@78 block drop in log quick on vtnet1 inet from 172.16.0.0/12 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@79 block drop in log quick on vtnet1 inet from 192.168.0.0/16 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@80 block drop in log quick on vtnet1 inet from 127.0.0.0/8 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@81 block drop in log quick on vtnet1 inet from 100.64.0.0/10 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@82 block drop in log quick on vtnet1 inet from 169.254.0.0/16 to any label "3d399f8f89b68d684701badb48eab085"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@83 block drop in log quick on vtnet1 inet6 from fd00::/8 to any label "6b231f0e90865b14cd918a141750d96a"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@84 block drop in log quick on vtnet1 inet6 from fe80::/10 to any label "6b231f0e90865b14cd918a141750d96a"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@85 block drop in log quick on vtnet1 inet6 from :: to any label "6b231f0e90865b14cd918a141750d96a"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@86 pass out log all flags S/SA keep state allow-opts label "fae559338f65e11c53669fc3642c93c2"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@87 pass in log quick on vtnet0 proto tcp from any to (self:12) port = http flags S/SA keep state label "01e83daa25c4483dee217a7ecd7c9a88"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@88 pass in log quick on vtnet0 proto tcp from any to (self:12) port = https flags S/SA keep state label "3345e04986bd5750d23b77cbbb21271f"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@89 pass in quick on vtnet0 inet from (vtnet0:network:1) to any flags S/SA keep state label "6d82ceaf-98f2-4034-9ed9-8a0064805795"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@90 pass in log quick on vtnet2 inet proto icmp from 10.255.255.2 to 10.255.255.1 keep state label "16753480-1a6a-4902-b727-b1b2dffa03f7"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@91 pass in log quick on vtnet2 inet proto pfsync from 10.255.255.2 to 10.255.255.1 no state label "784f183a-a347-4510-a8e6-e217e124a647"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@92 pass in quick on vtnet0 inet6 from (vtnet0:network:*) to any flags S/SA keep state label "f5606cbe-bcaf-4ff4-9968-7b4a255bccbf"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@93 pass in quick on vtnet0 inet6 from fe80::/10 to any flags S/SA keep state label "f5606cbe-bcaf-4ff4-9968-7b4a255bccbf"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@94 pass in log quick on vtnet2 inet proto tcp from 10.255.255.2 to 10.255.255.1 port = https flags S/SA keep state label "1e26e86b-e922-49f0-a0ee-cd2432e2689d"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@95 pass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.100 to 192.168.40.2 keep state label "1346206b-5bbc-4fd7-bf9d-e01c02c13fb7"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]
+@96 pass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.100 to 192.168.30.10 port = 8000 flags S/SA keep state label "684c6853-1caa-4a3c-9433-b48f01624c84"
+  [ Evaluations: 0         Packets: 0         Bytes: 0           States: 0     ]
+  [ Source Nodes: 0      Limit: 0      NAT/RDR: 0      Route: 0      ]
+  [ Inserted: uid 0 pid 0 State Creations: 0     ]
+  [ Last Active Time: N/A ]

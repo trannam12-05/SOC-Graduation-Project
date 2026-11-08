@@ -1,0 +1,21 @@
+{
+  "reviewed_at": "2026-11-03T17:58:40.488965+07:00",
+  "sources": [
+    {
+      "path": "opnsense\\ha\\ha-design.md",
+      "sha256": "6f67bd16db68f6736ae51a54397e60e6be5cda116cab5bb74c40690c39a0833d"
+    },
+    {
+      "path": "configs\\M3\\address-proposal.json",
+      "sha256": "8a72ab7527626e0f11a23ecfdea8bff5f16e4af983d880fc9cc1303130f700b2"
+    },
+    {
+      "path": "docs\\M1\\M1_Thiet_ke_SOC_Core_L2_OPNsense_Giai_thich_thuat_ngu.docx",
+      "sha256": "79953fd2f21f14928d7c3c1c58f0d09575c71252c76ff273defaa63163ebe703"
+    },
+    {
+      "path": "docs\\M3\\M3-OPNsense-HA-PROPOSED-20261101.md",
+      "sha256": "ae8c68bfcf73156f9cfb2c5fb886ba4a6907befc752b464702bfac5170d4c46e"
+    }
+  ]
+}

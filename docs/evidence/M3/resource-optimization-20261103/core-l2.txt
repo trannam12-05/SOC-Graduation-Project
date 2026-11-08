@@ -1,0 +1,1 @@
+ip -br addr; sysctl net.ipv4.ip_forward net.ipv6.conf.all.forwarding; sudo -n ovs-vsctl list-br; sudo -n journalctl -k -b --no-pager --grep="oom-kill|Out of memory|Killed process"

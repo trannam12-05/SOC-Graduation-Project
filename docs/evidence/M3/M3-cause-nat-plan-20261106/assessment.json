@@ -1,0 +1,12 @@
+﻿{
+    "status":  "PARTIAL",
+    "collected_at":  "2026-11-06T20:16:09.4565348+07:00",
+    "trigger_confirmed":  "Sau initial bulk done, hook96 gọi pluginctl -c pfsync và khởi phát đợt bulk thứ hai",
+    "delay_cause":  "Chưa xác định nguyên nhân sâu vì sao đợt thứ hai Primary kéo dài ~673 giây; send errors và failed lookups là counter tích lũy không đủ quy kết",
+    "configuration":  "Peer đối ứng, interfaceopt6, version1400 hai bên; rule pfsync pass in quick trên vtnet2; không có bằng chứng mismatch hoặc chặn tĩnh ở cấu hình đã đọc",
+    "nat":  "BLOCKED: bridge WAN chỉ hai firewall, chưa upstream; WAN DHCP chưa lease/default route; outbound mode automatic đã bật",
+    "proposal":  "Chỉ đề xuất WAN-ISP-1 có upstream; DHCP IPv4/gateway; NAT thử một Employee host. Để HA có WAN IP mỗi máy và WAN VIP ổn định, translation sang VIP và đồng bộ NAT được duyệt",
+    "approval_needed":  "Chọn upstream/Cloud hoặc router, xác nhận dải WAN/gateway/lease và VIP, phạm vi egress; phê duyệt cụ thể trước sửa topology hoặc cấu hình. Hook chỉ xem xét sửa sau điều tra, không tự xóa",
+    "preserved":  "PASS M3.5/M3.6 và cửa sổ HA giữ nguyên; không kiểm thử lại",
+    "source":  "results-20261106T201450+0700.json"
+}

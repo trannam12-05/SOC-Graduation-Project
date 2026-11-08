@@ -1,0 +1,64 @@
+{
+  "collector_time": "2026-11-02T21:45:25.626076+07:00",
+  "status": "MATCH_CONFIRMED_CONFIGURATION",
+  "failures": [],
+  "configuration_changes": [],
+  "traffic_tested": false,
+  "lacp": "NOT_APPLICABLE_NO_CONFIGURATION",
+  "historical_mirror": [
+    {
+      "name": "span-suricata",
+      "select_all": false,
+      "source_ports": [
+        "ens3",
+        "ens4",
+        "ens5",
+        "ens6",
+        "ens7",
+        "ens8",
+        "ens9"
+      ],
+      "destination_ports": [],
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "output_ports": [
+        "ens10"
+      ],
+      "output_vlan": []
+    }
+  ],
+  "current_mirror": [
+    {
+      "name": "span-suricata",
+      "select_all": false,
+      "source_ports": [
+        "ens3",
+        "ens4",
+        "ens5",
+        "ens6",
+        "ens7",
+        "ens8",
+        "ens9"
+      ],
+      "destination_ports": [],
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "output_ports": [
+        "ens10"
+      ],
+      "output_vlan": []
+    }
+  ],
+  "boot_id": "889ac878-8218-4e58-80b5-ae790802380e",
+  "scope": "Runtime configuration comparison only; no new functional traffic acceptance"
+}

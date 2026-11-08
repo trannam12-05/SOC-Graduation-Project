@@ -1,0 +1,8 @@
+{
+  "scope": "Passive CARP metadata only; not failover testing",
+  "packets": [],
+  "pcap_private_path": "/root/soc-m3-carp-capture-1793788276556239152/carp.pcap",
+  "pcap_sha256": "acc530668c8bc60b2d229281130b1899bfc81d70fdada5c34b3236c628f739c8",
+  "duration_s": 20,
+  "collector_time": "2026-11-04T10:31:36.662006+07:00"
+}

@@ -1,0 +1,238 @@
+{
+  "lab": "/opt/unetlab/labs/SOC-M2-Core-L2.unl",
+  "lab_id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+  "node": {
+    "id": "1",
+    "name": "OPNsense-Primary",
+    "type": "qemu",
+    "template": "opnsense",
+    "image": "opnsense-26.7-soc",
+    "console": "vnc",
+    "cpu": "2",
+    "cpulimit": "0",
+    "ram": "3072",
+    "ethernet": "4",
+    "uuid": "fe606d13-1542-490b-b651-5c1c6289afde",
+    "qemu_options": "-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio",
+    "qemu_version": "2.12.0",
+    "qemu_arch": "x86_64",
+    "qemu_nic": "virtio-net-pci",
+    "delay": "0",
+    "icon": "Firewall-2D-Generic-S.svg",
+    "config": "0",
+    "left": "348",
+    "top": "189"
+  },
+  "interfaces": [
+    {
+      "id": "0",
+      "name": "vtnet0",
+      "type": "ethernet",
+      "network_id": "1"
+    },
+    {
+      "id": "1",
+      "name": "vtnet1",
+      "type": "ethernet",
+      "network_id": "4"
+    },
+    {
+      "id": "2",
+      "name": "vtnet2",
+      "type": "ethernet",
+      "network_id": "3"
+    },
+    {
+      "id": "3",
+      "name": "vtnet3",
+      "type": "ethernet",
+      "network_id": "5"
+    }
+  ],
+  "networks": [
+    {
+      "id": "1",
+      "type": "bridge",
+      "name": "Net-SOC-Core-L2iface_5",
+      "left": "603",
+      "top": "217",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "2",
+      "type": "bridge",
+      "name": "Net-SOC-Core-L2iface_6",
+      "left": "597",
+      "top": "232",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "3",
+      "type": "bridge",
+      "name": "Net-OPNsense-Secondaryiface_2",
+      "left": "594",
+      "top": "319",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "4",
+      "type": "bridge",
+      "name": "WAN-ISP-1",
+      "left": "290",
+      "top": "65",
+      "visibility": "1",
+      "icon": "lan.png"
+    },
+    {
+      "id": "5",
+      "type": "bridge",
+      "name": "WAN-ISP-2",
+      "left": "820",
+      "top": "65",
+      "visibility": "1",
+      "icon": "lan.png"
+    },
+    {
+      "id": "6",
+      "type": "bridge",
+      "name": "VLAN30-Data-Center",
+      "left": "125",
+      "top": "520",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "7",
+      "type": "bridge",
+      "name": "VLAN40-Employee",
+      "left": "330",
+      "top": "520",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "8",
+      "type": "bridge",
+      "name": "VLAN50-Guest",
+      "left": "535",
+      "top": "520",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "9",
+      "type": "bridge",
+      "name": "VLAN60-DMZ",
+      "left": "740",
+      "top": "520",
+      "visibility": "0",
+      "icon": "lan.png"
+    },
+    {
+      "id": "10",
+      "type": "bridge",
+      "name": "VLAN99-Management",
+      "left": "945",
+      "top": "520",
+      "visibility": "1",
+      "icon": "lan.png"
+    },
+    {
+      "id": "11",
+      "type": "bridge",
+      "name": "SPAN-Capture",
+      "left": "1000",
+      "top": "365",
+      "visibility": "0",
+      "icon": "lan.png"
+    }
+  ],
+  "qemu": {
+    "pid": "4159",
+    "args": [
+      "/opt/qemu-2.12.0/bin/qemu-system-x86_64",
+      "-device",
+      "virtio-net-pci,netdev=net0,mac=50:00:00:01:00:00",
+      "-netdev",
+      "tap,id=net0,ifname=vunl0_1_0,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net1,mac=50:00:00:01:00:01",
+      "-netdev",
+      "tap,id=net1,ifname=vunl0_1_1,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net2,mac=50:00:00:01:00:02",
+      "-netdev",
+      "tap,id=net2,ifname=vunl0_1_2,script=no",
+      "-device",
+      "virtio-net-pci,netdev=net3,mac=50:00:00:01:00:03",
+      "-netdev",
+      "tap,id=net3,ifname=vunl0_1_3,script=no",
+      "-smp",
+      "2",
+      "-m",
+      "3072",
+      "-name",
+      "OPNsense-Primary",
+      "-uuid",
+      "fe606d13-1542-490b-b651-5c1c6289afde",
+      "-vnc",
+      ":26869",
+      "-cdrom",
+      "/opt/unetlab/addons/qemu/opnsense-26.7-soc/cdrom.iso",
+      "-drive",
+      "file=virtioa.qcow2,if=virtio,bus=0,unit=0,cache=none",
+      "-machine",
+      "type=pc,accel=kvm",
+      "-nographic",
+      "-usbdevice",
+      "tablet",
+      "-boot",
+      "order=c",
+      "-serial",
+      "mon:stdio"
+    ],
+    "cwd": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/1"
+  },
+  "vnc_port": 32769,
+  "remote_clock_utc_untrusted": "2026-11-03T17:01:04.339057+00:00",
+  "host_clock": {
+    "command": [
+      "timedatectl",
+      "show",
+      "-p",
+      "Timezone",
+      "-p",
+      "NTPSynchronized"
+    ],
+    "returncode": 0,
+    "stdout": "Timezone=Etc/UTC\nNTPSynchronized=no\n",
+    "stderr": ""
+  },
+  "host_links": {
+    "command": [
+      "ip",
+      "-j",
+      "link",
+      "show"
+    ],
+    "returncode": 0,
+    "stdout": "[{\"ifindex\":1,\"ifname\":\"lo\",\"flags\":[\"LOOPBACK\",\"UP\",\"LOWER_UP\"],\"mtu\":65536,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"loopback\",\"address\":\"00:00:00:00:00:00\",\"broadcast\":\"00:00:00:00:00:00\"},{\"ifindex\":2,\"ifname\":\"eth0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"pnet0\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"00:0c:29:67:da:ad\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp2s1\",\"ens33\"]},{\"ifindex\":3,\"ifname\":\"pnet0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"00:0c:29:67:da:ad\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":4,\"ifname\":\"pnet1\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"36:54:69:ec:49:44\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":5,\"ifname\":\"pnet2\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ca:48:b0:8a:51:0a\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":6,\"ifname\":\"pnet3\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"7a:a5:7a:ef:0b:58\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":7,\"ifname\":\"pnet4\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"6a:20:a1:66:96:ba\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":8,\"ifname\":\"pnet5\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"c6:e1:01:82:ec:c0\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":9,\"ifname\":\"pnet6\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ae:39:58:4f:72:b8\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":10,\"ifname\":\"pnet7\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"a6:67:6e:0d:f2:b1\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":11,\"ifname\":\"pnet8\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"fe:a2:2f:fb:03:23\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":12,\"ifname\":\"pnet9\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"0a:f0:bf:f4:f6:33\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":13,\"ifname\":\"vnet0_1\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:b8:4b:21:31:b8\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":14,\"ifname\":\"vnet0_4\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"4a:01:44:50:e5:bf\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":15,\"ifname\":\"vnet0_3\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:ea:5d:a8:58:9f\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":16,\"ifname\":\"vnet0_5\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"b2:79:33:63:ec:32\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":17,\"ifname\":\"vunl0_1_0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_1\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"4e:dc:37:98:65:e9\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":18,\"ifname\":\"vunl0_1_1\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_4\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"7e:7d:53:43:03:c2\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":19,\"ifname\":\"vunl0_1_2\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_3\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ba:c9:c2:e9:bf:71\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":20,\"ifname\":\"vunl0_1_3\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_5\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"12:44:ce:aa:11:9a\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":21,\"ifname\":\"vnet0_6\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"66:b1:78:3d:de:8f\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":22,\"ifname\":\"vnet0_7\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"2e:7c:33:3c:06:5d\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":23,\"ifname\":\"vnet0_8\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"d6:6f:d5:b1:f8:8e\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":24,\"ifname\":\"vnet0_9\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ee:be:cb:10:34:43\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":25,\"ifname\":\"vnet0_10\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"7e:7e:44:ec:14:0d\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":26,\"ifname\":\"vnet0_2\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"f6:30:bf:f2:47:1c\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":27,\"ifname\":\"vnet0_11\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"noqueue\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"aa:53:99:9c:d9:4d\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":28,\"ifname\":\"vunl0_3_0\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_6\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"1a:c3:46:f6:b6:44\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":29,\"ifname\":\"vunl0_3_1\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_7\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"f6:45:38:fa:9b:d2\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":30,\"ifname\":\"vunl0_3_2\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_8\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"2e:3c:20:7d:f6:07\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":31,\"ifname\":\"vunl0_3_3\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_9\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"de:48:9e:0b:2b:32\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":32,\"ifname\":\"vunl0_3_4\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_10\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"7a:65:fd:a8:29:79\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":33,\"ifname\":\"vunl0_3_5\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_1\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"f6:71:99:d8:e0:a4\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":34,\"ifname\":\"vunl0_3_6\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_2\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"12:93:d1:41:42:49\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":35,\"ifname\":\"vunl0_3_7\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_11\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"4e:18:80:f8:02:db\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":36,\"ifname\":\"vunl0_4_0\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_6\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"8a:5e:1f:7f:b9:92\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":37,\"ifname\":\"vunl0_4_1\",\"flags\":[\"NO-CARRIER\",\"BROADCAST\",\"MULTICAST\",\"UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_7\",\"operstate\":\"DOWN\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"86:e6:d8:36:93:b9\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":38,\"ifname\":\"vunl0_2_0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_2\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"46:cd:f2:be:57:31\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":39,\"ifname\":\"vunl0_2_1\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_4\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"d6:b7:69:f9:88:4f\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":40,\"ifname\":\"vunl0_2_2\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_3\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"ce:68:13:f4:18:d8\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"},{\"ifindex\":41,\"ifname\":\"vunl0_2_3\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":9000,\"qdisc\":\"fq_codel\",\"master\":\"vnet0_5\",\"operstate\":\"UP\",\"linkmode\":\"DEFAULT\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"22:6a:de:b1:07:ce\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\"}]\n",
+    "stderr": ""
+  },
+  "vnc_name": "QEMU (OPNsense-Primary)",
+  "guest_command_sent": "ifconfig pfsync0; sysctl net.inet.carp.demotion; sha256 -q /conf/config.xml",
+  "input_transport_note": "Physical base key with Shift for uppercase/punctuation; no guest configuration write",
+  "capture": {
+    "width": 720,
+    "height": 400,
+    "source": "QEMU VNC raw framebuffer; full screen; no image content changes",
+    "sha256": "6811ebff9987feec70419653ce46c8d688ffddf814d0de7074e4dc4e99ad578c",
+    "path": "D:\\SOC\\docs\\evidence\\M3\\post-copilot-runtime-audit-20261103\\primary-pfsync-proof-20261103T220826+0700.png"
+  },
+  "collector_time_start": "2026-11-03T22:08:26.013892+07:00",
+  "collector_time_end": "2026-11-03T22:08:34.349210+07:00",
+  "time_basis": "Collector Windows clock converted to UTC+07:00; EVE clock recorded separately, not trusted as capture timestamp."
+}

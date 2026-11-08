@@ -1,0 +1,14 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T11:14:31.347431+07:00",
+  "primary": "MASTER 5 VLAN",
+  "secondary": "BACKUP 5 VLAN",
+  "pfsync_ready_both": true,
+  "syncok": 1,
+  "demotion": 0,
+  "evidence": [
+    "primary-before.json",
+    "secondary-before.json",
+    "host-before.json"
+  ]
+}

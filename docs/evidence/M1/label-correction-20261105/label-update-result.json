@@ -1,0 +1,26 @@
+{
+  "operation": {
+    "updated_ids": [
+      4,
+      7,
+      10,
+      11
+    ],
+    "count": 13
+  },
+  "backup_directory": "/root/soc-m1-label-correction-20261105T092555Z",
+  "before_sha256": "94e4c6380f776ca9b154c5c068a3b2ee20f1f90c03005e9790e94543300e7a6f",
+  "after_sha256": "2540b7ed54266134679023595125c5db0abcb659416a3a9a0f518d154d0c805c",
+  "updated_ids": [
+    4,
+    7,
+    10,
+    11
+  ],
+  "only_four_label_data_fields_changed": true,
+  "node_count": 10,
+  "network_count": 11,
+  "power_operations": false,
+  "guest_configuration_changed": false,
+  "collector_time": "2026-11-05T09:25:55.556415+07:00"
+}

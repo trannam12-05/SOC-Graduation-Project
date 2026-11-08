@@ -1,0 +1,7 @@
+﻿ten_tep,noi_dung,thoi_diem,duong_dan,vi_tri_bao_cao
+access-probes.json,TCP tu may thao tac,2026-11-07T12:09:50+07:00,docs/evidence/M4/M4.3-M4.4-20261107/access-probes.json,4.3
+transport-failure.txt,Bien ban loi SSH khong phai log guest,2026-11-07T12:11:50.6145815+07:00,docs/evidence/M4/M4.3-M4.4-20261107/transport-failure.txt,4.3
+report.md,Bao cao va dieu kien tiep tuc,2026-11-07T12:11:50.6145815+07:00,docs/evidence/M4/M4.3-M4.4-20261107/report.md,4.3-4.4
+SOC_TO_DO.before.md,Backup checklist truoc cap nhat,2026-11-07T12:11:50.6145815+07:00,docs/evidence/M4/M4.3-M4.4-20261107/SOC_TO_DO.before.md,Phu luc
+retry-diagnosis-20261107.txt,Chan doan runtime EVE Primary va Wazuh,2026-11-07T19:17:04+07:00,docs/evidence/M4/M4.3-M4.4-20261107/retry-diagnosis-20261107.txt,4.4.3
+wazuh-known-hosts,Host key cong khai Wazuh thu qua EVE,2026-11-07T19:17:04+07:00,docs/evidence/M4/M4.3-M4.4-20261107/wazuh-known-hosts,Phu luc

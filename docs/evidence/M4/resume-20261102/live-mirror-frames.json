@@ -1,0 +1,25 @@
+{
+  "scope": "Host-generated benign ICMP frames injected into real Core guest TAP, mirrored to real sensor TAP; not VPCS ping or gateway routing",
+  "source": "vunl0_3_0 / Core ens3 access30",
+  "capture": "vunl0_9_0 / sensor capture NIC",
+  "observed": [
+    {
+      "case": "positive",
+      "marker": "SOC-M4-TEST-20261101-RESUME-20261102",
+      "bytes_sent": 78,
+      "bytes_received_at_sensor_tap": 78,
+      "vlan": null
+    },
+    {
+      "case": "negative",
+      "marker": "SOC-M4-NONMATCH-RESUME-20261102",
+      "bytes_sent": 73,
+      "bytes_received_at_sensor_tap": 73,
+      "vlan": null
+    }
+  ],
+  "both_frames_reached_sensor": true,
+  "pcap_path": "/root/soc-live-mirror-1793638897/sensor-input.pcap",
+  "pcap_sha256": "0404fcee0ecafe072c7cae285a15a672a0efa42c542e954937a29b1491f341be",
+  "collector_time": "2026-11-02T17:01:43.422455+07:00"
+}

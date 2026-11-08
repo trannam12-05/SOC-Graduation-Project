@@ -1,0 +1,19 @@
+{
+  "checked_at": "2026-11-03T16:51:24.192251+07:00",
+  "config_hash_equal": true,
+  "modern_count": 7,
+  "legacy_count": 0,
+  "configured_vlan30_count": 0,
+  "all_configured_UUIDs_present_in_PF": true,
+  "PF_command_rcs": {
+    "pf_rules_verbose": 0,
+    "pf_anchor_filter_rules": 0,
+    "pf_tables_names_only": 0
+  },
+  "traffic_tested": false,
+  "rules_changed": 0,
+  "authentication_changed": false,
+  "PF_filter_count": 97,
+  "PF_scrub_count": 1,
+  "source_public_sha256": "305900bddc4c0fd1ab1f16712146f3adfa4dadf6a1aefc5008475992d6ac948b"
+}

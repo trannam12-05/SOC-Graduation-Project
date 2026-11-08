@@ -1,0 +1,5 @@
+﻿T?n t?p,N?i dung,Th?i ?i?m thu th?p ho?c r? so?t UTC+07:00,???ng d?n,V? tr? d? ki?n trong b?o c?o
+M2-group2b1-vlan30-rule-proposal-20261103.md,B?o c?o ?? xu?t; ch?a ?p d?ng,2026-11-03T10:39:37.752461+07:00,docs\M2\M2-group2b1-vlan30-rule-proposal-20261103.md,Ch??ng 2 / Nh?m 2B.1
+M2-group2b1-vlan30-rule-proposal-20261103.csv,B?ng ngo?i l? ?ng vi?n v? implicit deny; thi?u th?ng s?,2026-11-03T10:39:37.752461+07:00,docs\M2\M2-group2b1-vlan30-rule-proposal-20261103.csv,Ch??ng 2 / Nh?m 2B.1
+source-manifest.json,Hash t?i li?u/minh ch?ng ?? r? so?t,2026-11-03T10:39:37.752461+07:00,docs\evidence\M2\group2b1-20261103\source-manifest.json,Ch??ng 2 / Nh?m 2B.1
+primary-readonly-availability.json,Ki?m k? ch? ??c: kh?ng c? QEMU Primary ?ang ch?y; kh?ng c? ?nh live,2026-11-03T10:39:37.752461+07:00,docs\evidence\M2\group2b1-20261103\primary-readonly-availability.json,Ch??ng 2 / Nh?m 2B.1

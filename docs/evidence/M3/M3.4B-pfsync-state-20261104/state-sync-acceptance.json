@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T16:53:46.163082+07:00",
+  "session": "192.168.40.100:44341 -> 192.168.30.10:8000",
+  "native_state_ids_creator_ids": [
+    [
+      "075deb6a00000000",
+      "d57c33f6"
+    ],
+    [
+      "085deb6a00000000",
+      "d57c33f6"
+    ]
+  ],
+  "primary_established": true,
+  "secondary_before_established": true,
+  "secondary_before_counters": "0:0",
+  "primary_before": "primary-state-before.json",
+  "secondary_before": "secondary-state-before.json"
+}

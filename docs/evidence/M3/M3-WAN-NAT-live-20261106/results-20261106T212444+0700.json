@@ -1,0 +1,18 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "backup":  "/root/soc-m3-wan-nat-20261106/config.before.xml",
+                             "config_sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                             "backup_sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                             "backup_mode":  "0o600",
+                             "helper_sha256":  "a520bcf27a712da1edf9012d248fe37fb0157b41ae3413b0a53bc111d5a72e8a",
+                             "scope":  "Backup and read-only guard helper only; no network or HA configuration changes"
+                         },
+    "OPNsense-Secondary":  {
+                               "backup":  "/root/soc-m3-wan-nat-20261106/config.before.xml",
+                               "config_sha256":  "5be86d0ea5faebaa54d5b4e9c721e724ac8380a06a419e12f2480a76cdb91eff",
+                               "backup_sha256":  "5be86d0ea5faebaa54d5b4e9c721e724ac8380a06a419e12f2480a76cdb91eff",
+                               "backup_mode":  "0o600",
+                               "helper_sha256":  "a520bcf27a712da1edf9012d248fe37fb0157b41ae3413b0a53bc111d5a72e8a",
+                               "scope":  "Backup and read-only guard helper only; no network or HA configuration changes"
+                           }
+}

@@ -1,0 +1,8 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T16:47:12.412988+07:00",
+  "native_roles": "Primary MASTER / Secondary BACKUP 5 VLAN",
+  "syncok_both": 1,
+  "demotion_both": 0,
+  "baseline_config_and_boottime_unchanged": true
+}

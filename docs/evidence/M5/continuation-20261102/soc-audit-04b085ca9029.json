@@ -1,0 +1,71 @@
+{
+  "session": "soc-audit-04b085ca9029",
+  "mode": "audit",
+  "guest_time_untrusted": "2026-11-02T20:41:34.393488+00:00",
+  "backup_directory": "/root/soc-audit-04b085ca9029",
+  "live_end_to_end": "NOT_VERIFIED",
+  "service": {
+    "rc": 3,
+    "stdout": "failed",
+    "stderr": ""
+  },
+  "systemd": {
+    "rc": 0,
+    "stdout": "TimeoutStartUSec=45s\nActiveState=failed\nSubState=failed\nDropInPaths=",
+    "stderr": ""
+  },
+  "enabled": {
+    "rc": 0,
+    "stdout": "enabled",
+    "stderr": ""
+  },
+  "components": {
+    "rc": 1,
+    "stdout": "wazuh-clusterd not running...\nwazuh-modulesd: Process 49902 not used by Wazuh, removing...\nwazuh-modulesd not running...\nwazuh-monitord: Process 49890 not used by Wazuh, removing...\nwazuh-monitord not running...\nwazuh-logcollector: Process 49874 not used by Wazuh, removing...\nwazuh-logcollector not running...\nwazuh-remoted: Process 49839 not used by Wazuh, removing...\nwazuh-remoted not running...\nwazuh-syscheckd: Process 49822 not used by Wazuh, removing...\nwazuh-syscheckd not running...\nwazuh-analysisd: Process 49810 not used by Wazuh, removing...\nwazuh-analysisd not running...\nwazuh-maild not running...\nwazuh-execd: Process 49797 not used by Wazuh, removing...\nwazuh-execd not running...\nwazuh-db: Process 49761 not used by Wazuh, removing...\nwazuh-db not running...\nwazuh-authd: Process 49749 not used by Wazuh, removing...\nwazuh-authd not running...\nwazuh-agentlessd not running...\nwazuh-integratord not running...\nwazuh-csyslogd not running...\nwazuh-apid is running...",
+    "stderr": ""
+  },
+  "version": {
+    "rc": 0,
+    "stdout": "wazuh-manager\t4.14.9-1",
+    "stderr": ""
+  },
+  "boot_id": "6d3e08fd-005e-4c6b-bb3e-0b4db7aab557",
+  "replay_localfile": [
+    {
+      "log_format": "json",
+      "location": "/var/log/soc-suricata-replay.json"
+    }
+  ],
+  "rules": [
+    {
+      "name": "soc_suricata_replay.xml",
+      "sha256": "b1f3bdae5fbe612e2ae2dbddfb8b36cf34060385553c2154d9826ad5e0786ff6",
+      "text": "<group name=\"local,soc,suricata,\">\n <rule id=\"100101\" level=\"8\">\n  <decoded_as>json</decoded_as>\n  <field name=\"event_type\">^alert$</field>\n  <field name=\"alert.signature_id\">^1000001$</field>\n  <description>SOC benign Suricata marker: controlled replay</description>\n </rule>\n</group>\n"
+    }
+  ],
+  "override_files": [],
+  "replay_before": {
+    "bytes": 0,
+    "lines": 0,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "logcollector_process": {
+    "rc": 1,
+    "stdout": "PID EUSER    EGROUP   COMMAND",
+    "stderr": ""
+  },
+  "collector_messages": [
+    "2026/11/02 17:21:36 wazuh-logcollector: INFO: (1950): Analyzing file: '/var/log/soc-suricata-replay.json'."
+  ],
+  "component_error_counts_last_500": {
+    "wazuh-logcollector": 0,
+    "wazuh-analysisd": 0
+  },
+  "rule_100101_existing": 0,
+  "result": "AUDIT_COLLECTED",
+  "collector_time": "2026-11-02T20:41:48.171838+07:00",
+  "time_basis": "Windows collector UTC+07:00; guest timestamps untrusted"
+}

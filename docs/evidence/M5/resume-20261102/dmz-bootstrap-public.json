@@ -1,0 +1,50 @@
+{
+  "node": "DMZ",
+  "serial_path": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/7/serial.log",
+  "result": {
+    "role": "DMZ",
+    "scope": "Local OS/IP/service only; routed client path still requires separate test",
+    "local_http_status": 200,
+    "local_http_bytes": 148,
+    "interfaces": [
+      {
+        "ifindex": 2,
+        "ifname": "lan0",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "02:54:12:37:e0:00",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "altnames": [
+          "enp0s3"
+        ],
+        "addr_info": [
+          {
+            "family": "inet",
+            "local": "192.168.60.10",
+            "prefixlen": 24,
+            "broadcast": "192.168.60.255",
+            "scope": "global",
+            "label": "lan0",
+            "valid_life_time": 4294967295,
+            "preferred_life_time": 4294967295
+          }
+        ]
+      }
+    ],
+    "state": "CONFIGURED_LOCAL_SERVICE_VERIFIED_NOT_END_TO_END",
+    "service_port": 80,
+    "boot_id": "dd7b6375-2576-41e8-8bf3-34b031ac007e"
+  },
+  "collector_time": "2026-11-02T17:14:14.248183+07:00",
+  "time_basis": "Windows collector UTC+07:00; guest event times untrusted"
+}

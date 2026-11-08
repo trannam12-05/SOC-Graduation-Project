@@ -1,0 +1,383 @@
+{
+  "legacy_dnsmasq": [
+    {
+      "path": "dnsmasq/enable",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/regdhcp",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/regdhcpstatic",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcpfirst",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/strict_order",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/domain_needed",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/no_private_reverse",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/no_resolv",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/log_queries",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/no_hosts",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/strictbind",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dnssec",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/regdhcpdomain",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/interface",
+      "value": "lan",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/port",
+      "value": "53053",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dns_forward_max",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/cache_size",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/local_ttl",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/add_mac",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/add_subnet",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/strip_subnet",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp",
+      "value": "\n      ",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/no_interface",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/fqdn",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/domain",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/local",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/lease_max",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/authoritative",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/default_fw_rules",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/reply_delay",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/enable_ra",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/host_ping",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/nosync",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/log_dhcp",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp/log_quiet",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/no_ident",
+      "value": "1",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges",
+      "value": "\n      ",
+      "attributes": {
+        "uuid": "d938664c-7e00-4dc9-9c1e-19c7d21c5f3a"
+      }
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/interface",
+      "value": "lan",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/set_tag",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/start_addr",
+      "value": "192.168.1.100",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/end_addr",
+      "value": "192.168.1.199",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/subnet_mask",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/constructor",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/mode",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/prefix_len",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/lease_time",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/domain_type",
+      "value": "range",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/domain",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/nosync",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_mode",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_priority",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_mtu",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_interval",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_router_lifetime",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/description",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges",
+      "value": "\n      ",
+      "attributes": {
+        "uuid": "aefdc6eb-010f-4b9f-a102-3a49cba0d2cc"
+      }
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/interface",
+      "value": "lan",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/set_tag",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/start_addr",
+      "value": "::1000",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/end_addr",
+      "value": "::2000",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/subnet_mask",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/constructor",
+      "value": "lan",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/mode",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/prefix_len",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/lease_time",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/domain_type",
+      "value": "range",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/domain",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/nosync",
+      "value": "0",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_mode",
+      "value": "slaac",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_priority",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_mtu",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_interval",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/ra_router_lifetime",
+      "value": "",
+      "attributes": {}
+    },
+    {
+      "path": "dnsmasq/dhcp_ranges/description",
+      "value": "",
+      "attributes": {}
+    }
+  ],
+  "model_dnsmasq": [],
+  "rc_scripts": [
+    "dnsmasq"
+  ],
+  "collector_time": "2026-11-05T10:22:08.805727+07:00"
+}

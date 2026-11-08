@@ -1,0 +1,52 @@
+{
+  "live": {
+    "state": "ESTABLISHED",
+    "flow": {
+      "source": "192.168.40.100",
+      "source_port": 44341,
+      "destination": "192.168.30.10",
+      "destination_port": 8000
+    },
+    "gateway": "192.168.40.1",
+    "gateway_mac": "00:00:5e:00:01:28",
+    "client_isn": 69072772,
+    "server_isn": 45026641,
+    "syn_transmissions": 1,
+    "retransmissions": 0,
+    "never_reconnects": true,
+    "phase": "before",
+    "snd_una": 69072867,
+    "snd_next": 69072867,
+    "rcv_next": 45026642,
+    "steps": [
+      {
+        "step": "request-headers",
+        "phase": "before",
+        "end": 69072867,
+        "acked": true,
+        "ack_elapsed": 3.166239,
+        "ack_phase": "before"
+      }
+    ],
+    "response_bytes": 0,
+    "http_status_line": null,
+    "elapsed": 11.11,
+    "failure": null
+  },
+  "result": null,
+  "events": [
+    "{\"event\":\"source_conflict_probe\",\"elapsed\":0.000755,\"host_wall_clock_untrusted\":1793811102.8798852,\"phase\":\"before\",\"source\":\"192.168.40.100\"}",
+    "{\"event\":\"gateway_arp\",\"elapsed\":2.105079,\"host_wall_clock_untrusted\":1793811104.9841924,\"phase\":\"before\",\"mac\":\"00:00:5e:00:01:28\"}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.102791,\"host_wall_clock_untrusted\":1793811105.981909,\"phase\":\"before\",\"seq\":69072772,\"ack\":0,\"flags\":2,\"bytes\":0,\"retry\":false,\"payload_sha256\":null}",
+    "{\"event\":\"client_arp_reply\",\"elapsed\":3.144204,\"host_wall_clock_untrusted\":1793811106.0233142,\"phase\":\"before\",\"target\":\"192.168.40.2\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":3.148638,\"host_wall_clock_untrusted\":1793811106.0277455,\"phase\":\"before\",\"seq\":45026641,\"ack\":69072773,\"flags\":18,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"established\",\"elapsed\":3.148943,\"host_wall_clock_untrusted\":1793811106.028049,\"phase\":\"before\",\"server_isn\":45026641}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.149311,\"host_wall_clock_untrusted\":1793811106.0284193,\"phase\":\"before\",\"seq\":69072773,\"ack\":45026642,\"flags\":16,\"bytes\":0,\"retry\":false,\"payload_sha256\":null}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.150061,\"host_wall_clock_untrusted\":1793811106.0291724,\"phase\":\"before\",\"seq\":69072773,\"ack\":45026642,\"flags\":24,\"bytes\":94,\"retry\":false,\"payload_sha256\":\"e3be16f2604986e6aaf9d52abc45766a35fa269a696c87198fb6b3fed06f02a4\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":3.165869,\"host_wall_clock_untrusted\":1793811106.0449827,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072867,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":3.166372,\"host_wall_clock_untrusted\":1793811106.0454767,\"phase\":\"before\",\"step\":\"request-headers\",\"end\":69072867}"
+  ],
+  "daemon": "",
+  "collector_time_start": "2026-11-04T16:51:53.328051+07:00",
+  "collector_time": "2026-11-04T16:51:53.932868+07:00"
+}

@@ -1,0 +1,272 @@
+{
+  "live": {
+    "state": "ESTABLISHED",
+    "flow": {
+      "source": "192.168.40.100",
+      "source_port": 44341,
+      "destination": "192.168.30.10",
+      "destination_port": 8000
+    },
+    "gateway": "192.168.40.1",
+    "gateway_mac": "00:00:5e:00:01:28",
+    "client_isn": 69072772,
+    "server_isn": 45026641,
+    "syn_transmissions": 1,
+    "retransmissions": 0,
+    "never_reconnects": true,
+    "phase": "before",
+    "snd_una": 69073318,
+    "snd_next": 69073318,
+    "rcv_next": 45026642,
+    "steps": [
+      {
+        "step": "request-headers",
+        "phase": "before",
+        "end": 69072867,
+        "acked": true,
+        "ack_elapsed": 3.166239,
+        "ack_phase": "before"
+      },
+      {
+        "step": 1,
+        "phase": "before",
+        "end": 69072889,
+        "acked": true,
+        "ack_elapsed": 13.255515,
+        "ack_phase": "before"
+      },
+      {
+        "step": 2,
+        "phase": "before",
+        "end": 69072911,
+        "acked": true,
+        "ack_elapsed": 23.258627,
+        "ack_phase": "before"
+      },
+      {
+        "step": 3,
+        "phase": "before",
+        "end": 69072933,
+        "acked": true,
+        "ack_elapsed": 33.306501,
+        "ack_phase": "before"
+      },
+      {
+        "step": 4,
+        "phase": "before",
+        "end": 69072955,
+        "acked": true,
+        "ack_elapsed": 43.356627,
+        "ack_phase": "before"
+      },
+      {
+        "step": 5,
+        "phase": "before",
+        "end": 69072977,
+        "acked": true,
+        "ack_elapsed": 53.389737,
+        "ack_phase": "before"
+      },
+      {
+        "step": 6,
+        "phase": "before",
+        "end": 69072999,
+        "acked": true,
+        "ack_elapsed": 63.44395,
+        "ack_phase": "before"
+      },
+      {
+        "step": 7,
+        "phase": "before",
+        "end": 69073021,
+        "acked": true,
+        "ack_elapsed": 73.521653,
+        "ack_phase": "before"
+      },
+      {
+        "step": 8,
+        "phase": "before",
+        "end": 69073043,
+        "acked": true,
+        "ack_elapsed": 83.569305,
+        "ack_phase": "before"
+      },
+      {
+        "step": 9,
+        "phase": "before",
+        "end": 69073065,
+        "acked": true,
+        "ack_elapsed": 93.629235,
+        "ack_phase": "before"
+      },
+      {
+        "step": 10,
+        "phase": "before",
+        "end": 69073088,
+        "acked": true,
+        "ack_elapsed": 103.705448,
+        "ack_phase": "before"
+      },
+      {
+        "step": 11,
+        "phase": "before",
+        "end": 69073111,
+        "acked": true,
+        "ack_elapsed": 113.735938,
+        "ack_phase": "before"
+      },
+      {
+        "step": 12,
+        "phase": "before",
+        "end": 69073134,
+        "acked": true,
+        "ack_elapsed": 123.729025,
+        "ack_phase": "before"
+      },
+      {
+        "step": 13,
+        "phase": "before",
+        "end": 69073157,
+        "acked": true,
+        "ack_elapsed": 133.784293,
+        "ack_phase": "before"
+      },
+      {
+        "step": 14,
+        "phase": "before",
+        "end": 69073180,
+        "acked": true,
+        "ack_elapsed": 143.801312,
+        "ack_phase": "before"
+      },
+      {
+        "step": 15,
+        "phase": "before",
+        "end": 69073203,
+        "acked": true,
+        "ack_elapsed": 153.841808,
+        "ack_phase": "before"
+      },
+      {
+        "step": 16,
+        "phase": "before",
+        "end": 69073226,
+        "acked": true,
+        "ack_elapsed": 163.871883,
+        "ack_phase": "before"
+      },
+      {
+        "step": 17,
+        "phase": "before",
+        "end": 69073249,
+        "acked": true,
+        "ack_elapsed": 173.961808,
+        "ack_phase": "before"
+      },
+      {
+        "step": 18,
+        "phase": "before",
+        "end": 69073272,
+        "acked": true,
+        "ack_elapsed": 184.04018,
+        "ack_phase": "before"
+      },
+      {
+        "step": 19,
+        "phase": "before",
+        "end": 69073295,
+        "acked": true,
+        "ack_elapsed": 194.111372,
+        "ack_phase": "before"
+      },
+      {
+        "step": 20,
+        "phase": "before",
+        "end": 69073318,
+        "acked": true,
+        "ack_elapsed": 204.184806,
+        "ack_phase": "before"
+      }
+    ],
+    "response_bytes": 0,
+    "http_status_line": null,
+    "elapsed": 209.341,
+    "failure": null
+  },
+  "result": null,
+  "events": [
+    "{\"event\":\"source_conflict_probe\",\"elapsed\":0.000755,\"host_wall_clock_untrusted\":1793811102.8798852,\"phase\":\"before\",\"source\":\"192.168.40.100\"}",
+    "{\"event\":\"gateway_arp\",\"elapsed\":2.105079,\"host_wall_clock_untrusted\":1793811104.9841924,\"phase\":\"before\",\"mac\":\"00:00:5e:00:01:28\"}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.102791,\"host_wall_clock_untrusted\":1793811105.981909,\"phase\":\"before\",\"seq\":69072772,\"ack\":0,\"flags\":2,\"bytes\":0,\"retry\":false,\"payload_sha256\":null}",
+    "{\"event\":\"client_arp_reply\",\"elapsed\":3.144204,\"host_wall_clock_untrusted\":1793811106.0233142,\"phase\":\"before\",\"target\":\"192.168.40.2\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":3.148638,\"host_wall_clock_untrusted\":1793811106.0277455,\"phase\":\"before\",\"seq\":45026641,\"ack\":69072773,\"flags\":18,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"established\",\"elapsed\":3.148943,\"host_wall_clock_untrusted\":1793811106.028049,\"phase\":\"before\",\"server_isn\":45026641}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.149311,\"host_wall_clock_untrusted\":1793811106.0284193,\"phase\":\"before\",\"seq\":69072773,\"ack\":45026642,\"flags\":16,\"bytes\":0,\"retry\":false,\"payload_sha256\":null}",
+    "{\"event\":\"tcp_send\",\"elapsed\":3.150061,\"host_wall_clock_untrusted\":1793811106.0291724,\"phase\":\"before\",\"seq\":69072773,\"ack\":45026642,\"flags\":24,\"bytes\":94,\"retry\":false,\"payload_sha256\":\"e3be16f2604986e6aaf9d52abc45766a35fa269a696c87198fb6b3fed06f02a4\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":3.165869,\"host_wall_clock_untrusted\":1793811106.0449827,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072867,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":3.166372,\"host_wall_clock_untrusted\":1793811106.0454767,\"phase\":\"before\",\"step\":\"request-headers\",\"end\":69072867}",
+    "{\"event\":\"tcp_send\",\"elapsed\":13.245092,\"host_wall_clock_untrusted\":1793811116.1242115,\"phase\":\"before\",\"seq\":69072867,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"26ec6a907b17d41b6bbe6a84a5dc1fa86a0f7a7a9547a7bb7682f6d0b9a0b0e1\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":13.255134,\"host_wall_clock_untrusted\":1793811116.1342437,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072889,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":13.255645,\"host_wall_clock_untrusted\":1793811116.1347497,\"phase\":\"before\",\"step\":1,\"end\":69072889}",
+    "{\"event\":\"tcp_send\",\"elapsed\":23.248376,\"host_wall_clock_untrusted\":1793811126.127491,\"phase\":\"before\",\"seq\":69072889,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"e7cbc3c7cb6783e089b925f8a415c44ccb2de1f202145ef59e2d723a86b836f4\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":23.258129,\"host_wall_clock_untrusted\":1793811126.1372411,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072911,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":23.258826,\"host_wall_clock_untrusted\":1793811126.1379333,\"phase\":\"before\",\"step\":2,\"end\":69072911}",
+    "{\"event\":\"tcp_send\",\"elapsed\":33.287698,\"host_wall_clock_untrusted\":1793811136.1668074,\"phase\":\"before\",\"seq\":69072911,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"759ed098801990ae7bf5e653112bab911f82541ac330bac87b7b9c9258e52817\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":33.306057,\"host_wall_clock_untrusted\":1793811136.1851683,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072933,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":33.30663,\"host_wall_clock_untrusted\":1793811136.1857347,\"phase\":\"before\",\"step\":3,\"end\":69072933}",
+    "{\"event\":\"tcp_send\",\"elapsed\":43.339996,\"host_wall_clock_untrusted\":1793811146.2191112,\"phase\":\"before\",\"seq\":69072933,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"b619714486a1351a438e8e57a88aaef8d358ae61e92177b0b78b9b2cacaad7bb\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":43.356239,\"host_wall_clock_untrusted\":1793811146.235349,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072955,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":43.356771,\"host_wall_clock_untrusted\":1793811146.2358756,\"phase\":\"before\",\"step\":4,\"end\":69072955}",
+    "{\"event\":\"tcp_send\",\"elapsed\":53.383389,\"host_wall_clock_untrusted\":1793811156.2625098,\"phase\":\"before\",\"seq\":69072955,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"342fb64bff427e6c8d47fa4b5135b4c8a949f6a2053207d11a5b9dd5cd184a52\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":53.389505,\"host_wall_clock_untrusted\":1793811156.2686105,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072977,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":53.389977,\"host_wall_clock_untrusted\":1793811156.2690816,\"phase\":\"before\",\"step\":5,\"end\":69072977}",
+    "{\"event\":\"tcp_send\",\"elapsed\":63.423973,\"host_wall_clock_untrusted\":1793811166.303094,\"phase\":\"before\",\"seq\":69072977,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"13db64af1a9744d4bb665fcd67c31f3039107079affcbfd2924bc1852b48f3e2\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":63.443287,\"host_wall_clock_untrusted\":1793811166.3223987,\"phase\":\"before\",\"seq\":45026642,\"ack\":69072999,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":63.444131,\"host_wall_clock_untrusted\":1793811166.3232381,\"phase\":\"before\",\"step\":6,\"end\":69072999}",
+    "{\"event\":\"tcp_send\",\"elapsed\":73.512985,\"host_wall_clock_untrusted\":1793811176.3921003,\"phase\":\"before\",\"seq\":69072999,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"60ea004aab548d26bd36c86baec537c727d36a8445b27d8121e0d42c4265f1e5\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":73.521164,\"host_wall_clock_untrusted\":1793811176.400274,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073021,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":73.521796,\"host_wall_clock_untrusted\":1793811176.4009,\"phase\":\"before\",\"step\":7,\"end\":69073021}",
+    "{\"event\":\"tcp_send\",\"elapsed\":83.556308,\"host_wall_clock_untrusted\":1793811186.4354253,\"phase\":\"before\",\"seq\":69073021,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"ff40f209ebe91746d8de19bbe1f9b547f8edfa2499ef6b212b7bd9c0c8316418\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":83.568714,\"host_wall_clock_untrusted\":1793811186.447827,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073043,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":83.569463,\"host_wall_clock_untrusted\":1793811186.448568,\"phase\":\"before\",\"step\":8,\"end\":69073043}",
+    "{\"event\":\"tcp_send\",\"elapsed\":93.611106,\"host_wall_clock_untrusted\":1793811196.490229,\"phase\":\"before\",\"seq\":69073043,\"ack\":45026642,\"flags\":24,\"bytes\":22,\"retry\":false,\"payload_sha256\":\"13f6dbbc1e4931950af86452b4ee6ae91779ee5a065615fa76b785a58aa4d65e\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":93.628776,\"host_wall_clock_untrusted\":1793811196.507887,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073065,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":93.629404,\"host_wall_clock_untrusted\":1793811196.5085084,\"phase\":\"before\",\"step\":9,\"end\":69073065}",
+    "{\"event\":\"tcp_send\",\"elapsed\":103.687318,\"host_wall_clock_untrusted\":1793811206.5664363,\"phase\":\"before\",\"seq\":69073065,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"247a84f55284b9992687b5fc00ebaf2284c58df3fc0f8c5c2ede57f83f127c58\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":103.705013,\"host_wall_clock_untrusted\":1793811206.5841246,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073088,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":103.70558,\"host_wall_clock_untrusted\":1793811206.5846848,\"phase\":\"before\",\"step\":10,\"end\":69073088}",
+    "{\"event\":\"tcp_send\",\"elapsed\":113.707267,\"host_wall_clock_untrusted\":1793811216.5863829,\"phase\":\"before\",\"seq\":69073088,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"52c3944c0505f59a5787ea116cc16a0a0dfcf44a08800c2c08f477d1e8565ebc\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":113.735501,\"host_wall_clock_untrusted\":1793811216.6146102,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073111,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":113.736078,\"host_wall_clock_untrusted\":1793811216.6151826,\"phase\":\"before\",\"step\":11,\"end\":69073111}",
+    "{\"event\":\"tcp_send\",\"elapsed\":123.719042,\"host_wall_clock_untrusted\":1793811226.5981603,\"phase\":\"before\",\"seq\":69073111,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"e9e0159c97a1678fb943b7f8a021703b23d0e0b53b7f57155d921be7decc4059\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":123.728603,\"host_wall_clock_untrusted\":1793811226.6077132,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073134,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":123.729188,\"host_wall_clock_untrusted\":1793811226.6082935,\"phase\":\"before\",\"step\":12,\"end\":69073134}",
+    "{\"event\":\"tcp_send\",\"elapsed\":133.776059,\"host_wall_clock_untrusted\":1793811236.655176,\"phase\":\"before\",\"seq\":69073134,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"f122259d4b6e43e9826c1d977da6e53dfd4b56c0cf60a72f8f69e971eb777e92\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":133.783869,\"host_wall_clock_untrusted\":1793811236.6629832,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073157,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":133.784711,\"host_wall_clock_untrusted\":1793811236.6638198,\"phase\":\"before\",\"step\":13,\"end\":69073157}",
+    "{\"event\":\"tcp_send\",\"elapsed\":143.776305,\"host_wall_clock_untrusted\":1793811246.655426,\"phase\":\"before\",\"seq\":69073157,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"1193be8470b03a495a25ea56481ddbdb87e7963bdb7e49bb0faa3489c2c81851\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":143.800857,\"host_wall_clock_untrusted\":1793811246.679967,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073180,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":143.801498,\"host_wall_clock_untrusted\":1793811246.680605,\"phase\":\"before\",\"step\":14,\"end\":69073180}",
+    "{\"event\":\"tcp_send\",\"elapsed\":153.82342,\"host_wall_clock_untrusted\":1793811256.7025375,\"phase\":\"before\",\"seq\":69073180,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"dfb92276958a9d3598d1e4e9449a89211309656ee08636939a8bb0e09df3a98f\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":153.840724,\"host_wall_clock_untrusted\":1793811256.7198339,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073203,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":153.841989,\"host_wall_clock_untrusted\":1793811256.721094,\"phase\":\"before\",\"step\":15,\"end\":69073203}",
+    "{\"event\":\"tcp_send\",\"elapsed\":163.854776,\"host_wall_clock_untrusted\":1793811266.7338948,\"phase\":\"before\",\"seq\":69073203,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"2f0cd7c118528446525b01fb3ecc8d9f25574210cdfe4a2bfff0d19ef8a333c3\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":163.871508,\"host_wall_clock_untrusted\":1793811266.7506187,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073226,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":163.872019,\"host_wall_clock_untrusted\":1793811266.7511244,\"phase\":\"before\",\"step\":16,\"end\":69073226}",
+    "{\"event\":\"tcp_send\",\"elapsed\":173.944369,\"host_wall_clock_untrusted\":1793811276.8234875,\"phase\":\"before\",\"seq\":69073226,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"40b17cbc6a8f78d5132ed81751365009e57abdeb0a80e46d05159d12e7e9b03c\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":173.961399,\"host_wall_clock_untrusted\":1793811276.840512,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073249,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":173.961945,\"host_wall_clock_untrusted\":1793811276.8410497,\"phase\":\"before\",\"step\":17,\"end\":69073249}",
+    "{\"event\":\"tcp_send\",\"elapsed\":184.026082,\"host_wall_clock_untrusted\":1793811286.9052007,\"phase\":\"before\",\"seq\":69073249,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"a5875fbe7f50b23faf2c122181d269aa21c5eb32828baacd40df9a8b2eebb1b2\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":184.039735,\"host_wall_clock_untrusted\":1793811286.9188485,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073272,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":184.040313,\"host_wall_clock_untrusted\":1793811286.919418,\"phase\":\"before\",\"step\":18,\"end\":69073272}",
+    "{\"event\":\"tcp_send\",\"elapsed\":194.101026,\"host_wall_clock_untrusted\":1793811296.9801486,\"phase\":\"before\",\"seq\":69073272,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"e0c7cf5b6864c7a4ce6d3e61947e3b66bd1a3989841ae9e9b3792b53edf4431b\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":194.110987,\"host_wall_clock_untrusted\":1793811296.9900959,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073295,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":194.111507,\"host_wall_clock_untrusted\":1793811296.990612,\"phase\":\"before\",\"step\":19,\"end\":69073295}",
+    "{\"event\":\"tcp_send\",\"elapsed\":204.103172,\"host_wall_clock_untrusted\":1793811306.9822922,\"phase\":\"before\",\"seq\":69073295,\"ack\":45026642,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"90fcf58afcbd15ea5270db4287beb2e9f22331e8d9e814c1e68350d4594c55b7\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":204.183493,\"host_wall_clock_untrusted\":1793811307.0626216,\"phase\":\"before\",\"seq\":45026642,\"ack\":69073318,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":204.185152,\"host_wall_clock_untrusted\":1793811307.0642626,\"phase\":\"before\",\"step\":20,\"end\":69073318}"
+  ],
+  "daemon": "",
+  "collector_time_start": "2026-11-04T16:55:10.015912+07:00",
+  "collector_time": "2026-11-04T16:55:12.141658+07:00"
+}

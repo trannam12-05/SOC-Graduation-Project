@@ -1,0 +1,38 @@
+﻿{
+    "status":  "DRAFT_NOT_APPLIED",
+    "source":  "EMPLOYEE_VERIFIED_IP/32",
+    "destination":  "1.1.1.1/32",
+    "ip_version":  "IPv4",
+    "protocol":  "TCP",
+    "destination_port":  443,
+    "firewall":  {
+                     "quick":  true,
+                     "direction":  "in",
+                     "interface":  "opt2/VLAN40",
+                     "action":  "pass",
+                     "log":  true
+                 },
+    "outbound_nat":  {
+                         "translation":  "WAN address (dynamic)",
+                         "interface":  "wan/vtnet1",
+                         "mode":  "Hybrid",
+                         "static_port":  false
+                     },
+    "wan":  {
+                "observed_upstream_subnet":  "192.168.220.0/24",
+                "guest_addresses":  "not verified or assigned",
+                "observed_host_dhcp_server":  "192.168.220.254",
+                "type":  "DHCP",
+                "vip":  "none; NAT HA continuity not in scope",
+                "observed_host_gateway":  "192.168.220.2"
+            },
+    "no_changes":  [
+                       "HA",
+                       "pfsync hook",
+                       "VLAN/IP LAN",
+                       "Core",
+                       "existing PASS"
+                   ],
+    "approval":  "WAITING_FOR_WAN_UPSTREAM_CONFIGURATION_APPROVAL",
+    "https_test":  "Destination approved; execute only after separate WAN approval and configuration"
+}

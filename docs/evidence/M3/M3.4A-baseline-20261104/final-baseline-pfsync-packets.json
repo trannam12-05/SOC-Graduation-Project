@@ -1,0 +1,1391 @@
+{
+  "scope": "Real protocol-240 packets only; not proof of CARP failover or complete state-table replication",
+  "capture_interface": "vunl0_2_2",
+  "pcap_path": "/root/soc-ha-pfsync-capture-20261102-1793809831/pfsync.pcap",
+  "pcap_sha256": "aa07485837a80a793ea56693ff5184f9061a88eebaa44be99a9f1bd9e8bcddee",
+  "packets": [
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 0.196,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 1.207,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 1.207,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 1.207,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 2.215,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 2.215,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 2.215,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 2.219,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 2.219,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 2.219,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 2.219,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 3.231,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 3.231,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 3.231,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 4.238,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 4.239,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 4.239,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 4.239,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 5.26,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 5.26,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 5.26,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 5.262,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 5.262,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 5.262,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 5.262,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 6.286,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 6.286,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 6.286,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 7.294,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 7.294,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 7.294,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 7.299,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 7.299,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 7.3,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 7.3,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 8.329,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 8.329,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 8.329,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 9.329,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 9.329,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 9.329,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 9.329,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 10.409,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 11.421,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 11.421,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 11.422,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 12.448,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 12.45,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 12.45,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 12.451,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 12.452,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 12.452,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 13.468,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 13.468,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 13.468,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 14.473,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 14.473,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 14.473,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 14.473,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 14.475,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 14.475,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 14.475,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 15.475,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 15.475,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 15.475,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 15.475,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 15.477,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 15.478,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 15.478,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 16.488,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 16.488,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 16.488,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 16.488,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 16.527,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 16.527,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 16.527,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 17.523,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 17.525,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 17.525,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 17.525,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 17.525,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 17.581,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 17.581,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 18.589,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 18.589,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 18.589,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 18.591,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 18.591,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 18.592,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 18.592,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 19.611,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 19.611,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 19.611,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 19.612,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 19.612,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 19.612,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 19.612,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 20.621,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 20.621,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 20.621,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 21.63,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 21.63,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 21.63,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 21.63,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 21.63,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 21.631,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 21.631,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 22.647,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 22.647,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 22.648,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 22.65,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 22.65,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 22.65,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 22.65,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 23.669,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 23.669,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 23.669,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 23.669,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 23.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 23.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 23.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 24.67,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 24.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 24.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 24.672,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 25.721,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 25.721,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 25.721,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 25.723,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 25.723,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 25.723,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 25.723,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 26.756,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 26.756,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 26.757,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 27.764,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 27.765,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 27.765,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 27.765,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 27.765,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 28.781,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 28.781,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 28.781,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 28.784,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 28.784,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 28.784,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 29.772,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 29.781,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 29.781,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 29.781,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 30.792,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 31.791,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 31.792,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 31.793,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 31.794,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 31.794,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 31.794,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 31.794,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 32.804,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 32.809,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 32.809,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 32.81,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 32.81,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 32.81,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 32.81,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 33.82,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 33.82,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 33.821,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 33.821,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 33.821,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 33.821,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 33.821,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 34.822,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 34.822,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 34.822,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 34.822,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 34.823,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 34.823,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    },
+    {
+      "elapsed_s": 34.823,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 230
+    }
+  ],
+  "packet_count": 197,
+  "both_directions": true,
+  "collector_time_start": "2026-11-04T16:30:30.241612+07:00",
+  "collector_time": "2026-11-04T16:31:06.947492+07:00"
+}

@@ -1,0 +1,6 @@
+{
+  "phase": "failover-start",
+  "host_clock_untrusted": 1793811354.3492792,
+  "collector_time_start": "2026-11-04T16:55:53.500201+07:00",
+  "collector_time": "2026-11-04T16:55:54.215088+07:00"
+}

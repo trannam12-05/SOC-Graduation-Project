@@ -1,0 +1,41 @@
+{
+  "reviewed_at": "2026-11-03T10:39:37.752461+07:00",
+  "sources": [
+    {
+      "path": "docs/evidence/M2/group2a-20261102T215617+0700/primary-audit-before.json",
+      "sha256": "1a46e9389413b579008f520803ac18173ae72ff4091c92d6b5ecadbbbfab4785"
+    },
+    {
+      "path": "configs/M3/deployment-observed-20261102.json",
+      "sha256": "9e8d39fe9cef88ce5f36ef56a0901be4e6d9d85c2aed62144c81cc9b2c7a41ee"
+    },
+    {
+      "path": "configs/M3/address-proposal.json",
+      "sha256": "8a72ab7527626e0f11a23ecfdea8bff5f16e4af983d880fc9cc1303130f700b2"
+    },
+    {
+      "path": "network/ip-plan/vlan-ip-plan.md",
+      "sha256": "b8fb26ce36384115230e65f5c3114eb588ace70c6227a22cee92402aa2c7e880"
+    },
+    {
+      "path": "configs/topology-first-plan.json",
+      "sha256": "7b4770daa6e0c14d411408bae10dda4c15e624f1ea600e7f08d76f2be6ca6133"
+    },
+    {
+      "path": "docs/M5-live-pipeline-proposal-20261102.md",
+      "sha256": "2964a1f71204540b8cbb18ed2f38611431706f1dba82cc58f04a0784362d4534"
+    },
+    {
+      "path": "docs/M3/M3-deployment-matrix-and-tests-PREPARED-20261101.md",
+      "sha256": "ea501a01227f4376e15b750aea43c78ceb6bca0f97fc238a8d74b057e54cd9bc"
+    },
+    {
+      "path": "docs/evidence/M3/resume-20261102/primary-employee-diagnostic-rules-20261102T165019+0700.png",
+      "sha256": "612ecd2c2658c2cea7b6c1afedadffca9c97510928746a54bbd9b88251e77166"
+    },
+    {
+      "path": "docs/evidence/M3/resume-20261102/primary-ha-rules-applied-20261102T153652+0700.png",
+      "sha256": "6e87075d23884cfdff7ab5900f6252799df96e0cff0a23e5e2dac46c3af632f5"
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+[
+  {
+    "name": "live.json",
+    "exists": true,
+    "bytes": 8018,
+    "sha256": "b672dae0e45c255a28c628994007634a3fd462a8717290ef3ee1093a8f9f087f",
+    "source_mtime_untrusted": 1793791465.5400667,
+    "source": "/root/soc-m34-20261104/live.json",
+    "copied_at": "2026-11-04T16:16:58.382496+07:00"
+  },
+  {
+    "name": "client-events.jsonl",
+    "exists": true,
+    "bytes": 28546,
+    "sha256": "8893b4df726255a7afdb968ca6e5d797416ecacec9e42a0d762f18e283cb6136",
+    "source_mtime_untrusted": 1793791465.5400667,
+    "source": "/root/soc-m34-20261104/client-events.jsonl",
+    "copied_at": "2026-11-04T16:16:58.383505+07:00"
+  },
+  {
+    "name": "client.pcap",
+    "exists": true,
+    "bytes": 8192,
+    "sha256": "632bd1a3c36a52a1cdbf8a3a3ac2dd5a3d2bbd66e3eb84eae6331b3a39709c14",
+    "source_mtime_untrusted": 1793791465.5360668,
+    "source": "/root/soc-m34-20261104/client.pcap",
+    "copied_at": "2026-11-04T16:16:58.384064+07:00"
+  },
+  {
+    "name": "daemon.log",
+    "exists": true,
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_mtime_untrusted": 1793791019.9080586,
+    "source": "/root/soc-m34-20261104/daemon.log",
+    "copied_at": "2026-11-04T16:16:58.384563+07:00"
+  },
+  {
+    "name": "wire.jsonl",
+    "exists": true,
+    "bytes": 47826,
+    "sha256": "c45008868e947bf5de5f32972667343ecf29710ccbef47cc31bdd6b2304734b5",
+    "source_mtime_untrusted": 1793791465.5480666,
+    "source": "/root/soc-m34-20261104/wire.jsonl",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  },
+  {
+    "name": "wire-daemon.log",
+    "exists": true,
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "source_mtime_untrusted": 1793791125.4440606,
+    "source": "/root/soc-m34-20261104/wire-daemon.log",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  },
+  {
+    "name": "vunl0_3_5-flow.pcap",
+    "exists": true,
+    "bytes": 5659,
+    "sha256": "8b90f849f55e321a568cf37f1d3c41516a1daa0dcb58a145ad47e74ad40a32dc",
+    "source_mtime_untrusted": 1793791304.8120637,
+    "source": "/root/soc-m34-20261104/vunl0_3_5-flow.pcap",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  },
+  {
+    "name": "vunl0_3_6-flow.pcap",
+    "exists": true,
+    "bytes": 5496,
+    "sha256": "ee641c9ca0b53fecf281a622675e354f264dc95b8e660957e663b9a4b295bdc0",
+    "source_mtime_untrusted": 1793791465.5520668,
+    "source": "/root/soc-m34-20261104/vunl0_3_6-flow.pcap",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  },
+  {
+    "name": "client-result.json",
+    "exists": false,
+    "source": "/root/soc-m34-20261104/client-result.json",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  },
+  {
+    "name": "wire-result.json",
+    "exists": false,
+    "source": "/root/soc-m34-20261104/wire-result.json",
+    "copied_at": "2026-11-04T16:16:58.385064+07:00"
+  }
+]

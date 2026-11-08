@@ -1,0 +1,156 @@
+{
+  "base": "/root/soc-m2-final-pcaps-20261103",
+  "captures": [
+    {
+      "label": "dc30",
+      "interface": "vunl0_4_0",
+      "pid": 31841,
+      "cmd": [
+        "tcpdump",
+        "-nn",
+        "-U",
+        "-s",
+        "0",
+        "-i",
+        "vunl0_4_0",
+        "-w",
+        "/root/soc-m2-final-pcaps-20261103/dc30.pcap",
+        "tcp port 8000 or tcp port 8001 or (vlan and (tcp port 8000 or tcp port 8001))"
+      ]
+    },
+    {
+      "label": "client40",
+      "interface": "vunl0_4_1",
+      "pid": 31842,
+      "cmd": [
+        "tcpdump",
+        "-nn",
+        "-U",
+        "-s",
+        "0",
+        "-i",
+        "vunl0_4_1",
+        "-w",
+        "/root/soc-m2-final-pcaps-20261103/client40.pcap",
+        "tcp port 8000 or tcp port 8001 or (vlan and (tcp port 8000 or tcp port 8001))"
+      ]
+    },
+    {
+      "label": "primary_trunk",
+      "interface": "vunl0_1_0",
+      "pid": 31843,
+      "cmd": [
+        "tcpdump",
+        "-nn",
+        "-U",
+        "-s",
+        "0",
+        "-i",
+        "vunl0_1_0",
+        "-w",
+        "/root/soc-m2-final-pcaps-20261103/primary_trunk.pcap",
+        "tcp port 8000 or tcp port 8001 or (vlan and (tcp port 8000 or tcp port 8001))"
+      ]
+    },
+    {
+      "label": "span",
+      "interface": "vunl0_3_7",
+      "pid": 31844,
+      "cmd": [
+        "tcpdump",
+        "-nn",
+        "-U",
+        "-s",
+        "0",
+        "-i",
+        "vunl0_3_7",
+        "-w",
+        "/root/soc-m2-final-pcaps-20261103/span.pcap",
+        "tcp port 8000 or tcp port 8001 or (vlan and (tcp port 8000 or tcp port 8001))"
+      ]
+    }
+  ],
+  "links": [
+    {
+      "ifindex": 17,
+      "ifname": "vunl0_1_0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 9000,
+      "qdisc": "fq_codel",
+      "master": "vnet0_1",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "4e:dc:37:98:65:e9",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    },
+    {
+      "ifindex": 35,
+      "ifname": "vunl0_3_7",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 9000,
+      "qdisc": "fq_codel",
+      "master": "vnet0_11",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "4e:18:80:f8:02:db",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    },
+    {
+      "ifindex": 36,
+      "ifname": "vunl0_4_0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 9000,
+      "qdisc": "fq_codel",
+      "master": "vnet0_6",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "8a:5e:1f:7f:b9:92",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    },
+    {
+      "ifindex": 37,
+      "ifname": "vunl0_4_1",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 9000,
+      "qdisc": "fq_codel",
+      "master": "vnet0_7",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "86:e6:d8:36:93:b9",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    }
+  ],
+  "collector_time": "2026-11-03T17:13:27.165778+07:00"
+}

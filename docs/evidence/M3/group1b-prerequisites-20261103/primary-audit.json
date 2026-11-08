@@ -1,0 +1,92 @@
+{
+  "role": "Primary",
+  "mode": "audit",
+  "config_sha256_before": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "backup_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "backup_guest": "/root/soc-m3-1b-primary-20261103/config.before.xml",
+  "backup_bytes": 48839,
+  "VIP_references": [],
+  "VHIDs": [],
+  "ARP_VIP_conflicts": [],
+  "source_function": "function interfaces_pfsync_configure()\n{\n    global $config;\n\n    if (!empty($config['hasync']['pfsyncinterface'])) {\n        /*\n         * We are just checking the actual attached interface here as get_real_interface()\n         * was not dependable when the selected interface does not exist for any reason.\n         *\n         * What the current method tells us is that we are going to ignore whether this\n         * interface is currently enabled or not.  To avoid breakage we will keep it so\n         * although in reality disabling your pfsync interface should cause it to stop\n         * syncing.\n         */\n        if (!empty($config['interfaces'][$config['hasync']['pfsyncinterface']]['if'])) {\n            $syncdev = $config['interfaces'][$config['hasync']['pfsyncinterface']]['if'];\n        }\n    }\n\n    if (!empty($syncdev)) {\n        $ifcfrmt = ['/sbin/ifconfig pfsync0 syncdev %s'];\n        $ifcargs = [$syncdev];\n\n        if (!empty($config['hasync']['pfsyncpeerip']) && is_ipaddrv4($config['hasync']['pfsyncpeerip'])) {\n            $ifcfrmt[] = 'syncpeer %s';\n            $ifcargs[] = $config['hasync']['pfsyncpeerip'];\n        } else {\n            $ifcfrmt[] = '-syncpeer';\n        }\n        if (!empty($config['hasync']['pfsyncversion'])) {\n            $ifcfrmt[] = 'version %s';\n            $ifcargs[] = $config['hasync']['pfsyncversion'];\n        }\n\n        $ifcfrmt[] = !empty($config['hasync']['pfsyncdefer']) ? 'defer' : '-defer';\n        $ifcfrmt[] = 'up';\n\n        mwexecf($ifcfrmt, $ifcargs);\n\n        /*\n         * Fix presumed replication issue when outgoing MTU\n         * is smaller than what is set in pfsync0, also see\n         * https://github.com/opnsense/core/commit/15acbad935\n         */\n        $intf_stats = legacy_interface_details($syncdev);\n        if (!empty($intf_stats['mtu'])) {\n            mwexecf('/sbin/ifconfig pfsync0 mtu %s', [$intf_stats['mtu']]);\n        }\n    } else {\n        mwexecf('/sbin/ifconfig pfsync0 -syncdev -syncpeer down');\n    }\n}\n",
+  "source_file_sha256": "0f87021fda1a3a124546070a39f312ec87e98bccf183494b29f7e39de139972d",
+  "native_action": "[pfsync.configure]\ncommand: /usr/local/sbin/pluginctl -c pfsync\nmessage: Reconfiguring pfsync configuration\ntype: script\n",
+  "source_callsites": [
+    {
+      "file": "/usr/local/etc/inc/interfaces.inc",
+      "line": 1362,
+      "context": [
+        "}",
+        "",
+        "function interfaces_pfsync_configure()",
+        "{",
+        "    global $config;"
+      ]
+    },
+    {
+      "file": "/usr/local/etc/inc/interfaces.inc",
+      "line": 1493,
+      "context": [
+        "",
+        "    if ($pfsync) {",
+        "        interfaces_pfsync_configure();",
+        "    }",
+        ""
+      ]
+    },
+    {
+      "file": "/usr/local/etc/inc/plugins.inc.d/pf.inc",
+      "line": 53,
+      "context": [
+        "{",
+        "    return [",
+        "        'pfsync' => ['interfaces_pfsync_configure'],",
+        "    ];",
+        "}"
+      ]
+    },
+    {
+      "file": "/usr/local/etc/inc/xmlrpc/legacy.inc",
+      "line": 256,
+      "context": [
+        "",
+        "        if ($pfsync) {",
+        "            interfaces_pfsync_configure();",
+        "        }",
+        ""
+      ]
+    }
+  ],
+  "sync": {
+    "assignment": "opt6",
+    "device": "vtnet2",
+    "local": "10.255.255.1",
+    "peer": "10.255.255.2",
+    "configured_device": "opt6",
+    "configured_peer": "10.255.255.2"
+  },
+  "runtime_before": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "runtime_all": {
+    "rc": 0,
+    "stdout": "vtnet0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: LAN (lan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:00\n\tinet 192.168.1.1 netmask 0xffffff00 broadcast 192.168.1.255\n\tinet6 fe80::5200:ff:fe01:0%vtnet0 prefixlen 64 scopeid 0x1\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nvtnet1: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:01\n\tinet6 fe80::5200:ff:fe01:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>\nvtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:02\n\tinet 10.255.255.1 netmask 0xfffffffc broadcast 10.255.255.3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet3: flags=1008802<BROADCAST,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:03\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nlo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384\n\toptions=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>\n\tinet 127.0.0.1 netmask 0xff000000\n\tinet6 ::1 prefixlen 128\n\tinet6 fe80::1%lo0 prefixlen 64 scopeid 0x5\n\tgroups: lo\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nenc0: flags=0 metric 0 mtu 1536\n\toptions=0\n\tgroups: enc\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\npflog0: flags=0 metric 0 mtu 33152\n\toptions=0\n\tgroups: pflog\npfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\nvtnet0_vlan30: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT1 (opt1)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.30.2 netmask 0xffffff00 broadcast 192.168.30.255\n\tgroups: vlan\n\tvlan: 30 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan40: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.40.2 netmask 0xffffff00 broadcast 192.168.40.255\n\tgroups: vlan\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan50: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT3 (opt3)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.50.2 netmask 0xffffff00 broadcast 192.168.50.255\n\tgroups: vlan\n\tvlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan60: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT4 (opt4)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.60.2 netmask 0xffffff00 broadcast 192.168.60.255\n\tgroups: vlan\n\tvlan: 60 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan99: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT5 (opt5)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.99.2 netmask 0xffffff00 broadcast 192.168.99.255\n\tgroups: vlan\n\tvlan: 99 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "stderr": ""
+  },
+  "source_public_key_der_b64": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAuHe+9/JEgs3zjx1hX606VQnFP6PCWXxQnAI5pRTBcNCqEANj6eLEaaAzX+Cj3e4yM0VK3SK2eRiVL2ZeuvoHsUPn/JO0he49+2GuSbdxzkJKem3PvMuhzloplwJZhzmFZ/vZKVH5WHjN1gw3egNBnrNPTyVFsBPESHAiMlpdNNn03SBNbKjtNkJyhRm03nsBCH8ZXGSJGorYcR75OoGmhn7mb/gnE53G7WcfQFeSGhTjtcbNtbMB0FTOa0nfWwobq7JWgUyp0a0lcClaxDz0utnfh1Qftji9pel9ZphKbWl0SsqgwXmjQD4GvC9zkZ9/EA5A5aSWDMzx+69KAFCxywIDAQAB",
+  "protected_before": {
+    "interfaces": "51b957b60b8e3e9c67b192b7e6afe06acf186dc66cf394a8ed054b4ab8585bb6",
+    "filter": "18dd25fdf3cce1099c8325d18391a8ea404d6cbfe8f04fdba49d11b012437850",
+    "nat": "851a3e6e161267283cd05e1b592a17face20a18492cd6b430611c93fad6a9ad4",
+    "dhcpd": null,
+    "dhcpdv6": null,
+    "hasync": "45fcfbefed87c7e2cafb348065ad831d7b175e18dc56e28f0f614d7608c9d594",
+    "virtualip": "40b7f105bd15cee80ae334f20740280a3312d194829bc008bcf94fd1426896da",
+    "OPNsense": "53e70c7f198976bfc5ec98f27225004a31c6767ab2919153c57118e973b868d5"
+  },
+  "config_sha256_after": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "config_unchanged": true,
+  "collector_time": "2026-11-03T18:12:59.469205+07:00"
+}

@@ -1,0 +1,1 @@
+systemctl show wazuh-manager -p TimeoutStartUSec -p DropInPaths -p ActiveState; sudo -n cat /etc/systemd/system/wazuh-manager.service.d/soc-timeout.conf; findmnt /mnt/soc-seed; ls /mnt/soc-seed/suricata-real-alert-replay.jsonl

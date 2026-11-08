@@ -1,0 +1,1 @@
+systemctl show wazuh-manager -p Result -p TimeoutStartUSec -p DropInPaths; sudo -n journalctl -b -u wazuh-manager --no-pager -n 12

@@ -1,0 +1,17 @@
+{
+  "reviewed_at": "2026-11-03T17:29:00.762093+07:00",
+  "sources": [
+    {
+      "path": "docs\\evidence\\M2\\live-tests-20261101\\final-collection\\frame-cases.csv",
+      "sha256": "01e4ed96fe3ae41c77d05be78994b119794c151f753ab16ca89fb13fd6901cd9"
+    },
+    {
+      "path": "docs\\evidence\\M2\\group2b2-20261103\\firewall-current-public.json",
+      "sha256": "305900bddc4c0fd1ab1f16712146f3adfa4dadf6a1aefc5008475992d6ac948b"
+    },
+    {
+      "path": "docs\\evidence\\M2\\group2b2-20261103\\configured-firewall-rules.csv",
+      "sha256": "741ad7c4e5427f398486af4cce528044e9a8cb393d7d2021d26dbb2869004d39"
+    }
+  ]
+}

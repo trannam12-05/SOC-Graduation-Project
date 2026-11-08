@@ -1,0 +1,101 @@
+{
+  "collector_time": "2026-11-02T22:21:23.892540+07:00",
+  "status": "MATCH_EXISTING_VLAN_CONFIGURATION",
+  "before_after": [
+    {
+      "vlan": 30,
+      "assignment": "opt1",
+      "device": "vtnet0_vlan30",
+      "parent": "vtnet0",
+      "address_before": "192.168.30.2/24",
+      "address_after": "192.168.30.2/24",
+      "action": "KEEP_UNCHANGED",
+      "checks": {
+        "parent_vtnet0": true,
+        "address_matches_observed": true,
+        "enabled": true,
+        "runtime_read_ok": true,
+        "runtime_up": true,
+        "runtime_tag_parent": true,
+        "runtime_ipv4_prefix": true
+      }
+    },
+    {
+      "vlan": 40,
+      "assignment": "opt2",
+      "device": "vtnet0_vlan40",
+      "parent": "vtnet0",
+      "address_before": "192.168.40.2/24",
+      "address_after": "192.168.40.2/24",
+      "action": "KEEP_UNCHANGED",
+      "checks": {
+        "parent_vtnet0": true,
+        "address_matches_observed": true,
+        "enabled": true,
+        "runtime_read_ok": true,
+        "runtime_up": true,
+        "runtime_tag_parent": true,
+        "runtime_ipv4_prefix": true
+      }
+    },
+    {
+      "vlan": 50,
+      "assignment": "opt3",
+      "device": "vtnet0_vlan50",
+      "parent": "vtnet0",
+      "address_before": "192.168.50.2/24",
+      "address_after": "192.168.50.2/24",
+      "action": "KEEP_UNCHANGED",
+      "checks": {
+        "parent_vtnet0": true,
+        "address_matches_observed": true,
+        "enabled": true,
+        "runtime_read_ok": true,
+        "runtime_up": true,
+        "runtime_tag_parent": true,
+        "runtime_ipv4_prefix": true
+      }
+    },
+    {
+      "vlan": 60,
+      "assignment": "opt4",
+      "device": "vtnet0_vlan60",
+      "parent": "vtnet0",
+      "address_before": "192.168.60.2/24",
+      "address_after": "192.168.60.2/24",
+      "action": "KEEP_UNCHANGED",
+      "checks": {
+        "parent_vtnet0": true,
+        "address_matches_observed": true,
+        "enabled": true,
+        "runtime_read_ok": true,
+        "runtime_up": true,
+        "runtime_tag_parent": true,
+        "runtime_ipv4_prefix": true
+      }
+    },
+    {
+      "vlan": 99,
+      "assignment": "opt5",
+      "device": "vtnet0_vlan99",
+      "parent": "vtnet0",
+      "address_before": "192.168.99.2/24",
+      "address_after": "192.168.99.2/24",
+      "action": "KEEP_UNCHANGED",
+      "checks": {
+        "parent_vtnet0": true,
+        "address_matches_observed": true,
+        "enabled": true,
+        "runtime_read_ok": true,
+        "runtime_up": true,
+        "runtime_tag_parent": true,
+        "runtime_ipv4_prefix": true
+      }
+    }
+  ],
+  "failures": [],
+  "configuration_changes": [],
+  "traffic_tested": false,
+  "scope": "Interface/parent/tag/address configuration only; no firewall or traffic acceptance",
+  "address_reference": "Previously observed deployed Primary addresses, not unconfirmed M1 VIP proposals"
+}

@@ -1,0 +1,1 @@
+sudo -n ovs-vsctl --columns=name,select_all,select_src_port,select_dst_port,select_vlan,output_port list Mirror

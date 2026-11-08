@@ -1,0 +1,26 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T17:01:01.132846+07:00",
+  "flow": {
+    "source": "192.168.40.100",
+    "source_port": 44341,
+    "destination": "192.168.30.10",
+    "destination_port": 8000
+  },
+  "client_isn": 69072772,
+  "server_isn": 45026641,
+  "syn_transmissions": 1,
+  "no_reconnect": true,
+  "original_request_completed_after_failover": true,
+  "http_status": "HTTP/1.0 200 OK",
+  "response_bytes": 350,
+  "response_sha256": "0bb359fd124e711c0a8346c78e307aa2318dafe747e861bebe9941724e0c0f80",
+  "acked_markers_after_primary_off": 11,
+  "tcp_retransmissions_observed": 0,
+  "packet_loss": "NOT_MEASURED; no zero-packet-loss claim",
+  "path_before": "Primary trunk; routed TTL63",
+  "path_after": "Secondary trunk; routed TTL63",
+  "raw_jsonl_records_valid": true,
+  "wire_packet_records": 212,
+  "client_event_records": 162
+}

@@ -1,0 +1,1 @@
+sudo -n sh -c 'mkdir -p /etc/systemd/system/wazuh-manager.service.d; set -C; printf "[Service]\nTimeoutStartSec=300\n" > /etc/systemd/system/wazuh-manager.service.d/soc-timeout.conf' && sudo -n systemctl daemon-reload && sudo -n systemctl start --no-block wazuh-manager

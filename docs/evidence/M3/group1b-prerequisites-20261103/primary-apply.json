@@ -1,0 +1,24 @@
+{
+  "role": "Primary",
+  "mode": "apply",
+  "config_sha256_before": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "native_apply": {
+    "rc": 0,
+    "stdout": "Action not allowed or missing\n\n\n\n",
+    "stderr": ""
+  },
+  "runtime_after": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "protected_sections_unchanged": true,
+  "secret_path": "/root/soc-m3-1b-primary-20261103/carp-shared.secret",
+  "secret_mode": "0o600",
+  "CARP_VIPs_created": 0,
+  "runtime_ready": false,
+  "config_sha256_after": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "config_unchanged": true,
+  "same_shared_secret_verified": true,
+  "collector_time": "2026-11-03T18:15:19.750738+07:00"
+}

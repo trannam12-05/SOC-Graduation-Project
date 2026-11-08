@@ -1,0 +1,42 @@
+{
+  "guest_utc_unverified": "2026-11-06T21:40:09.065421+00:00",
+  "command": [
+    "curl",
+    "--ipv4",
+    "--interface",
+    "employee0",
+    "--noproxy",
+    "*",
+    "--proto",
+    "=https",
+    "--silent",
+    "--show-error",
+    "--head",
+    "--output",
+    "/var/tmp/soc-m3-https-headers.txt",
+    "--connect-timeout",
+    "5",
+    "--max-time",
+    "12",
+    "--retry",
+    "0",
+    "--write-out",
+    "{\"local_ip\": \"%{local_ip}\", \"local_port\": \"%{local_port}\", \"remote_ip\": \"%{remote_ip}\", \"remote_port\": \"%{remote_port}\", \"http_code\": \"%{http_code}\", \"ssl_verify_result\": \"%{ssl_verify_result}\", \"time_total\": \"%{time_total}\"}",
+    "https://1.1.1.1/"
+  ],
+  "rc": 0,
+  "metrics": {
+    "local_ip": "192.168.40.110",
+    "local_port": "52552",
+    "remote_ip": "1.1.1.1",
+    "remote_port": "443",
+    "http_code": "301",
+    "ssl_verify_result": "0",
+    "time_total": "0.439285"
+  },
+  "stderr": "",
+  "requests_attempted": 1,
+  "redirects_followed": false,
+  "scope": "Employee Linux NAT Internet only; no HA failover or previous PASS retests",
+  "status": "PASS"
+}

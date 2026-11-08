@@ -1,0 +1,92 @@
+{
+  "collected_at": "2026-11-02T17:09:36.850701+07:00",
+  "nodes": [
+    {
+      "node": "Data-Center",
+      "seed_sha256": "f16a9fc9ecaf031bd6c619e316a5fcb0dc9232bc6005030ce92b1955d163743c",
+      "seed_bytes": 378880,
+      "previous_seed_backup": "/root/soc-service-seeds-20261102/Data-Center-previous-seed.iso",
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:bc:2f:0c:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true,
+            "addresses": [
+              "192.168.30.10/24"
+            ],
+            "routes": [
+              {
+                "to": "0.0.0.0/0",
+                "via": "192.168.30.2"
+              }
+            ]
+          }
+        }
+      },
+      "state": "PREPARED_NOT_BOOTED"
+    },
+    {
+      "node": "DMZ",
+      "seed_sha256": "af630bd20dcc8867cccd8671d836c5a389dc9f83b0e90be1fd2a2124a6ade287",
+      "seed_bytes": 378880,
+      "previous_seed_backup": "/root/soc-service-seeds-20261102/DMZ-previous-seed.iso",
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:12:37:e0:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true,
+            "addresses": [
+              "192.168.60.10/24"
+            ],
+            "routes": [
+              {
+                "to": "0.0.0.0/0",
+                "via": "192.168.60.2"
+              }
+            ]
+          }
+        }
+      },
+      "state": "PREPARED_NOT_BOOTED"
+    },
+    {
+      "node": "Wazuh-SOC",
+      "seed_sha256": "9ee40db603b30254ce94b0b301aeb38282096c060301980225e17de643cab6e4",
+      "seed_bytes": 596117504,
+      "previous_seed_backup": "/root/soc-service-seeds-20261102/Wazuh-SOC-previous-seed.iso",
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:1d:c7:d8:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          }
+        }
+      },
+      "state": "PREPARED_NOT_BOOTED"
+    }
+  ]
+}

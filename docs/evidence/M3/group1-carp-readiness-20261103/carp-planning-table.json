@@ -1,0 +1,85 @@
+{
+  "reviewed_at": "2026-11-03T17:58:40.488965+07:00",
+  "status": "DRAFT_NOT_APPROVED_NOT_APPLIED",
+  "rows": [
+    {
+      "interface_Primary": "opt1 / vtnet0_vlan30",
+      "interface_Secondary": "opt1 / vtnet0_vlan30",
+      "VLAN": 30,
+      "Primary_IP": "192.168.30.2",
+      "Secondary_IP": "192.168.30.3",
+      "CARP_VIP_candidate_M1": "192.168.30.1",
+      "subnet_prefix": "192.168.30.0/24",
+      "VIP_approval": "Ví dụ M1, chưa xác nhận, không áp dụng",
+      "VHID": "Chưa được chốt",
+      "advskew_Primary": "Chưa được chốt",
+      "advskew_Secondary": "Chưa được chốt",
+      "advbase": "Chưa được chốt",
+      "SYNC": "opt6 / vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30"
+    },
+    {
+      "interface_Primary": "opt2 / vtnet0_vlan40",
+      "interface_Secondary": "opt2 / vtnet0_vlan40",
+      "VLAN": 40,
+      "Primary_IP": "192.168.40.2",
+      "Secondary_IP": "192.168.40.3",
+      "CARP_VIP_candidate_M1": "192.168.40.1",
+      "subnet_prefix": "192.168.40.0/24",
+      "VIP_approval": "Ví dụ M1, chưa xác nhận, không áp dụng",
+      "VHID": "Chưa được chốt",
+      "advskew_Primary": "Chưa được chốt",
+      "advskew_Secondary": "Chưa được chốt",
+      "advbase": "Chưa được chốt",
+      "SYNC": "opt6 / vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30"
+    },
+    {
+      "interface_Primary": "opt3 / vtnet0_vlan50",
+      "interface_Secondary": "opt3 / vtnet0_vlan50",
+      "VLAN": 50,
+      "Primary_IP": "192.168.50.2",
+      "Secondary_IP": "192.168.50.3",
+      "CARP_VIP_candidate_M1": "192.168.50.1",
+      "subnet_prefix": "192.168.50.0/24",
+      "VIP_approval": "Ví dụ M1, chưa xác nhận, không áp dụng",
+      "VHID": "Chưa được chốt",
+      "advskew_Primary": "Chưa được chốt",
+      "advskew_Secondary": "Chưa được chốt",
+      "advbase": "Chưa được chốt",
+      "SYNC": "opt6 / vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30"
+    },
+    {
+      "interface_Primary": "opt4 / vtnet0_vlan60",
+      "interface_Secondary": "opt4 / vtnet0_vlan60",
+      "VLAN": 60,
+      "Primary_IP": "192.168.60.2",
+      "Secondary_IP": "192.168.60.3",
+      "CARP_VIP_candidate_M1": "192.168.60.1",
+      "subnet_prefix": "192.168.60.0/24",
+      "VIP_approval": "Ví dụ M1, chưa xác nhận, không áp dụng",
+      "VHID": "Chưa được chốt",
+      "advskew_Primary": "Chưa được chốt",
+      "advskew_Secondary": "Chưa được chốt",
+      "advbase": "Chưa được chốt",
+      "SYNC": "opt6 / vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30"
+    },
+    {
+      "interface_Primary": "opt5 / vtnet0_vlan99",
+      "interface_Secondary": "opt5 / vtnet0_vlan99",
+      "VLAN": 99,
+      "Primary_IP": "192.168.99.2",
+      "Secondary_IP": "192.168.99.3",
+      "CARP_VIP_candidate_M1": "192.168.99.1",
+      "subnet_prefix": "192.168.99.0/24",
+      "VIP_approval": "Ví dụ M1, chưa xác nhận, không áp dụng",
+      "VHID": "Chưa được chốt",
+      "advskew_Primary": "Chưa được chốt",
+      "advskew_Secondary": "Chưa được chốt",
+      "advbase": "Chưa được chốt",
+      "SYNC": "opt6 / vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30"
+    }
+  ],
+  "actual_CARP_entries": {
+    "Primary": [],
+    "Secondary": []
+  }
+}

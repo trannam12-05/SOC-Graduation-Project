@@ -1,0 +1,1 @@
+sha256 /conf/config.xml /root/soc-resource-checkpoint-20261103/config.xml; sysctl hw.physmem net.inet.carp.demotion; swapinfo -h; ifconfig pfsync0; ifconfig vtnet2 | grep -E "inet |status:"

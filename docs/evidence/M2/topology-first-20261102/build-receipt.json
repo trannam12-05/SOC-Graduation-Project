@@ -1,0 +1,130 @@
+{
+  "backup_directory": "/root/soc-topology-first-backup-20261102T130107Z",
+  "backup_disks": [
+    {
+      "node": "SOC-Core-L2",
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/virtioa.qcow2",
+      "backup": "/root/soc-topology-first-backup-20261102T130107Z/SOC-Core-L2-virtioa.qcow2",
+      "sha256": "0ee7ef57fb1ded42f8e8132edb5e0f146c5b6f8cbe855c9ac11d6f79877d9afe",
+      "bytes": 745275392
+    },
+    {
+      "node": "OPNsense-Primary",
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/1/virtioa.qcow2",
+      "backup": "/root/soc-topology-first-backup-20261102T130107Z/OPNsense-Primary-virtioa.qcow2",
+      "sha256": "7e3dfa9bf9cec7812c53d99d1c66627c240b537545a354667784f97d00555501",
+      "bytes": 2510880768
+    },
+    {
+      "node": "OPNsense-Secondary",
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/2/virtioa.qcow2",
+      "backup": "/root/soc-topology-first-backup-20261102T130107Z/OPNsense-Secondary-virtioa.qcow2",
+      "sha256": "c09a6c5e5ac5090ab3bcefaccd0a97b6fc318f2f50cc1893aaaa1edac8f2ae83",
+      "bytes": 197120
+    }
+  ],
+  "nodes_after_creation": [
+    {
+      "id": 3,
+      "name": "SOC-Core-L2",
+      "status": 0,
+      "ethernet": 8
+    },
+    {
+      "id": 1,
+      "name": "OPNsense-Primary",
+      "status": 0,
+      "ethernet": 4
+    },
+    {
+      "id": 2,
+      "name": "OPNsense-Secondary",
+      "status": 0,
+      "ethernet": 4
+    },
+    {
+      "id": 4,
+      "name": "Data-Center",
+      "status": 0,
+      "ethernet": 1
+    },
+    {
+      "id": 5,
+      "name": "Employee",
+      "status": 0,
+      "ethernet": 1
+    },
+    {
+      "id": 6,
+      "name": "Guest",
+      "status": 0,
+      "ethernet": 1
+    },
+    {
+      "id": 7,
+      "name": "DMZ",
+      "status": 0,
+      "ethernet": 1
+    },
+    {
+      "id": 8,
+      "name": "Management",
+      "status": 0,
+      "ethernet": 1
+    },
+    {
+      "id": 9,
+      "name": "Suricata-NIDS",
+      "status": 0,
+      "ethernet": 2
+    },
+    {
+      "id": 10,
+      "name": "Wazuh-SOC",
+      "status": 0,
+      "ethernet": 1
+    }
+  ],
+  "link_result": {
+    "nodes": {
+      "SOC-Core-L2": 3,
+      "OPNsense-Primary": 1,
+      "OPNsense-Secondary": 2,
+      "Data-Center": 4,
+      "Employee": 5,
+      "Guest": 6,
+      "DMZ": 7,
+      "Management": 8,
+      "Suricata-NIDS": 9,
+      "Wazuh-SOC": 10
+    },
+    "networks": {
+      "Net-SOC-Core-L2iface_5": 1,
+      "Net-SOC-Core-L2iface_6": 2,
+      "Net-OPNsense-Secondaryiface_2": 3,
+      "WAN-ISP-1": 4,
+      "WAN-ISP-2": 5,
+      "VLAN30-Data-Center": 6,
+      "VLAN40-Employee": 7,
+      "VLAN50-Guest": 8,
+      "VLAN60-DMZ": 9,
+      "VLAN99-Management": 10,
+      "SPAN-Capture": 11
+    }
+  },
+  "lab_sha256_before": "4352da1087c5fb9fe3e05f3b3fc471edb34cdb5fdc9c942378670cec1f42e7cb",
+  "lab_sha256_after": "1ffe4fe428e386a3ee59b981ebc96ee5b659b0d90824e5e253b1fbe05f2b4210",
+  "protected_existing_disks_unchanged": true,
+  "protected_existing_attributes_and_links_unchanged": true,
+  "base_image_unchanged": true,
+  "nodes_started": 0,
+  "unresolved": [
+    "Internet/upstream chưa có node/image/interface chỉ định: giữ WAN bridge cô lập, không nối pnet/VMware",
+    "Wazuh VLAN/IP và đường vật lý chưa chỉ định: tạo node giữ tắt, chưa nối NIC, chưa mô phỏng mũi tên log thành dây trực tiếp",
+    "Automation có trong bảng 2.1 nhưng chưa xác định máy riêng: ghi thành phần logic, không tự tạo thêm node",
+    "Số lượng máy chủ DC, Web/DNS DMZ, client mỗi vùng và máy SOC chưa có danh sách vật lý; mỗi vùng chỉ một endpoint đại diện",
+    "Địa chỉ IP/VIP, policy, DHCP, WAN2/SYNC guest chưa xác nhận; không tự áp dụng IP dự kiến"
+  ],
+  "completed_at_remote_utc": "2026-11-02T13:03:21.980989+00:00",
+  "collector_time": "2026-11-02T13:03:22.080788+07:00"
+}

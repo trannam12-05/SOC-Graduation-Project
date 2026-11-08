@@ -1,0 +1,1 @@
+echo vtnet0; ifconfig vtnet0 | grep ether; echo vtnet1; ifconfig vtnet1 | grep ether; echo vtnet2; ifconfig vtnet2 | grep ether

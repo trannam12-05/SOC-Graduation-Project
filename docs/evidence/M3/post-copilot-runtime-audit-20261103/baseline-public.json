@@ -1,0 +1,142 @@
+{
+  "Primary": {
+    "baseline_path": "docs/evidence/M3/group1b-prerequisites-20261103/private-backups/Primary-before.xml",
+    "sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+    "interfaces": [
+      {
+        "if": "vtnet1",
+        "ipaddr": "dhcp",
+        "subnet": "",
+        "enable": "1",
+        "assignment": "wan"
+      },
+      {
+        "if": "vtnet0",
+        "ipaddr": "192.168.1.1",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "lan"
+      },
+      {
+        "if": "lo0",
+        "ipaddr": "127.0.0.1",
+        "subnet": "8",
+        "enable": "1",
+        "assignment": "lo0"
+      },
+      {
+        "if": "vtnet0_vlan30",
+        "ipaddr": "192.168.30.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt1"
+      },
+      {
+        "if": "vtnet0_vlan40",
+        "ipaddr": "192.168.40.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt2"
+      },
+      {
+        "if": "vtnet0_vlan50",
+        "ipaddr": "192.168.50.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt3"
+      },
+      {
+        "if": "vtnet0_vlan60",
+        "ipaddr": "192.168.60.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt4"
+      },
+      {
+        "if": "vtnet0_vlan99",
+        "ipaddr": "192.168.99.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt5"
+      },
+      {
+        "if": "vtnet2",
+        "ipaddr": "10.255.255.1",
+        "subnet": "30",
+        "enable": "1",
+        "assignment": "opt6"
+      }
+    ],
+    "vip_count": 0
+  },
+  "Secondary": {
+    "baseline_path": "docs/evidence/M3/group1b-prerequisites-20261103/private-backups/Secondary-before.xml",
+    "sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+    "interfaces": [
+      {
+        "if": "vtnet1",
+        "ipaddr": "dhcp",
+        "subnet": "",
+        "enable": "1",
+        "assignment": "wan"
+      },
+      {
+        "if": "vtnet0",
+        "ipaddr": "192.168.1.2",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "lan"
+      },
+      {
+        "if": "lo0",
+        "ipaddr": "127.0.0.1",
+        "subnet": "8",
+        "enable": "1",
+        "assignment": "lo0"
+      },
+      {
+        "if": "vtnet0_vlan30",
+        "ipaddr": "192.168.30.3",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt1"
+      },
+      {
+        "if": "vtnet0_vlan40",
+        "ipaddr": "192.168.40.3",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt2"
+      },
+      {
+        "if": "vtnet0_vlan50",
+        "ipaddr": "192.168.50.3",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt3"
+      },
+      {
+        "if": "vtnet0_vlan60",
+        "ipaddr": "192.168.60.3",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt4"
+      },
+      {
+        "if": "vtnet0_vlan99",
+        "ipaddr": "192.168.99.3",
+        "subnet": "24",
+        "enable": "1",
+        "assignment": "opt5"
+      },
+      {
+        "if": "vtnet2",
+        "ipaddr": "10.255.255.2",
+        "subnet": "30",
+        "enable": "1",
+        "assignment": "opt6"
+      }
+    ],
+    "vip_count": 0
+  }
+}

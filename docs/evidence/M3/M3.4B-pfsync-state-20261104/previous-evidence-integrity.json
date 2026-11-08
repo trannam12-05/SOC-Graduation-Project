@@ -1,0 +1,15 @@
+{
+  "collector_time": "2026-11-04T17:12:50.875586+07:00",
+  "manifests": [
+    {
+      "folder": "D:\\SOC\\docs\\evidence\\M3\\M3.4-pfsync-state-20261104",
+      "files_checked": 137,
+      "unchanged": true
+    },
+    {
+      "folder": "D:\\SOC\\docs\\evidence\\M3\\M3.4A-baseline-20261104",
+      "files_checked": 119,
+      "unchanged": true
+    }
+  ]
+}

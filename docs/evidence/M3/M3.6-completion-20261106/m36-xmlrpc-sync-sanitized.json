@@ -1,0 +1,11 @@
+{
+  "evidence_type": "sanitized_summary",
+  "collected_at": "2026-11-06T18:27:00+07:00",
+  "component": "OPNsense XMLRPC configuration synchronization",
+  "source": "Primary system log and synchronization command result",
+  "http_result": 200,
+  "remote_restore_result": true,
+  "system_log_result": "Filter sync successfully completed",
+  "sensitive_headers_included": false,
+  "note_vi": "Bản tóm tắt đã loại bỏ toàn bộ HTTP header và dữ liệu xác thực. Các tệp chẩn đoán thô có metadata xác thực đã bị xóa và không được dùng làm minh chứng."
+}

@@ -1,0 +1,94 @@
+{
+  "approved_at": "2026-11-03T18:30:33.807929+07:00",
+  "scope_HA": [
+    30,
+    40,
+    50,
+    60,
+    99
+  ],
+  "excluded": [
+    "WAN",
+    "LAN parent"
+  ],
+  "conflict_check_scope": "Current firewall full configuration/runtime and passive ARP cache; saved VPCS/seed endpoint assignments; IP plan; no active DAD and no assurance about undisclosed external/offline device",
+  "rows": [
+    {
+      "status": "APPROVED",
+      "VLAN": 30,
+      "interface_Primary": "opt1 / vtnet0_vlan30",
+      "interface_Secondary": "opt1 / vtnet0_vlan30",
+      "Primary_IP": "192.168.30.2/24",
+      "Secondary_IP": "192.168.30.3/24",
+      "CARP_VIP": "192.168.30.1/24",
+      "VHID": 30,
+      "advbase": 1,
+      "Primary_advskew": 0,
+      "Secondary_advskew": 100,
+      "SYNC": "opt6/vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30",
+      "applied": false
+    },
+    {
+      "status": "APPROVED",
+      "VLAN": 40,
+      "interface_Primary": "opt2 / vtnet0_vlan40",
+      "interface_Secondary": "opt2 / vtnet0_vlan40",
+      "Primary_IP": "192.168.40.2/24",
+      "Secondary_IP": "192.168.40.3/24",
+      "CARP_VIP": "192.168.40.1/24",
+      "VHID": 40,
+      "advbase": 1,
+      "Primary_advskew": 0,
+      "Secondary_advskew": 100,
+      "SYNC": "opt6/vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30",
+      "applied": false
+    },
+    {
+      "status": "APPROVED",
+      "VLAN": 50,
+      "interface_Primary": "opt3 / vtnet0_vlan50",
+      "interface_Secondary": "opt3 / vtnet0_vlan50",
+      "Primary_IP": "192.168.50.2/24",
+      "Secondary_IP": "192.168.50.3/24",
+      "CARP_VIP": "192.168.50.1/24",
+      "VHID": 50,
+      "advbase": 1,
+      "Primary_advskew": 0,
+      "Secondary_advskew": 100,
+      "SYNC": "opt6/vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30",
+      "applied": false
+    },
+    {
+      "status": "APPROVED",
+      "VLAN": 60,
+      "interface_Primary": "opt4 / vtnet0_vlan60",
+      "interface_Secondary": "opt4 / vtnet0_vlan60",
+      "Primary_IP": "192.168.60.2/24",
+      "Secondary_IP": "192.168.60.3/24",
+      "CARP_VIP": "192.168.60.1/24",
+      "VHID": 60,
+      "advbase": 1,
+      "Primary_advskew": 0,
+      "Secondary_advskew": 100,
+      "SYNC": "opt6/vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30",
+      "applied": false
+    },
+    {
+      "status": "APPROVED",
+      "VLAN": 99,
+      "interface_Primary": "opt5 / vtnet0_vlan99",
+      "interface_Secondary": "opt5 / vtnet0_vlan99",
+      "Primary_IP": "192.168.99.2/24",
+      "Secondary_IP": "192.168.99.3/24",
+      "CARP_VIP": "192.168.99.1/24",
+      "VHID": 99,
+      "advbase": 1,
+      "Primary_advskew": 0,
+      "Secondary_advskew": 100,
+      "SYNC": "opt6/vtnet2; Primary 10.255.255.1/30; Secondary 10.255.255.2/30",
+      "applied": false
+    }
+  ],
+  "CARP_VIPs_created": 0,
+  "password_value_included": false
+}

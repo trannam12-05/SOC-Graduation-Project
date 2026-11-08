@@ -1,0 +1,1 @@
+exitcode=0;raise __import__("builtins").__dict__[bytes.fromhex("53797374656d45786974").decode()](exitcode)

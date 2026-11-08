@@ -90,3 +90,21 @@ Desktop.ini
 
 # Bản kiểm kê cũ có trường accountPassword chưa đủ điều kiện công bố; giữ nguyên cục bộ.
 /docs/evidence/eve-ng/ubuntu-image-test-config/node-config.json
+
+# Bản làm việc/trình bày cũ và dữ liệu trung gian không xuất bản.
+/temp/
+/automation/debug/
+*.previous-*
+*_SOC_Corrected.pptx
+/docs/slide12-source.png
+**/Word-pagination-proof.pdf
+**/wazuh-known-hosts
+**/*known_hosts*
+**/*.dpapi
+**/*.enc
+**/carp-shared.secret
+# Minh chứng thô cần rà soát riêng trước công bố; không xóa dữ liệu cục bộ.
+/docs/evidence/**/console-export/
+/docs/evidence/**/console-*/
+# Seed lịch sử có public SSH key; không xuất bản lại cùng tiến độ.
+/docs/evidence/eve-ng/ubuntu-image-test-config/user-data.yaml

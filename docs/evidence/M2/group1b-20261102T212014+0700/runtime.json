@@ -1,0 +1,963 @@
+{
+  "hostname": "soc-core-l2",
+  "version": "ovs-vsctl (Open vSwitch) 3.3.9\nDB Schema 8.5.1\n",
+  "services": "active\nactive\nactive\n",
+  "links": [
+    {
+      "ifindex": 1,
+      "ifname": "lo",
+      "flags": [
+        "LOOPBACK",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 65536,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "loopback",
+      "address": "00:00:00:00:00:00",
+      "broadcast": "00:00:00:00:00:00"
+    },
+    {
+      "ifindex": 2,
+      "ifname": "ens3",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:00",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s3"
+      ]
+    },
+    {
+      "ifindex": 3,
+      "ifname": "ens4",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:01",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s4"
+      ]
+    },
+    {
+      "ifindex": 4,
+      "ifname": "ens5",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:02",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s5"
+      ]
+    },
+    {
+      "ifindex": 5,
+      "ifname": "ens6",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:03",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s6"
+      ]
+    },
+    {
+      "ifindex": 6,
+      "ifname": "ens7",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:04",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s7"
+      ]
+    },
+    {
+      "ifindex": 7,
+      "ifname": "ens8",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:05",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s8"
+      ]
+    },
+    {
+      "ifindex": 8,
+      "ifname": "ens9",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:06",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s9"
+      ]
+    },
+    {
+      "ifindex": 9,
+      "ifname": "ens10",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:07",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s10"
+      ]
+    },
+    {
+      "ifindex": 10,
+      "ifname": "ovs-system",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST"
+      ],
+      "mtu": 1500,
+      "qdisc": "noop",
+      "operstate": "DOWN",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "8e:43:b7:f2:cb:90",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    },
+    {
+      "ifindex": 11,
+      "ifname": "br-core-l2",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "linkmode": "DEFAULT",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "2a:de:e5:91:5a:40",
+      "broadcast": "ff:ff:ff:ff:ff:ff"
+    }
+  ],
+  "addresses": [
+    {
+      "ifindex": 1,
+      "ifname": "lo",
+      "flags": [
+        "LOOPBACK",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 65536,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "loopback",
+      "address": "00:00:00:00:00:00",
+      "broadcast": "00:00:00:00:00:00",
+      "addr_info": [
+        {
+          "family": "inet",
+          "local": "127.0.0.1",
+          "prefixlen": 8,
+          "scope": "host",
+          "label": "lo",
+          "valid_life_time": 4294967295,
+          "preferred_life_time": 4294967295
+        },
+        {
+          "family": "inet6",
+          "local": "::1",
+          "prefixlen": 128,
+          "scope": "host",
+          "noprefixroute": true,
+          "valid_life_time": 4294967295,
+          "preferred_life_time": 4294967295
+        }
+      ]
+    },
+    {
+      "ifindex": 2,
+      "ifname": "ens3",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:00",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s3"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 3,
+      "ifname": "ens4",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:01",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s4"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 4,
+      "ifname": "ens5",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:02",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s5"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 5,
+      "ifname": "ens6",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:03",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s6"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 6,
+      "ifname": "ens7",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:04",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s7"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 7,
+      "ifname": "ens8",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:05",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s8"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 8,
+      "ifname": "ens9",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:06",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s9"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 9,
+      "ifname": "ens10",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "master": "ovs-system",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:53:45:f2:19:07",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s10"
+      ],
+      "addr_info": []
+    },
+    {
+      "ifindex": 10,
+      "ifname": "ovs-system",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST"
+      ],
+      "mtu": 1500,
+      "qdisc": "noop",
+      "operstate": "DOWN",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "8e:43:b7:f2:cb:90",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "addr_info": []
+    },
+    {
+      "ifindex": 11,
+      "ifname": "br-core-l2",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "noqueue",
+      "operstate": "UNKNOWN",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "2a:de:e5:91:5a:40",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "addr_info": []
+    }
+  ],
+  "routes4": [
+    {
+      "type": "local",
+      "dst": "127.0.0.0/8",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "127.0.0.1",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "host",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "broadcast",
+      "dst": "127.255.255.255",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "127.0.0.1",
+      "flags": []
+    },
+    {
+      "type": "local",
+      "dst": "::1",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 0,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens3",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens4",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens5",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens6",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens7",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens8",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens9",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens10",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    }
+  ],
+  "routes6": [
+    {
+      "type": "local",
+      "dst": "::1",
+      "dev": "lo",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 0,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens3",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens4",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens5",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens6",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens7",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens8",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens9",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    },
+    {
+      "type": "multicast",
+      "dst": "ff00::/8",
+      "dev": "ens10",
+      "table": "local",
+      "protocol": "kernel",
+      "metric": 256,
+      "flags": [],
+      "pref": "medium"
+    }
+  ],
+  "forward4": "0",
+  "forward6": "0",
+  "bridges": [
+    {
+      "name": "br-core-l2",
+      "datapath_type": "system",
+      "fail_mode": "standalone",
+      "ports": [
+        "4a14c6ca-df39-4da6-9f6d-bca72f947e72",
+        "564d0824-4a66-49fa-b52d-c642b2abeb68",
+        "8a71920d-676f-4d01-8451-f2ea00bc93c4",
+        "90ec285e-e44b-45b4-ba77-5ccd6a1fbf57",
+        "941fbc03-4b59-43e2-954d-46f2475a0a84",
+        "d4e7ac82-cc64-4ffe-8079-3d84d66e3d31",
+        "d8245d47-775e-4e07-b56e-59418c6d2c3d",
+        "d890b5fd-362c-47ae-b571-bb89b11f4e4d",
+        "de198363-80be-4aa7-a530-17d1c7764d12"
+      ],
+      "mirrors": "9550b37b-ad1c-470f-9526-aa8c472b0603",
+      "controller": []
+    }
+  ],
+  "ports": [
+    {
+      "_uuid": "4a14c6ca-df39-4da6-9f6d-bca72f947e72",
+      "name": "ens10",
+      "vlan_mode": "trunk",
+      "tag": [],
+      "trunks": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "interfaces": "37736ff2-bf3c-4604-ac68-e27575f4a715",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "d4e7ac82-cc64-4ffe-8079-3d84d66e3d31",
+      "name": "ens5",
+      "vlan_mode": "access",
+      "tag": 50,
+      "trunks": [],
+      "interfaces": "b4e53d11-6356-4515-bfd1-a9d171158ff5",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "941fbc03-4b59-43e2-954d-46f2475a0a84",
+      "name": "ens9",
+      "vlan_mode": "trunk",
+      "tag": [],
+      "trunks": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "interfaces": "8c498356-9643-43b2-aeac-066a1bc4f010",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "de198363-80be-4aa7-a530-17d1c7764d12",
+      "name": "ens8",
+      "vlan_mode": "trunk",
+      "tag": [],
+      "trunks": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "interfaces": "a577116f-cec2-4c09-a122-57a5ee3cda0d",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "564d0824-4a66-49fa-b52d-c642b2abeb68",
+      "name": "br-core-l2",
+      "vlan_mode": "access",
+      "tag": 99,
+      "trunks": [],
+      "interfaces": "a39809d1-ae6d-4f64-910f-6017bddd5df1",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "8a71920d-676f-4d01-8451-f2ea00bc93c4",
+      "name": "ens7",
+      "vlan_mode": "access",
+      "tag": 99,
+      "trunks": [],
+      "interfaces": "f6038e96-7fb4-48d6-810a-81085d532638",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "d890b5fd-362c-47ae-b571-bb89b11f4e4d",
+      "name": "ens4",
+      "vlan_mode": "access",
+      "tag": 40,
+      "trunks": [],
+      "interfaces": "bf72bb1c-bf10-4365-bc48-e0fcd466d34b",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "90ec285e-e44b-45b4-ba77-5ccd6a1fbf57",
+      "name": "ens6",
+      "vlan_mode": "access",
+      "tag": 60,
+      "trunks": [],
+      "interfaces": "03c48a60-5330-4e4b-b49d-7c261b46fd8d",
+      "lacp": [],
+      "bond_mode": []
+    },
+    {
+      "_uuid": "d8245d47-775e-4e07-b56e-59418c6d2c3d",
+      "name": "ens3",
+      "vlan_mode": "access",
+      "tag": 30,
+      "trunks": [],
+      "interfaces": "0f508599-2796-49db-b97c-76b3e38b1df4",
+      "lacp": [],
+      "bond_mode": []
+    }
+  ],
+  "interfaces": [
+    {
+      "_uuid": "03c48a60-5330-4e4b-b49d-7c261b46fd8d",
+      "name": "ens6",
+      "type": "",
+      "ofport": 4,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "a39809d1-ae6d-4f64-910f-6017bddd5df1",
+      "name": "br-core-l2",
+      "type": "internal",
+      "ofport": 65534,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "0f508599-2796-49db-b97c-76b3e38b1df4",
+      "name": "ens3",
+      "type": "",
+      "ofport": 7,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "b4e53d11-6356-4515-bfd1-a9d171158ff5",
+      "name": "ens5",
+      "type": "",
+      "ofport": 5,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "37736ff2-bf3c-4604-ac68-e27575f4a715",
+      "name": "ens10",
+      "type": "",
+      "ofport": 8,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "bf72bb1c-bf10-4365-bc48-e0fcd466d34b",
+      "name": "ens4",
+      "type": "",
+      "ofport": 2,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "8c498356-9643-43b2-aeac-066a1bc4f010",
+      "name": "ens9",
+      "type": "",
+      "ofport": 1,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "f6038e96-7fb4-48d6-810a-81085d532638",
+      "name": "ens7",
+      "type": "",
+      "ofport": 3,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    },
+    {
+      "_uuid": "a577116f-cec2-4c09-a122-57a5ee3cda0d",
+      "name": "ens8",
+      "type": "",
+      "ofport": 6,
+      "error": [],
+      "admin_state": "up",
+      "link_state": "up"
+    }
+  ],
+  "mirrors": [
+    {
+      "_uuid": "9550b37b-ad1c-470f-9526-aa8c472b0603",
+      "name": "span-suricata",
+      "select_all": false,
+      "select_src_port": [
+        "8a71920d-676f-4d01-8451-f2ea00bc93c4",
+        "90ec285e-e44b-45b4-ba77-5ccd6a1fbf57",
+        "941fbc03-4b59-43e2-954d-46f2475a0a84",
+        "d4e7ac82-cc64-4ffe-8079-3d84d66e3d31",
+        "d8245d47-775e-4e07-b56e-59418c6d2c3d",
+        "d890b5fd-362c-47ae-b571-bb89b11f4e4d",
+        "de198363-80be-4aa7-a530-17d1c7764d12"
+      ],
+      "select_dst_port": [],
+      "select_vlan": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "output_port": "4a14c6ca-df39-4da6-9f6d-bca72f947e72",
+      "output_vlan": []
+    }
+  ],
+  "show": "020cf56d-a904-4ee4-a1be-f5090b62b556\n    Bridge br-core-l2\n        fail_mode: standalone\n        datapath_type: system\n        Port ens10\n            trunks: [30, 40, 50, 60, 99]\n            Interface ens10\n        Port br-core-l2\n            tag: 99\n            Interface br-core-l2\n                type: internal\n        Port ens7\n            tag: 99\n            Interface ens7\n        Port ens6\n            tag: 60\n            Interface ens6\n        Port ens9\n            trunks: [30, 40, 50, 60, 99]\n            Interface ens9\n        Port ens5\n            tag: 50\n            Interface ens5\n        Port ens3\n            tag: 30\n            Interface ens3\n        Port ens4\n            tag: 40\n            Interface ens4\n        Port ens8\n            trunks: [30, 40, 50, 60, 99]\n            Interface ens8\n    ovs_version: \"3.3.9\"\n",
+  "boot_id": "889ac878-8218-4e58-80b5-ae790802380e",
+  "noip_service": "active",
+  "noip_service_enabled": "enabled"
+}

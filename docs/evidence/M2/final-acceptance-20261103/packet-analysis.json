@@ -1,0 +1,170 @@
+{
+  "checked_at": "2026-11-03T17:18:42.384012+07:00",
+  "capture_counts": {
+    "dc30": 16,
+    "client40": 16,
+    "primary_trunk": 32,
+    "span": 32
+  },
+  "routing_pairs": [
+    {
+      "before": {
+        "capture": "primary_trunk",
+        "ordinal": 1,
+        "timestamp_raw_untrusted": "1793707832.506379",
+        "vlan": [
+          40
+        ],
+        "eth_src": "02:54:bc:2f:0c:01",
+        "eth_dst": "50:00:00:01:00:00",
+        "src": "192.168.40.100",
+        "dst": "192.168.30.10",
+        "sport": 55077,
+        "dport": 8000,
+        "ttl": 64,
+        "ip_id": 60023,
+        "seq": 3060261172,
+        "ack": 0,
+        "flags": 2,
+        "payload_bytes": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "payload_text": ""
+      },
+      "after": {
+        "capture": "primary_trunk",
+        "ordinal": 2,
+        "timestamp_raw_untrusted": "1793707832.527277",
+        "vlan": [
+          30
+        ],
+        "eth_src": "50:00:00:01:00:00",
+        "eth_dst": "02:54:bc:2f:0c:00",
+        "src": "192.168.40.100",
+        "dst": "192.168.30.10",
+        "sport": 55077,
+        "dport": 8000,
+        "ttl": 63,
+        "ip_id": 60023,
+        "seq": 3060261172,
+        "ack": 0,
+        "flags": 2,
+        "payload_bytes": 0,
+        "payload_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "payload_text": ""
+      }
+    }
+  ],
+  "positive_http": {
+    "GET_seen_server": 1,
+    "HTTP200_seen_client": 1,
+    "guest_case": {
+      "name": "positive40_to30",
+      "source": "192.168.40.100",
+      "destination": "192.168.30.10",
+      "port": 8000,
+      "expected": "HTTP200",
+      "observed": {
+        "result": "HTTP_RESPONSE",
+        "status": 200,
+        "reason": "OK",
+        "headers": [
+          [
+            "Server",
+            "SimpleHTTP/0.6 Python/3.12.3"
+          ],
+          [
+            "Date",
+            "Tue, 03 Nov 2026 12:10:32 GMT"
+          ],
+          [
+            "Content-type",
+            "text/html"
+          ],
+          [
+            "Content-Length",
+            "164"
+          ],
+          [
+            "Last-Modified",
+            "Mon, 02 Nov 2026 17:12:24 GMT"
+          ]
+        ],
+        "body_bytes": 164,
+        "body_sha256": "3bab0b6226fd128b770bca8e63c8b2abe89b8ee53fc6998557dbf5dffb273426",
+        "body_text": "<!doctype html><html lang=\"vi\"><meta charset=\"utf-8\"><title>SOC Data-Center</title><h1>SOC Data-Center</h1><p>Dich vu Web toi thieu trong mo hinh EVE-NG.</p></html>"
+      },
+      "pass": true
+    }
+  },
+  "negative_wrong_source": {
+    "SYN_ingress40": 6,
+    "egress30": 0,
+    "guest_case": {
+      "name": "negative_wrong_source",
+      "source": "192.168.40.101",
+      "destination": "192.168.30.10",
+      "port": 8000,
+      "expected": "DENY",
+      "observed": {
+        "result": "NO_HTTP_RESPONSE",
+        "error_type": "TimeoutError",
+        "error": "timed out"
+      },
+      "client_result_only": true
+    }
+  },
+  "negative_reverse": {
+    "SYN_ingress30": 6,
+    "egress40": 0,
+    "guest_case": {
+      "name": "negative_reverse_new_flow",
+      "source": "192.168.30.10",
+      "destination": "192.168.40.100",
+      "port": 8001,
+      "expected": "DENY",
+      "local_server_control": {
+        "result": "HTTP_RESPONSE",
+        "status": 200,
+        "reason": "OK",
+        "headers": [
+          [
+            "Server",
+            "SimpleHTTP/0.6 Python/3.12.3"
+          ],
+          [
+            "Date",
+            "Tue, 03 Nov 2026 12:10:40 GMT"
+          ],
+          [
+            "Content-type",
+            "text/html"
+          ],
+          [
+            "Content-Length",
+            "164"
+          ],
+          [
+            "Last-Modified",
+            "Mon, 02 Nov 2026 17:12:24 GMT"
+          ]
+        ],
+        "body_bytes": 164,
+        "body_sha256": "3bab0b6226fd128b770bca8e63c8b2abe89b8ee53fc6998557dbf5dffb273426",
+        "body_text": "<!doctype html><html lang=\"vi\"><meta charset=\"utf-8\"><title>SOC Data-Center</title><h1>SOC Data-Center</h1><p>Dich vu Web toi thieu trong mo hinh EVE-NG.</p></html>"
+      },
+      "observed": {
+        "result": "NO_HTTP_RESPONSE",
+        "error_type": "TimeoutError",
+        "error": "timed out"
+      },
+      "client_result_only": true
+    }
+  },
+  "span_marker_packets": 2,
+  "access_client_untagged": true,
+  "access_server_untagged": true,
+  "Inter_VLAN_PASS": true,
+  "ACL_negative_PASS": true,
+  "SPAN_PASS": true,
+  "access_trunk_live_PASS": true
+}

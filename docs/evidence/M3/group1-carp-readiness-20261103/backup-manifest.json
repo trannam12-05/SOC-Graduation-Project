@@ -1,0 +1,28 @@
+{
+  "collected_at": "2026-11-03T17:58:40.488965+07:00",
+  "scope": "New full backups, protected locally; public metadata only",
+  "encryption": "RSA-OAEP-SHA256 + AES-256-CBC/PBKDF2; decrypted XML SHA256 verified",
+  "backups": [
+    {
+      "role": "Primary",
+      "local": "docs/evidence/M3/group1-carp-readiness-20261103/private-backups/Primary-config.xml",
+      "guest": "/root/soc-m3-group1-primary-20261103/config.xml",
+      "bytes": 48839,
+      "sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+      "git_ignored": true,
+      "config_unchanged": true
+    },
+    {
+      "role": "Secondary",
+      "local": "docs/evidence/M3/group1-carp-readiness-20261103/private-backups/Secondary-config.xml",
+      "guest": "/root/soc-m3-group1-secondary-20261103/config.xml",
+      "bytes": 45360,
+      "sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+      "git_ignored": true,
+      "config_unchanged": true
+    }
+  ],
+  "Primary_matches_M2_baseline": true,
+  "both_versions": "OPNsense 26.7 (amd64)",
+  "actual_CARP_VIP_count": 0
+}

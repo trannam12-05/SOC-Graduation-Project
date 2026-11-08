@@ -1,0 +1,1 @@
+sudo -n ovs-vsctl --format=table --columns=name,vlan_mode,tag,trunks list Port

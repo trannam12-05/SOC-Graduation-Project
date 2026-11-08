@@ -1,0 +1,1 @@
+ls -ld /root/soc-group2a-20261102-215617; ls -l /root/soc-group2a-20261102-215617/config.xml; sha256 -q /root/soc-group2a-20261102-215617/config.xml

@@ -1,0 +1,1 @@
+opnsense-version; df -h; sysctl hw.physmem

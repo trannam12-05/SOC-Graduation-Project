@@ -1,0 +1,20 @@
+{
+  "checks": {
+    "wazuh_management": true,
+    "capture_separate": true,
+    "primary_trunk": true,
+    "secondary_trunk": true,
+    "sync": true,
+    "ten_nodes": true,
+    "eleven_segments": true,
+    "access_Data-Center": true,
+    "access_Employee": true,
+    "access_Guest": true,
+    "access_DMZ": true,
+    "access_Management": true
+  },
+  "all_passed": true,
+  "sha256": "94e4c6380f776ca9b154c5c068a3b2ee20f1f90c03005e9790e94543300e7a6f",
+  "scope": "XML structure only; no guest IP or live log acceptance",
+  "collector_time": "2026-11-05T09:16:43.257983+07:00"
+}

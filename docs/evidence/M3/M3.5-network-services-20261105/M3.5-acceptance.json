@@ -1,0 +1,30 @@
+{
+  "stage": "M3.5 network services steps 1-5",
+  "collected_at": "2026-11-05T14:41:58.694546+07:00",
+  "timezone": "UTC+07:00 Asia/Saigon",
+  "status": "DONE/PASS",
+  "checks": {
+    "backup_and_baseline": "PASS",
+    "dhcp_vlan40_employee": "PASS: 192.168.40.110/24, gateway/DNS 192.168.40.1",
+    "dhcp_vlan50_guest": "PASS: 192.168.50.110/24, gateway/DNS 192.168.50.1",
+    "management_static": "PASS: 192.168.99.100/24, gateway 192.168.99.1",
+    "firewall_matrix": "PASS: 8 scoped rules loaded",
+    "carp_gateway": "PASS: Employee, Guest, Management 3/3 replies each",
+    "dns": "PASS: Employee and Guest resolved opnsense.internal",
+    "employee_to_dc_tcp8000": "PASS: 3/3 connections",
+    "guest_to_dc_tcp8000": "PASS: 3/3 timeouts (expected deny)"
+  },
+  "configuration": {
+    "kea_primary": "enabled on LAN, opt2 and opt3",
+    "employee_pool": "192.168.40.110-192.168.40.199",
+    "guest_pool": "192.168.50.110-192.168.50.199",
+    "lan_ipv4_pool_preserved_by_migration": "192.168.1.100-192.168.1.199",
+    "dnsmasq": "DNS remains on 53053; legacy LAN IPv4 DHCP range migrated to Kea",
+    "primary_config_sha256_final": "245c699daa64ec33beda11a451eec1dffd5b19dc197dfa39e00f0dfe59f16cba"
+  },
+  "limitations": [
+    "No Internet/NAT acceptance because WAN remains an isolated internal-lab segment.",
+    "DHCP HA/XMLRPC and firewall failover are outside steps 1-5 and were not tested here.",
+    "VPCS has no QEMU framebuffer in the available capture tool; raw console logs are retained instead of claiming screenshots."
+  ]
+}

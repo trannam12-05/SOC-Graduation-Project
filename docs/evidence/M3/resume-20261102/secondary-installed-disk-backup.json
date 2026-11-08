@@ -1,0 +1,34 @@
+{
+  "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/2/virtioa.qcow2",
+  "backup": "/root/soc-secondary-installed-backup-20261102-resume/virtioa.qcow2",
+  "bytes": 2491613184,
+  "sha256_source_and_backup": "506422162ca81de0ca16f481ae262a6150eedbc322c9681c3f5b220fcb46c5da",
+  "secondary_stopped_at_backup": true,
+  "image_info": {
+    "virtual-size": 17179869184,
+    "filename": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/2/virtioa.qcow2",
+    "cluster-size": 65536,
+    "format": "qcow2",
+    "actual-size": 2491555840,
+    "format-specific": {
+      "type": "qcow2",
+      "data": {
+        "compat": "1.1",
+        "lazy-refcounts": false,
+        "refcount-bits": 16,
+        "corrupt": false
+      }
+    },
+    "full-backing-filename": "/opt/unetlab/addons/qemu/opnsense-26.7-soc/virtioa.qcow2",
+    "backing-filename": "/opt/unetlab/addons/qemu/opnsense-26.7-soc/virtioa.qcow2",
+    "dirty-flag": false
+  },
+  "boot": {
+    "before": "-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=dc -serial mon:stdio",
+    "after": "-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio"
+  },
+  "other_nodes_and_links_unchanged": true,
+  "ISO": "Preserved unchanged; boot order selects disk only",
+  "start_requested": true,
+  "collector_time": "2026-11-02T16:09:51.526087+07:00"
+}

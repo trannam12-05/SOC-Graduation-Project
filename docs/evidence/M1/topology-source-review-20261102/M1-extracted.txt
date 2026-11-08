@@ -1,0 +1,419 @@
+[TÊN BỘ / TRƯỜNG ĐẠI HỌC]
+[KHOA / VIỆN / BỘ MÔN]
+
+ĐỒ ÁN TỐT NGHIỆP ĐẠI HỌC
+
+THIẾT KẾ HỆ THỐNG MẠNG CHO TRUNG TÂM GIÁM SÁT AN NINH MẠNG (SOC)
+THEO KIẾN TRÚC CORE LAYER 2 VÀ TƯỜNG LỬA OPNsense HA
+
+BÁO CÁO GIAI ĐOẠN M1 – THIẾT KẾ
+
+Sinh viên thực hiện: [Họ và tên Nam]
+Lớp: [Tên lớp]
+Mã số sinh viên: [MSSV]
+Giảng viên hướng dẫn: [Họ và tên GVHD]
+
+[ĐỊA ĐIỂM], 2026
+
+[TRƯỜNG ĐẠI HỌC / KHOA]
+
+TRANG BÌA PHỤ
+
+BÁO CÁO GIAI ĐOẠN M1
+Thiết kế mạng SOC sử dụng Core Layer 2 và OPNsense HA
+
+Người thực hiện: [Họ và tên Nam]
+Tên đề tài chính thức: [Điền tên đề tài đã được phê duyệt]
+Chuyên ngành: [Điền chuyên ngành]
+Đơn vị thực hiện: [Điền đơn vị]
+Giảng viên hướng dẫn: [Điền thông tin]
+
+PHÊ DUYỆT VÀ GIAO NHIỆM VỤ ĐỀ TÀI
+Tên đề tài: [Điền tên đề tài chính thức].
+Sinh viên thực hiện: [Họ và tên Nam]; MSSV: [MSSV]; Lớp: [Tên lớp].
+Nội dung được giao trong giai đoạn M1: thiết kế topology EVE-NG, quy hoạch VLAN, địa chỉ IP, subnet và gateway; đề xuất mô hình Core Layer 2 kết hợp OPNsense High Availability (HA).
+Yêu cầu đầu ra: sơ đồ kiến trúc logic, danh sách VLAN và bảng cấp phát địa chỉ, sơ đồ kết nối cổng dự kiến, nguyên tắc định tuyến/chính sách phân vùng và tiêu chí nghiệm thu M1.
+
+GIẢNG VIÊN HƯỚNG DẪN
+NGƯỜI GIAO NHIỆM VỤ / KHOA
+(Ký, ghi rõ họ tên)
+(Ký, ghi rõ họ tên)
+
+Lưu ý: Trang này là mẫu chờ điền thông tin và chữ ký phê duyệt thực tế.
+
+LỜI CẢM ƠN
+Em xin chân thành cảm ơn quý thầy cô và giảng viên hướng dẫn đã định hướng kiến thức, phương pháp nghiên cứu cũng như hỗ trợ quá trình xây dựng đề tài. Em cũng cảm ơn các thành viên trong nhóm đã phối hợp xác định yêu cầu tích hợp giữa hạ tầng mạng, hệ thống giám sát an ninh và cơ chế phản ứng tự động.
+Báo cáo này tập trung vào kết quả thiết kế giai đoạn M1. Những cấu hình và kết quả kiểm thử thực tế của các giai đoạn tiếp theo sẽ được cập nhật sau khi triển khai trên EVE-NG.
+[Địa điểm], ngày ... tháng ... năm 2026
+Sinh viên thực hiện
+[Họ và tên Nam]
+
+MỤC LỤC
+Các mục trong bản M1 (số trang có thể cập nhật bằng tính năng mục lục tự động của Word sau khi hoàn thiện thông tin bìa):
+• LỜI CẢM ƠN
+• DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT
+• DANH MỤC CÁC BẢNG
+• DANH MỤC CÁC HÌNH VẼ
+• MỞ ĐẦU
+• CHƯƠNG 1. TỔNG QUAN VÀ YÊU CẦU THIẾT KẾ
+• CHƯƠNG 2. THIẾT KẾ KIẾN TRÚC MẠNG SOC
+• CHƯƠNG 3. QUY HOẠCH VLAN VÀ ĐỊA CHỈ IP
+• CHƯƠNG 4. KẾ HOẠCH TRIỂN KHAI VÀ NGHIỆM THU M1
+• KẾT LUẬN VÀ KIẾN NGHỊ
+• TÀI LIỆU THAM KHẢO
+• PHỤ LỤC
+
+DANH MỤC CÁC KÝ HIỆU VÀ CHỮ VIẾT TẮT
+Viết tắt
+Tên đầy đủ
+Giải nghĩa
+ACL
+Access Control List
+Danh sách quy tắc cho phép hoặc từ chối một số loại lưu lượng; giống danh sách khách được phép đi qua cổng.
+API
+Application Programming Interface
+Giao diện để các phần mềm trao đổi yêu cầu; trong đề tài, hệ thống tự động gửi yêu cầu chặn IP đến OPNsense.
+CARP
+Common Address Redundancy Protocol
+Giao thức cho hai firewall cùng cung cấp một địa chỉ IP ảo; khi máy chính lỗi, máy dự phòng có thể tiếp quản.
+DHCP
+Dynamic Host Configuration Protocol
+Dịch vụ tự động cấp địa chỉ IP, gateway và DNS cho máy tính khi kết nối mạng.
+DMZ
+Demilitarized Zone
+Vùng mạng tách riêng để đặt dịch vụ có thể truy cập từ bên ngoài, ví dụ máy chủ web; hạn chế ảnh hưởng tới mạng nội bộ.
+DNS
+Domain Name System
+Dịch vụ chuyển tên miền dễ nhớ (ví dụ example.com) thành địa chỉ IP mà thiết bị mạng sử dụng.
+EVE-NG
+Emulated Virtual Environment – Next Generation
+Phần mềm mô phỏng mạng, cho phép tạo switch, router, firewall và máy ảo để thử nghiệm trước khi triển khai thật.
+Firewall
+Network Firewall
+Tường lửa: kiểm tra kết nối vào/ra và áp dụng quy tắc cho phép hoặc chặn truy cập.
+Gateway
+Default Gateway
+Địa chỉ thiết bị mà máy tính gửi dữ liệu tới khi cần giao tiếp với một mạng khác.
+HA
+High Availability
+Tính sẵn sàng cao: có thiết bị dự phòng để dịch vụ vẫn hoạt động khi thiết bị chính gặp sự cố.
+IP
+Internet Protocol Address
+Địa chỉ định danh thiết bị trong mạng; ví dụ 192.168.40.100.
+ISP
+Internet Service Provider
+Nhà cung cấp dịch vụ Internet; cung cấp đường truyền từ hệ thống ra mạng ngoài.
+L2
+Layer 2
+Tầng liên kết dữ liệu: chuyển frame trong mạng cục bộ dựa trên địa chỉ MAC; Core L2 không định tuyến giữa các VLAN.
+L3
+Layer 3
+Tầng mạng: chuyển gói tin giữa các mạng IP khác nhau; trong thiết kế này OPNsense đảm nhiệm.
+LACP
+Link Aggregation Control Protocol
+Giao thức ghép nhiều đường vật lý phù hợp thành một liên kết logic để tăng dung lượng hoặc dự phòng.
+MAC
+Media Access Control Address
+Địa chỉ phần cứng của giao diện mạng, thường dùng để switch xác định đích của frame trong LAN.
+NAT
+Network Address Translation
+Cơ chế chuyển đổi địa chỉ IP khi gói tin đi qua firewall/router; thường dùng để nhiều máy nội bộ truy cập Internet.
+NIDS
+Network Intrusion Detection System
+Hệ thống phát hiện xâm nhập bằng cách quan sát lưu lượng và tạo cảnh báo khi thấy dấu hiệu đáng ngờ.
+OPNsense
+Open-source firewall platform
+Hệ điều hành tường lửa mã nguồn mở; thực hiện gateway, định tuyến giữa VLAN, lọc truy cập và dự phòng HA.
+pfsync
+Packet Filter State Synchronization
+Cơ chế đồng bộ trạng thái các kết nối qua hai firewall để hỗ trợ chuyển đổi khi có sự cố.
+SIEM
+Security Information and Event Management
+Nền tảng thu thập và phân tích nhật ký, sự kiện bảo mật từ nhiều nguồn; trong đề tài sử dụng Wazuh.
+SOC
+Security Operations Center
+Trung tâm giám sát và xử lý sự kiện an ninh mạng, nơi tập trung cảnh báo từ máy chủ, mạng và các công cụ bảo mật.
+SPAN
+Switched Port Analyzer
+Tính năng sao chép lưu lượng của một hoặc nhiều cổng switch sang cổng giám sát, giúp Suricata quan sát dữ liệu.
+Subnet
+IP Subnetwork
+Mạng con: nhóm địa chỉ IP thuộc cùng một dải; ví dụ 192.168.40.0/24 chứa các địa chỉ trong mạng Employee.
+Trunk
+802.1Q trunk port
+Cổng kết nối mang lưu lượng của nhiều VLAN qua cùng một đường dây, sử dụng nhãn VLAN để phân biệt.
+VLAN
+Virtual Local Area Network
+Mạng LAN ảo: tách các nhóm máy thành những vùng mạng logic khác nhau dù dùng chung switch.
+VIP
+Virtual IP Address
+Địa chỉ IP ảo dùng chung cho cặp firewall HA; máy trạm dùng VIP làm gateway thay vì IP riêng của từng firewall.
+WAN
+Wide Area Network
+Mạng diện rộng, thường là đường kết nối từ hệ thống nội bộ đến nhà cung cấp Internet.
+XMLRPC
+XML Remote Procedure Call
+Cơ chế trao đổi lời gọi giữa các hệ thống qua dữ liệu XML; được OPNsense dùng để hỗ trợ đồng bộ cấu hình HA.
+
+
+DANH MỤC CÁC BẢNG
+Bảng 1.1. Yêu cầu kỹ thuật của thiết kế M1
+Bảng 2.1. Vai trò các thành phần mạng
+Bảng 3.1. Phân bổ VLAN, subnet và gateway
+Bảng 3.2. Kế hoạch địa chỉ thiết bị và CARP
+Bảng 3.3. Ánh xạ kết nối cổng dự kiến
+Bảng 4.1. Ma trận luồng truy cập tham chiếu
+Bảng 4.2. Checklist nghiệm thu thiết kế M1
+
+DANH MỤC CÁC HÌNH VẼ
+Hình 2.1. Topology logic SOC sử dụng Core L2 và OPNsense HA.
+
+MỞ ĐẦU
+1. Lý do chọn đề tài
+Một hệ thống Security Operations Center (SOC) cần mạng nền ổn định, có khả năng phân đoạn các khu vực người dùng, máy chủ và dịch vụ công khai, đồng thời cung cấp dữ liệu lưu lượng phục vụ phát hiện bất thường. Kiến trúc sử dụng Core Layer 2 (L2) và OPNsense cho phép tập trung chức năng định tuyến, kiểm soát truy cập và ghi nhận sự kiện tại lớp tường lửa, thuận lợi cho tích hợp giám sát và tự động hóa phản ứng.
+2. Mục tiêu và phạm vi
+Mục tiêu của M1 là thiết kế cấu trúc mạng logic trên EVE-NG, quy hoạch VLAN và địa chỉ IP, xác định luồng dữ liệu giữa các phân vùng, đề xuất OPNsense HA và vị trí giám sát Suricata. Báo cáo chưa khẳng định các thành phần đã được cấu hình hoặc kiểm thử thành công; đây là tài liệu đầu vào cho các giai đoạn triển khai và tích hợp.
+3. Phương pháp thực hiện
+Phương pháp gồm phân tích đầu việc đã phân công trong nhóm, phân tách yêu cầu mạng theo vùng bảo mật, xây dựng topology logic, thiết lập bảng địa chỉ và đối chiếu các luồng tích hợp với Wazuh, Suricata và automation. Những giá trị chưa được thống nhất được ghi rõ là đề xuất thiết kế.
+4. Kết cấu báo cáo
+Ngoài phần mở đầu, tài liệu gồm bốn chương: tổng quan yêu cầu; kiến trúc topology; quy hoạch VLAN/IP; kế hoạch nghiệm thu M1, tiếp theo là kết luận, tài liệu tham khảo và phụ lục.
+
+CHƯƠNG 1. TỔNG QUAN VÀ YÊU CẦU THIẾT KẾ
+1.1. Bối cảnh hệ thống SOC
+Phần Network & OPNsense trong dự án đảm nhiệm nền tảng kết nối cho các máy chủ, người dùng, mạng khách, vùng dịch vụ công khai và quản trị. Các thành phần SIEM/NIDS và automation sử dụng dữ liệu từ mạng để phát hiện, đánh giá và xử lý các sự kiện bảo mật. Vì vậy, quy hoạch mạng phải đảm bảo khả năng liên thông có kiểm soát và thu thập lưu lượng phù hợp.
+Giải thích dễ hiểu: SOC (Security Operations Center) là trung tâm giám sát an ninh mạng: nơi tiếp nhận log và cảnh báo để phát hiện sự cố. Log là bản ghi hoạt động của hệ thống, ví dụ thời điểm đăng nhập hoặc một kết nối bị từ chối.
+1.2. Thay đổi từ Core L3 sang Core L2
+Thiết kế ban đầu phân bổ nhiệm vụ định tuyến liên VLAN và ACL tại Core Layer 3. Trong phương án được chọn ở báo cáo này, Core chỉ thực hiện switching Layer 2, VLAN 802.1Q, trunk/access và SPAN; còn OPNsense chịu trách nhiệm default gateway, inter-VLAN routing, firewall rules và NAT. Điều này giúp tập trung chính sách phân vùng và tạo điểm tích hợp API block IP.
+Giải thích dễ hiểu: Để dễ hình dung, Core L2 giống bộ phận phân luồng xe trong từng khu vực, còn OPNsense giống trạm kiểm soát khi xe cần đi từ khu vực này sang khu vực khác. L2 chuyển dữ liệu trong cùng mạng ảo; L3 quyết định đường đi giữa các mạng IP.
+1.3. Yêu cầu kỹ thuật
+Bảng 1.1. Yêu cầu kỹ thuật của thiết kế M1
+Nhóm
+Yêu cầu thiết kế
+Phân vùng mạng
+Có VLAN 30, 40, 50, 99 và DMZ; cô lập broadcast domain.
+Kết nối
+Trunk IEEE 802.1Q giữa Core L2 và firewall; access port tới thiết bị đầu cuối.
+Định tuyến & chính sách
+Gateway các VLAN và firewall rules được triển khai tại OPNsense.
+Độ sẵn sàng
+Có phương án hai firewall và cơ chế CARP/pfsync/XMLRPC.
+Giám sát
+Bố trí điểm mirror/SPAN để Suricata nhận bản sao lưu lượng.
+Tích hợp
+Có đường truyền log cho Wazuh và API phục vụ automation block IP.
+
+1.4. Ranh giới của giai đoạn M1
+M1 chỉ bao gồm thiết kế và tài liệu hóa. Cài đặt OPNsense, cấu hình switch, CARP, SPAN, DHCP, NAT và API thuộc các giai đoạn M2–M5; chúng được mô tả ở M1 ở mức định hướng kỹ thuật, không coi là kết quả đã thực hiện.
+
+1.5. Giải thích các khái niệm nền tảng
+Mạng máy tính là tập hợp các thiết bị có thể trao đổi dữ liệu với nhau. Trong mô hình này, máy tính, máy chủ và firewall là các “thiết bị đầu cuối hoặc thiết bị mạng”, còn switch là thiết bị dùng để kết nối nhiều máy trong cùng hạ tầng.
+VLAN là cách chia một switch vật lý thành nhiều vùng mạng logic. Ví dụ, VLAN 40 dành cho nhân viên và VLAN 50 dành cho khách: dù kết nối đến cùng Core L2, các máy thuộc hai VLAN sẽ không giao tiếp trực tiếp ở tầng 2.
+Cổng access là cổng thường gắn một máy tính hoặc máy chủ và thuộc một VLAN cụ thể. Cổng trunk là cổng có thể mang nhiều VLAN, thường dùng để nối hai switch hoặc nối Core L2 đến OPNsense.
+Địa chỉ IP được dùng để xác định thiết bị trong mạng; subnet cho biết dải địa chỉ thuộc cùng mạng con. Default gateway là “cửa ra” mà thiết bị sử dụng để đến mạng khác, còn firewall kiểm tra xem việc đi qua cửa đó có được phép không.
+Core L2 không tự làm nhiệm vụ inter-VLAN routing (định tuyến giữa những VLAN khác nhau). Trong phương án thiết kế này, OPNsense đóng vai trò gateway và quyết định lưu lượng nào được phép đi giữa các VLAN.
+HA là mô hình dự phòng: hai firewall được cấu hình để khi một thiết bị gặp sự cố, thiết bị còn lại có thể tiếp quản. CARP cung cấp địa chỉ gateway ảo chung; pfsync đồng bộ trạng thái kết nối; XMLRPC hỗ trợ đồng bộ cấu hình. Cần có các kết nối mạng và thử nghiệm phù hợp để HA hoạt động thực tế.
+Suricata là công cụ phát hiện dấu hiệu xâm nhập trên lưu lượng mạng, còn Wazuh dùng để thu thập và phân tích các sự kiện bảo mật. SPAN là cách switch sao chép dữ liệu cần quan sát cho Suricata mà không thay đổi đường truyền gốc.
+Ví dụ luồng hoạt động: PC nhân viên gửi yêu cầu truy cập máy chủ; Core L2 chuyển frame đến OPNsense khi đích thuộc VLAN khác; OPNsense kiểm tra firewall rule rồi định tuyến hoặc chặn; Suricata có thể nhận bản sao lưu lượng qua SPAN để phân tích và chuyển cảnh báo đến hệ thống SOC.
+CHƯƠNG 2. THIẾT KẾ KIẾN TRÚC MẠNG SOC
+2.1. Nguyên tắc kiến trúc
+Kiến trúc được tổ chức theo mô hình firewall-on-a-stick: mỗi VLAN được đưa lên OPNsense qua trunk 802.1Q, tạo interface VLAN tương ứng trên firewall. Thiết bị Core L2 không được cấu hình làm gateway cho người dùng; chỉ có một địa chỉ IP quản trị trong VLAN 99.
+Giải thích dễ hiểu: Khái niệm “firewall-on-a-stick” có nghĩa là nhiều VLAN cùng đi qua một đường trunk từ switch đến tường lửa. Tường lửa tạo giao diện logic cho từng VLAN, làm gateway và áp dụng chính sách cho traffic đi giữa chúng. “Traffic” là lưu lượng dữ liệu truyền qua mạng.
+2.2. Sơ đồ topology logic
+
+Hình 2.1. Topology logic SOC sử dụng Core L2 và OPNsense HA.
+Đường WAN từ các ISP phải được cung cấp tới cả hai firewall khi yêu cầu cả Primary và Secondary có thể sử dụng đường đó sau failover. Kết nối pfsync/XMLRPC được đặt trên mạng đồng bộ tách biệt; các trunk LAN của hai firewall cùng kết nối tới miền L2 chứa các VLAN cần CARP. Hình biểu diễn logic, không thể hiện đầy đủ số lượng node và cổng vật lý.
+2.3. Vai trò các thành phần
+Bảng 2.1. Vai trò các thành phần mạng
+Thành phần
+Vai trò
+Core L2
+VLAN, access/trunk, chuyển frame, SPAN; không chạy inter-VLAN routing.
+OPNsense Primary
+Xử lý traffic khi hoạt động Master; định tuyến, firewall, NAT và gateway VIP.
+OPNsense Secondary
+Dự phòng và tiếp quản dịch vụ khi cơ chế HA chuyển trạng thái.
+Suricata NIDS
+Nhận bản sao lưu lượng từ SPAN để phân tích.
+Wazuh / SIEM
+Thu nhận log và cảnh báo từ hệ thống giám sát/agent.
+Automation
+Xử lý cảnh báo và gọi API firewall để block/unblock theo chính sách.
+
+2.4. Vấn đề cần lưu ý về độ dự phòng
+Hai firewall HA không đồng nghĩa với toàn mạng đã loại bỏ điểm lỗi đơn. Nếu chỉ có một Core L2, switch này vẫn là single point of failure. Phạm vi M1 đề xuất một Core L2 để phù hợp lab EVE-NG; khả năng dự phòng Core thứ hai là phương án mở rộng và phải thiết kế STP/LACP phù hợp nếu triển khai.
+
+CHƯƠNG 3. QUY HOẠCH VLAN VÀ ĐỊA CHỈ IP
+3.1. Phương án chia vùng mạng
+Giữ nguyên các nhóm VLAN trong bảng công việc: VLAN 30 (Data Center), VLAN 40 (Employee), VLAN 50 (Guest), VLAN 99 (Management); vùng DMZ được đề xuất gắn VLAN 60 để cấu hình thống nhất trên trunk. Các subnet dưới đây là ví dụ dành cho lab, cần đối chiếu với quy hoạch chính thức của nhóm trước khi cấu hình.
+Giải thích dễ hiểu: Ví dụ: máy nhân viên ở VLAN 40 muốn truy cập máy chủ ở VLAN 30 sẽ phải gửi dữ liệu đến gateway là OPNsense; hai VLAN không tự thông nhau chỉ vì cắm chung một switch. Ký hiệu /24 trong địa chỉ 192.168.40.0/24 chỉ độ dài phần mạng, tương ứng subnet mask 255.255.255.0.
+Bảng 3.1. Phân bổ VLAN, subnet và gateway
+VLAN
+Tên / mục đích
+Subnet
+Gateway (CARP VIP)
+30
+Data Center
+192.168.30.0/24
+192.168.30.1
+40
+Employee
+192.168.40.0/24
+192.168.40.1
+50
+Guest
+192.168.50.0/24
+192.168.50.1
+60
+DMZ (đề xuất)
+192.168.60.0/24
+192.168.60.1
+99
+Management
+192.168.99.0/24
+192.168.99.1
+
+3.2. Quy hoạch IP cho OPNsense HA và thiết bị
+Với mỗi VLAN, .1 được dành cho địa chỉ CARP VIP dùng làm gateway sau khi bật HA; Primary dùng .2 và Secondary dùng .3. Không đồng thời gán .1 làm IP thật của firewall khi khai báo CARP. Nếu giai đoạn thử một firewall sử dụng .1 tạm thời thì cần đổi lại khi chuyển sang HA.
+Bảng 3.2. Kế hoạch địa chỉ thiết bị và CARP
+VLAN
+CARP VIP
+Primary
+Secondary
+Thiết bị ví dụ
+30
+192.168.30.1
+192.168.30.2
+192.168.30.3
+Server .10–.30
+40
+192.168.40.1
+192.168.40.2
+192.168.40.3
+PC .100–.199
+50
+192.168.50.1
+192.168.50.2
+192.168.50.3
+Guest .100–.199
+60
+192.168.60.1
+192.168.60.2
+192.168.60.3
+Web .10, DNS .30
+99
+192.168.99.1
+192.168.99.2
+192.168.99.3
+Core .10, PC .100
+
+3.3. Bảng kết nối dự kiến trong EVE-NG
+Tên interface bên dưới là ví dụ cho Cisco IOSvL2; phải xác nhận lại theo node/image thực tế. Các cổng trunk tới hai OPNsense đều cho phép các VLAN tương ứng.
+Bảng 3.3. Ánh xạ kết nối cổng dự kiến
+Cổng Core L2
+Thiết bị / vùng
+Chế độ
+Gi0/0
+OPNsense Primary LAN
+Trunk: 30,40,50,60,99
+Gi0/1
+OPNsense Secondary LAN
+Trunk: 30,40,50,60,99
+Gi0/2
+Access VLAN 30 / Data Center
+Access 30
+Gi0/3
+Access VLAN 40 / Employee
+Access 40
+Gi1/0
+Access VLAN 50 / Guest
+Access 50
+Gi1/1
+Access VLAN 99 / Management
+Access 99
+Gi1/2
+Suricata capture interface
+SPAN destination
+
+3.4. Nguyên tắc dịch vụ mạng
+DHCP được cấu hình tại OPNsense cho VLAN người dùng nếu cần. Địa chỉ máy chủ quan trọng được đặt tĩnh hoặc DHCP reservation. NAT ra Internet thực hiện trên OPNsense, riêng lưu lượng giữa các mạng nội bộ đi qua firewall rules và inter-VLAN routing. Các cổng mạng vật lý hoặc phân đoạn WAN/HA-sync được quy hoạch riêng, không nhập chung tùy tiện vào VLAN người dùng.
+
+CHƯƠNG 4. KẾ HOẠCH TRIỂN KHAI VÀ NGHIỆM THU M1
+4.1. Ma trận truy cập tham chiếu
+Các quy tắc dưới đây là chính sách đề xuất tối thiểu, không phải cấu hình đã áp dụng. Hướng lưu lượng và thứ tự rule cần được kiểm thử trên OPNsense ở M3.
+Bảng 4.1. Ma trận luồng truy cập tham chiếu
+Nguồn
+Đích
+Đề xuất
+Lý do
+Guest
+Data Center / Management
+Chặn
+Giảm truy cập trái phép vào nội bộ
+Guest
+Internet
+Cho phép có giới hạn
+Phục vụ mạng khách
+Employee
+Data Center
+Cho phép theo dịch vụ
+Chỉ truy cập dịch vụ cần thiết
+Management
+Thiết bị hạ tầng
+Cho phép có giới hạn
+Quản trị có kiểm soát
+DMZ
+Mạng nội bộ
+Chặn mặc định
+Hạn chế lan truyền rủi ro
+Server / NIDS
+Wazuh / SIEM
+Cho phép theo cổng cần thiết
+Đảm bảo thu thập log
+
+4.2. Giám sát và tích hợp SOC
+Suricata nhận bản sao traffic từ cổng SPAN trên Core L2; chỉ các frame đi qua nguồn SPAN mới được nhìn thấy. Trong quá trình triển khai phải xác định có cần mirror một hoặc nhiều trunk OPNsense để bao phủ lưu lượng khi HA failover. Wazuh nhận log/event từ các nguồn tương ứng; automation gọi API OPNsense để cập nhật đối tượng block có kiểm soát, tránh chặn nhầm IP quản trị, máy chủ và các địa chỉ quan trọng.
+Giải thích dễ hiểu: SPAN có thể hình dung như một bản sao của camera quan sát: switch vẫn chuyển dữ liệu tới đích như bình thường, đồng thời sao chép dữ liệu từ các cổng được chọn sang máy Suricata. Suricata chỉ phân tích lưu lượng được cấp cho nó, không tự thấy mọi kết nối trong toàn mạng.
+4.3. Tiêu chí nghiệm thu M1
+Bảng 4.2. Checklist nghiệm thu thiết kế M1
+Mã
+Tiêu chí
+Minh chứng
+M1-01
+Topology logic có đầy đủ thành phần lõi và SOC
+Hình 2.1
+M1-02
+VLAN, subnet, gateway nhất quán
+Bảng 3.1–3.2
+M1-03
+Cổng trunk / access và SPAN được dự kiến
+Bảng 3.3
+M1-04
+Inter-VLAN routing đặt trên OPNsense
+Mục 1.2, 2.1
+M1-05
+Phương án OPNsense HA có sync riêng
+Mục 2.2, 2.4
+M1-06
+Các luồng cần kiểm soát được mô tả
+Bảng 4.1
+
+4.4. Đầu vào cho các mốc tiếp theo
+M2: cấu hình Core L2, trunk/access và SPAN. M3: cài đặt OPNsense, interface VLAN, DHCP, firewall rules, NAT và HA. M4: kiểm thử failover, kiểm thử đường truyền giám sát và API block IP. M5: tích hợp với Wazuh/Suricata, pipeline và automation để kiểm thử đầu cuối theo phạm vi được phê duyệt.
+
+KẾT LUẬN VÀ KIẾN NGHỊ
+Báo cáo M1 đã xác lập kiến trúc đề xuất cho hạ tầng SOC theo hướng Core Layer 2 kết hợp OPNsense HA. Thiết kế tập trung chức năng định tuyến giữa các VLAN và chính sách tường lửa tại OPNsense; Core L2 phụ trách switching và hỗ trợ bản sao lưu lượng cho Suricata. Các phân vùng Data Center, Employee, Guest, DMZ và Management được mô tả bằng bảng subnet, gateway, kế hoạch IP và kết nối cổng tham chiếu.
+Trước M2, nhóm cần xác nhận phiên bản image Cisco IOSvL2 và OPNsense, tài nguyên EVE-NG, cấu trúc WAN/HA-sync thực tế, kế hoạch địa chỉ chính thức và cơ chế SPAN khả dụng. Sau đó mới chốt cấu hình mẫu và đánh giá hệ thống bằng kết quả kiểm thử thực tế.
+
+TÀI LIỆU THAM KHẢO
+[1] Bảng phân công công việc dự án SOC của nhóm, mục “NAM – Network & OPNsense”, tài liệu do nhóm cung cấp.
+[2] Tài liệu thiết kế topology EVE-NG của nhóm, đường dẫn được ghi trong bảng phân công (cần kiểm tra và bổ sung thông tin trích dẫn sau khi đối chiếu bản chính).
+[3] Tài liệu kỹ thuật OPNsense (VLAN, CARP, pfsync, XMLRPC) – cần bổ sung phiên bản tài liệu chính thức khi hoàn thiện đồ án.
+[4] Tài liệu Cisco IOS về VLAN, 802.1Q trunk và SPAN – cần bổ sung tên tài liệu, năm xuất bản và phiên bản phù hợp image sử dụng.
+
+PHỤ LỤC A. THÔNG TIN CẦN XÁC NHẬN
+A.1. Tên trường, khoa, lớp, MSSV, giảng viên hướng dẫn và đề tài chính thức.
+A.2. Danh sách node thực tế trên EVE-NG; tên các NIC/interface và image phiên bản.
+A.3. Bảng IP thống nhất toàn nhóm (đặc biệt Wazuh, Suricata, automation và server).
+A.4. Các mạng WAN transit, HA sync, địa chỉ riêng của hai firewall và khả năng CARP trong lab.
+A.5. Phạm vi traffic cần mirror và SPAN thực tế trên switch image.
+A.6. Đánh giá bổ sung rủi ro single point of failure tại Core L2.

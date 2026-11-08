@@ -1,0 +1,147 @@
+{
+  "hostname": "OPNsense.internal",
+  "version": {
+    "rc": 0,
+    "stdout": "OPNsense 26.7 (amd64)\n",
+    "stderr": ""
+  },
+  "config_sha256": "f2e62e02319a00831a72c4c610aa71781656f90130723df34b383e844e65e799",
+  "backup_path": "/root/soc-m35-20261105/config.before.xml",
+  "backup_sha256": "f2e62e02319a00831a72c4c610aa71781656f90130723df34b383e844e65e799",
+  "backup_mode": "0o600",
+  "interfaces": {
+    "wan": {
+      "if": "vtnet1",
+      "descr": null,
+      "ipaddr": "dhcp",
+      "subnet": "",
+      "enable": true
+    },
+    "lan": {
+      "if": "vtnet0",
+      "descr": null,
+      "ipaddr": "192.168.1.1",
+      "subnet": "24",
+      "enable": true
+    },
+    "lo0": {
+      "if": "lo0",
+      "descr": "Loopback",
+      "ipaddr": "127.0.0.1",
+      "subnet": "8",
+      "enable": true
+    },
+    "opt1": {
+      "if": "vtnet0_vlan30",
+      "descr": null,
+      "ipaddr": "192.168.30.2",
+      "subnet": "24",
+      "enable": true
+    },
+    "opt2": {
+      "if": "vtnet0_vlan40",
+      "descr": null,
+      "ipaddr": "192.168.40.2",
+      "subnet": "24",
+      "enable": true
+    },
+    "opt3": {
+      "if": "vtnet0_vlan50",
+      "descr": null,
+      "ipaddr": "192.168.50.2",
+      "subnet": "24",
+      "enable": true
+    },
+    "opt4": {
+      "if": "vtnet0_vlan60",
+      "descr": null,
+      "ipaddr": "192.168.60.2",
+      "subnet": "24",
+      "enable": true
+    },
+    "opt5": {
+      "if": "vtnet0_vlan99",
+      "descr": null,
+      "ipaddr": "192.168.99.2",
+      "subnet": "24",
+      "enable": true
+    },
+    "opt6": {
+      "if": "vtnet2",
+      "descr": null,
+      "ipaddr": "10.255.255.1",
+      "subnet": "30",
+      "enable": true
+    }
+  },
+  "dhcpd": {},
+  "opnsense_models": {
+    "Kea": {
+      "attributes": {},
+      "children": [
+        "ctrl_agent",
+        "ddns",
+        "dhcp4",
+        "dhcp6"
+      ]
+    },
+    "unboundplus": {
+      "attributes": {
+        "version": "1.0.15",
+        "persisted_at": "1793537851.25",
+        "description": "Unbound configuration"
+      },
+      "children": [
+        "general",
+        "advanced",
+        "acls",
+        "dnsbl",
+        "forwarding",
+        "dots",
+        "hosts",
+        "aliases"
+      ]
+    }
+  },
+  "rules": [],
+  "ifconfig_carp": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "ifconfig_pfsync": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "processes": {
+    "rc": 0,
+    "stdout": "439   0.0  0.8  29588 15864  -  Is   09:32    0:00.76 /usr/local/bin/python3 /usr/local/opnsense/service/configd.py (python3.13)\nroot      441   0.0  2.1  84128 42192  -  I    09:32    0:08.97 /usr/local/bin/python3 /usr/local/opnsense/service/configd.py console (python3.13)\nroot      763   0.0  0.2  15700  4200  -  Ss   09:32    0:00.08 /sbin/devd\nroot     2014   0.0  0.7  28844 15012  -  S    09:33    0:00.44 /usr/local/bin/python3 /usr/local/sbin/configctl -e -t 0.5 system event config_changed (python3.13)\nroot     2193   0.0  0.7  28856 15164  -  S    09:33    0:00.52 /usr/local/bin/python3 /usr/local/opnsense/scripts/syslog/lockout_handler (python3.13)\nroot     6363   0.0  0.1  14208  2704  -  Ss   09:33    0:00.14 /usr/sbin/cron -s\nroot    12616   0.0  0.5  26792 10504  -  I    09:32    0:00.09 /usr/local/sbin/syslog-ng -f /usr/local/etc/syslog-ng.conf -p /var/run/syslog-ng.pid\nroot    12762   0.0  0.7  43688 15244  -  Ss   09:32    0:01.32 /usr/local/sbin/syslog-ng -f /usr/local/etc/syslog-ng.conf -p /var/run/syslog-ng.pid\nroot    26250   0.0  0.1  14596  2900  -  Ss   09:33    0:00.08 /usr/local/sbin/filterlog -i pflog0 -p /var/run/filterlog.pid\nroot    29949   0.0  0.4  25972  8200  -  Ss   09:33    0:00.22 /usr/local/sbin/ntpd -g -c /var/etc/ntpd.conf\nroot    45696   0.0  0.1  14112  2324  -  Ss   09:32    0:00.01 daemon: /sbin/dhclient[46254] (daemon)\n_dhcp   46254   0.0  0.1  14436  2808  -  SC   09:32    0:00.16 dhclient: vtnet1 (dhclient)\nroot    46984   0.0  0.1  14432  2684  -  Ss   09:32    0:00.03 dhclient: system.syslog (dhclient)\nroot    47518   0.0  0.1  14280  2604  -  ICs  09:32    0:00.01 /usr/sbin/rtsold -d -aiu -p /var/run/rtsold.pid -A /usr/local/opnsense/scripts/interfaces/rtsold_script.sh -R /usr/local/opnsense/scripts/interfaces/rtsold_resolvconf.sh\nroot    47902   0.0  0.1  14280  2568  -  Is   09:32    0:00.09 rtsold: rtsold.llflags (rtsold)\nroot    48104   0.0  0.1  14280  2556  -  Is   09:32    0:00.08 rtsold: rtsold.script (rtsold)\nroot    48368   0.0  0.1  14280  2556  -  Is   09:32    0:00.04 rtsold: rtsold.sendmsg (rtsold)\nroot    48489   0.0  0.1  14280  2640  -  Is   09:32    0:00.05 rtsold: system.syslog (rtsold)\nroot    49854   0.0  0.1  14432  2800  -  Ss   09:32    0:00.04 dhclient: vtnet1 [priv] (dhclient)\nroot    83967   0.0  0.5  23472 10072  -  S    09:33    0:00.05 /usr/local/sbin/lighttpd -f /usr/local/etc/lighttpd_webgui/lighttpd.conf\nroot    84090   0.0  1.7 199960 33908  -  Is   09:33    0:00.24 /usr/local/bin/php-cgi\nroot    84525   0.0  1.6 199960 33728  -  Is   09:33    0:00.34 /usr/local/bin/php-cgi\nroot    84714   0.0  1.7 199960 33932  -  Is   09:33    0:00.33 /usr/local/bin/php-cgi\nroot    84827   0.0  1.6 199960 33728  -  Is   09:33    0:00.33 /usr/local/bin/php-cgi\nroot    85390   0.0  1.7 199960 33912  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    85412   0.0  1.7 199960 33912  -  I    09:33    0:00.03 /usr/local/bin/php-cgi\nroot    85755   0.0  1.7 199960 33912  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    85872   0.0  1.7 199960 33912  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86068   0.0  1.7 199960 33912  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86186   0.0  1.6 199960 33732  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86265   0.0  1.6 199960 33732  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86304   0.0  1.6 199960 33732  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86505   0.0  1.6 199960 33732  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86617   0.0  1.6 199960 33732  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    86842   0.0  1.6 199960 33736  -  I    09:33    0:00.04 /usr/local/bin/php-cgi\nroot    87034   0.0  1.7 199960 33932  -  I    09:33    0:00.01 /usr/local/bin/php-cgi\nroot    87248   0.0  1.7 199960 33932  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    87378   0.0  1.7 199960 33932  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    87402   0.0  1.7 199960 33932  -  I    09:33    0:00.03 /usr/local/bin/php-cgi\nroot    87562   0.0  1.6 199960 33736  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    87691   0.0  1.6 199960 33736  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    87808   0.0  1.6 199960 33736  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nroot    88064   0.0  1.7 199960 33932  -  I    09:33    0:00.03 /usr/local/bin/php-cgi\nroot    88289   0.0  1.6 199960 33736  -  I    09:33    0:00.00 /usr/local/bin/php-cgi\nhostd   93107   0.0  0.7  61708 14932  -  I    09:33    0:02.59 /usr/local/bin/hostwatch -c -S -p -P /var/run/hostwatch/hostwatch.pid -d /var/db/hostwatch/hosts.db -u hostd -g hostd\nroot    93562   0.0  0.1  14140  2544  -  Is   09:33    0:00.02 /usr/local/sbin/dhcp6c -d -c /var/etc/dhcp6c.conf -p /var/run/dhcp6c.pid\nnobody  97896   0.0  0.2  18148  4792  -  I    09:33    0:00.05 /usr/local/sbin/dnsmasq -x /var/run/dnsmasq.pid -C /usr/local/etc/dnsmasq.conf\nroot    14381   0.0  1.0  36532 21300 v0  S+   09:39    0:00.22 python3 -c import zlib;exec(zlib.decompress(bytes.fromhex(\"78da8d56c172db380cbdeb2b745a4a33b4aca64dd25546c71cb7db436f1e8f8792289b6b89d492546327d37f5f80a42cc56dd2f5c122f10010001f098a7e50dac603b3874e54d48cd5a055cd8da1ff1825e981192f3f8c567454197aeabb8c5bcd79f6d8f19e4bfb0dc63133f163a44c36f6cc1c935ce5f7f769542bd996c173f615be0959a3ccfd897d06ae48faa0d95389824c73d6ecaab3e52601a952b67ccc5aad7a63b590fb04f4d2a862f5711cae9da2f2daa87ad57fbc5ddde437771f3ee4b7e0da6b67fdb1113ae955c3cb5cdde739e52761ec4e1dcb6f7ae469d470634bafbb2621b68ab74a73176224da1855326706c115510c3f660c87ca3964197a5942a4943ca232c41dfff531bb8dbdf7b8116dcbb58931adb81eb586fac57ec587d8583590887786fb059ce7272d2c0faeb1020f4e5a1f201b28f35d9ea75108246c55660eece6f62ef929ae343bf05323f620c720afd4d1f752018ad2c6969f6c22a16e54b29e87bc4f254ab256c82671e218ea83a25818f8daf88b923cc634dcc8d9686e472de3e494a1cb58e9981067777ac34848cb75cb8088e5cb8f48d812b7d8af49668ca4b837c22e9df82061f3d0b704d00bf0371b6e2010b6df962f44b4a470699e288e534aa070b59e857e0a7231b0a65900610e081c1ac9ed8c8439205cb2aae3a43885d0c33c5d06fc236a0ef5d0609ecd6199a713fb149bc33b29368739452df7e5b49866720f6b5d30e76fcefcffc4460932356406bec31c32b36a298519c8f6ccf227769e0b3109b0aa1259fa9d430137cf9e0598c03326e023605d972cd41c3dbce6f647a4c70ea8b0d946ade85e9101e7a88d55c2f1afeba4711984e795d02349e7ca195d973a38356ad435a00f0d5c0c93100f9490cc0a2517457581656c1838e8bc9071140d2974b6e736f113acd579e053b5c20cf934b171866611e0700f5b55ab6e862f922b96ea054b7de83be0df93d2c7a000b95132896625e42fdcf44ba549e45798f2bd72075579e56ea9f9daa7d37cc327f69da59a9ba38e30484457c650f949f2fadca4115ee99dbb21d42097acf8fbeb17c3a5e19e1700fe9a16f541740d5203346626740a1a122278523298719dcc1b0efe983c27473403ccf971930d3972461cd3a109fe8b233870f01965a546d9906d5af8803717ef780e9985fe568d704793a211b54d3ceac5500f3785460107c79dddf9e03b64bb293ee77042f0bed6a34ceabe09ac1ecab99b6701a2351be02ae63b35da61b4ae0152dc8330123d07a4bcc9d3e5bdfd42744d8a21f3d31a1b0231b6014d94fad166f539cff362eb10ae754060b481968c08c408e91e94b1d836487115dd6686b6ef87998625337c190c09d4082e0c83e7b2f08ed6a3d1eb4ed5ac5b9b4\nroot    16511   0.0  0.2  14744  3120 v0  R+   09:39    0:00.01 /bin/ps auxww\nroot    19537   0.0  0.1  14500  3060 v0  Is   09:33    0:00.04 login [pam] (login)\nroot    35585   0.0  0.1  14672  2820 v0  I    09:33    0:00.01 /bin/sh /usr/local/sbin/opnsense-shell\nroot    19630   0.0  0.1  14132  2408 v1  Is+  09:33    0:00.01 /usr/libexec/getty Pc ttyv1\nroot    19784   0.0  0.1  14132  2408 v2  Is+  09:33    0:00.01 /usr/libexec/getty Pc ttyv2\nroot    20006   0.0  0.1  14132  2412 v3  Is+  09:33    0:00.01 /usr/libexec/getty Pc ttyv3\nroot    20036   0.0  0.1  14132  2408 v4  Is+  09:33    0:00.02 /usr/libexec/getty Pc ttyv4\nroot    20369   0.0  0.1  14132  2408 v5  Is+  09:33    0:00.07 /usr/libexec/getty Pc ttyv5\nroot    20499   0.0  0.1  14132  2408 v6  Is+  09:33    0:00.02 /usr/libexec/getty Pc ttyv6\nroot    20793   0.0  0.1  14132  2408 v7  Is+  09:33    0:00.01 /usr/libexec/getty Pc ttyv7\n",
+    "stderr": ""
+  },
+  "config_root_tags": [
+    "trigger_initial_wizard",
+    "theme",
+    "system",
+    "interfaces",
+    "dnsmasq",
+    "nat",
+    "filter",
+    "ntpd",
+    "OPNsense",
+    "revision",
+    "hasync",
+    "sysctl",
+    "openvpn",
+    "ifgroups",
+    "bridges",
+    "gifs",
+    "gres",
+    "laggs",
+    "virtualip",
+    "vlans",
+    "staticroutes",
+    "cert"
+  ],
+  "collector_time": "2026-11-05T09:41:11.046365+07:00"
+}

@@ -1,0 +1,1 @@
+grep -n 'function interface[s]*_configure' /usr/local/etc/inc/interfaces.inc; tail -35 /usr/local/opnsense/mvc/app/models/OPNsense/Interfaces/Vlan.xml

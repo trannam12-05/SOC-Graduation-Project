@@ -1,0 +1,17 @@
+{
+  "collected_at": "2026-11-03T17:04:55.146952+07:00",
+  "status": "NOT_RUN_BLOCKED",
+  "acceptance_pass": false,
+  "http_request_sent": false,
+  "network_failure_demonstrated": false,
+  "blocking_conditions": [
+    "Core is stopped; current authorization explicitly limits new starts to endpoints",
+    "HTTP client on Employee VPCS not yet confirmed; TCP probe is insufficient",
+    "6144 MiB nominal QEMU combination requires resource review; existing start script group guard is 5120 MiB"
+  ],
+  "nodes_started": [],
+  "rules_changed": 0,
+  "traffic_tests": 0,
+  "runtime_endpoint_addresses_verified": false,
+  "report": "docs/M2/M2-acceptance-group1-20261103.md"
+}

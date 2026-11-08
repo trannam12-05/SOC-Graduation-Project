@@ -1,0 +1,27 @@
+{
+  "recorded_at": "2026-11-03T22:13:03+07:00",
+  "health": {
+    "Primary": "HEALTHY",
+    "Secondary": "HEALTHY"
+  },
+  "health_scope": "OS/root shell and existing VLAN/SYNC/pfsync runtime only; not WAN/CARP/failover acceptance",
+  "persistent_carp": "NOT PRESENT",
+  "runtime_carp": "ABSENT on all five VLANs, both nodes",
+  "pfsync": {
+    "Primary": "READY",
+    "Secondary": "READY"
+  },
+  "persistent_unchanged": true,
+  "unexpected_runtime_interfaces": {
+    "Primary": [],
+    "Secondary": []
+  },
+  "rollback_required": "NO",
+  "rollback_scope": "No persistent delta or residual unexpected interface/VIP observed; not a forensic guarantee of all past temporary actions",
+  "next_action": "MORE EVIDENCE REQUIRED",
+  "next_action_reason": "Core stopped; need approved resource/L2 readiness and address/VHID conflict check before CARP apply",
+  "config_modified": false,
+  "carp_applied": false,
+  "failover_run": false,
+  "guest_reader_exited": true
+}

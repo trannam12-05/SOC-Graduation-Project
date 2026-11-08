@@ -1,0 +1,14 @@
+[
+  {
+    "role": "Primary",
+    "baseline_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+    "VIP_exact_references": [],
+    "nonzero_VHIDs": []
+  },
+  {
+    "role": "Secondary",
+    "baseline_sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+    "VIP_exact_references": [],
+    "nonzero_VHIDs": []
+  }
+]

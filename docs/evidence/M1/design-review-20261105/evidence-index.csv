@@ -1,0 +1,10 @@
+﻿ten_tep,noi_dung,thoi_diem_kem_mui_gio,duong_dan,vi_tri_bao_cao,phan_loai
+validation-topology-built.json,Cấu trúc topology; Wazuh và upstream còn thiếu,2026-11-02T13:08:31.197173+07:00,docs/evidence/M2/topology-first-20261102/validation-topology-built.json,"1.2, 1.5",Nguồn lịch sử; không thu lại runtime
+M2-final-summary-20261103.md,"Core L2, routing, firewall và mirror","2026-11-03; UTC+07:00, xem từng nguồn gốc",docs/M2/M2-final-summary-20261103.md,"1.5, 1.6",Nguồn lịch sử; không thu lại runtime
+M3.3-acceptance.json,CARP failover/recovery,2026-11-04T11:07:14.319327+07:00,docs/evidence/M3/M3.3-failover-20261104/run-105204/M3.3-acceptance.json,1.7,Nguồn lịch sử; không thu lại runtime
+M3.4-acceptance.json,State sync và continuity một session,2026-11-04T17:12:50.875586+07:00,docs/evidence/M3/M3.4B-pfsync-state-20261104/M3.4-acceptance.json,"1.4, 1.7",Nguồn lịch sử; không thu lại runtime
+M5-verification-and-demo-20261102.md,Wazuh replay; chưa live,"2026-11-02; UTC+07:00, xem từng nguồn gốc",docs/M5-verification-and-demo-20261102.md,"1.2, 1.6",Nguồn lịch sử; không thu lại runtime
+M1-design-consolidated-20261105.md,Báo cáo hợp nhất,2026-11-05T09:11:36.571323+07:00,docs/M1/M1-design-consolidated-20261105.md,Chương 1,Tài liệu mới; không phải minh chứng runtime
+M1-design-consolidated-20261105.docx,Word mới,2026-11-05T09:11:36.571323+07:00,docs/M1/M1-design-consolidated-20261105.docx,Chương 1,Tài liệu mới; không phải minh chứng runtime
+M1-internal-lab-20261105.mmd,"Sơ đồ thiết kế, không phải ảnh EVE",2026-11-05T09:11:36.571323+07:00,network/topology/M1-internal-lab-20261105.mmd,Chương 1,Tài liệu mới; không phải minh chứng runtime
+manual-capture.md,Hướng dẫn ảnh chưa thu,2026-11-05T09:11:36.571323+07:00,docs/evidence/M1/design-review-20261105/manual-capture.md,Chương 1,Tài liệu mới; không phải minh chứng runtime

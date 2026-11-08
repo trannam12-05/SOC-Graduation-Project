@@ -1,0 +1,57 @@
+{
+  "role": "primary",
+  "secret_present_root_only_19_bytes": true,
+  "model": "<model>\n    <mount>/virtualip</mount>\n    <version>1.0.1</version>\n    <description>Virtual IP configuration</description>\n    <items>\n        <vip type=\".\\VipField\">\n            <interface type=\".\\VipInterfaceField\">\n                <Required>Y</Required>\n                <AllowDynamic>S</AllowDynamic>\n            </interface>\n            <mode type=\"OptionField\">\n                <Required>Y</Required>\n                <Default>ipalias</Default>\n                <OptionValues>\n                    <ipalias>IP Alias</ipalias>\n                    <carp>CARP</carp>\n                    <proxyarp>Proxy ARP</proxyarp>\n                </OptionValues>\n            </mode>\n            <subnet type=\".\\VipNetworkField\">\n                <!-- required, but validated in model -->\n            </subnet>\n            <subnet_bits type=\".\\VipNetworkField\">\n                <!-- required, but validated in model -->\n            </subnet_bits>\n            <gateway type=\"NetworkField\"/>\n            <noexpand type=\"BooleanField\">\n                <Default>0</Default>\n                <Required>Y</Required>\n            </noexpand>\n            <nobind type=\"BooleanField\">\n                <Default>0</Default>\n                <Required>Y</Required>\n            </nobind>\n            <password type=\"TextField\"/>\n            <vhid type=\"IntegerField\">\n                <MinimumValue>1</MinimumValue>\n                <MaximumValue>255</MaximumValue>\n                <ValidationMessage>Invalid VHID number provided, Acceptable values for vhid are 1 to 255.</ValidationMessage>\n            </vhid>\n            <advbase type=\"IntegerField\">\n                <Required>Y</Required>\n                <Default>1</Default>\n                <MinimumValue>1</MinimumValue>\n                <MaximumValue>254</MaximumValue>\n                <ValidationMessage>Invalid advertisement interval, acceptable values are 1 to 255.</ValidationMessage>\n            </advbase>\n            <advskew type=\"IntegerField\">\n                <Required>Y</Required>\n                <Default>0</Default>\n                <MinimumValue>0</MinimumValue>\n                <MaximumValue>254</MaximumValue>\n                <ValidationMessage>Invalid skew value, acceptable values are 0 to 255.</ValidationMessage>\n            </advskew>\n            <peer type=\"NetworkField\">\n                <NetMaskAllowed>N</NetMaskAllowed>\n                <AddressFamily>ipv4</AddressFamily>\n            </peer>\n            <peer6 type=\"NetworkField\">\n                <NetMaskAllowed>N</NetMaskAllowed>\n                <AddressFamily>ipv6</AddressFamily>\n            </peer6>\n            <nosync type=\"BooleanField\">\n                <Required>Y</Required>\n                <Default>0</Default>\n            </nosync>\n            <address type=\"TextField\" volatile=\"true\"/>\n            <vhid_txt type=\"TextField\" volatile=\"true\"/>\n            <descr type=\"DescriptionField\"/>\n        </vip>\n    </items>\n</model>\n",
+  "vip_native_action": "[vip.configure]\ncommand: /usr/local/opnsense/scripts/interfaces/reconfigure_vips.php\nmessage: Reconfiguring Virtual IPs\ntype: script\n",
+  "interfaces": {
+    "wan": {
+      "if": "vtnet1",
+      "ipaddr": "dhcp",
+      "subnet": ""
+    },
+    "lan": {
+      "if": "vtnet0",
+      "ipaddr": "192.168.1.1",
+      "subnet": "24"
+    },
+    "lo0": {
+      "if": "lo0",
+      "ipaddr": "127.0.0.1",
+      "subnet": "8"
+    },
+    "opt1": {
+      "if": "vtnet0_vlan30",
+      "ipaddr": "192.168.30.2",
+      "subnet": "24"
+    },
+    "opt2": {
+      "if": "vtnet0_vlan40",
+      "ipaddr": "192.168.40.2",
+      "subnet": "24"
+    },
+    "opt3": {
+      "if": "vtnet0_vlan50",
+      "ipaddr": "192.168.50.2",
+      "subnet": "24"
+    },
+    "opt4": {
+      "if": "vtnet0_vlan60",
+      "ipaddr": "192.168.60.2",
+      "subnet": "24"
+    },
+    "opt5": {
+      "if": "vtnet0_vlan99",
+      "ipaddr": "192.168.99.2",
+      "subnet": "24"
+    },
+    "opt6": {
+      "if": "vtnet2",
+      "ipaddr": "10.255.255.1",
+      "subnet": "30"
+    }
+  },
+  "vip_count": 0,
+  "carp_filter_rules": [],
+  "carp_sysctl": "net.inet.carp.allow: 1\nnet.inet.carp.preempt: 1\nnet.inet.carp.demotion: 0\n",
+  "collector_time": "2026-11-03T23:07:48.421595+07:00"
+}

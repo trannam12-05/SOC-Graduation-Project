@@ -1,0 +1,1 @@
+ovs-vsctl --format=csv --columns=name,tag,trunks,vlan_mode list port; ovs-ofctl dump-flows br-core-l2

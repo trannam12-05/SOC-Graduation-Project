@@ -1,0 +1,172 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "schema_file":  "/usr/local/opnsense/mvc/app/models/OPNsense/Firewall/Filter.xml",
+                             "nat_settings":  null,
+                             "snat_rule_fields":  [
+                                                      [
+                                                          "enabled",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "1"
+                                                      ],
+                                                      [
+                                                          "nonat",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "0"
+                                                      ],
+                                                      [
+                                                          "nosync",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "0"
+                                                      ],
+                                                      [
+                                                          "sequence",
+                                                          {
+                                                              "type":  ".\\FilterSequenceField"
+                                                          },
+                                                          "1"
+                                                      ],
+                                                      [
+                                                          "sort_order",
+                                                          {
+                                                              "type":  "TextField",
+                                                              "volatile":  "true"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "prio_group",
+                                                          {
+                                                              "type":  "TextField",
+                                                              "volatile":  "true"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "interface",
+                                                          {
+                                                              "type":  "InterfaceField"
+                                                          },
+                                                          "lan"
+                                                      ],
+                                                      [
+                                                          "ipprotocol",
+                                                          {
+                                                              "type":  "OptionField"
+                                                          },
+                                                          "inet"
+                                                      ],
+                                                      [
+                                                          "protocol",
+                                                          {
+                                                              "type":  "ProtocolField"
+                                                          },
+                                                          "any"
+                                                      ],
+                                                      [
+                                                          "source_net",
+                                                          {
+                                                              "type":  "NetworkAliasField"
+                                                          },
+                                                          "any"
+                                                      ],
+                                                      [
+                                                          "source_not",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "0"
+                                                      ],
+                                                      [
+                                                          "source_port",
+                                                          {
+                                                              "type":  "PortField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "destination_net",
+                                                          {
+                                                              "type":  "NetworkAliasField"
+                                                          },
+                                                          "any"
+                                                      ],
+                                                      [
+                                                          "destination_not",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "0"
+                                                      ],
+                                                      [
+                                                          "destination_port",
+                                                          {
+                                                              "type":  "PortField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "target",
+                                                          {
+                                                              "type":  "NetworkAliasField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "target_port",
+                                                          {
+                                                              "type":  "PortField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "staticnatport",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "log",
+                                                          {
+                                                              "type":  "BooleanField"
+                                                          },
+                                                          "0"
+                                                      ],
+                                                      [
+                                                          "categories",
+                                                          {
+                                                              "type":  "ModelRelationField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "tag",
+                                                          {
+                                                              "type":  "StrictTextField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "tagged",
+                                                          {
+                                                              "type":  "StrictTextField"
+                                                          },
+                                                          null
+                                                      ],
+                                                      [
+                                                          "description",
+                                                          {
+                                                              "type":  "DescriptionField"
+                                                          },
+                                                          null
+                                                      ]
+                                                  ],
+                             "snat_target":  "\u003ctarget type=\"NetworkAliasField\" /\u003e\n                "
+                         }
+}

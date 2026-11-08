@@ -1,0 +1,1 @@
+sudo -n sha256sum /root/m2-group1b-20261102-212014/ovsdb.snapshot; sudo -n ovsdb-tool db-version /root/m2-group1b-20261102-212014/ovsdb.snapshot; systemctl is-active openvswitch-switch ovsdb-server ovs-vswitchd soc-core-l2-noip

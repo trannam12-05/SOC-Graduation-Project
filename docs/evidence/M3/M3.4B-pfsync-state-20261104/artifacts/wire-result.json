@@ -1,0 +1,17 @@
+{
+  "counts": {
+    "vunl0_3_5": 118,
+    "vunl0_3_6": 94
+  },
+  "elapsed_s": 486.496,
+  "pcaps": {
+    "vunl0_3_5": {
+      "private_path": "/root/soc-m34b-20261104/vunl0_3_5-flow.pcap",
+      "sha256": "a75a2a5483c824117f077f169ebf9e9820a309ca9cacbbb16e9b5007570339ee"
+    },
+    "vunl0_3_6": {
+      "private_path": "/root/soc-m34b-20261104/vunl0_3_6-flow.pcap",
+      "sha256": "8d087c9db35d8a06d549d409bba5c1e25e7e0f01c29d33ac81bd67a5a47f5460"
+    }
+  }
+}

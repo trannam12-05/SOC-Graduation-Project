@@ -1,0 +1,8 @@
+{
+  "status": "FAILED",
+  "rc": 255,
+  "stdout": "\nFatal error: Uncaught Error: Call to undefined function shell_safe() in /usr/local/etc/inc/config.inc:311\nStack trace:\n#0 /usr/local/etc/inc/config.inc(230): make_config_revision_entry('SOC M3.6: enabl...')\n#1 /var/tmp/soc-m36-fix-syncitems.php(7): write_config('SOC M3.6: enabl...')\n#2 {main}\n  thrown in /usr/local/etc/inc/config.inc on line 311\n",
+  "stderr": "",
+  "config_sha256": "189d39687b6963bc0cdd15741f7e91bcbfe6f03723331c33d2bf6602e7f215b1",
+  "collector_time": "2026-11-06T18:42:39.378192+07:00"
+}

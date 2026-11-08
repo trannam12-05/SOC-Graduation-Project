@@ -1,0 +1,7 @@
+{
+  "collector_time": "2026-11-04T16:55:54.971047+07:00",
+  "node": "OPNsense-Primary",
+  "command": "shutdown -p now",
+  "capture": "docs\\evidence\\M3\\M3.4B-pfsync-state-20261104\\primary-soft-shutdown-20261104T165555+0700.png",
+  "watcher_confirmed_before_shutdown": true
+}

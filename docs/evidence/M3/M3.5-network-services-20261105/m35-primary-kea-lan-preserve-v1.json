@@ -1,0 +1,38 @@
+{
+  "status": "DONE",
+  "config_sha256": "452758cddf5f793a2a1b7367e842f5d456578a5d7f045aecfa284d930434dba9",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m35-apply-dhcp.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m35-apply-dhcp.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m35-apply-dhcp.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"backup\":\"\\/root\\/soc-m35-20261105\\/config.before-dhcp.xml\",\"subnets\":[{\"subnet\":\"192.168.1.0\\/24\",\"pools\":\"192.168.1.100 - 192.168.1.199\",\"option_data_autocollect\":\"0\",\"option_data.domain_name_servers\":\"192.168.1.1\",\"option_data.routers\":\"192.168.1.1\",\"option_data.domain_name\":\"internal\",\"description\":\"Migrated existing LAN IPv4 DHCP\"},{\"subnet\":\"192.168.40.0\\/24\",\"pools\":\"192.168.40.110 - 192.168.40.199\",\"option_data_autocollect\":\"0\",\"option_data.domain_name_servers\":\"192.168.40.1\",\"option_data.routers\":\"192.168.40.1\",\"option_data.domain_name\":\"soc.local\",\"description\":\"SOC VLAN40 Employee\"},{\"subnet\":\"192.168.50.0\\/24\",\"pools\":\"192.168.50.110 - 192.168.50.199\",\"option_data_autocollect\":\"0\",\"option_data.domain_name_servers\":\"192.168.50.1\",\"option_data.routers\":\"192.168.50.1\",\"option_data.domain_name\":\"soc.local\",\"description\":\"SOC VLAN50 Guest\"}]}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl template reload OPNsense/Kea",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea status",
+      "rc": 0,
+      "stdout": "kea-dhcp[v4] is running as pid 5174.\n",
+      "stderr": ""
+    }
+  ],
+  "kea_process_lines": [],
+  "collector_time": "2026-11-05T10:28:34.938752+07:00"
+}

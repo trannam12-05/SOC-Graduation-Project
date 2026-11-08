@@ -1,0 +1,1 @@
+ifconfig -a | grep 'carp:'; netstat -s -p carp; sysctl net.inet.carp; pfctl -sr | grep -i carp

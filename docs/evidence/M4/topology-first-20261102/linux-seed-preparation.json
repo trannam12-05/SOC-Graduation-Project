@@ -1,0 +1,112 @@
+{
+  "collected_at": "2026-11-02T13:16:48.743902+07:00",
+  "nodes": [
+    {
+      "node": "Data-Center",
+      "seed_path": "/opt/unetlab/addons/qemu/linux-soc-data-center/cdrom.iso",
+      "sha256": "8590496ed3f3386d8ca84dfceb2bb787b640cdf500213bdececa3ef148374a7c",
+      "bytes": 376832,
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:bc:2f:0c:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          }
+        }
+      },
+      "state": "SEED_PREPARED_NOT_BOOTED",
+      "console": "soc-admin autologin on isolated EVE console; SSH key only, password locked"
+    },
+    {
+      "node": "DMZ",
+      "seed_path": "/opt/unetlab/addons/qemu/linux-soc-dmz/cdrom.iso",
+      "sha256": "64e61ad79b2e1decd72c598fe77c9fd8226c489ba3f1e6a3d067aaa074089b7d",
+      "bytes": 376832,
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:12:37:e0:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          }
+        }
+      },
+      "state": "SEED_PREPARED_NOT_BOOTED",
+      "console": "soc-admin autologin on isolated EVE console; SSH key only, password locked"
+    },
+    {
+      "node": "Suricata-NIDS",
+      "seed_path": "/opt/unetlab/addons/qemu/linux-soc-suricata-nids/cdrom.iso",
+      "sha256": "49369c8e60e369845787ace177e18ef09e48812581d9df7cee5fb1fb0a5feacb",
+      "bytes": 30007296,
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "capture0": {
+            "match": {
+              "macaddress": "02:54:42:38:75:00"
+            },
+            "set-name": "capture0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          },
+          "mgmt0": {
+            "match": {
+              "macaddress": "02:54:42:38:75:01"
+            },
+            "set-name": "mgmt0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          }
+        }
+      },
+      "state": "SEED_PREPARED_NOT_BOOTED",
+      "console": "soc-admin autologin on isolated EVE console; SSH key only, password locked"
+    },
+    {
+      "node": "Wazuh-SOC",
+      "seed_path": "/opt/unetlab/addons/qemu/linux-soc-wazuh-soc/cdrom.iso",
+      "sha256": "82a51950077e8814555bf1b303c571b9d9ccc28f0226daae3b32288607f23132",
+      "bytes": 376832,
+      "network": {
+        "version": 2,
+        "ethernets": {
+          "lan0": {
+            "match": {
+              "macaddress": "02:54:1d:c7:d8:00"
+            },
+            "set-name": "lan0",
+            "dhcp4": false,
+            "dhcp6": false,
+            "accept-ra": false,
+            "link-local": [],
+            "optional": true
+          }
+        }
+      },
+      "state": "SEED_PREPARED_NOT_BOOTED",
+      "console": "soc-admin autologin on isolated EVE console; SSH key only, password locked"
+    }
+  ]
+}

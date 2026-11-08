@@ -1,0 +1,100 @@
+{
+  "scope": "Passive protocol240 capture, no state-retention or failover acceptance",
+  "interface": "vunl0_2_2",
+  "packets": [
+    {
+      "elapsed_seconds": 314.173,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.173,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.173,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.428,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.428,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.428,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.429,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.43,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.43,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 314.589,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 319.182,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 319.184,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_seconds": 319.371,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    }
+  ],
+  "both_directions": true,
+  "sha256": "fc1d0bc66b30bc2127ccc9bce8e1f037bb06645020e62e52e42bfe82731cb612",
+  "collector_time": "2026-11-03T18:20:50.428949+07:00"
+}

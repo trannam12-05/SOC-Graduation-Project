@@ -1,0 +1,8 @@
+{
+  "status": "DONE",
+  "rc": 0,
+  "stdout": "{\"ip\":\"10.255.255.1\",\"hostname\":\"OPNsense-Primary\"}",
+  "stderr": "",
+  "config_sha256": "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+  "collector_time": "2026-11-06T18:57:14.513001+07:00"
+}

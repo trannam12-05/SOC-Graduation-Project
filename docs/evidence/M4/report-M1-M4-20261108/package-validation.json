@@ -1,0 +1,22 @@
+﻿{
+    "file":  "D:\\SOC\\docs\\SOC_M1-M4_BaoCaoCaNhan.docx",
+    "chapters":  6,
+    "image_placements":  23,
+    "unique_embedded_images":  22,
+    "tables":  17,
+    "toc_instruction_fields":  3,
+    "oversize_images":  0,
+    "replacement_characters":  0,
+    "conclusion_partial_m4":  true,
+    "front_matter_present":  true,
+    "visual_samples":  [
+                           1,
+                           6,
+                           13,
+                           25,
+                           39,
+                           76
+                       ],
+    "figure_sources":  "evidence-index.csv",
+    "source_manifest":  "source-index.csv"
+}

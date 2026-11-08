@@ -1,0 +1,27 @@
+{
+  "raw_equal": false,
+  "parsed_tree_equal": false,
+  "root_attributes_before": {
+    "name": "SOC-M2-Core-L2",
+    "id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+    "version": "1",
+    "scripttimeout": "600",
+    "lock": "0",
+    "author": "SOC Project"
+  },
+  "root_attributes_after": {
+    "name": "SOC-M2-Core-L2",
+    "id": "f39cfc8c-5eaf-461e-bb0c-60b5fde848b7",
+    "version": "1",
+    "scripttimeout": "600",
+    "lock": "0",
+    "author": "SOC Project"
+  },
+  "node_trees_equal": true,
+  "network_trees_equal": true,
+  "old_bytes": 14015,
+  "new_bytes": 14511,
+  "old_lines": 106,
+  "new_lines": 106,
+  "collector_time": "2026-11-03T23:37:04.301767+07:00"
+}

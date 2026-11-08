@@ -1,0 +1,9 @@
+{
+  "collected_at": "2026-11-02T20:49:34.976849+07:00",
+  "source_path": "docs\\evidence\\M4\\resume-20261102\\suricata-real-alert-replay.jsonl",
+  "source_sha256": "ce69196abe7eb37559d534040eed5d41ae3fc09e6fc0e0116b61bd85b0aec5f6",
+  "sensor_evidence_path": "docs\\evidence\\M4\\resume-20261102\\sensor-public-after-marker.json",
+  "matches_saved_sensor_alert": true,
+  "source_kind": "Historical real Suricata alert from Core TAP frame test; replay is not direct log transport",
+  "original_collector_time": "2026-11-02T17:02:54.102647+07:00"
+}

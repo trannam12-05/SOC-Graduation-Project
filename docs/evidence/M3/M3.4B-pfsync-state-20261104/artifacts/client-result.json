@@ -1,0 +1,413 @@
+{
+  "state": "COMPLETED",
+  "flow": {
+    "source": "192.168.40.100",
+    "source_port": 44341,
+    "destination": "192.168.30.10",
+    "destination_port": 8000
+  },
+  "gateway": "192.168.40.1",
+  "gateway_mac": "00:00:5e:00:01:28",
+  "client_isn": 69072772,
+  "server_isn": 45026641,
+  "syn_transmissions": 1,
+  "retransmissions": 0,
+  "never_reconnects": true,
+  "phase": "secondary-master",
+  "snd_una": 69073919,
+  "snd_next": 69073919,
+  "rcv_next": 45026993,
+  "steps": [
+    {
+      "step": "request-headers",
+      "phase": "before",
+      "end": 69072867,
+      "acked": true,
+      "ack_elapsed": 3.166239,
+      "ack_phase": "before"
+    },
+    {
+      "step": 1,
+      "phase": "before",
+      "end": 69072889,
+      "acked": true,
+      "ack_elapsed": 13.255515,
+      "ack_phase": "before"
+    },
+    {
+      "step": 2,
+      "phase": "before",
+      "end": 69072911,
+      "acked": true,
+      "ack_elapsed": 23.258627,
+      "ack_phase": "before"
+    },
+    {
+      "step": 3,
+      "phase": "before",
+      "end": 69072933,
+      "acked": true,
+      "ack_elapsed": 33.306501,
+      "ack_phase": "before"
+    },
+    {
+      "step": 4,
+      "phase": "before",
+      "end": 69072955,
+      "acked": true,
+      "ack_elapsed": 43.356627,
+      "ack_phase": "before"
+    },
+    {
+      "step": 5,
+      "phase": "before",
+      "end": 69072977,
+      "acked": true,
+      "ack_elapsed": 53.389737,
+      "ack_phase": "before"
+    },
+    {
+      "step": 6,
+      "phase": "before",
+      "end": 69072999,
+      "acked": true,
+      "ack_elapsed": 63.44395,
+      "ack_phase": "before"
+    },
+    {
+      "step": 7,
+      "phase": "before",
+      "end": 69073021,
+      "acked": true,
+      "ack_elapsed": 73.521653,
+      "ack_phase": "before"
+    },
+    {
+      "step": 8,
+      "phase": "before",
+      "end": 69073043,
+      "acked": true,
+      "ack_elapsed": 83.569305,
+      "ack_phase": "before"
+    },
+    {
+      "step": 9,
+      "phase": "before",
+      "end": 69073065,
+      "acked": true,
+      "ack_elapsed": 93.629235,
+      "ack_phase": "before"
+    },
+    {
+      "step": 10,
+      "phase": "before",
+      "end": 69073088,
+      "acked": true,
+      "ack_elapsed": 103.705448,
+      "ack_phase": "before"
+    },
+    {
+      "step": 11,
+      "phase": "before",
+      "end": 69073111,
+      "acked": true,
+      "ack_elapsed": 113.735938,
+      "ack_phase": "before"
+    },
+    {
+      "step": 12,
+      "phase": "before",
+      "end": 69073134,
+      "acked": true,
+      "ack_elapsed": 123.729025,
+      "ack_phase": "before"
+    },
+    {
+      "step": 13,
+      "phase": "before",
+      "end": 69073157,
+      "acked": true,
+      "ack_elapsed": 133.784293,
+      "ack_phase": "before"
+    },
+    {
+      "step": 14,
+      "phase": "before",
+      "end": 69073180,
+      "acked": true,
+      "ack_elapsed": 143.801312,
+      "ack_phase": "before"
+    },
+    {
+      "step": 15,
+      "phase": "before",
+      "end": 69073203,
+      "acked": true,
+      "ack_elapsed": 153.841808,
+      "ack_phase": "before"
+    },
+    {
+      "step": 16,
+      "phase": "before",
+      "end": 69073226,
+      "acked": true,
+      "ack_elapsed": 163.871883,
+      "ack_phase": "before"
+    },
+    {
+      "step": 17,
+      "phase": "before",
+      "end": 69073249,
+      "acked": true,
+      "ack_elapsed": 173.961808,
+      "ack_phase": "before"
+    },
+    {
+      "step": 18,
+      "phase": "before",
+      "end": 69073272,
+      "acked": true,
+      "ack_elapsed": 184.04018,
+      "ack_phase": "before"
+    },
+    {
+      "step": 19,
+      "phase": "before",
+      "end": 69073295,
+      "acked": true,
+      "ack_elapsed": 194.111372,
+      "ack_phase": "before"
+    },
+    {
+      "step": 20,
+      "phase": "before",
+      "end": 69073318,
+      "acked": true,
+      "ack_elapsed": 204.184806,
+      "ack_phase": "before"
+    },
+    {
+      "step": 21,
+      "phase": "before",
+      "end": 69073341,
+      "acked": true,
+      "ack_elapsed": 214.189334,
+      "ack_phase": "before"
+    },
+    {
+      "step": 22,
+      "phase": "before",
+      "end": 69073364,
+      "acked": true,
+      "ack_elapsed": 224.200368,
+      "ack_phase": "before"
+    },
+    {
+      "step": 23,
+      "phase": "before",
+      "end": 69073387,
+      "acked": true,
+      "ack_elapsed": 234.285232,
+      "ack_phase": "before"
+    },
+    {
+      "step": 24,
+      "phase": "before",
+      "end": 69073410,
+      "acked": true,
+      "ack_elapsed": 244.332582,
+      "ack_phase": "before"
+    },
+    {
+      "step": 25,
+      "phase": "failover-start",
+      "end": 69073433,
+      "acked": true,
+      "ack_elapsed": 254.445142,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 26,
+      "phase": "failover-start",
+      "end": 69073456,
+      "acked": true,
+      "ack_elapsed": 264.509171,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 27,
+      "phase": "failover-start",
+      "end": 69073479,
+      "acked": true,
+      "ack_elapsed": 274.611187,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 28,
+      "phase": "failover-start",
+      "end": 69073502,
+      "acked": true,
+      "ack_elapsed": 284.703003,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 29,
+      "phase": "failover-start",
+      "end": 69073525,
+      "acked": true,
+      "ack_elapsed": 294.731661,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 30,
+      "phase": "failover-start",
+      "end": 69073548,
+      "acked": true,
+      "ack_elapsed": 304.776308,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 31,
+      "phase": "failover-start",
+      "end": 69073571,
+      "acked": true,
+      "ack_elapsed": 314.837832,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 32,
+      "phase": "failover-start",
+      "end": 69073594,
+      "acked": true,
+      "ack_elapsed": 324.950476,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 33,
+      "phase": "failover-start",
+      "end": 69073617,
+      "acked": true,
+      "ack_elapsed": 334.974069,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 34,
+      "phase": "failover-start",
+      "end": 69073640,
+      "acked": true,
+      "ack_elapsed": 345.078115,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 35,
+      "phase": "primary-off",
+      "end": 69073663,
+      "acked": true,
+      "ack_elapsed": 355.149937,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 36,
+      "phase": "primary-off",
+      "end": 69073686,
+      "acked": true,
+      "ack_elapsed": 365.179916,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 37,
+      "phase": "primary-off",
+      "end": 69073709,
+      "acked": true,
+      "ack_elapsed": 375.231593,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 38,
+      "phase": "primary-off",
+      "end": 69073732,
+      "acked": true,
+      "ack_elapsed": 385.22008,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 39,
+      "phase": "primary-off",
+      "end": 69073755,
+      "acked": true,
+      "ack_elapsed": 395.273106,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 40,
+      "phase": "primary-off",
+      "end": 69073778,
+      "acked": true,
+      "ack_elapsed": 405.361265,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 41,
+      "phase": "primary-off",
+      "end": 69073801,
+      "acked": true,
+      "ack_elapsed": 415.471817,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 42,
+      "phase": "primary-off",
+      "end": 69073824,
+      "acked": true,
+      "ack_elapsed": 425.489525,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 43,
+      "phase": "primary-off",
+      "end": 69073847,
+      "acked": true,
+      "ack_elapsed": 435.535433,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 44,
+      "phase": "primary-off",
+      "end": 69073870,
+      "acked": true,
+      "ack_elapsed": 445.56868,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 45,
+      "phase": "primary-off",
+      "end": 69073893,
+      "acked": true,
+      "ack_elapsed": 455.646624,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 46,
+      "phase": "secondary-master",
+      "end": 69073916,
+      "acked": true,
+      "ack_elapsed": 465.705329,
+      "ack_phase": "secondary-master"
+    },
+    {
+      "step": "request-complete",
+      "phase": "secondary-master",
+      "end": 69073918,
+      "acked": true,
+      "ack_elapsed": 466.286439,
+      "ack_phase": "secondary-master"
+    }
+  ],
+  "response_bytes": 350,
+  "http_status_line": "HTTP/1.0 200 OK",
+  "elapsed": 466.597,
+  "failure": null,
+  "pcap_private_path": "/root/soc-m34b-20261104/client.pcap",
+  "pcap_sha256": "b4546bf6e99acf6fa2f1f80621aeba59aca2b3f2f424f54e53f733b735fb4fdf",
+  "response_sha256": "0bb359fd124e711c0a8346c78e307aa2318dafe747e861bebe9941724e0c0f80"
+}

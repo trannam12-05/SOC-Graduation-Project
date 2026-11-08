@@ -1,0 +1,12 @@
+Thu thập ngày 07/11/2026, UTC+07:00.
+
+1. SSH EVE-NG bằng khóa đã cấu hình: PASS.
+2. EVE-NG time: 2026-11-07T12:17:04+00:00; uptime since 2026-11-07 12:09:43 UTC.
+3. Không có tiến trình qemu-system-x86_64; toàn bộ node QEMU đang tắt.
+4. EVE-NG -> 192.168.220.144: ping 0/2, neighbor FAILED. Primary offline.
+5. EVE-NG -> 192.168.220.146: ping 2/2; TCP/22 succeeded; TCP/514 refused.
+6. Wazuh neighbor: MAC 00:0c:29:d0:c4:d8 REACHABLE (VMware).
+7. Host key ED25519 Wazuh thu qua EVE-NG được lưu trong wazuh-known-hosts.
+8. Đăng nhập soc-admin bằng khóa triển khai hiện có: Permission denied (publickey,password).
+
+Không thử mật khẩu, không thử tài khoản khác, không bật node và không thay cấu hình.

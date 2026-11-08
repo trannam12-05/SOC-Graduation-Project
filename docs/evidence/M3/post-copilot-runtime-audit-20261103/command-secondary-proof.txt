@@ -1,0 +1,1 @@
+opnsense-version; uname -sr; whoami; ifconfig -l

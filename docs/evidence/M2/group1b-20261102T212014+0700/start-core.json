@@ -1,0 +1,150 @@
+{
+  "running_before": [
+    {
+      "name": "Wazuh-SOC",
+      "pid": "3284",
+      "ram_mib": 4096
+    }
+  ],
+  "meminfo_before": {
+    "MemTotal": 8087308,
+    "MemFree": 5367348,
+    "MemAvailable": 5713440,
+    "Buffers": 42332,
+    "Cached": 515332,
+    "SwapCached": 0,
+    "Active": 2147004,
+    "Inactive": 230940,
+    "Active(anon)": 1833748,
+    "Inactive(anon)": 0,
+    "Active(file)": 313256,
+    "Inactive(file)": 230940,
+    "Unevictable": 27792,
+    "Mlocked": 27792,
+    "SwapTotal": 4194300,
+    "SwapFree": 4194300,
+    "Zswap": 0,
+    "Zswapped": 0,
+    "Dirty": 344,
+    "Writeback": 0,
+    "AnonPages": 1847908,
+    "Mapped": 197344,
+    "Shmem": 4396,
+    "KReclaimable": 45096,
+    "Slab": 145984,
+    "SReclaimable": 45096,
+    "SUnreclaim": 100888,
+    "KernelStack": 7904,
+    "PageTables": 10456,
+    "SecPageTables": 1956,
+    "NFS_Unstable": 0,
+    "Bounce": 0,
+    "WritebackTmp": 0,
+    "CommitLimit": 8237952,
+    "Committed_AS": 6332768,
+    "VmallocTotal": 34359738367,
+    "VmallocUsed": 34528,
+    "VmallocChunk": 0,
+    "Percpu": 77312,
+    "HardwareCorrupted": 0,
+    "AnonHugePages": 151552,
+    "ShmemHugePages": 0,
+    "ShmemPmdMapped": 0,
+    "FileHugePages": 0,
+    "FilePmdMapped": 0,
+    "Unaccepted": 0,
+    "HugePages_Total": 0,
+    "HugePages_Free": 0,
+    "HugePages_Rsvd": 0,
+    "HugePages_Surp": 0,
+    "Hugepagesize": 2048,
+    "Hugetlb": 0,
+    "DirectMap4k": 153408,
+    "DirectMap2M": 4040704,
+    "DirectMap1G": 6291456
+  },
+  "target": {
+    "id": "3",
+    "name": "SOC-Core-L2",
+    "type": "qemu",
+    "template": "linux",
+    "image": "linux-ubuntu-24.04-soc-core-l2",
+    "console": "vnc",
+    "cpu": "1",
+    "cpulimit": "1",
+    "ram": "2048",
+    "ethernet": "8",
+    "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+    "firstmac": "02:53:45:f2:19:00",
+    "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+    "qemu_version": "2.12.0",
+    "qemu_arch": "x86_64",
+    "qemu_nic": "virtio-net-pci",
+    "delay": "0",
+    "icon": "Server-2D-Linux-S.svg",
+    "config": "0",
+    "left": "560",
+    "top": "365"
+  },
+  "interfaces": [
+    {
+      "id": "0",
+      "name": "e0",
+      "type": "ethernet",
+      "network_id": "6"
+    },
+    {
+      "id": "1",
+      "name": "e1",
+      "type": "ethernet",
+      "network_id": "7"
+    },
+    {
+      "id": "2",
+      "name": "e2",
+      "type": "ethernet",
+      "network_id": "8"
+    },
+    {
+      "id": "3",
+      "name": "e3",
+      "type": "ethernet",
+      "network_id": "9"
+    },
+    {
+      "id": "4",
+      "name": "e4",
+      "type": "ethernet",
+      "network_id": "10"
+    },
+    {
+      "id": "5",
+      "name": "e5",
+      "type": "ethernet",
+      "network_id": "1"
+    },
+    {
+      "id": "6",
+      "name": "e6",
+      "type": "ethernet",
+      "network_id": "2"
+    },
+    {
+      "id": "7",
+      "name": "e7",
+      "type": "ethernet",
+      "network_id": "11"
+    }
+  ],
+  "vmstat_before": "procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st\n 0  0      0 5367348  42332 560428    0    0    88    20  241  251  4  7 89  0  0\n 1  0      0 5367348  42332 560464    0    0     0     0  478  677  0  4 95  0  0\n",
+  "wrapper_rc": 0,
+  "wrapper_stdout": "\n",
+  "wrapper_stderr": "Nov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_6.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_7.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_8.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_9.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_10.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_1.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_2.disable_ipv6=1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vnet0_11.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_0 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_0.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_1 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_1.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_2 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_2.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_3 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_3.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_4 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_4.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_5 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_5.disable_ipv6=1\nNov 02 22:16:45 INFO: tunctl -u unl0 -g root -t vunl0_3_6 2>&1\nNov 02 22:16:45 INFO: sysctl -w net.ipv6.conf.vunl0_3_6.disable_ipv6=1\nNov 02 22:16:46 INFO: tunctl -u unl0 -g root -t vunl0_3_7 2>&1\nNov 02 22:16:46 INFO: sysctl -w net.ipv6.conf.vunl0_3_7.disable_ipv6=1\nNov 02 22:16:46 cmd = mountpoint -q /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/jail || mount -B -o ro /opt/unetlab/jail /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/jail\nNov 02 22:16:46 cmd = for i in /opt/qemu-*; do ( ls /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/$i || mkdir /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/$i) ; done \nNov 02 22:16:46 cmd = for i in /opt/qemu-*; do ( mountpoint -q /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/$i || mount -B -o ro $i /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/$i ) ; done \nNov 02 22:16:46 cmd =  mountpoint -q /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/opt/unetlab/addons/qemu || mount -B -o ro /opt/unetlab/addons/qemu /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/opt/unetlab/addons/qemu\nNov 02 22:16:46 INFO: CWD is /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3\nNov 02 22:16:46 INFO: starting /opt/unetlab/wrappers/qemu_wrapper -T 0 -D 3 -t \"SOC-Core-L2\" -F /opt/qemu-2.12.0/bin/qemu-system-x86_64 -d 0 -x -- -device virtio-net-pci,netdev=net0,mac=02:53:45:f2:19:00 -netdev tap,id=net0,ifname=vunl0_3_0,script=no -device virtio-net-pci,netdev=net1,mac=02:53:45:f2:19:01 -netdev tap,id=net1,ifname=vunl0_3_1,script=no -device virtio-net-pci,netdev=net2,mac=02:53:45:f2:19:02 -netdev tap,id=net2,ifname=vunl0_3_2,script=no -device virtio-net-pci,netdev=net3,mac=02:53:45:f2:19:03 -netdev tap,id=net3,ifname=vunl0_3_3,script=no -device virtio-net-pci,netdev=net4,mac=02:53:45:f2:19:04 -netdev tap,id=net4,ifname=vunl0_3_4,script=no -device virtio-net-pci,netdev=net5,mac=02:53:45:f2:19:05 -netdev tap,id=net5,ifname=vunl0_3_5,script=no -device virtio-net-pci,netdev=net6,mac=02:53:45:f2:19:06 -netdev tap,id=net6,ifname=vunl0_3_6,script=no -device virtio-net-pci,netdev=net7,mac=02:53:45:f2:19:07 -netdev tap,id=net7,ifname=vunl0_3_7,script=no -smp 1 -m 2048 -name SOC-Core-L2 -uuid 2b295168-b72e-4de7-b364-37298252dd9f -vnc :26871 -cdrom /opt/unetlab/addons/qemu/linux-ubuntu-24.04-soc-core-l2/cdrom.iso -drive file=virtioa.qcow2,if=virtio,bus=0,unit=0,cache=none -machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host > /opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/3/wrapper.txt 2>&1 &\ngrep: /proc/14238/environ: binary file matches\nPHP Warning:  Undefined array key 0 in /opt/unetlab/html/includes/cli.php on line 1148\nNov 02 22:16:47 INFO: qemu pid is \nPHP Warning:  Undefined array key 0 in /opt/unetlab/html/includes/cli.php on line 1149\n",
+  "action": "START_REQUESTED",
+  "collector_time": "2026-11-02T21:20:14.583514+07:00",
+  "windows_before": {
+    "commit_available_kib": 5984216,
+    "available_kib": 844320
+  },
+  "authorization": "Start SOC-Core-L2 only; preserve previously running Wazuh; no other lifecycle changes"
+}

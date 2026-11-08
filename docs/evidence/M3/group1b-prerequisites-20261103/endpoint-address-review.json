@@ -1,0 +1,67 @@
+{
+  "known_endpoint_configuration": [
+    {
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/5/startup.vpc",
+      "node": "Employee",
+      "IP_lines": [
+        "ip 192.168.40.100 192.168.40.2 24"
+      ]
+    },
+    {
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/6/startup.vpc",
+      "node": "Guest",
+      "IP_lines": [
+        "ip 192.168.50.100 192.168.50.2 24"
+      ]
+    },
+    {
+      "source": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/8/startup.vpc",
+      "node": "Management",
+      "IP_lines": [
+        "ip 192.168.99.100 192.168.99.2 24"
+      ]
+    },
+    {
+      "source": "/root/soc-service-seeds-20261102/DMZ/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": [
+        "192.168.60.10/24"
+      ]
+    },
+    {
+      "source": "/root/soc-service-seeds-20261102/Data-Center/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": [
+        "192.168.30.10/24"
+      ]
+    },
+    {
+      "source": "/root/soc-service-seeds-20261102/Wazuh-SOC/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": []
+    },
+    {
+      "source": "/root/soc-linux-seeds-20261102/DMZ/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": []
+    },
+    {
+      "source": "/root/soc-linux-seeds-20261102/Data-Center/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": []
+    },
+    {
+      "source": "/root/soc-linux-seeds-20261102/Wazuh-SOC/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": []
+    },
+    {
+      "source": "/root/soc-linux-seeds-20261102/Suricata-NIDS/network-config",
+      "seed_only_not_live": true,
+      "assigned_addresses": []
+    }
+  ],
+  "VIP_assignment_conflicts": [],
+  "scope": "Saved VPCS config and seed assigned addresses only; no boot or active duplicate-address probing",
+  "collector_time": "2026-11-03T18:09:30.819407+07:00"
+}

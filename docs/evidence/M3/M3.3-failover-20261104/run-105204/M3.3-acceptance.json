@@ -1,0 +1,200 @@
+{
+  "todo": "M3.3 — CARP failover/recovery",
+  "status": "DONE/PASS",
+  "collector_time": "2026-11-04T11:07:14.319327+07:00",
+  "reason": "",
+  "phases": {
+    "before": {
+      "phase": "before",
+      "status": "PASS",
+      "collector_time": "2026-11-04T10:55:01.766058+07:00",
+      "roles": {
+        "primary": {
+          "vlans": [
+            {
+              "vlan": 30,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 40,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 50,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 60,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 99,
+              "state": "MASTER",
+              "vip_ok": true
+            }
+          ],
+          "demotion": "0",
+          "pfsync": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+        },
+        "secondary": {
+          "vlans": [
+            {
+              "vlan": 30,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 40,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 50,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 60,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 99,
+              "state": "BACKUP",
+              "vip_ok": true
+            }
+          ],
+          "demotion": "0",
+          "pfsync": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+        }
+      },
+      "primary_off_confirmed": false,
+      "core_secondary_pids_unchanged": false,
+      "scope": "CARP roles/VIP and specified readiness; not session preservation or NAT/DHCP"
+    },
+    "failover": {
+      "phase": "failover",
+      "status": "PASS",
+      "collector_time": "2026-11-04T10:59:25.297430+07:00",
+      "roles": {
+        "secondary": {
+          "vlans": [
+            {
+              "vlan": 30,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 40,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 50,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 60,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 99,
+              "state": "MASTER",
+              "vip_ok": true
+            }
+          ],
+          "demotion": "0",
+          "pfsync": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+        }
+      },
+      "primary_off_confirmed": true,
+      "core_secondary_pids_unchanged": true,
+      "scope": "CARP roles/VIP and specified readiness; not session preservation or NAT/DHCP"
+    },
+    "recovery": {
+      "phase": "recovery",
+      "status": "PASS",
+      "collector_time": "2026-11-04T11:06:33.449061+07:00",
+      "roles": {
+        "primary": {
+          "vlans": [
+            {
+              "vlan": 30,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 40,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 50,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 60,
+              "state": "MASTER",
+              "vip_ok": true
+            },
+            {
+              "vlan": 99,
+              "state": "MASTER",
+              "vip_ok": true
+            }
+          ],
+          "demotion": "0",
+          "pfsync": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+        },
+        "secondary": {
+          "vlans": [
+            {
+              "vlan": 30,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 40,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 50,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 60,
+              "state": "BACKUP",
+              "vip_ok": true
+            },
+            {
+              "vlan": 99,
+              "state": "BACKUP",
+              "vip_ok": true
+            }
+          ],
+          "demotion": "0",
+          "pfsync": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n"
+        }
+      },
+      "primary_off_confirmed": false,
+      "core_secondary_pids_unchanged": true,
+      "scope": "CARP roles/VIP and specified readiness; not session preservation or NAT/DHCP"
+    }
+  },
+  "method": "Soft shutdown Primary bằng shutdown -p now; chỉ boot lại Primary sau failover PASS.",
+  "configuration_changed": false,
+  "native_pfsync_reapply_during_recovery": false,
+  "carp_parameters_changed": false,
+  "session_preservation_tested": false,
+  "scope": "Chỉ CARP failover/recovery năm VLAN và readiness; không NAT/DHCP, không M3.4/M4/M5.",
+  "evidence_directory": "D:\\SOC\\docs\\evidence\\M3\\M3.3-failover-20261104\\run-105204"
+}

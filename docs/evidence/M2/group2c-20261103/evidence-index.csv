@@ -1,0 +1,4 @@
+﻿file,content,reviewed_at_UTC+07:00,path,report_position,sha256
+M2-group2c-intervlan-policy-20261103.md,Policy review and TCP8000 provenance,2026-11-03T16:57:07.203113+07:00,docs/M2/M2-group2c-intervlan-policy-20261103.md,Chapter 2 / M2 Group 2C,011e0081ed24b3ae66138c7d53e67fb2b3f0fe9456dbce0f6464f6d5015d69d1
+M2-group2c-intervlan-policy-20261103.csv,Five VLAN source policy matrix,2026-11-03T16:57:07.203113+07:00,docs/M2/M2-group2c-intervlan-policy-20261103.csv,Chapter 2 / M2 Group 2C,396ba933502903ffa7fe078ae628f4d40d0cf578d19411cbeb383c30ddeb2e94
+source-manifest.json,Existing source hashes and local review timestamp,2026-11-03T16:57:07.203113+07:00,docs/evidence/M2/group2c-20261103/source-manifest.json,Chapter 2 / M2 Group 2C,583935c5a92d8b91d027994ce7e062442d07c45914068d433c9bba1dee94b116

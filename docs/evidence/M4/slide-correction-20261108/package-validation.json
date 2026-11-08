@@ -1,0 +1,20 @@
+﻿{
+    "checked_at":  "2026-11-08T11:03:14.4917683+07:00",
+    "source":  "663EC00220AA9A740B70FA4E8543D31CC57FDF6FA3340F7B71B7DD3CFBB34EF1",
+    "output":  "66501F3B297A4DE20C6A664F0B15B76A8F742AE9988B5869351DA57AEFAD0FFD",
+    "changed_parts":  [
+                          "ppt/slides/slide14.xml",
+                          "ppt/slides/_rels/slide14.xml.rels",
+                          "ppt/slides/slide15.xml",
+                          "ppt/slides/slide16.xml",
+                          "ppt/slides/slide17.xml"
+                      ],
+    "expected_parts":  [
+                           "ppt/slides/slide14.xml",
+                           "ppt/slides/slide15.xml",
+                           "ppt/slides/slide16.xml",
+                           "ppt/slides/slide17.xml",
+                           "ppt/slides/_rels/slide14.xml.rels"
+                       ],
+    "other_parts_unchanged":  true
+}

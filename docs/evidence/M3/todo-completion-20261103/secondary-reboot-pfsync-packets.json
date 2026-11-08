@@ -1,0 +1,32 @@
+{
+  "scope": "Real protocol-240 packets only; not proof of CARP failover or complete state-table replication",
+  "capture_interface": "vunl0_2_2",
+  "pcap_path": "/root/soc-ha-pfsync-capture-20261102-1793728871/pfsync.pcap",
+  "pcap_sha256": "bc8678c94d236485fca3a63bbf7c92d1241013cede4055901c88b48990412aeb",
+  "packets": [
+    {
+      "elapsed_s": 24.78,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 146
+    },
+    {
+      "elapsed_s": 24.782,
+      "source": "10.255.255.1",
+      "destination": "10.255.255.2",
+      "protocol": 240,
+      "bytes": 74
+    },
+    {
+      "elapsed_s": 24.784,
+      "source": "10.255.255.2",
+      "destination": "10.255.255.1",
+      "protocol": 240,
+      "bytes": 339
+    }
+  ],
+  "packet_count": 3,
+  "both_directions": true,
+  "collector_time": "2026-11-03T23:09:09.401762+07:00"
+}

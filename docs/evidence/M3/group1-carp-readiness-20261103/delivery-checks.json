@@ -1,0 +1,38 @@
+{
+  "checked_at": "2026-11-03T17:58:40.488965+07:00",
+  "both_firewalls_booted": true,
+  "same_version": true,
+  "both_backups_new_and_plaintext_hash_verified": true,
+  "both_backups_Git_ignored": true,
+  "Primary_matches_M2_snapshot": true,
+  "VLAN_assignments_and_prefix_match": true,
+  "CARP_VIP_count": 0,
+  "CARP_applied": false,
+  "failover_tested": false,
+  "firewall_NAT_DHCP_HA_modified": false,
+  "ready_for_CARP_application": false,
+  "pfsync_runtime_issue": [
+    {
+      "role": "Primary",
+      "UP": false,
+      "syncdev_present": false,
+      "syncpeer_present": false
+    },
+    {
+      "role": "Secondary",
+      "UP": false,
+      "syncdev_present": false,
+      "syncpeer_present": false
+    }
+  ],
+  "missing": [
+    "VIP approval",
+    "VHID",
+    "advskew both sides",
+    "advbase",
+    "CARP secret via private channel",
+    "scope WAN/LAN parent",
+    "Layer2 and RAM plan for CARP test",
+    "Review pfsync runtime versus saved configuration"
+  ]
+}

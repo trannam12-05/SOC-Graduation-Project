@@ -1,0 +1,51 @@
+pfsync:
+	20 packets received (IPv4)
+	0 packets received (IPv6)
+		0 clear all requests received
+		0 13.1 state inserts received
+		0 state inserted acks received
+		0 13.1 state updates received
+		0 compressed state updates received
+		1 uncompressed state request received
+		0 state deletes received
+		3 compressed state deletes received
+		0 fragment inserts received
+		0 fragment deletes received
+		9 bulk update marks received
+		0 TDB replay counter updates received
+		17 end of frame marks received
+		4 14.0 state inserts received
+		0 14.0 state updates received
+		0 state inserts received
+		0 state updates received
+		0 packets discarded for bad interface
+		0 packets discarded for bad ttl
+		0 packets shorter than header
+		0 packets discarded for bad version
+		0 packets discarded for bad HMAC
+		0 packets discarded for bad action
+		0 packets discarded for short packet
+		0 states discarded for bad values
+		0 stale states
+		2 failed state lookup/inserts
+	19 packets sent (IPv4)
+	0 packets sent (IPv6)
+		0 clear all requests sent
+		0 13.1 state inserts sent
+		0 state inserted acks sent
+		0 13.1 state updates sent
+		0 compressed state updates sent
+		8 uncompressed state requests sent
+		0 state deletes sent
+		6 compressed state deletes sent
+		0 fragment inserts sent
+		0 fragment deletes sent
+		2 bulk update marks sent
+		0 TDB replay counter updates sent
+		19 end of frame marks sent
+		3 14.0 state inserts sent
+		0 14.0 state updates sent
+		0 state inserts sent
+		0 state updates sent
+		0 failures due to mbuf memory error
+		0 send errors

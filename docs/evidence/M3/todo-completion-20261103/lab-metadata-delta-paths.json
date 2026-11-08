@@ -1,0 +1,12 @@
+{
+  "changes": [
+    {
+      "path": "/lab/objects[2]/textobjects[0]/textobject[3]/data[0]/text",
+      "kind": "text",
+      "old_length": 349,
+      "new_length": 876
+    }
+  ],
+  "sensitive_values_not_exported": true,
+  "collector_time": "2026-11-03T23:37:27.323826+07:00"
+}

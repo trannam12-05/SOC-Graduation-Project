@@ -64,3 +64,25 @@ Ngưỡng 4 GiB Windows nêu trên được đánh giá lại là quá bảo th�
 **Trạng thái mới nhất: Primary đã bật lại, Core tắt; chưa chạy installer.** Receipt `start-primary-after-backup.json` lưu Windows available 1,128 GiB, commit available 3,421 GiB; EVE available 6354 MiB trước start. Ảnh `primary-restarted-20261101T130415+0700.png` là màn hình boot thực tế, không chứng minh cài đặt. Chờ người dùng đăng nhập `installer` trực tiếp, dừng tại Keymap. Đã chuẩn bị `m3_installer_keys.py`, chỉ gửi phím điều hướng sau khi xem từng màn hình; chưa chạy script này, không chứa thông tin xác thực.
 
 Mẫu sau start có Windows available 0,86 GiB, commit available 3,33 GiB; EVE available 6175 MiB, swap 0. Tiếp tục theo dõi, không bật Core hoặc tăng tải khi RAM dưới ngưỡng. Việc bật Primary không tự đồng nghĩa đã đủ tài nguyên để bật thêm VM hay nghiệm thu gateway.
+
+## 3.7. Installer đã chọn UFS, chưa ghi ổ — 13:18 UTC+07:00
+
+Lưu ý: phần 3.7 ghi lịch sử tạm dừng. Trạng thái mới hơn ở 3.8 bên dưới.
+
+Người dùng đăng nhập installer, xác nhận màn hình Keymap. Công cụ chụp đúng trạng thái rồi gửi Enter để giữ keymap US mặc định; tiếp tục Down/Enter từ menu để chọn Install (UFS). Đây là phương án filesystem đơn giản cho lab một ổ, không triển khai ZFS trong phiên này. Tùy chọn UFS hiện diện trong installer thật; không gọi việc chọn menu là cài thành công.
+
+Ảnh `installer-ufs-target-20261101T131826+0700.png` xác nhận danh sách gồm `vtbd0 <Unknown disk> (16GB)` và `cd0 <QEMU QEMU DVDROM 25> (1GB)`. Thanh chọn đang ở vtbd0; chưa nhấn OK hoặc xác nhận phân vùng. Dung lượng hiển thị DVD của installer không thay thế kích thước tệp ISO đã đo trên EVE.
+
+Windows trước bước này available 0,37 GiB, commit available 3,01 GiB; EVE available 5035 MiB, swap 0. Tạm dừng thao tác ghi/tăng tải cho đến khi Windows đạt khoảng 1 GiB available. Giữ nguyên phiên installer để tiếp tục ngay, không tắt/bật lại VM. Core tắt. Người dùng được đề nghị đóng các ứng dụng không cần thiết, không tự dừng tiến trình hoặc thay cấu hình host.
+
+Hình 3.5–3.7: các ảnh `installer-keymap-20261101T131744+0700.png`, `installer-options-20261101T131807+0700.png`, `installer-ufs-target-20261101T131826+0700.png`. Mục đích: ghi nhận diễn biến installer và xác minh đích trước ghi. Kết quả: keymap mặc định và UFS đã chọn, đúng ổ vtbd0 16GB hiển thị. Ý nghĩa: tránh chọn nhầm DVD và tránh tuyên bố cài xong khi mới ở menu. Metadata JSON cùng tên ghi phím đã gửi, thời điểm và SHA-256; ảnh nguyên framebuffer.
+
+## 3.8. Thực thi cài UFS từ 13:26 UTC+07:00
+
+Sau đánh giá lại tài nguyên, tiếp tục duy nhất Primary đang chạy: EVE available 4988 MiB, swap 0; Windows available 0,61 GiB nhưng commit available 4,24 GiB. Mốc Windows 1 GiB trước đó là dự phòng vận hành tạm, không phải yêu cầu bắt buộc của installer; giữ nguyên hạn chế không tăng RAM/khởi động thêm VM hoặc thử song song. Không tiếp tục dừng ở menu chỉ vì mốc tạm đó khi ngân sách trong EVE còn đủ; tiếp tục theo dõi thực tế.
+
+Đã xem ảnh xác nhận ghi chỉ liệt kê `vtbd0`, rồi gửi Enter tại YES theo quyền cài đặt người dùng đã duyệt. Backup offline đã có trước thao tác này. Installer ghi từ bên trong guest vào ổ runtime; không mở QCOW2 để sửa từ host, không thay image gốc.
+
+Ảnh `installer-write-started-20261101T132632+0700.png` ghi phân vùng đang khởi tạo; ảnh `installer-progress-20261101T132703+0700.png` ghi khởi tạo 100%. Sau đó chuyển sang Cloning current system, Verifying resulting files, Preparing target system. Ảnh `installer-copy-progress2-20261101T132908+0700.png` ghi cloning 1%, các bước sau chưa chạy. Đây là **IN_PROGRESS**, không phải PASS cài đặt hoặc boot từ ổ.
+
+Mẫu tài nguyên trong khi cài: Windows available 0,91 GiB, commit available 4,35 GiB; EVE available 4982 MiB/swap 0. Kiểm tra metadata tệp runtime bằng stat thấy 366411776 byte đang tăng, filesystem EVE còn khoảng 35 GiB. Không đọc nội dung QCOW2 hoặc gọi qemu-img trong lúc VM chạy.

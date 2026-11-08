@@ -1,0 +1,23 @@
+{
+  "checked_at": "2026-11-03T17:29:00.762093+07:00",
+  "required_items": {
+    "Core L2": "PASS",
+    "Inter-VLAN Routing": "PASS",
+    "ACL/firewall giữa VLAN": "PASS",
+    "Access/trunk": "PASS",
+    "LACP": "N/A",
+    "SPAN/Port Mirroring": "PASS"
+  },
+  "application_cases_PASS": 3,
+  "historical_frame_PASS": 95,
+  "pcap_routing_negative_and_mirror_checks": true,
+  "HTTP_body_hash_matches": true,
+  "temporary_topology_restored_byte_exact": true,
+  "only_Core_and_Primary_running": true,
+  "DOCX_package_valid": true,
+  "DOCX_A4_TimesNewRoman_margins_valid": true,
+  "DOCX_six_embedded_images_byte_equal_originals": true,
+  "DOCX_visual_pagination_reviewed": false,
+  "firewall_config_hash_equal_from_screenshots": true,
+  "no_M3_work": true
+}

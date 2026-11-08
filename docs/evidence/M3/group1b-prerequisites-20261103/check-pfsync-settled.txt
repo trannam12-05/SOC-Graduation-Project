@@ -1,0 +1,1 @@
+ifconfig pfsync0; sysctl net.inet.carp.demotion; netstat -s -p pfsync | head -18

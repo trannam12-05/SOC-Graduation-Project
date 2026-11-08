@@ -1,0 +1,60 @@
+{
+  "vmstat": "procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st\n 9  0      0 1696760 231464 1284748    0    0    41    66  197  413 10 13 78  0  0\n11  0      0 1690744 231516 1284768    0    0    64  6109 4301 6058 41 48  9  3  0\n 5  0      0 1679348 231532 1284780    0    0    12  1062 3559 3809 50 42  7  0  0\n 6  0      0 1672480 231540 1284780    0    0     0   329 3414 2731 49 51  0  0  0\n 7  0      0 1670716 231540 1284780    0    0   112  3493 3045 2879 52 48  0  0  0\n 8  0      0 1669292 231600 1284780    0    0     0  3781 3866 5113 49 41  8  2  0\n 8  1      0 1665008 231640 1284816    0    0  1576  4573 4193 6366 43 43 11  3  0\n 7  0      0 1659660 231652 1284828    0    0  1168   472 2467 2817 58 38  4  0  0\n 5  0      0 1659800 231652 1284828    0    0    64   252 2135 2228 58 41  1  0  0\n 6  0      0 1659800 231680 1284824    0    0     0  3476 3041 2995 60 39  1  0  0\n10  0      0 1659044 231716 1284836    0    0     0  5993 3874 5240 50 45  4  2  0\n 6  0      0 1659884 231732 1284872    0    0  1088  1612 3644 5827 50 45  4  1  0\n 5  0      0 1659884 231736 1284884    0    0     8   330 3698 2823 57 42  1  0  0\n 4  0      0 1659128 231736 1284884    0    0   196   528 3339 3044 54 44  2  0  0\n 4  0      0 1655540 231760 1284884    0    0   800  2769 3854 2973 46 50  3  1  0\n21  1      0 1655540 231764 1284884    0    0   548   569 1795 2328 44 47  8  1  0\n 8  0      0 1655036 231840 1284900    0    0  1700  9398 3492 5107 37 54  6  2  0\n 6  0      0 1655036 231856 1284936    0    0   584  1052 3972 4879 47 50  3  0  0\n 6  0      0 1642748 231856 1284936    0    0   724   489 3253 2730 54 43  3  0  0\n 7  0      0 1642496 231864 1284932    0    0   384  4277 2677 3220 53 44  2  1  0\n",
+  "historical_bootstrap": [
+    {
+      "node_id": "7",
+      "historical_not_current_runtime": true,
+      "data": {
+        "role": "DMZ",
+        "scope": "Local OS/IP/service only; routed client path still requires separate test",
+        "local_http_status": 200,
+        "local_http_bytes": 148,
+        "interfaces": [
+          {
+            "ifindex": 2,
+            "ifname": "lan0",
+            "flags": [
+              "BROADCAST",
+              "MULTICAST",
+              "UP",
+              "LOWER_UP"
+            ],
+            "mtu": 1500,
+            "qdisc": "fq_codel",
+            "operstate": "UP",
+            "group": "default",
+            "txqlen": 1000,
+            "link_type": "ether",
+            "address": "02:54:12:37:e0:00",
+            "broadcast": "ff:ff:ff:ff:ff:ff",
+            "altnames": [
+              "enp0s3"
+            ],
+            "addr_info": [
+              {
+                "family": "inet",
+                "local": "192.168.60.10",
+                "prefixlen": 24,
+                "broadcast": "192.168.60.255",
+                "scope": "global",
+                "label": "lan0",
+                "valid_life_time": 4294967295,
+                "preferred_life_time": 4294967295
+              }
+            ]
+          }
+        ],
+        "state": "CONFIGURED_LOCAL_SERVICE_VERIFIED_NOT_END_TO_END",
+        "service_port": 80,
+        "boot_id": "dd7b6375-2576-41e8-8bf3-34b031ac007e"
+      }
+    }
+  ],
+  "meminfo": "MemTotal:        8087324 kB\nMemFree:         1644420 kB\nMemAvailable:    2754408 kB\nBuffers:          231884 kB\nCached:          1124008 kB\nSwapCached:            0 kB\nActive:          4910668 kB\nInactive:         982660 kB\nActive(anon):    4553112 kB\nInactive(anon):        0 kB\nActive(file):     357556 kB\nInactive(file):   982660 kB\nUnevictable:       27792 kB\nMlocked:           27792 kB\nSwapTotal:       4194300 kB\nSwapFree:        4194300 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               408 kB\nWriteback:             0 kB\nAnonPages:       4563204 kB\nMapped:           228736 kB\nShmem:              6604 kB\nKReclaimable:     161076 kB\nSlab:             320696 kB\nSReclaimable:     161076 kB\nSUnreclaim:       159620 kB\nKernelStack:        9744 kB\nPageTables:        21556 kB\nSecPageTables:      5664 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8237960 kB\nCommitted_AS:    8600884 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       38220 kB\nVmallocChunk:          0 kB\nPercpu:            92672 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:   1398784 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      182080 kB\nDirectMap2M:     5060608 kB\nDirectMap1G:     5242880 kB\n",
+  "loadavg": [
+    7.35498046875,
+    5.32470703125,
+    4.26611328125
+  ],
+  "collector_time": "2026-11-03T22:43:51.692999+07:00"
+}

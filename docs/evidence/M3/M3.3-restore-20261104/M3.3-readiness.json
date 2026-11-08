@@ -1,0 +1,63 @@
+{
+  "todo": "M3.3",
+  "status": "READY_FOR_FAILOVER",
+  "collector_time": "2026-11-04T10:48:54.279347+07:00",
+  "core": {
+    "status": "PASS",
+    "basis": "Ảnh console thật đã đọc: OVS services active; port access/trunk đúng năm VLAN; flow NORMAL; không IP ngoài loopback; forwarding IPv4/IPv6=0; ARP .2/.3/.1 qua năm access port.",
+    "evidence": [
+      "core-public-proof-20261104T103549+0700.png",
+      "core-ovs-compact-20261104T103726+0700.png",
+      "arp-restored.json"
+    ]
+  },
+  "firewalls": {
+    "primary": {
+      "state": "MASTER",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "hook_this_boot": true,
+      "config_matches_M3_2": true,
+      "backup_path": "/root/soc-m33-restore-20261104/config.before.xml"
+    },
+    "secondary": {
+      "state": "BACKUP",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "hook_this_boot": true,
+      "config_matches_M3_2": true,
+      "backup_path": "/root/soc-m33-restore-20261104/config.before.xml"
+    }
+  },
+  "failover_tested": false,
+  "recovery_tested": false,
+  "runtime_native_restore_primary": true,
+  "automatic_simultaneous_boot_readiness": false,
+  "guest_configuration_changed": false,
+  "changes": "Boot ba node, tạo backup/checkpoint; gọi lại /usr/local/sbin/pluginctl -c pfsync trên Primary để khôi phục runtime M3.1. Không sửa config hoặc CARP parameters.",
+  "pfsync_packet_both_directions": true,
+  "limitations": [
+    "READY_FOR_FAILOVER chỉ xác nhận điều kiện đầu; M3.3 failover/recovery chưa DONE/PASS.",
+    "Trường vip_conflict_seen trong collector ARP cũ chỉ nghĩa có trả lời VIP; ở đây VIP đã được cấu hình, không phải kết luận xung đột.",
+    "Hash toàn lab có thể khác do tọa độ giao diện; đối chiếu riêng node/network/mapping bên dưới."
+  ],
+  "node_resource_interface_mapping_unchanged": true,
+  "lab_sha256_before": "885368801d8bb7b8093f71fe8dca095f01ff7ad8339684963be0a3aed6bb7723",
+  "lab_sha256_after": "3a228544ae38c43703b495c6f4022a83112578936cd1d90f5b72c895a9fd53b2"
+}

@@ -1,0 +1,15 @@
+{
+  "running": [
+    {
+      "name": "OPNsense-Primary",
+      "ram_mib": 3072
+    },
+    {
+      "name": "OPNsense-Secondary",
+      "ram_mib": 3072
+    }
+  ],
+  "mem_available_kib": 3191884,
+  "swap_used_kib": 0,
+  "collector_time": "2026-11-03T17:53:39.033220+07:00"
+}

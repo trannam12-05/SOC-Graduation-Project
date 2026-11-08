@@ -1,0 +1,2 @@
+[8799] carp: demoted by 240 to 240 (pfsync bulk start)
+[9229] carp: demoted by -240 to 0 (pfsync bulk done)

@@ -1,0 +1,16 @@
+{
+  "local": "10.255.255.2",
+  "peer": "10.255.255.1",
+  "backup": "/root/soc-m3-todo-pfsync-20261103/config.before.xml",
+  "config_sha256_before": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "config_unchanged": true,
+  "hook_path": "/usr/local/etc/rc.syshook.d/start/96-soc-pfsync",
+  "hook_sha256": "7575588f69bfc2eee49b5d9cd336659d32e6831651366aba355d8b750b9a36a8",
+  "hook_mode": "0o700",
+  "native_rc": 0,
+  "runtime": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 0\n\tgroups: pfsync\n",
+  "ready": true,
+  "boot_log": "Tue Nov  3 17:54:37 UTC 2026\n{ sec = 1793727202, usec = 642678 } Tue Nov  3 17:33:22 2026\npfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 0\n\tgroups: pfsync\nnative_rc=0\n",
+  "boottime": "{ sec = 1793727202, usec = 642678 } Tue Nov  3 17:33:22 2026\n",
+  "collector_time": "2026-11-03T23:02:57.815140+07:00"
+}

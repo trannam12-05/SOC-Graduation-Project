@@ -1,0 +1,25 @@
+{
+  "captures": [
+    {
+      "label": "dc30",
+      "bytes": 1869,
+      "stderr": "tcpdump: listening on vunl0_4_0, link-type EN10MB (Ethernet), snapshot length 262144 bytes\n16 packets captured\n16 packets received by filter\n0 packets dropped by kernel\n"
+    },
+    {
+      "label": "client40",
+      "bytes": 1869,
+      "stderr": "tcpdump: listening on vunl0_4_1, link-type EN10MB (Ethernet), snapshot length 262144 bytes\n16 packets captured\n16 packets received by filter\n0 packets dropped by kernel\n"
+    },
+    {
+      "label": "primary_trunk",
+      "bytes": 3842,
+      "stderr": "tcpdump: listening on vunl0_1_0, link-type EN10MB (Ethernet), snapshot length 262144 bytes\n32 packets captured\n32 packets received by filter\n0 packets dropped by kernel\n"
+    },
+    {
+      "label": "span",
+      "bytes": 3842,
+      "stderr": "tcpdump: listening on vunl0_3_7, link-type EN10MB (Ethernet), snapshot length 262144 bytes\n32 packets captured\n32 packets received by filter\n0 packets dropped by kernel\n"
+    }
+  ],
+  "collector_time": "2026-11-03T17:18:41.893255+07:00"
+}

@@ -1,0 +1,15 @@
+{
+  "running_qemu": [
+    {
+      "pid": "4159",
+      "name": "OPNsense-Primary",
+      "uuid": "fe606d13-1542-490b-b651-5c1c6289afde"
+    },
+    {
+      "pid": "49523",
+      "name": "OPNsense-Secondary",
+      "uuid": "64b94195-c24d-4107-95d4-737e0a4b3016"
+    }
+  ],
+  "collector_time": "2026-11-03T22:13:56.345503+07:00"
+}

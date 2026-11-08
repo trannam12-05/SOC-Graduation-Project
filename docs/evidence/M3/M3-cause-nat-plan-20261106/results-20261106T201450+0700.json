@@ -1,0 +1,597 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "hostname":  "OPNsense-Primary",
+                             "hook":  "#!/bin/sh\n# SOC M3: ap pfsync native sau khi network khoi dong; khong sua core/config.xml.\numask 077\n{\n /bin/date -u\n /sbin/sysctl -n kern.boottime\n /usr/local/sbin/pluginctl -c pfsync\n result=$?\n /sbin/ifconfig pfsync0\n echo \"native_rc=$result\"\n} \u003e /var/log/soc-pfsync-start.log 2\u003e\u00261\nexit \"$result\"\n",
+                             "hasync":  {
+                                            "pfsyncinterface":  "opt6",
+                                            "pfsyncpeerip":  "10.255.255.2",
+                                            "pfsyncversion":  "1400",
+                                            "disablepreempt":  "0"
+                                        },
+                             "sync_interface":  {
+                                                    "tag":  "opt6",
+                                                    "attrs":  {
+
+                                                              },
+                                                    "text":  "",
+                                                    "children":  [
+                                                                     {
+                                                                         "tag":  "if",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "vtnet2",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "enable",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "1",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "ipaddr",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "10.255.255.1",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "subnet",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "30",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "gateway",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "ipaddrv6",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "subnetv6",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     },
+                                                                     {
+                                                                         "tag":  "gatewayv6",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     }
+                                                                 ]
+                                                },
+                             "nat_outbound":  {
+                                                  "tag":  "outbound",
+                                                  "attrs":  {
+
+                                                            },
+                                                  "text":  "",
+                                                  "children":  [
+                                                                   {
+                                                                       "tag":  "mode",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "automatic",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   }
+                                                               ]
+                                              },
+                             "gateways":  null,
+                             "wan_config":  {
+                                                "tag":  "wan",
+                                                "attrs":  {
+
+                                                          },
+                                                "text":  "",
+                                                "children":  [
+                                                                 {
+                                                                     "tag":  "enable",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "1",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "if",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "vtnet1",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "mtu",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "ipaddr",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "dhcp",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "ipaddrv6",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "dhcp6",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "subnet",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "gateway",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "blockpriv",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "1",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "blockbogons",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "1",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "dhcphostname",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "media",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "mediaopt",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 },
+                                                                 {
+                                                                     "tag":  "dhcp6-ia-pd-len",
+                                                                     "attrs":  {
+
+                                                                               },
+                                                                     "text":  "0",
+                                                                     "children":  [
+
+                                                                                  ]
+                                                                 }
+                                                             ]
+                                            },
+                             "pfsync_stats":  {
+                                                  "rc":  0,
+                                                  "stdout":  "pfsync:\n\t9514 packets received (IPv4)\n\t0 packets received (IPv6)\n\t\t0 clear all requests received\n\t\t0 13.1 state inserts received\n\t\t0 state inserted acks received\n\t\t0 13.1 state updates received\n\t\t12367 compressed state updates received\n\t\t6 uncompressed state requests received\n\t\t0 state deletes received\n\t\t57 compressed state deletes received\n\t\t0 fragment inserts received\n\t\t0 fragment deletes received\n\t\t9 bulk update marks received\n\t\t0 TDB replay counter updates received\n\t\t9514 end of frame marks received\n\t\t35 14.0 state inserts received\n\t\t73 14.0 state updates received\n\t\t0 state inserts received\n\t\t0 state updates received\n\t\t0 packets discarded for bad interface\n\t\t0 packets discarded for bad ttl\n\t\t0 packets shorter than header\n\t\t0 packets discarded for bad version\n\t\t0 packets discarded for bad HMAC\n\t\t0 packets discarded for bad action\n\t\t0 packets discarded for short packet\n\t\t0 states discarded for bad values\n\t\t0 stale states\n\t\t32 failed state lookup/inserts\n\t7970 packets sent (IPv4)\n\t0 packets sent (IPv6)\n\t\t0 clear all requests sent\n\t\t0 13.1 state inserts sent\n\t\t0 state inserted acks sent\n\t\t0 13.1 state updates sent\n\t\t10545 compressed state updates sent\n\t\t44 uncompressed state requests sent\n\t\t0 state deletes sent\n\t\t63 compressed state deletes sent\n\t\t0 fragment inserts sent\n\t\t0 fragment deletes sent\n\t\t7 bulk update marks sent\n\t\t0 TDB replay counter updates sent\n\t\t8028 end of frame marks sent\n\t\t51 14.0 state inserts sent\n\t\t48 14.0 state updates sent\n\t\t0 state inserts sent\n\t\t0 state updates sent\n\t\t0 failures due to mbuf memory error\n\t\t58 send errors\n",
+                                                  "stderr":  ""
+                                              },
+                             "sync_filter":  [
+                                                 "block drop in log on ! vtnet2 inet from 10.255.255.0/30 to any",
+                                                 "pass in log quick on vtnet2 inet proto icmp from 10.255.255.2 to 10.255.255.1 keep state label \"16753480-1a6a-4902-b727-b1b2dffa03f7\"",
+                                                 "pass in log quick on vtnet2 inet proto pfsync from 10.255.255.2 to 10.255.255.1 no state label \"784f183a-a347-4510-a8e6-e217e124a647\"",
+                                                 "pass in log quick on vtnet2 inet proto tcp from 10.255.255.2 to 10.255.255.1 port = https flags S/SA keep state label \"1e26e86b-e922-49f0-a0ee-cd2432e2689d\"",
+                                                 "pass in log quick on vtnet2 inet proto tcp from 10.255.255.2 to 10.255.255.1 port = 8001 flags S/SA keep state label \"fa45c2f8-f07d-4d61-b7d2-4a1c16bd5f59\""
+                                             ],
+                             "log_events":  [
+                                                "\u003c13\u003e1 2026-11-06T17:41:58+00:00 OPNsense.internal kernel - - [meta sequenceId=\"209\"] \u003c6\u003e[77] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                "\u003c13\u003e1 2026-11-06T17:42:08+00:00 OPNsense.internal kernel - - [meta sequenceId=\"243\"] \u003c6\u003e[88] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                "\u003c13\u003e1 2026-11-06T17:43:31+00:00 OPNsense.internal kernel - - [meta sequenceId=\"22\"] \u003c118\u003e[170] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                "\u003c13\u003e1 2026-11-06T17:43:31+00:00 OPNsense.internal opnsense 84848 - [meta sequenceId=\"23\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                "\u003c13\u003e1 2026-11-06T17:43:31+00:00 OPNsense.internal opnsense 84848 - [meta sequenceId=\"24\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                "\u003c13\u003e1 2026-11-06T17:43:31+00:00 OPNsense.internal kernel - - [meta sequenceId=\"25\"] \u003c6\u003e[170] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                "\u003c13\u003e1 2026-11-06T17:43:31+00:00 OPNsense.internal kernel - - [meta sequenceId=\"27\"] \u003c6\u003e[170] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                "\u003c13\u003e1 2026-11-06T19:18:34+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"209\"] \u003c6\u003e[97] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                "\u003c13\u003e1 2026-11-06T19:18:53+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"240\"] \u003c6\u003e[116] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                "\u003c13\u003e1 2026-11-06T19:20:24+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"29\"] \u003c118\u003e[207] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal opnsense 30361 - [meta sequenceId=\"32\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal opnsense 30361 - [meta sequenceId=\"33\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"34\"] \u003c6\u003e[209] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                "\u003c13\u003e1 2026-11-06T19:31:38+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[881] carp: demoted by -240 to 0 (pfsync bulk done)"
+                                            ],
+                             "soc-pfsync-start.log":  "Fri Nov  6 19:20:24 UTC 2026\n{ sec = 1793992616, usec = 551827 } Fri Nov  6 19:16:56 2026\npfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 0\n\tgroups: pfsync\nnative_rc=0\n"
+                         },
+    "OPNsense-Secondary":  {
+                               "hostname":  "OPNsense-Secondary",
+                               "hook":  "#!/bin/sh\n# SOC M3: ap pfsync native sau khi network khoi dong; khong sua core/config.xml.\numask 077\n{\n /bin/date -u\n /sbin/sysctl -n kern.boottime\n /usr/local/sbin/pluginctl -c pfsync\n result=$?\n /sbin/ifconfig pfsync0\n echo \"native_rc=$result\"\n} \u003e /var/log/soc-pfsync-start.log 2\u003e\u00261\nexit \"$result\"\n",
+                               "hasync":  {
+                                              "pfsyncinterface":  "opt6",
+                                              "pfsyncpeerip":  "10.255.255.1",
+                                              "pfsyncversion":  "1400",
+                                              "disablepreempt":  "0"
+                                          },
+                               "sync_interface":  {
+                                                      "tag":  "opt6",
+                                                      "attrs":  {
+
+                                                                },
+                                                      "text":  "",
+                                                      "children":  [
+                                                                       {
+                                                                           "tag":  "if",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "vtnet2",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "enable",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "1",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "ipaddr",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "10.255.255.2",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "subnet",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "30",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "gateway",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "ipaddrv6",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "idassoc6",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "subnetv6",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "64",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "gatewayv6",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "track6-interface",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "wan",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       },
+                                                                       {
+                                                                           "tag":  "track6-prefix-id",
+                                                                           "attrs":  {
+
+                                                                                     },
+                                                                           "text":  "0",
+                                                                           "children":  [
+
+                                                                                        ]
+                                                                       }
+                                                                   ]
+                                                  },
+                               "nat_outbound":  {
+                                                    "tag":  "outbound",
+                                                    "attrs":  {
+
+                                                              },
+                                                    "text":  "",
+                                                    "children":  [
+                                                                     {
+                                                                         "tag":  "mode",
+                                                                         "attrs":  {
+
+                                                                                   },
+                                                                         "text":  "automatic",
+                                                                         "children":  [
+
+                                                                                      ]
+                                                                     }
+                                                                 ]
+                                                },
+                               "gateways":  null,
+                               "wan_config":  {
+                                                  "tag":  "wan",
+                                                  "attrs":  {
+
+                                                            },
+                                                  "text":  "",
+                                                  "children":  [
+                                                                   {
+                                                                       "tag":  "enable",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "1",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "if",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "vtnet1",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "mtu",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "ipaddr",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "dhcp",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "ipaddrv6",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "dhcp6",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "subnet",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "gateway",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "blockpriv",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "1",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "blockbogons",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "1",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "dhcphostname",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "media",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "mediaopt",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   },
+                                                                   {
+                                                                       "tag":  "dhcp6-ia-pd-len",
+                                                                       "attrs":  {
+
+                                                                                 },
+                                                                       "text":  "0",
+                                                                       "children":  [
+
+                                                                                    ]
+                                                                   }
+                                                               ]
+                                              },
+                               "pfsync_stats":  {
+                                                    "rc":  0,
+                                                    "stdout":  "pfsync:\n\t8373 packets received (IPv4)\n\t0 packets received (IPv6)\n\t\t0 clear all requests received\n\t\t0 13.1 state inserts received\n\t\t0 state inserted acks received\n\t\t0 13.1 state updates received\n\t\t11042 compressed state updates received\n\t\t23 uncompressed state requests received\n\t\t0 state deletes received\n\t\t63 compressed state deletes received\n\t\t0 fragment inserts received\n\t\t0 fragment deletes received\n\t\t7 bulk update marks received\n\t\t0 TDB replay counter updates received\n\t\t8373 end of frame marks received\n\t\t41 14.0 state inserts received\n\t\t48 14.0 state updates received\n\t\t0 state inserts received\n\t\t0 state updates received\n\t\t0 packets discarded for bad interface\n\t\t0 packets discarded for bad ttl\n\t\t0 packets shorter than header\n\t\t0 packets discarded for bad version\n\t\t0 packets discarded for bad HMAC\n\t\t0 packets discarded for bad action\n\t\t0 packets discarded for short packet\n\t\t0 states discarded for bad values\n\t\t0 stale states\n\t\t31 failed state lookup/inserts\n\t10024 packets sent (IPv4)\n\t0 packets sent (IPv6)\n\t\t0 clear all requests sent\n\t\t0 13.1 state inserts sent\n\t\t0 state inserted acks sent\n\t\t0 13.1 state updates sent\n\t\t13068 compressed state updates sent\n\t\t28 uncompressed state requests sent\n\t\t0 state deletes sent\n\t\t57 compressed state deletes sent\n\t\t0 fragment inserts sent\n\t\t0 fragment deletes sent\n\t\t9 bulk update marks sent\n\t\t0 TDB replay counter updates sent\n\t\t10084 end of frame marks sent\n\t\t52 14.0 state inserts sent\n\t\t73 14.0 state updates sent\n\t\t0 state inserts sent\n\t\t0 state updates sent\n\t\t0 failures due to mbuf memory error\n\t\t60 send errors\n",
+                                                    "stderr":  ""
+                                                },
+                               "sync_filter":  [
+                                                   "block drop in log on ! vtnet2 inet from 10.255.255.0/30 to any",
+                                                   "block drop in log on vtnet2 inet6 from fe80::5200:ff:fe02:2 to any",
+                                                   "pass in log quick on vtnet2 inet proto icmp from 10.255.255.1 to 10.255.255.2 keep state label \"4ba057ad-eaf3-4c0b-b14e-5b90ad60cb31\"",
+                                                   "pass in log quick on vtnet2 inet proto pfsync from 10.255.255.1 to 10.255.255.2 no state label \"419effb1-ee82-4d39-8b1a-84e6601bf3d2\"",
+                                                   "pass in log quick on vtnet2 inet proto tcp from 10.255.255.1 to 10.255.255.2 port = https flags S/SA keep state label \"e5a787a7-dd8f-4d0d-85d6-0e675aba02ef\"",
+                                                   "pass in log quick on vtnet2 inet proto tcp from 10.255.255.1 to 10.255.255.2 port = 8001 flags S/SA keep state label \"aa8fc249-d6e7-4ed9-b077-bbeaf7107f12\""
+                                               ],
+                               "log_events":  [
+                                                  "\u003c13\u003e1 2026-11-06T17:41:56+00:00 OPNsense.internal kernel - - [meta sequenceId=\"209\"] \u003c6\u003e[74] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                  "\u003c13\u003e1 2026-11-06T17:42:09+00:00 OPNsense.internal kernel - - [meta sequenceId=\"251\"] \u003c6\u003e[87] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                  "\u003c13\u003e1 2026-11-06T17:43:07+00:00 OPNsense.internal kernel - - [meta sequenceId=\"19\"] \u003c118\u003e[145] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                  "\u003c13\u003e1 2026-11-06T17:43:07+00:00 OPNsense.internal opnsense 12103 - [meta sequenceId=\"21\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                  "\u003c13\u003e1 2026-11-06T17:43:07+00:00 OPNsense.internal opnsense 12103 - [meta sequenceId=\"22\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                  "\u003c13\u003e1 2026-11-06T17:43:07+00:00 OPNsense.internal kernel - - [meta sequenceId=\"24\"] \u003c6\u003e[145] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                  "\u003c13\u003e1 2026-11-06T17:43:08+00:00 OPNsense.internal kernel - - [meta sequenceId=\"29\"] \u003c6\u003e[146] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                  "\u003c13\u003e1 2026-11-06T19:18:27+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"208\"] \u003c6\u003e[88] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                  "\u003c13\u003e1 2026-11-06T19:18:50+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"284\"] \u003c6\u003e[111] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                  "\u003c13\u003e1 2026-11-06T19:20:12+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"26\"] \u003c118\u003e[193] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                  "\u003c13\u003e1 2026-11-06T19:20:13+00:00 OPNsense-Secondary.internal opnsense 87401 - [meta sequenceId=\"27\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                  "\u003c13\u003e1 2026-11-06T19:20:13+00:00 OPNsense-Secondary.internal opnsense 87401 - [meta sequenceId=\"28\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                  "\u003c13\u003e1 2026-11-06T19:20:14+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"29\"] \u003c6\u003e[195] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                  "\u003c13\u003e1 2026-11-06T19:20:16+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"32\"] \u003c6\u003e[197] carp: demoted by -240 to 0 (pfsync bulk done)"
+                                              ],
+                               "soc-pfsync-start.log":  "Fri Nov  6 19:20:12 UTC 2026\n{ sec = 1793992618, usec = 702120 } Fri Nov  6 19:16:58 2026\npfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 0\n\tgroups: pfsync\nnative_rc=0\n"
+                           }
+}

@@ -1,0 +1,64 @@
+{
+  "pid": 2096,
+  "armed_monotonic": 1721.893833017,
+  "guest_wall_clock_untrusted": 1793811261.5782418,
+  "initial_carp": [
+    {
+      "vlan": 30,
+      "rc": 0,
+      "state": [
+        "BACKUP"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: BACKUP vhid 30 advbase 1 advskew 100"
+      ]
+    },
+    {
+      "vlan": 40,
+      "rc": 0,
+      "state": [
+        "BACKUP"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: BACKUP vhid 40 advbase 1 advskew 100"
+      ]
+    },
+    {
+      "vlan": 50,
+      "rc": 0,
+      "state": [
+        "BACKUP"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: BACKUP vhid 50 advbase 1 advskew 100"
+      ]
+    },
+    {
+      "vlan": 60,
+      "rc": 0,
+      "state": [
+        "BACKUP"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: BACKUP vhid 60 advbase 1 advskew 100"
+      ]
+    },
+    {
+      "vlan": 99,
+      "rc": 0,
+      "state": [
+        "BACKUP"
+      ],
+      "vip_ok": true,
+      "carp": [
+        "carp: BACKUP vhid 99 advbase 1 advskew 100"
+      ]
+    }
+  ],
+  "deadline_seconds": 300,
+  "collector_time": "2026-11-04T16:55:12.849688+07:00"
+}

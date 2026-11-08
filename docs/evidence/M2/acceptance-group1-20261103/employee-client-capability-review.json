@@ -1,0 +1,16 @@
+{
+  "scope": "READ_ONLY_STRINGS_OF_EXISTING_BINARY_NOT_EXECUTED",
+  "binary": "/opt/vpcsu/bin/vpcs",
+  "strings_rc": 0,
+  "help_excerpts": [
+    "  Show IPv6 mtu table",
+    "{Hshow} [{UARG}]",
+    "  Show information for ARG",
+    "    ARG:",
+    "       {Harp} [{Udigit}|{Hall}]    Show arp table for VPC {Udigit} or all VPCs",
+    "       {Hdump} [{Udigit}|{Hall}]   Show dump flags for VPC {Udigit} or all VPCs"
+  ],
+  "http_client_confirmed": false,
+  "note": "Absence of strings is not proof of missing capability; existing project test script sends a TCP probe only",
+  "collector_time": "2026-11-03T17:03:33.591771+07:00"
+}

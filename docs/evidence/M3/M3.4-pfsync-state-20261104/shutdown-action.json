@@ -1,0 +1,7 @@
+{
+  "collector_time": "2026-11-04T11:21:22.655712+07:00",
+  "command": "shutdown -p now",
+  "node": "OPNsense-Primary",
+  "capture": "docs\\evidence\\M3\\M3.4-pfsync-state-20261104\\primary-soft-shutdown-20261104T112122+0700.png",
+  "scope": "M3.4 authorized controlled failover"
+}

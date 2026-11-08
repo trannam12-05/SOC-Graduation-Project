@@ -1,0 +1,1 @@
+﻿{"source": "/var/lib/dhcp/dhclient.pnet0.leases", "last_lease_fields": ["fixed-address 192.168.220.143;", "option subnet-mask 255.255.255.0;", "option routers 192.168.220.2;", "option domain-name-servers 192.168.220.2;", "option dhcp-server-identifier 192.168.220.254;", "renew 5 2026/11/06 20:27:06;", "rebind 5 2026/11/06 20:39:44;", "expire 5 2026/11/06 20:43:29;"]}

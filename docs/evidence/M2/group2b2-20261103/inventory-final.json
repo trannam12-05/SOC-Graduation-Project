@@ -1,0 +1,12 @@
+{
+  "running_qemu": [
+    {
+      "name": "OPNsense-Primary",
+      "ram_mib": 3072
+    }
+  ],
+  "mem_available_kib": 5259100,
+  "swap_used_kib": 0,
+  "action": "READ_ONLY",
+  "collected_at": "2026-11-03T16:37:49.363677+07:00"
+}

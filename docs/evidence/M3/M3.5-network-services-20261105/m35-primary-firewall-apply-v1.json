@@ -1,0 +1,36 @@
+{
+  "status": "DONE",
+  "config_sha256": "73d13cef6599260cfa44940d6bcccb3cb851e10b9c5d37dab2f9ef2fba07fcc5",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m35-apply-firewall.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m35-apply-firewall.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m35-apply-firewall.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"backup\":\"\\/root\\/soc-m35-20261105\\/config.before-firewall.xml\",\"added\":[{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt2\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"udp\",\"source_net\":\"192.168.40.0\\/24\",\"destination_net\":\"192.168.40.1\\/32\",\"log\":\"1\",\"sequence\":\"300\",\"description\":\"SOC M35 EMPLOYEE DNS UDP\",\"destination_port\":\"53\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt2\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"tcp\",\"source_net\":\"192.168.40.0\\/24\",\"destination_net\":\"192.168.40.1\\/32\",\"log\":\"1\",\"sequence\":\"301\",\"description\":\"SOC M35 EMPLOYEE DNS TCP\",\"destination_port\":\"53\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt2\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"icmp\",\"source_net\":\"192.168.40.0\\/24\",\"destination_net\":\"192.168.40.1\\/32\",\"log\":\"1\",\"sequence\":\"302\",\"description\":\"SOC M35 EMPLOYEE CARP PING\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt2\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"tcp\",\"source_net\":\"192.168.40.0\\/24\",\"destination_net\":\"192.168.30.10\\/32\",\"log\":\"1\",\"sequence\":\"303\",\"description\":\"SOC M35 EMPLOYEE TO DC HTTP8000\",\"destination_port\":\"8000\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt3\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"udp\",\"source_net\":\"192.168.50.0\\/24\",\"destination_net\":\"192.168.50.1\\/32\",\"log\":\"1\",\"sequence\":\"304\",\"description\":\"SOC M35 GUEST DNS UDP\",\"destination_port\":\"53\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt3\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"tcp\",\"source_net\":\"192.168.50.0\\/24\",\"destination_net\":\"192.168.50.1\\/32\",\"log\":\"1\",\"sequence\":\"305\",\"description\":\"SOC M35 GUEST DNS TCP\",\"destination_port\":\"53\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt3\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"icmp\",\"source_net\":\"192.168.50.0\\/24\",\"destination_net\":\"192.168.50.1\\/32\",\"log\":\"1\",\"sequence\":\"306\",\"description\":\"SOC M35 GUEST CARP PING\"},{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt5\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"icmp\",\"source_net\":\"192.168.99.100\\/32\",\"destination_net\":\"192.168.99.1\\/32\",\"log\":\"1\",\"sequence\":\"307\",\"description\":\"SOC M35 MANAGEMENT CARP PING\"}]}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl filter reload",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    }
+  ],
+  "runtime_rules": [
+    "pass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.100 to 192.168.40.2 keep state label \"1346206b-5bbc-4fd7-bf9d-e01c02c13fb7\"",
+    "pass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.100 to 192.168.30.10 port = 8000 flags S/SA keep state label \"684c6853-1caa-4a3c-9433-b48f01624c84\"",
+    "pass in log quick on vtnet0_vlan40 inet proto udp from 192.168.40.0/24 to 192.168.40.1 port = domain keep state label \"ccbbe825-4c5e-40cc-90fc-bea18cb460a6\"",
+    "pass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.0/24 to 192.168.40.1 port = domain flags S/SA keep state label \"efb0145c-dba9-4ff7-b2ce-6e124b4ae1e1\"",
+    "pass in log quick on vtnet0_vlan40 inet proto icmp from 192.168.40.0/24 to 192.168.40.1 keep state label \"076d581f-f419-4727-b738-e3715e1e0725\"",
+    "pass in log quick on vtnet0_vlan50 inet proto udp from 192.168.50.0/24 to 192.168.50.1 port = domain keep state label \"2bdbf0b8-df09-4ae4-9804-ca8665906af2\"",
+    "pass in log quick on vtnet0_vlan50 inet proto tcp from 192.168.50.0/24 to 192.168.50.1 port = domain flags S/SA keep state label \"42c79a2e-eadf-492c-addf-49956864ec42\"",
+    "pass in log quick on vtnet0_vlan50 inet proto icmp from 192.168.50.0/24 to 192.168.50.1 keep state label \"80c0195c-5f11-45ca-9b5d-b1736eb339c9\"",
+    "pass in log quick on vtnet0_vlan99 inet proto icmp from 192.168.99.100 to 192.168.99.1 keep state label \"f495a3f9-172f-4f4c-8bb5-b2ee8ada70af\""
+  ],
+  "collector_time": "2026-11-05T10:12:04.160880+07:00"
+}

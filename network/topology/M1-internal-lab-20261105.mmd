@@ -1,0 +1,22 @@
+flowchart TB
+  P["OPNsense Primary\nVLAN .2; VIP .1 khi MASTER"]
+  S["OPNsense Secondary\nVLAN .3; VIP .1 khi MASTER"]
+  C["SOC-Core-L2 / Open vSwitch\nKhông IP; không routing"]
+  P ---|"e2 / vtnet2: SYNC .1 ↔ .2 /30"| S
+  C ---|"e5/ens8 ↔ e0/vtnet0; trunk 30,40,50,60,99"| P
+  C ---|"e6/ens9 ↔ e0/vtnet0; trunk 30,40,50,60,99"| S
+  C ---|"e0/ens3; access30"| DC["Data-Center e0\n192.168.30.10"]
+  C ---|"e1/ens4; access40"| E["Employee e0\n.40.100 thiết kế / nguồn test"]
+  C ---|"e2/ens5; access50"| G["Guest e0\n.50.100 dự kiến"]
+  C ---|"e3/ens6; access60"| D["DMZ e0\n.60.10 thiết kế"]
+  C ---|"e4/ens7; access99"| M["Segment Management / VLAN99"]
+  M --- PC["Management e0\n.99.100 thiết kế"]
+  M ---|"Suricata e1: quản trị"| IDS["Suricata-NIDS\nCapture e0 không IP\nQuản trị .99.20 dự kiến"]
+  C -->|"e7/ens10 → e0; bản sao ingress ens3–ens9"| IDS
+  M -.->|"Nối e0 dự kiến; chưa triển khai"| W["Wazuh-SOC\n.99.30 dự kiến"]
+  IDS -.->|"Log qua mạng quản trị; chưa nghiệm thu live"| W
+  W -.-> A["Automation logic\nM4/M5; chưa chốt máy chạy"]
+  A -.->|"API block IP dự kiến"| P
+  WAN["WAN1/WAN2 hiện có: cô lập\nInternet/upstream ngoài phạm vi cơ sở"]
+  WAN ---|"e1 / WAN1; e3 / WAN2"| P
+  WAN ---|"e1 / WAN1; e3 / WAN2"| S

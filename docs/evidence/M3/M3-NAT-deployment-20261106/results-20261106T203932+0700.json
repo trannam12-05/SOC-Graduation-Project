@@ -1,0 +1,38 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "role":  "OPNsense-Primary",
+                             "backup":  "/root/soc-m3-nat-prechange-20261106T203235Z/config.before.xml",
+                             "backup_mode":  "0o600",
+                             "config_sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                             "backup_sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                             "wan":  {
+                                         "rc":  0,
+                                         "stdout":  "vtnet1: flags=1008843\u003cUP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP\u003e metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028\u003cVLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS\u003e\n\tether 50:00:00:01:00:01\n\tinet6 fe80::5200:ff:fe01:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T \u003cfull-duplex\u003e)\n\tstatus: active\n\tnd6 options=23\u003cPERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL\u003e\n",
+                                         "stderr":  ""
+                                     },
+                             "default_route":  {
+                                                   "rc":  255,
+                                                   "stdout":  "",
+                                                   "stderr":  "route: route has not been found\n"
+                                               },
+                             "scope":  "Backup only; no configuration, link, service or HA changes"
+                         },
+    "OPNsense-Secondary":  {
+                               "role":  "OPNsense-Secondary",
+                               "backup":  "/root/soc-m3-nat-prechange-20261106T203421Z/config.before.xml",
+                               "backup_mode":  "0o600",
+                               "config_sha256":  "5be86d0ea5faebaa54d5b4e9c721e724ac8380a06a419e12f2480a76cdb91eff",
+                               "backup_sha256":  "5be86d0ea5faebaa54d5b4e9c721e724ac8380a06a419e12f2480a76cdb91eff",
+                               "wan":  {
+                                           "rc":  0,
+                                           "stdout":  "vtnet1: flags=1008843\u003cUP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP\u003e metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028\u003cVLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS\u003e\n\tether 50:00:00:02:00:01\n\tinet6 fe80::5200:ff:fe02:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T \u003cfull-duplex\u003e)\n\tstatus: active\n\tnd6 options=23\u003cPERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL\u003e\n",
+                                           "stderr":  ""
+                                       },
+                               "default_route":  {
+                                                     "rc":  255,
+                                                     "stdout":  "",
+                                                     "stderr":  "route: route has not been found\n"
+                                                 },
+                               "scope":  "Backup only; no configuration, link, service or HA changes"
+                           }
+}

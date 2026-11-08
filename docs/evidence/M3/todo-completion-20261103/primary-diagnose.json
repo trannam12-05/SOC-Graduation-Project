@@ -1,0 +1,312 @@
+{
+  "source": {
+    "/usr/local/etc/rc.bootup": [
+      {
+        "line": 93,
+        "context": [
+          "system_resolver_configure(true); /* adapts to runtime interface configuration */",
+          "filter_configure_sync(true);",
+          "plugins_configure('early', true);",
+          "system_routing_configure(true, null, 'ignore');",
+          "",
+          "plugins_configure('dhcp', true);"
+        ]
+      },
+      {
+        "line": 96,
+        "context": [
+          "system_routing_configure(true, null, 'ignore');",
+          "",
+          "plugins_configure('dhcp', true);",
+          "plugins_configure('dns', true);",
+          "",
+          "filter_configure_sync(true);"
+        ]
+      },
+      {
+        "line": 97,
+        "context": [
+          "",
+          "plugins_configure('dhcp', true);",
+          "plugins_configure('dns', true);",
+          "",
+          "filter_configure_sync(true);",
+          "plugins_configure('monitor', true);"
+        ]
+      },
+      {
+        "line": 100,
+        "context": [
+          "",
+          "filter_configure_sync(true);",
+          "plugins_configure('monitor', true);",
+          "plugins_configure('vpn', true);",
+          "plugins_configure('bootup', true);",
+          ""
+        ]
+      },
+      {
+        "line": 101,
+        "context": [
+          "filter_configure_sync(true);",
+          "plugins_configure('monitor', true);",
+          "plugins_configure('vpn', true);",
+          "plugins_configure('bootup', true);",
+          "",
+          "exit(0);"
+        ]
+      },
+      {
+        "line": 102,
+        "context": [
+          "plugins_configure('monitor', true);",
+          "plugins_configure('vpn', true);",
+          "plugins_configure('bootup', true);",
+          "",
+          "exit(0);"
+        ]
+      }
+    ],
+    "/usr/local/etc/inc/plugins.inc.d/pf.inc": [
+      {
+        "line": 53,
+        "context": [
+          "{",
+          "    return [",
+          "        'pfsync' => ['interfaces_pfsync_configure'],",
+          "    ];",
+          "}",
+          ""
+        ]
+      }
+    ],
+    "/usr/local/etc/inc/interfaces.inc": [
+      {
+        "line": 1362,
+        "context": [
+          "}",
+          "",
+          "function interfaces_pfsync_configure()",
+          "{",
+          "    global $config;",
+          ""
+        ]
+      },
+      {
+        "line": 1366,
+        "context": [
+          "    global $config;",
+          "",
+          "    if (!empty($config['hasync']['pfsyncinterface'])) {",
+          "        /*",
+          "         * We are just checking the actual attached interface here as get_real_interface()",
+          "         * was not dependable when the selected interface does not exist for any reason."
+        ]
+      },
+      {
+        "line": 1373,
+        "context": [
+          "         * What the current method tells us is that we are going to ignore whether this",
+          "         * interface is currently enabled or not.  To avoid breakage we will keep it so",
+          "         * although in reality disabling your pfsync interface should cause it to stop",
+          "         * syncing.",
+          "         */",
+          "        if (!empty($config['interfaces'][$config['hasync']['pfsyncinterface']]['if'])) {"
+        ]
+      },
+      {
+        "line": 1376,
+        "context": [
+          "         * syncing.",
+          "         */",
+          "        if (!empty($config['interfaces'][$config['hasync']['pfsyncinterface']]['if'])) {",
+          "            $syncdev = $config['interfaces'][$config['hasync']['pfsyncinterface']]['if'];",
+          "        }",
+          "    }"
+        ]
+      },
+      {
+        "line": 1377,
+        "context": [
+          "         */",
+          "        if (!empty($config['interfaces'][$config['hasync']['pfsyncinterface']]['if'])) {",
+          "            $syncdev = $config['interfaces'][$config['hasync']['pfsyncinterface']]['if'];",
+          "        }",
+          "    }",
+          ""
+        ]
+      },
+      {
+        "line": 1382,
+        "context": [
+          "",
+          "    if (!empty($syncdev)) {",
+          "        $ifcfrmt = ['/sbin/ifconfig pfsync0 syncdev %s'];",
+          "        $ifcargs = [$syncdev];",
+          "",
+          "        if (!empty($config['hasync']['pfsyncpeerip']) && is_ipaddrv4($config['hasync']['pfsyncpeerip'])) {"
+        ]
+      },
+      {
+        "line": 1385,
+        "context": [
+          "        $ifcargs = [$syncdev];",
+          "",
+          "        if (!empty($config['hasync']['pfsyncpeerip']) && is_ipaddrv4($config['hasync']['pfsyncpeerip'])) {",
+          "            $ifcfrmt[] = 'syncpeer %s';",
+          "            $ifcargs[] = $config['hasync']['pfsyncpeerip'];",
+          "        } else {"
+        ]
+      },
+      {
+        "line": 1387,
+        "context": [
+          "        if (!empty($config['hasync']['pfsyncpeerip']) && is_ipaddrv4($config['hasync']['pfsyncpeerip'])) {",
+          "            $ifcfrmt[] = 'syncpeer %s';",
+          "            $ifcargs[] = $config['hasync']['pfsyncpeerip'];",
+          "        } else {",
+          "            $ifcfrmt[] = '-syncpeer';",
+          "        }"
+        ]
+      },
+      {
+        "line": 1391,
+        "context": [
+          "            $ifcfrmt[] = '-syncpeer';",
+          "        }",
+          "        if (!empty($config['hasync']['pfsyncversion'])) {",
+          "            $ifcfrmt[] = 'version %s';",
+          "            $ifcargs[] = $config['hasync']['pfsyncversion'];",
+          "        }"
+        ]
+      },
+      {
+        "line": 1393,
+        "context": [
+          "        if (!empty($config['hasync']['pfsyncversion'])) {",
+          "            $ifcfrmt[] = 'version %s';",
+          "            $ifcargs[] = $config['hasync']['pfsyncversion'];",
+          "        }",
+          "",
+          "        $ifcfrmt[] = !empty($config['hasync']['pfsyncdefer']) ? 'defer' : '-defer';"
+        ]
+      },
+      {
+        "line": 1396,
+        "context": [
+          "        }",
+          "",
+          "        $ifcfrmt[] = !empty($config['hasync']['pfsyncdefer']) ? 'defer' : '-defer';",
+          "        $ifcfrmt[] = 'up';",
+          "",
+          "        mwexecf($ifcfrmt, $ifcargs);"
+        ]
+      },
+      {
+        "line": 1403,
+        "context": [
+          "        /*",
+          "         * Fix presumed replication issue when outgoing MTU",
+          "         * is smaller than what is set in pfsync0, also see",
+          "         * https://github.com/opnsense/core/commit/15acbad935",
+          "         */",
+          "        $intf_stats = legacy_interface_details($syncdev);"
+        ]
+      },
+      {
+        "line": 1408,
+        "context": [
+          "        $intf_stats = legacy_interface_details($syncdev);",
+          "        if (!empty($intf_stats['mtu'])) {",
+          "            mwexecf('/sbin/ifconfig pfsync0 mtu %s', [$intf_stats['mtu']]);",
+          "        }",
+          "    } else {",
+          "        mwexecf('/sbin/ifconfig pfsync0 -syncdev -syncpeer down');"
+        ]
+      },
+      {
+        "line": 1411,
+        "context": [
+          "        }",
+          "    } else {",
+          "        mwexecf('/sbin/ifconfig pfsync0 -syncdev -syncpeer down');",
+          "    }",
+          "}",
+          ""
+        ]
+      },
+      {
+        "line": 1461,
+        "context": [
+          "{",
+          "    $proxyarp = false;",
+          "    $pfsync = false;",
+          "    $dad = false;",
+          "",
+          "    foreach (config_read_array('virtualip', 'vip', false) as $vip) {"
+        ]
+      },
+      {
+        "line": 1487,
+        "context": [
+          "            case 'carp':",
+          "                interface_carp_configure($vip);",
+          "                $pfsync = true;",
+          "                break;",
+          "        }",
+          "    }"
+        ]
+      },
+      {
+        "line": 1492,
+        "context": [
+          "    }",
+          "",
+          "    if ($pfsync) {",
+          "        interfaces_pfsync_configure();",
+          "    }",
+          ""
+        ]
+      },
+      {
+        "line": 1493,
+        "context": [
+          "",
+          "    if ($pfsync) {",
+          "        interfaces_pfsync_configure();",
+          "    }",
+          "",
+          "    if ($proxyarp) {"
+        ]
+      }
+    ],
+    "/usr/local/etc/inc/plugins.inc": []
+  },
+  "configured_sync": {
+    "pfsyncinterface": "opt6",
+    "pfsyncpeerip": "10.255.255.2",
+    "pfsyncversion": "1400"
+  },
+  "runtime": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "start_hooks": [
+    "95-beep",
+    "90-sysctl",
+    "90-openvpn",
+    "90-cron",
+    "90-carp",
+    "25-syslog",
+    "20-freebsd",
+    "10-newwanip"
+  ],
+  "physmem": {
+    "rc": 0,
+    "stdout": "hw.physmem: 2102890496\n",
+    "stderr": ""
+  },
+  "config_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "collector_time": "2026-11-03T22:59:55.024453+07:00"
+}

@@ -1,0 +1,265 @@
+{
+  "rc": 0,
+  "mapping": {
+    "users": {
+      "description": "Users and Groups",
+      "help": "Synchronize the users and groups over to the other HA host.",
+      "section": "system.user,system.group",
+      "services": [
+        "login"
+      ]
+    },
+    "authservers": {
+      "description": "Authentication Servers",
+      "help": "Synchronize the authentication servers (e.g. LDAP, RADIUS) over to the other HA host.",
+      "section": "system.authserver",
+      "services": [
+        "login"
+      ]
+    },
+    "certs": {
+      "description": "Certificates and Authorities",
+      "help": "Synchronize the Certificate Authorities, Certificates, and Certificate Revocation Lists over to the other HA host.",
+      "section": "cert,ca,crl",
+      "services": []
+    },
+    "virtualip": {
+      "description": "Virtual IPs",
+      "help": "Synchronize the CARP Virtual IPs to the other HA host.",
+      "section": "virtualip",
+      "services": []
+    },
+    "staticroutes": {
+      "description": "Static Routes",
+      "help": "Synchronize the Static Route configuration and Gateways to the other HA host.",
+      "section": "staticroutes,gateways,OPNsense.Gateways",
+      "services": [
+        "routing",
+        "dpinger"
+      ]
+    },
+    "syslog-ng": {
+      "description": "System logging",
+      "section": "syslog,OPNsense.Syslog",
+      "services": [
+        "syslogd"
+      ],
+      "help": "Synchronize the System logging configuration to the other HA host."
+    },
+    "cron": {
+      "description": "Cron",
+      "section": "OPNsense.cron",
+      "services": [
+        "cron"
+      ],
+      "help": "Synchronize the Cron configuration to the other HA host."
+    },
+    "sysctl": {
+      "description": "System Tunables",
+      "section": "sysctl",
+      "services": [
+        "sysctl"
+      ],
+      "help": "Synchronize the System Tunables configuration to the other HA host."
+    },
+    "webgui": {
+      "description": "Web GUI",
+      "section": "system.webgui",
+      "services": [
+        "webgui"
+      ],
+      "help": "Synchronize the Web GUI configuration to the other HA host."
+    },
+    "dhcrelay": {
+      "description": "DHCRelay",
+      "section": "dhcrelay,dhcrelay6,OPNsense.DHCRelay",
+      "services": [
+        "dhcrelay"
+      ],
+      "help": "Synchronize the DHCRelay configuration to the other HA host."
+    },
+    "dnsforwarder": {
+      "description": "Dnsmasq DNS/DHCP",
+      "section": "dnsmasq",
+      "services": [
+        "dnsmasq"
+      ],
+      "help": "Synchronize the Dnsmasq DNS/DHCP configuration to the other HA host."
+    },
+    "hostwatch": {
+      "section": "OPNsense.Hostwatch",
+      "description": "Host discovery service",
+      "services": [
+        "hostwatch"
+      ],
+      "help": "Synchronize the Host discovery service configuration to the other HA host."
+    },
+    "shaper": {
+      "description": "Shaper",
+      "section": "OPNsense.TrafficShaper",
+      "services": [
+        "ipfw"
+      ],
+      "help": "Synchronize the Shaper configuration to the other HA host."
+    },
+    "captiveportal": {
+      "description": "Captive Portal",
+      "section": "OPNsense.captiveportal",
+      "services": [
+        "ipfw"
+      ],
+      "help": "Synchronize the Captive Portal configuration to the other HA host."
+    },
+    "ipsec": {
+      "description": "IPsec",
+      "section": "ipsec,OPNsense.IPsec,OPNsense.Swanctl",
+      "services": [
+        "strongswan"
+      ],
+      "help": "Synchronize the IPsec configuration to the other HA host."
+    },
+    "kea": {
+      "services": [
+        "kea-dhcpv4",
+        "kea-dhcpv6",
+        "kea-dhcp-ddns"
+      ],
+      "description": "Kea DHCP",
+      "section": "OPNsense.Kea",
+      "help": "Synchronize the Kea DHCP configuration to the other HA host."
+    },
+    "monit": {
+      "description": "Monit System Monitoring",
+      "section": "OPNsense.monit",
+      "services": [
+        "monit"
+      ],
+      "help": "Synchronize the Monit System Monitoring configuration to the other HA host."
+    },
+    "syslog": {
+      "description": "Netflow / Insight",
+      "section": "OPNsense.Netflow",
+      "services": [
+        "samplicate",
+        "flowd_aggregate"
+      ],
+      "help": "Synchronize the Netflow / Insight configuration to the other HA host."
+    },
+    "ntpd": {
+      "description": "Network Time",
+      "section": "ntpd,system.timeservers",
+      "services": [
+        "ntpd"
+      ],
+      "help": "Synchronize the Network Time configuration to the other HA host."
+    },
+    "opendns": {
+      "description": "OpenDNS",
+      "section": "opendns",
+      "help": "Synchronize the OpenDNS configuration to the other HA host.",
+      "services": []
+    },
+    "ssh": {
+      "description": "OpenSSH",
+      "section": "system.ssh",
+      "services": [
+        "openssh"
+      ],
+      "help": "Synchronize the OpenSSH configuration to the other HA host."
+    },
+    "openvpn": {
+      "description": "OpenVPN",
+      "section": "openvpn,OPNsense.OpenVPN",
+      "services": [
+        "openvpn"
+      ],
+      "help": "Synchronize the OpenVPN configuration to the other HA host."
+    },
+    "ifgroups": {
+      "description": "Firewall Groups",
+      "section": "ifgroups.ifgroupentry",
+      "services": [
+        "pf"
+      ],
+      "help": "Synchronize the Firewall Groups configuration to the other HA host."
+    },
+    "rules": {
+      "description": "Firewall Rules",
+      "help": "Synchronize the firewall rules to the other HA host.",
+      "section": "filter,OPNsense.Firewall.Filter.rules",
+      "services": [
+        "pf"
+      ]
+    },
+    "schedules": {
+      "description": "Firewall Schedules",
+      "help": "Synchronize the firewall schedules to the other HA host.",
+      "section": "schedules",
+      "services": [
+        "pf"
+      ]
+    },
+    "categories": {
+      "description": "Firewall Categories",
+      "section": "OPNsense.Firewall.Category",
+      "help": "Synchronize the Firewall Categories configuration to the other HA host.",
+      "services": []
+    },
+    "lvtemplate": {
+      "description": "Firewall Log Templates",
+      "section": "OPNsense.Firewall.Lvtemplate",
+      "help": "Synchronize the Firewall Log Templates configuration to the other HA host.",
+      "services": []
+    },
+    "aliases": {
+      "description": "Aliases",
+      "help": "Synchronize the aliases over to the other HA host.",
+      "section": "aliases,OPNsense.Firewall.Alias",
+      "services": [
+        "pf"
+      ]
+    },
+    "nat": {
+      "description": "NAT",
+      "help": "Synchronize the NAT rules over to the other HA host.",
+      "section": "nat,OPNsense.Firewall.Filter.snatrules,OPNsense.Firewall.Filter.npt,OPNsense.Firewall.Filter.onetoone",
+      "services": [
+        "pf"
+      ]
+    },
+    "radvd": {
+      "help": "Synchronize router advertisements.",
+      "description": "Router Advertisements",
+      "section": "OPNsense.radvd",
+      "services": [
+        "radvd"
+      ]
+    },
+    "suricata": {
+      "description": "Intrusion Detection",
+      "section": "OPNsense.IDS",
+      "services": [
+        "suricata"
+      ],
+      "help": "Synchronize the Intrusion Detection configuration to the other HA host."
+    },
+    "dnsresolver": {
+      "section": "unbound,OPNsense.unboundplus",
+      "description": "Unbound DNS",
+      "services": [
+        "unbound"
+      ],
+      "help": "Synchronize the Unbound DNS configuration to the other HA host."
+    },
+    "wireguard": {
+      "section": "OPNsense.wireguard",
+      "description": "WireGuard",
+      "services": [
+        "wireguard"
+      ],
+      "help": "Synchronize the WireGuard configuration to the other HA host."
+    }
+  },
+  "stderr": "",
+  "collector_time": "2026-11-06T18:37:49.032084+07:00"
+}

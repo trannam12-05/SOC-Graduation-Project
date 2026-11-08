@@ -1,0 +1,8 @@
+{
+  "collected_at": "2026-11-02T13:12:30.609828+07:00",
+  "package_count": 103,
+  "bundle_sha256": "09f31b28b8739c18b01b11cccacd412194988438e4c60302eef526706f110513",
+  "bytes": 29624320,
+  "remote_bundle": "/opt/unetlab/soc-suricata-preparation-20261102/suricata-offline.tar",
+  "origin": "Ubuntu Noble official signed metadata, SHA256 package checks; no installation on EVE host"
+}

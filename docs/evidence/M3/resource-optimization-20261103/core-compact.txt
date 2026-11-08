@@ -1,0 +1,1 @@
+hostname; free -m; systemctl is-active openvswitch-switch soc-core-l2-noip; sudo -n ovs-vsctl --format=table --columns=name,vlan_mode,tag,trunks list Port

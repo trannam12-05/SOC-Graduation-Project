@@ -1,0 +1,40 @@
+{
+  "status": "DONE",
+  "config_sha256": "96a0920acf1fe7296481a0dd1d94fb430f725d50903201e1b9fc89f4d811fadf",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m35-apply-dhcp.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m35-apply-dhcp.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m35-apply-dhcp.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"backup\":\"\\/root\\/soc-m35-20261105\\/config.before-dhcp.xml\",\"subnets\":[{\"subnet\":\"192.168.40.0\\/24\",\"pools\":\"192.168.40.110 - 192.168.40.199\",\"option_data_autocollect\":\"0\",\"option_data.domain_name_servers\":\"192.168.40.1\",\"option_data.routers\":\"192.168.40.1\",\"option_data.domain_name\":\"soc.local\",\"description\":\"SOC VLAN40 Employee\"},{\"subnet\":\"192.168.50.0\\/24\",\"pools\":\"192.168.50.110 - 192.168.50.199\",\"option_data_autocollect\":\"0\",\"option_data.domain_name_servers\":\"192.168.50.1\",\"option_data.routers\":\"192.168.50.1\",\"option_data.domain_name\":\"soc.local\",\"description\":\"SOC VLAN50 Guest\"}]}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl template reload OPNsense/Kea",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea status",
+      "rc": 0,
+      "stdout": "kea-dhcp[v4] is running as pid 28848.\n",
+      "stderr": ""
+    }
+  ],
+  "kea_process_lines": [
+    "root    28848   0.0  1.1  46252 22236  -  S    10:07    0:00.24 /usr/local/sbin/kea-dhcp4 -c /usr/local/etc/kea/kea-dhcp4.conf"
+  ],
+  "collector_time": "2026-11-05T10:08:46.954043+07:00"
+}

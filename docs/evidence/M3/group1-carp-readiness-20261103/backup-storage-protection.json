@@ -1,0 +1,9 @@
+{
+  "scope": "Local backup protection",
+  "private_directory": "docs\\evidence\\M3\\group1-carp-readiness-20261103\\private-backups",
+  "NTFS_owner_only_grant": "laptop-490fgei5\\acer",
+  "inherited_permissions_removed": true,
+  "git_check_ignore_private_key": true,
+  "encryption": "RSA-OAEP-SHA256 wrapping random passphrase; AES-256-CBC PBKDF2 100000 iterations; plaintext hash verified after decryption",
+  "transport_public_key_bytes": 294
+}

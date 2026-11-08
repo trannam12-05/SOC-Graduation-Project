@@ -1,0 +1,170 @@
+{
+  "role": "Primary",
+  "backup_path_guest": "/root/soc-m3-group1-primary-20261103/config.xml",
+  "backup_bytes": 48839,
+  "backup_mode": "0o600",
+  "backup_directory_mode": "0o700",
+  "config_sha256_before": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "backup_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "interfaces": [
+    {
+      "assignment": "wan",
+      "if": "vtnet1",
+      "enable": "1",
+      "ipaddr": "dhcp",
+      "subnet": "",
+      "ipaddrv6": "dhcp6"
+    },
+    {
+      "assignment": "lan",
+      "if": "vtnet0",
+      "enable": "1",
+      "ipaddr": "192.168.1.1",
+      "subnet": "24",
+      "ipaddrv6": "idassoc6",
+      "subnetv6": "64"
+    },
+    {
+      "assignment": "lo0",
+      "if": "lo0",
+      "enable": "1",
+      "descr": "Loopback",
+      "ipaddr": "127.0.0.1",
+      "subnet": "8",
+      "ipaddrv6": "::1",
+      "subnetv6": "128"
+    },
+    {
+      "assignment": "opt1",
+      "if": "vtnet0_vlan30",
+      "enable": "1",
+      "ipaddr": "192.168.30.2",
+      "subnet": "24",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    },
+    {
+      "assignment": "opt2",
+      "if": "vtnet0_vlan40",
+      "enable": "1",
+      "ipaddr": "192.168.40.2",
+      "subnet": "24",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    },
+    {
+      "assignment": "opt3",
+      "if": "vtnet0_vlan50",
+      "enable": "1",
+      "ipaddr": "192.168.50.2",
+      "subnet": "24",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    },
+    {
+      "assignment": "opt4",
+      "if": "vtnet0_vlan60",
+      "enable": "1",
+      "ipaddr": "192.168.60.2",
+      "subnet": "24",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    },
+    {
+      "assignment": "opt5",
+      "if": "vtnet0_vlan99",
+      "enable": "1",
+      "ipaddr": "192.168.99.2",
+      "subnet": "24",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    },
+    {
+      "assignment": "opt6",
+      "if": "vtnet2",
+      "enable": "1",
+      "ipaddr": "10.255.255.1",
+      "subnet": "30",
+      "ipaddrv6": "",
+      "subnetv6": ""
+    }
+  ],
+  "vlans": [
+    {
+      "if": "vtnet0",
+      "tag": "30",
+      "vlanif": "vtnet0_vlan30"
+    },
+    {
+      "if": "vtnet0",
+      "tag": "40",
+      "vlanif": "vtnet0_vlan40"
+    },
+    {
+      "if": "vtnet0",
+      "tag": "50",
+      "vlanif": "vtnet0_vlan50"
+    },
+    {
+      "if": "vtnet0",
+      "tag": "60",
+      "vlanif": "vtnet0_vlan60"
+    },
+    {
+      "if": "vtnet0",
+      "tag": "99",
+      "vlanif": "vtnet0_vlan99"
+    }
+  ],
+  "VIPs_public": [],
+  "sync_public": {
+    "pfsyncinterface": "opt6",
+    "pfsyncpeerip": "10.255.255.2",
+    "synchronizetoip": "10.255.255.2",
+    "disablepreempt": "0"
+  },
+  "version": {
+    "rc": 0,
+    "stdout": "OPNsense 26.7 (amd64)\n",
+    "stderr": ""
+  },
+  "runtime_ifconfig": {
+    "rc": 0,
+    "stdout": "vtnet0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: LAN (lan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:00\n\tinet 192.168.1.1 netmask 0xffffff00 broadcast 192.168.1.255\n\tinet6 fe80::5200:ff:fe01:0%vtnet0 prefixlen 64 scopeid 0x1\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nvtnet1: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:01\n\tinet6 fe80::5200:ff:fe01:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>\nvtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:02\n\tinet 10.255.255.1 netmask 0xfffffffc broadcast 10.255.255.3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet3: flags=1008802<BROADCAST,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:01:00:03\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nlo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384\n\toptions=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>\n\tinet 127.0.0.1 netmask 0xff000000\n\tinet6 ::1 prefixlen 128\n\tinet6 fe80::1%lo0 prefixlen 64 scopeid 0x5\n\tgroups: lo\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nenc0: flags=0 metric 0 mtu 1536\n\toptions=0\n\tgroups: enc\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\npflog0: flags=0 metric 0 mtu 33152\n\toptions=0\n\tgroups: pflog\npfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\nvtnet0_vlan30: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT1 (opt1)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.30.2 netmask 0xffffff00 broadcast 192.168.30.255\n\tgroups: vlan\n\tvlan: 30 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan40: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.40.2 netmask 0xffffff00 broadcast 192.168.40.255\n\tgroups: vlan\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan50: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT3 (opt3)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.50.2 netmask 0xffffff00 broadcast 192.168.50.255\n\tgroups: vlan\n\tvlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan60: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT4 (opt4)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.60.2 netmask 0xffffff00 broadcast 192.168.60.255\n\tgroups: vlan\n\tvlan: 60 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan99: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT5 (opt5)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.99.2 netmask 0xffffff00 broadcast 192.168.99.255\n\tgroups: vlan\n\tvlan: 99 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "stderr": ""
+  },
+  "carp_sysctl": {
+    "rc": 0,
+    "stdout": "net.inet.carp.allow: 1\nnet.inet.carp.demotion: 0\nnet.inet.carp.preempt: 1\n",
+    "stderr": ""
+  },
+  "root_mount": {
+    "rc": 0,
+    "stdout": "/dev/gpt/rootfs on / (ufs, local, soft-updates, journaled soft-updates)\ndevfs on /dev (devfs)\n/dev/gpt/efifs on /boot/efi (msdosfs, local)\ndevfs on /var/unbound/dev (devfs)\n/usr/local/lib/python3.13 on /var/unbound/usr/local/lib/python3.13 (nullfs, local, read-only)\n/lib on /var/unbound/lib (nullfs, local, read-only)\n",
+    "stderr": ""
+  },
+  "scope": "Read-only HA audit and new backup; no config save/reload/probe/failover",
+  "config_sha256_after": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "config_unchanged": true,
+  "collector_time": "2026-11-03T17:54:34.563899+07:00",
+  "backup_local": "docs/evidence/M3/group1-carp-readiness-20261103/private-backups/Primary-config.xml",
+  "local_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "local_decryption_and_hash_verified": true,
+  "CARP_entries_public_all_branches": [],
+  "pfsync_runtime_observation": {
+    "raw_interface_block": "pfsync0: flags=0 metric 0 mtu 1500\n\toptions=0\n\tmaxupd: 128 defer: off version: 1500\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "UP_flag_present": false,
+    "syncdev_present": false,
+    "syncpeer_present": false,
+    "interpretation": "Read-only runtime observation; prior packet evidence retained; no reconfiguration in group1"
+  },
+  "protected_section_hashes_local_read": {
+    "interfaces": "51b957b60b8e3e9c67b192b7e6afe06acf186dc66cf394a8ed054b4ab8585bb6",
+    "filter": "18dd25fdf3cce1099c8325d18391a8ea404d6cbfe8f04fdba49d11b012437850",
+    "nat": "851a3e6e161267283cd05e1b592a17face20a18492cd6b430611c93fad6a9ad4",
+    "dhcpd": null,
+    "hasync": "45fcfbefed87c7e2cafb348065ad831d7b175e18dc56e28f0f614d7608c9d594",
+    "virtualip": "40b7f105bd15cee80ae334f20740280a3312d194829bc008bcf94fd1426896da",
+    "OPNsense": "53e70c7f198976bfc5ec98f27225004a31c6767ab2919153c57118e973b868d5"
+  }
+}

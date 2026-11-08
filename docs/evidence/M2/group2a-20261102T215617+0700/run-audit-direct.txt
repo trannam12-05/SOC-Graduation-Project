@@ -1,0 +1,1 @@
+python3 /var/tmp/m2-bundle-primary-group2a-20261102-215617/guest.py --work /root/soc-group2a-20261102-215617

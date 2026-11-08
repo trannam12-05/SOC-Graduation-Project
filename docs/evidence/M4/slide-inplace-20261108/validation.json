@@ -1,0 +1,40 @@
+﻿{
+    "path":  "D:\\SOC\\Thuyết trình nhóm 1.pptx",
+    "recorded_at":  "2026-11-08T11:17:39.2003950+07:00",
+    "changed_parts":  [
+                          "ppt/slides/slide16.xml",
+                          "ppt/slides/slide17.xml"
+                      ],
+    "added_parts":  [
+
+                    ],
+    "other_existing_parts_unchanged":  true,
+    "photos":  [
+                   {
+                       "source":  "docs/evidence/M1/label-correction-20261105/topology-labels-corrected-20261105T0928+0700.png",
+                       "embedded":  "ppt/media/soc-live-topology.png",
+                       "caption":  "Topology EVE-NG ngày 05/11/2026; ảnh cấu trúc trước mở rộng WAN, một số nhãn lịch sử chưa cập nhật.",
+                       "sha256":  "9E49DBD1424495825F43B721A1A02FED177A1C3BFB23E50FAB04D4C47657C3D1"
+                   },
+                   {
+                       "source":  "docs/evidence/M3/M3.4B-pfsync-state-20261104/primary-recovery-carp-readable-20261104T170827+0700.png",
+                       "embedded":  "ppt/media/soc-live-vlan-vip.png",
+                       "caption":  "Primary sau recovery 04/11/2026: năm VLAN, IP .2 và CARP VIP .1.",
+                       "sha256":  "D3E487EA476D50BA29F6B709448ECA0839B11AA22D2D6AB6EC6F500417F0B7BF"
+                   },
+                   {
+                       "source":  "docs/evidence/M3/M3.4B-pfsync-state-20261104/secondary-after-native-readable-20261104T165711+0700.png",
+                       "embedded":  "ppt/media/soc-live-ha-failover.png",
+                       "caption":  "M3.4B 04/11/2026: Secondary MASTER năm VHID, state TCP ESTABLISHED sau Primary OFF; không reconnect.",
+                       "sha256":  "B53766F347D07769247C3F8F2A88CED1E8826BD296A7DD7EC6065388BB78D541"
+                   },
+                   {
+                       "source":  "docs/evidence/M2/final-acceptance-20261103/core-mirror-after-tests-20261103T171916+0700.png",
+                       "embedded":  "ppt/media/soc-live-span.png",
+                       "caption":  "OVS Mirror thực tế 03/11/2026: span-suricata, VLAN30/40/50/60/99; tx_packets48; có PCAP marker GET.",
+                       "sha256":  "415769F052AE0F2E4EE6201AF533C329EB9D20B280B1BD6E8D313A2F12EB03E2"
+                   }
+               ],
+    "sha256":  "C26383EE0CACAB68C63A73CD4D52C6C9A8016C705B3F43A0105AA65D1F07A58F",
+    "visual_review":  "PASS: 4 slide đã mở lại bằng PowerPoint Open2007 OpenAndRepair ở chế độ chỉ đọc và kiểm tra ảnh render; không lưu tự động từ PowerPoint."
+}

@@ -1,0 +1,12 @@
+﻿{
+    "collected_at":  "2026-11-06T19:17:19.5981866+07:00",
+    "status":  "PARTIAL",
+    "method":  "Đối chiếu hồ sơ có sẵn; không phải kiểm tra runtime mới",
+    "xmlrpc":  "PASS trong phạm vi tám mô tả rule và ba pool DHCP trùng nhau; chưa so sánh toàn bộ thuộc tính rule",
+    "rules_equal":  true,
+    "dhcp_subnets_equal":  true,
+    "nat":  "BLOCKED: WAN cô lập theo M3.5; chưa kiểm tra NAT live",
+    "live_verification":  "BLOCKED: python.exe không chạy được; py báo No installed Python found; không cài phần mềm",
+    "dhcp_firewall":  "Giữ PASS M3.5 lịch sử; không chạy lại",
+    "new_screenshots":  0
+}

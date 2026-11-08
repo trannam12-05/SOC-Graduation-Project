@@ -1,0 +1,40 @@
+{
+  "hostname": {
+    "rc": 0,
+    "out": "data-center\n",
+    "err": ""
+  },
+  "addresses": {
+    "rc": 0,
+    "out": "[{\"ifindex\":2,\"ifname\":\"lan0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:54:bc:2f:0c:00\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s3\"],\"addr_info\":[{\"family\":\"inet\",\"local\":\"192.168.30.10\",\"prefixlen\":24,\"broadcast\":\"192.168.30.255\",\"scope\":\"global\",\"label\":\"lan0\",\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295}]}]\n",
+    "err": ""
+  },
+  "routes": {
+    "rc": 0,
+    "out": "[{\"dst\":\"default\",\"gateway\":\"192.168.30.2\",\"dev\":\"lan0\",\"protocol\":\"static\",\"flags\":[]},{\"dst\":\"192.168.30.0/24\",\"dev\":\"lan0\",\"protocol\":\"kernel\",\"scope\":\"link\",\"prefsrc\":\"192.168.30.10\",\"flags\":[]}]\n",
+    "err": ""
+  },
+  "route_to_client": {
+    "rc": 0,
+    "out": "[{\"dst\":\"192.168.40.100\",\"gateway\":\"192.168.30.2\",\"dev\":\"lan0\",\"prefsrc\":\"192.168.30.10\",\"flags\":[],\"uid\":1000,\"cache\":[]}]\n",
+    "err": ""
+  },
+  "http_service": {
+    "rc": 0,
+    "out": "active\n",
+    "err": ""
+  },
+  "http_main_pid": {
+    "rc": 0,
+    "out": "642\n",
+    "err": ""
+  },
+  "listening": {
+    "rc": 0,
+    "out": "State  Recv-Q Send-Q Local Address:Port Peer Address:PortProcess\nLISTEN 0      5      192.168.30.10:8000      0.0.0.0:*          \nLISTEN 0      4096   127.0.0.53%lo:53        0.0.0.0:*          \nLISTEN 0      4096      127.0.0.54:53        0.0.0.0:*          \nLISTEN 0      4096         0.0.0.0:22        0.0.0.0:*          \nLISTEN 0      4096            [::]:22           [::]:*          \n",
+    "err": ""
+  },
+  "boot_id": "927bcd80-1d24-4dc3-ae9e-7c7b11b0e21a",
+  "scope": "Chỉ đọc dịch vụ/địa chỉ/route; không GET, không TCP client, không state/failover test.",
+  "collector_time": "2026-11-04T16:29:30.558408+07:00"
+}

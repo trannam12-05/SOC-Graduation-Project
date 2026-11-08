@@ -1,0 +1,31 @@
+{
+  "service": "active",
+  "capture_interface": [
+    {
+      "ifindex": 2,
+      "ifname": "capture0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:54:42:38:75:00",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s3"
+      ],
+      "addr_info": []
+    }
+  ],
+  "alerts": [],
+  "boot_id": "e31a5937-121a-4958-826c-ff4608e2ca89",
+  "collector_time": "2026-11-02T17:01:16.369534+07:00",
+  "scope": "Actual live sensor state; guest timestamps untrusted, correlate marker and addresses"
+}

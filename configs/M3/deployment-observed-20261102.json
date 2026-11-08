@@ -1,0 +1,53 @@
+{
+  "collected_at": "2026-11-02T15:34:59.806486+07:00",
+  "scope": "Console and filesystem observations; no HA acceptance",
+  "primary": {
+    "root_filesystem": "/dev/gpt/rootfs",
+    "boot": "HARD_DISK",
+    "lan": "192.168.1.1/24",
+    "sync": {
+      "interface": "vtnet2",
+      "address": "10.255.255.1/30"
+    },
+    "vlans": {
+      "30": "192.168.30.2/24",
+      "40": "192.168.40.2/24",
+      "50": "192.168.50.2/24",
+      "60": "192.168.60.2/24",
+      "99": "192.168.99.2/24"
+    },
+    "config_backup": "/root/soc-ha-backup-20261102-1528/config.xml"
+  },
+  "secondary": {
+    "current_root": "/dev/gpt/rootfs",
+    "current_boot": "HARD_DISK_VERIFIED",
+    "lan_live": "192.168.1.2/24",
+    "sync_live": {
+      "interface": "vtnet2",
+      "address": "10.255.255.2/30"
+    },
+    "vlans_live": {
+      "30": "192.168.30.3/24",
+      "40": "192.168.40.3/24",
+      "50": "192.168.50.3/24",
+      "60": "192.168.60.3/24",
+      "99": "192.168.99.3/24"
+    },
+    "installed_partition": "/dev/vtbd0p3",
+    "installed_network_config": "LAN .2, VLAN30/40/50/60/99 .3, SYNC 10.255.255.2/30 verified on disk boot banner",
+    "persistent_live_backup": "/root/soc-ha-backup-20261102-1522/live-config.xml on installed filesystem",
+    "backup_sha256": "6af39a6589a1edfee0ac354452c3037e8b32108d47652f3be74b711c7317550d",
+    "disk_backup": "docs/evidence/M3/resume-20261102/secondary-installed-disk-backup.json",
+    "boot_evidence": "docs/evidence/M3/resume-20261102/secondary-disk-boot-check-20261102T161149+0700.png"
+  },
+  "sync_pretest": {
+    "arp": "PASS: 50:00:00:01:00:02 on vtnet2",
+    "icmp": "FAIL: 3 sent, 0 received before HA rules",
+    "icmp_after_rules": "Primary -> Secondary: PASS 3/3, 0% loss",
+    "tcp443_after_rules": "Primary -> Secondary: CONNECTED"
+  },
+  "pfsync": "CONFIGURED_BOTH; PROTOCOL_240_BIDIRECTIONAL_VERIFIED; FULL_STATE_REPLICATION_NOT_YET_ACCEPTED",
+  "XMLRPC": "AWAIT_DIRECT_CONSOLE_SECRET_ENTRY",
+  "CARP": "NOT_VERIFIED",
+  "pfsync_evidence": "docs/evidence/M3/resume-20261102/pfsync-packets.json"
+}

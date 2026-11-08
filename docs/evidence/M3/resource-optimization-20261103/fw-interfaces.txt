@@ -1,0 +1,1 @@
+ifconfig -a | grep inet; ifconfig vtnet2; uptime; vmstat 1 3

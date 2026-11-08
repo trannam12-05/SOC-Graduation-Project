@@ -1,0 +1,43 @@
+{
+  "collected_at": "2026-11-03T22:16:24.650427+07:00",
+  "resources": "FAIL",
+  "decision": "NOT READY TO APPLY CARP",
+  "ram_mib": {
+    "eve_memtotal": 7897.77734375,
+    "eve_memavailable": 2771.1796875,
+    "core": 2048,
+    "primary": 3072,
+    "secondary": 3072,
+    "three_nodes_total": 8192,
+    "guest_only_deficit": 294.22265625,
+    "reserve_policy": 1024,
+    "remaining_available_after_nominal_core": 723.1796875,
+    "shortfall_for_three_nodes_plus_reserve": 1318.22265625
+  },
+  "cpu": {
+    "eve_logical": 4,
+    "requested_vcpu_total": 5,
+    "loadavg": [
+      3.75390625,
+      3.67578125,
+      3.72021484375
+    ],
+    "assessment": "Not the decisive blocker; vmstat recent idle93–96%, no current swap-in/out"
+  },
+  "core_booted": false,
+  "skipped_checks": [
+    "Core L2",
+    "VLAN30 L2",
+    "VLAN40 L2",
+    "VLAN50 L2",
+    "VLAN60 L2",
+    "VLAN99 L2",
+    "VIP conflict probes",
+    "VHID capture",
+    "pfsync current recheck"
+  ],
+  "last_pfsync": "READY in earlier recovery audit, not measured anew in this readiness",
+  "no_config_changes": true,
+  "no_carp_apply": true,
+  "no_node_lifecycle_changes": true
+}

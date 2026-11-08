@@ -1,0 +1,46 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T17:08:27.138168+07:00",
+  "firewalls": {
+    "primary": {
+      "CARP": "MASTER",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "VIPs_correct": true,
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "SYNC_ping": "2/2",
+      "config_unchanged": true
+    },
+    "secondary": {
+      "CARP": "BACKUP",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "VIPs_correct": true,
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "SYNC_ping": "2/2",
+      "config_unchanged": true
+    }
+  },
+  "core_L2_OVS_VLAN": "PASS",
+  "VIPs": "PASS 5 VLAN",
+  "endpoint": "Existing DC IP/service and scoped return route present",
+  "native_pfsync_reapply_during_recovery": false,
+  "Core_Secondary_DC_pids_unchanged": true,
+  "primary_new_boot": true,
+  "node_resource_interface_mapping_unchanged": true,
+  "lab_byte_hash_unchanged": true
+}

@@ -1,0 +1,20 @@
+{
+  "boot_id": "2728869a-3755-4793-b058-052b0a39f4db",
+  "uptime": "214.06 603.12\n",
+  "client_pid_file": "41051",
+  "client_process_exists": false,
+  "client_command": null,
+  "wire_daemon_log": "",
+  "wire_result": null,
+  "events_tail": [
+    "{\"event\":\"step_acked\",\"elapsed\":415.317925,\"host_wall_clock_untrusted\":1793791435.3874176,\"phase\":\"primary-off\",\"step\":41,\"end\":385805453}",
+    "{\"event\":\"tcp_send\",\"elapsed\":425.323388,\"host_wall_clock_untrusted\":1793791445.392892,\"phase\":\"primary-off\",\"seq\":385805453,\"ack\":366362235,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"b29a724f96834ffde12f31385fc484ec5f4f4fc30f21e8552371f09a8f929eac\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":425.346063,\"host_wall_clock_untrusted\":1793791445.415566,\"phase\":\"primary-off\",\"seq\":366362235,\"ack\":385805476,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":425.347272,\"host_wall_clock_untrusted\":1793791445.4167733,\"phase\":\"primary-off\",\"step\":42,\"end\":385805476}",
+    "{\"event\":\"tcp_send\",\"elapsed\":435.3931,\"host_wall_clock_untrusted\":1793791455.4626021,\"phase\":\"primary-off\",\"seq\":385805476,\"ack\":366362235,\"flags\":24,\"bytes\":23,\"retry\":false,\"payload_sha256\":\"8f201a3e440b9114f61624acef39a7d3fc1a6dfb0c5b381f2ebfa4e1ee0b6e44\"}",
+    "{\"event\":\"tcp_receive\",\"elapsed\":435.411182,\"host_wall_clock_untrusted\":1793791455.4806771,\"phase\":\"primary-off\",\"seq\":366362235,\"ack\":385805499,\"flags\":16,\"bytes\":0,\"ttl\":63,\"checksum_offload_pending\":false}",
+    "{\"event\":\"step_acked\",\"elapsed\":435.41172,\"host_wall_clock_untrusted\":1793791455.4812114,\"phase\":\"primary-off\",\"step\":43,\"end\":385805499}",
+    "\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000\u0000"
+  ],
+  "collector_time": "2026-11-04T16:15:15.211521+07:00"
+}

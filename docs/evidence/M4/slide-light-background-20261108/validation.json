@@ -1,0 +1,46 @@
+﻿{
+    "file":  "D:\\SOC\\Thuyết trình nhóm 1.pptx",
+    "changed_parts":  [
+                          "ppt/media/soc-live-vlan-vip.png",
+                          "ppt/media/soc-live-span.png",
+                          "ppt/media/soc-live-ha-failover.png"
+                      ],
+    "other_parts_unchanged":  true,
+    "topology_image_unchanged":  true,
+    "pixel_verification":  [
+                               {
+                                   "image":  "ppt/media/soc-live-vlan-vip.png",
+                                   "width":  720,
+                                   "height":  400,
+                                   "neutral_pixels_converted":  288000,
+                                   "colored_pixels_unchanged":  0,
+                                   "pixels_verified":  288000,
+                                   "method":  "Đổi mức xám v thành 255-v tại cùng tọa độ; giữ nguyên pixel có màu và alpha; không OCR hoặc tạo chữ mới",
+                                   "derived_image":  "D:\\SOC\\docs\\evidence\\M4\\slide-light-background-20261108\\soc-live-vlan-vip.png",
+                                   "timestamp":  "2026-11-08T11:25:14.2889066+07:00"
+                               },
+                               {
+                                   "image":  "ppt/media/soc-live-ha-failover.png",
+                                   "width":  720,
+                                   "height":  400,
+                                   "neutral_pixels_converted":  288000,
+                                   "colored_pixels_unchanged":  0,
+                                   "pixels_verified":  288000,
+                                   "method":  "Đổi mức xám v thành 255-v tại cùng tọa độ; giữ nguyên pixel có màu và alpha; không OCR hoặc tạo chữ mới",
+                                   "derived_image":  "D:\\SOC\\docs\\evidence\\M4\\slide-light-background-20261108\\soc-live-ha-failover.png",
+                                   "timestamp":  "2026-11-08T11:25:14.8305095+07:00"
+                               },
+                               {
+                                   "image":  "ppt/media/soc-live-span.png",
+                                   "width":  720,
+                                   "height":  400,
+                                   "neutral_pixels_converted":  288000,
+                                   "colored_pixels_unchanged":  0,
+                                   "pixels_verified":  288000,
+                                   "method":  "Đổi mức xám v thành 255-v tại cùng tọa độ; giữ nguyên pixel có màu và alpha; không OCR hoặc tạo chữ mới",
+                                   "derived_image":  "D:\\SOC\\docs\\evidence\\M4\\slide-light-background-20261108\\soc-live-span.png",
+                                   "timestamp":  "2026-11-08T11:25:15.4528194+07:00"
+                               }
+                           ],
+    "original_evidence_untouched":  true
+}

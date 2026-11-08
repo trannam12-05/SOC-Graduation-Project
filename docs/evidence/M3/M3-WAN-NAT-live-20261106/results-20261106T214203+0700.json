@@ -1,0 +1,35 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "status":  "APPLIED",
+                             "backup":  "/root/soc-m3-wan-nat-20261106/config.before-nat.xml",
+                             "before_sha256":  "87168a5f2652efe7e2530ea2dc7495a867c8ca0339aaa8626f7f3fb09aa78935",
+                             "after_sha256":  "c2eac24c1e352722b65ec7a4abe09580333acfc1a6f5bd1d6b1f05bf2d73119b",
+                             "steps":  [
+                                           {
+                                               "rc":  0,
+                                               "stdout":  "No syntax errors detected in /root/soc-m3-wan-nat-20261106/apply-nat.php\n",
+                                               "stderr":  ""
+                                           },
+                                           {
+                                               "rc":  0,
+                                               "stdout":  "{\"status\":\"SAVED\",\"mode\":\"hybrid\",\"target\":\"egress interface address (empty target)\",\"scope\":\"192.168.40.110\\/32 -\u003e 1.1.1.1\\/32 TCP443\"}",
+                                               "stderr":  ""
+                                           },
+                                           {
+                                               "rc":  0,
+                                               "stdout":  "OK\n\n\n",
+                                               "stderr":  ""
+                                           }
+                                       ],
+                             "firewall_uuid":  "3f845536-0298-401c-8842-8a15754f21da",
+                             "snat_uuid":  "22b3f6fa-a716-497a-b30e-3167e9eb0501",
+                             "nat_runtime":  [
+                                                 "nat log on vtnet1 inet proto tcp from 192.168.40.110 to 1.1.1.1 port = https -\u003e (vtnet1:0) port 1024:65535"
+                                             ],
+                             "firewall_runtime":  [
+                                                      "pass in log quick on vtnet0_vlan40 inet proto tcp from 192.168.40.110 to 1.1.1.1 port = https flags S/SA keep state label \"3f845536-0298-401c-8842-8a15754f21da\""
+                                                  ],
+                             "protected_unchanged":  true,
+                             "old_rules_unchanged":  true
+                         }
+}

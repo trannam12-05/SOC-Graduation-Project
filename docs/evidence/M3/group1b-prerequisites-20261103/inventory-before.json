@@ -1,0 +1,13 @@
+{
+  "running": [
+    {
+      "name": "OPNsense-Primary",
+      "ram_mib": 3072
+    },
+    {
+      "name": "OPNsense-Secondary",
+      "ram_mib": 3072
+    }
+  ],
+  "collector_time": "2026-11-03T18:02:11.095027+07:00"
+}

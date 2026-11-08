@@ -1,0 +1,3 @@
+﻿filename,content,collected_at,path,report_section,sha256
+inventory.json,Read-only current EVE inventory; Core stopped,2026-11-02T21:16:09.539109+07:00,docs/evidence/M2/group1-audit-20261102T211609+0700/inventory.json,M2 group 1; sections 2.1-2.5,103934216cd6dbf37395e0e089ee1fd20bbd606fa3e73bb635b64f5839eb0edf
+lab-observed.unl,Observed lab XML copy; not an OVS configuration backup,2026-11-02T21:16:09.539109+07:00,docs/evidence/M2/group1-audit-20261102T211609+0700/lab-observed.unl,M2 group 1; sections 2.1-2.5,b04ab2d6b7f345d1d7a078bf7896697efc2b1978ebc37d4b61718d9edfc15ce7

@@ -1,0 +1,384 @@
+{
+  "state": "ESTABLISHED",
+  "flow": {
+    "source": "192.168.40.100",
+    "source_port": 44340,
+    "destination": "192.168.30.10",
+    "destination_port": 8000
+  },
+  "gateway": "192.168.40.1",
+  "gateway_mac": "00:00:5e:00:01:28",
+  "client_isn": 385804424,
+  "server_isn": 366362234,
+  "syn_transmissions": 1,
+  "retransmissions": 1,
+  "never_reconnects": true,
+  "phase": "primary-off",
+  "snd_una": 385805499,
+  "snd_next": 385805522,
+  "rcv_next": 366362235,
+  "steps": [
+    {
+      "step": "request-headers",
+      "phase": "before",
+      "end": 385804519,
+      "acked": true,
+      "ack_elapsed": 3.182754,
+      "ack_phase": "before"
+    },
+    {
+      "step": 1,
+      "phase": "before",
+      "end": 385804541,
+      "acked": true,
+      "ack_elapsed": 13.22442,
+      "ack_phase": "before"
+    },
+    {
+      "step": 2,
+      "phase": "before",
+      "end": 385804563,
+      "acked": true,
+      "ack_elapsed": 23.288196,
+      "ack_phase": "before"
+    },
+    {
+      "step": 3,
+      "phase": "before",
+      "end": 385804585,
+      "acked": true,
+      "ack_elapsed": 33.351047,
+      "ack_phase": "before"
+    },
+    {
+      "step": 4,
+      "phase": "before",
+      "end": 385804607,
+      "acked": true,
+      "ack_elapsed": 43.369183,
+      "ack_phase": "before"
+    },
+    {
+      "step": 5,
+      "phase": "before",
+      "end": 385804629,
+      "acked": true,
+      "ack_elapsed": 53.471303,
+      "ack_phase": "before"
+    },
+    {
+      "step": 6,
+      "phase": "before",
+      "end": 385804651,
+      "acked": true,
+      "ack_elapsed": 63.560494,
+      "ack_phase": "before"
+    },
+    {
+      "step": 7,
+      "phase": "before",
+      "end": 385804673,
+      "acked": true,
+      "ack_elapsed": 73.64953,
+      "ack_phase": "before"
+    },
+    {
+      "step": 8,
+      "phase": "before",
+      "end": 385804695,
+      "acked": true,
+      "ack_elapsed": 83.666133,
+      "ack_phase": "before"
+    },
+    {
+      "step": 9,
+      "phase": "before",
+      "end": 385804717,
+      "acked": true,
+      "ack_elapsed": 93.744058,
+      "ack_phase": "before"
+    },
+    {
+      "step": 10,
+      "phase": "before",
+      "end": 385804740,
+      "acked": true,
+      "ack_elapsed": 103.774791,
+      "ack_phase": "before"
+    },
+    {
+      "step": 11,
+      "phase": "before",
+      "end": 385804763,
+      "acked": true,
+      "ack_elapsed": 113.8588,
+      "ack_phase": "before"
+    },
+    {
+      "step": 12,
+      "phase": "before",
+      "end": 385804786,
+      "acked": true,
+      "ack_elapsed": 123.842472,
+      "ack_phase": "before"
+    },
+    {
+      "step": 13,
+      "phase": "before",
+      "end": 385804809,
+      "acked": true,
+      "ack_elapsed": 133.869042,
+      "ack_phase": "before"
+    },
+    {
+      "step": 14,
+      "phase": "before",
+      "end": 385804832,
+      "acked": true,
+      "ack_elapsed": 144.014308,
+      "ack_phase": "before"
+    },
+    {
+      "step": 15,
+      "phase": "before",
+      "end": 385804855,
+      "acked": true,
+      "ack_elapsed": 153.98201,
+      "ack_phase": "before"
+    },
+    {
+      "step": 16,
+      "phase": "before",
+      "end": 385804878,
+      "acked": true,
+      "ack_elapsed": 164.069133,
+      "ack_phase": "before"
+    },
+    {
+      "step": 17,
+      "phase": "before",
+      "end": 385804901,
+      "acked": true,
+      "ack_elapsed": 174.175444,
+      "ack_phase": "before"
+    },
+    {
+      "step": 18,
+      "phase": "before",
+      "end": 385804924,
+      "acked": true,
+      "ack_elapsed": 184.242379,
+      "ack_phase": "before"
+    },
+    {
+      "step": 19,
+      "phase": "before",
+      "end": 385804947,
+      "acked": true,
+      "ack_elapsed": 194.255512,
+      "ack_phase": "before"
+    },
+    {
+      "step": 20,
+      "phase": "before",
+      "end": 385804970,
+      "acked": true,
+      "ack_elapsed": 204.30974,
+      "ack_phase": "before"
+    },
+    {
+      "step": 21,
+      "phase": "before",
+      "end": 385804993,
+      "acked": true,
+      "ack_elapsed": 214.370551,
+      "ack_phase": "before"
+    },
+    {
+      "step": 22,
+      "phase": "before",
+      "end": 385805016,
+      "acked": true,
+      "ack_elapsed": 224.438735,
+      "ack_phase": "before"
+    },
+    {
+      "step": 23,
+      "phase": "before",
+      "end": 385805039,
+      "acked": true,
+      "ack_elapsed": 234.42322,
+      "ack_phase": "before"
+    },
+    {
+      "step": 24,
+      "phase": "before",
+      "end": 385805062,
+      "acked": true,
+      "ack_elapsed": 244.526678,
+      "ack_phase": "before"
+    },
+    {
+      "step": 25,
+      "phase": "before",
+      "end": 385805085,
+      "acked": true,
+      "ack_elapsed": 254.561501,
+      "ack_phase": "before"
+    },
+    {
+      "step": 26,
+      "phase": "failover-start",
+      "end": 385805108,
+      "acked": true,
+      "ack_elapsed": 264.61979,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 27,
+      "phase": "failover-start",
+      "end": 385805131,
+      "acked": true,
+      "ack_elapsed": 274.661978,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 28,
+      "phase": "failover-start",
+      "end": 385805154,
+      "acked": true,
+      "ack_elapsed": 286.874214,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 29,
+      "phase": "failover-start",
+      "end": 385805177,
+      "acked": true,
+      "ack_elapsed": 294.818366,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 30,
+      "phase": "failover-start",
+      "end": 385805200,
+      "acked": true,
+      "ack_elapsed": 304.863265,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 31,
+      "phase": "failover-start",
+      "end": 385805223,
+      "acked": true,
+      "ack_elapsed": 314.854494,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 32,
+      "phase": "failover-start",
+      "end": 385805246,
+      "acked": true,
+      "ack_elapsed": 324.888221,
+      "ack_phase": "failover-start"
+    },
+    {
+      "step": 33,
+      "phase": "primary-off",
+      "end": 385805269,
+      "acked": true,
+      "ack_elapsed": 334.980993,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 34,
+      "phase": "primary-off",
+      "end": 385805292,
+      "acked": true,
+      "ack_elapsed": 345.07175,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 35,
+      "phase": "primary-off",
+      "end": 385805315,
+      "acked": true,
+      "ack_elapsed": 355.073118,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 36,
+      "phase": "primary-off",
+      "end": 385805338,
+      "acked": true,
+      "ack_elapsed": 365.137036,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 37,
+      "phase": "primary-off",
+      "end": 385805361,
+      "acked": true,
+      "ack_elapsed": 375.168101,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 38,
+      "phase": "primary-off",
+      "end": 385805384,
+      "acked": true,
+      "ack_elapsed": 385.211027,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 39,
+      "phase": "primary-off",
+      "end": 385805407,
+      "acked": true,
+      "ack_elapsed": 395.221671,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 40,
+      "phase": "primary-off",
+      "end": 385805430,
+      "acked": true,
+      "ack_elapsed": 405.266906,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 41,
+      "phase": "primary-off",
+      "end": 385805453,
+      "acked": true,
+      "ack_elapsed": 415.317679,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 42,
+      "phase": "primary-off",
+      "end": 385805476,
+      "acked": true,
+      "ack_elapsed": 425.346893,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 43,
+      "phase": "primary-off",
+      "end": 385805499,
+      "acked": true,
+      "ack_elapsed": 435.411577,
+      "ack_phase": "primary-off"
+    },
+    {
+      "step": 44,
+      "phase": "primary-off",
+      "end": 385805522,
+      "acked": false
+    }
+  ],
+  "response_bytes": 0,
+  "http_status_line": null,
+  "elapsed": 445.474,
+  "failure": null
+}

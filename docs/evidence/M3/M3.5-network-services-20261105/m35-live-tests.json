@@ -1,0 +1,63 @@
+{
+  "collected_at": "2026-11-05T14:41:58.694546+07:00",
+  "scope": "Actual VPCS traffic through Core L2 and OPNsense Primary CARP MASTER",
+  "cases": [
+    {
+      "case": "employee_carp_gateway",
+      "node": "Employee",
+      "command": "ping 192.168.40.1 -c 3 -w 1000",
+      "output": "ping 192.168.40.1 -c 3 -w 1000\r\n\r\n84 bytes from 192.168.40.1 icmp_seq=1 ttl=64 time=29.523 ms\r\n84 bytes from 192.168.40.1 icmp_seq=2 ttl=64 time=10.123 ms\r\n84 bytes from 192.168.40.1 icmp_seq=3 ttl=64 time=10.865 ms\r\n\r\n\rEmployee> ",
+      "duration_s": 4.04,
+      "passed": true
+    },
+    {
+      "case": "guest_carp_gateway",
+      "node": "Guest",
+      "command": "ping 192.168.50.1 -c 3 -w 1000",
+      "output": "ping 192.168.50.1 -c 3 -w 1000\r\n\r\n84 bytes from 192.168.50.1 icmp_seq=1 ttl=64 time=8.856 ms\r\n84 bytes from 192.168.50.1 icmp_seq=2 ttl=64 time=7.184 ms\r\n84 bytes from 192.168.50.1 icmp_seq=3 ttl=64 time=5.385 ms\r\n\r\n\rVPCS> ",
+      "duration_s": 4.08,
+      "passed": true
+    },
+    {
+      "case": "management_carp_gateway",
+      "node": "Management",
+      "command": "ping 192.168.99.1 -c 3 -w 1000",
+      "output": "ping 192.168.99.1 -c 3 -w 1000\r\n\r\n84 bytes from 192.168.99.1 icmp_seq=1 ttl=64 time=7.729 ms\r\n84 bytes from 192.168.99.1 icmp_seq=2 ttl=64 time=5.149 ms\r\n84 bytes from 192.168.99.1 icmp_seq=3 ttl=64 time=4.858 ms\r\n\r\n\rManagement> ",
+      "duration_s": 4.09,
+      "passed": true
+    },
+    {
+      "case": "employee_dns",
+      "node": "Employee",
+      "command": "ping opnsense.internal -c 1 -w 1000",
+      "output": "ping opnsense.internal -c 1 -w 1000\r\nopnsense.internal resolved to 192.168.40.2\r\n\r\nopnsense.internal icmp_seq=1 timeout\r\n\r\n\rEmployee> ",
+      "duration_s": 3.07,
+      "passed": true
+    },
+    {
+      "case": "guest_dns",
+      "node": "Guest",
+      "command": "ping opnsense.internal -c 1 -w 1000",
+      "output": "ping opnsense.internal -c 1 -w 1000\r\nopnsense.internal resolved to 192.168.60.2\r\n\r\nopnsense.internal icmp_seq=1 timeout\r\n\r\n\rVPCS> ",
+      "duration_s": 3.06,
+      "passed": true
+    },
+    {
+      "case": "employee_to_dc_tcp8000_allow",
+      "node": "Employee",
+      "command": "ping 192.168.30.10 -P 6 -p 8000 -c 3 -w 1000",
+      "output": "ping 192.168.30.10 -P 6 -p 8000 -c 3 -w 1000\r\n\r\nConnect   8000@192.168.30.10 seq=1 ttl=63 time=30.427 ms\r\nSendData  8000@192.168.30.10 seq=1 ttl=63 time=14.444 ms\r\nClose     8000@192.168.30.10 seq=1 ttl=63 time=26.880 ms\r\nConnect   8000@192.168.30.10 seq=2 ttl=63 time=14.029 ms\r\nSendData  8000@192.168.30.10 seq=2 ttl=63 time=18.200 ms\r\nClose     8000@192.168.30.10 seq=2 ttl=63 time=29.966 ms\r\nConnect   8000@192.168.30.10 seq=3 ttl=63 time=18.788 ms\r\nSendData  8000@192.168.30.10 seq=3 ttl=63 time=16.138 ms\r\nClose     8000@192.168.30.10 seq=3 ttl=63 time=16.669 ms\r\n\r\n\rEmployee> ",
+      "duration_s": 3.33,
+      "passed": true
+    },
+    {
+      "case": "guest_to_dc_tcp8000_deny",
+      "node": "Guest",
+      "command": "ping 192.168.30.10 -P 6 -p 8000 -c 3 -w 1000",
+      "output": "ping 192.168.30.10 -P 6 -p 8000 -c 3 -w 1000\r\n\r\nConnect   8000@192.168.30.10 timeout\r\nConnect   8000@192.168.30.10 timeout\r\nConnect   8000@192.168.30.10 timeout\r\n\r\n\rVPCS> ",
+      "duration_s": 12.12,
+      "passed": true
+    }
+  ],
+  "status": "PASS"
+}

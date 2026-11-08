@@ -1,0 +1,12 @@
+{
+  "before_sha256": "a588f348ef49d5bc92eb185f162368cba8618ee9509870135e27fd9b8b3d4879",
+  "after_sha256": "9ba8aaf4220da0de93383ff70e6a0ff106dfba7641ff3a92f7631427d399644d",
+  "changes": {
+    "SOC-Core-L2": 1024,
+    "OPNsense-Primary": 2048,
+    "OPNsense-Secondary": 2048
+  },
+  "only_ram_changed": true,
+  "nodes_off_verified": true,
+  "collector_time": "2026-11-03T22:39:24.099911+07:00"
+}

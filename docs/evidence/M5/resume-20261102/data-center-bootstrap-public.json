@@ -1,0 +1,50 @@
+{
+  "node": "Data-Center",
+  "serial_path": "/opt/unetlab/tmp/0/f39cfc8c-5eaf-461e-bb0c-60b5fde848b7/4/serial.log",
+  "result": {
+    "role": "Data-Center",
+    "scope": "Local OS/IP/service only; routed client path still requires separate test",
+    "local_http_status": 200,
+    "local_http_bytes": 164,
+    "interfaces": [
+      {
+        "ifindex": 2,
+        "ifname": "lan0",
+        "flags": [
+          "BROADCAST",
+          "MULTICAST",
+          "UP",
+          "LOWER_UP"
+        ],
+        "mtu": 1500,
+        "qdisc": "fq_codel",
+        "operstate": "UP",
+        "group": "default",
+        "txqlen": 1000,
+        "link_type": "ether",
+        "address": "02:54:bc:2f:0c:00",
+        "broadcast": "ff:ff:ff:ff:ff:ff",
+        "altnames": [
+          "enp0s3"
+        ],
+        "addr_info": [
+          {
+            "family": "inet",
+            "local": "192.168.30.10",
+            "prefixlen": 24,
+            "broadcast": "192.168.30.255",
+            "scope": "global",
+            "label": "lan0",
+            "valid_life_time": 4294967295,
+            "preferred_life_time": 4294967295
+          }
+        ]
+      }
+    ],
+    "state": "CONFIGURED_LOCAL_SERVICE_VERIFIED_NOT_END_TO_END",
+    "service_port": 8000,
+    "boot_id": "3c7ea355-a274-49b3-a70a-9be5ec807d63"
+  },
+  "collector_time": "2026-11-02T17:14:14.245408+07:00",
+  "time_basis": "Windows collector UTC+07:00; guest event times untrusted"
+}

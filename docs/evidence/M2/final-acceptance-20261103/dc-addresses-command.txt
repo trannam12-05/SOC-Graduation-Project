@@ -1,0 +1,1 @@
+ip -br address; ip route; sudo -n ip netns exec m2-client40 ip -br address; sudo -n ip netns exec m2-client40 ip route

@@ -1,0 +1,130 @@
+{
+  "scope": "ARP observations through existing Core access ports; no guest configuration read; no response is not a guarantee of unused VIP",
+  "rows": [
+    {
+      "vlan": 30,
+      "tap": "vunl0_3_0",
+      "probes_per_target": 2,
+      "responses": [
+        {
+          "ip": "192.168.30.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.30.3",
+          "mac": "50:00:00:02:00:00"
+        }
+      ],
+      "primary_seen": false,
+      "secondary_seen": true,
+      "vip_conflict_seen": false
+    },
+    {
+      "vlan": 40,
+      "tap": "vunl0_3_1",
+      "probes_per_target": 2,
+      "responses": [
+        {
+          "ip": "192.168.40.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.40.1",
+          "mac": "00:00:5e:00:01:28"
+        },
+        {
+          "ip": "192.168.40.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.40.1",
+          "mac": "00:00:5e:00:01:28"
+        }
+      ],
+      "primary_seen": false,
+      "secondary_seen": true,
+      "vip_conflict_seen": true
+    },
+    {
+      "vlan": 50,
+      "tap": "vunl0_3_2",
+      "probes_per_target": 2,
+      "responses": [
+        {
+          "ip": "192.168.50.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.50.1",
+          "mac": "00:00:5e:00:01:32"
+        },
+        {
+          "ip": "192.168.50.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.50.1",
+          "mac": "00:00:5e:00:01:32"
+        }
+      ],
+      "primary_seen": false,
+      "secondary_seen": true,
+      "vip_conflict_seen": true
+    },
+    {
+      "vlan": 60,
+      "tap": "vunl0_3_3",
+      "probes_per_target": 2,
+      "responses": [
+        {
+          "ip": "192.168.60.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.60.1",
+          "mac": "00:00:5e:00:01:3c"
+        },
+        {
+          "ip": "192.168.60.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.60.1",
+          "mac": "00:00:5e:00:01:3c"
+        }
+      ],
+      "primary_seen": false,
+      "secondary_seen": true,
+      "vip_conflict_seen": true
+    },
+    {
+      "vlan": 99,
+      "tap": "vunl0_3_4",
+      "probes_per_target": 2,
+      "responses": [
+        {
+          "ip": "192.168.99.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.99.1",
+          "mac": "00:00:5e:00:01:63"
+        },
+        {
+          "ip": "192.168.99.3",
+          "mac": "50:00:00:02:00:00"
+        },
+        {
+          "ip": "192.168.99.1",
+          "mac": "00:00:5e:00:01:63"
+        }
+      ],
+      "primary_seen": false,
+      "secondary_seen": true,
+      "vip_conflict_seen": true
+    }
+  ],
+  "configuration_changed": false,
+  "collector_time_start": "2026-11-04T10:55:34.805241+07:00",
+  "collector_time": "2026-11-04T10:55:57.676994+07:00"
+}

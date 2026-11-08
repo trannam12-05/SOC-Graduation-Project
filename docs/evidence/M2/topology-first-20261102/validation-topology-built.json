@@ -1,0 +1,28 @@
+{
+  "collected_at": "2026-11-02T13:08:31.197173+07:00",
+  "structural_checks": {
+    "node_count_10": true,
+    "segments_11": true,
+    "firewalls_4_nics": true,
+    "core_eight_nics": true,
+    "original_primary_trunk": true,
+    "original_secondary_trunk": true,
+    "original_sync": true,
+    "wan_segments_isolated": true,
+    "capture_separate_management": true,
+    "capture_core_only": true,
+    "sensor_management": true,
+    "wazuh_no_invented_connection": true,
+    "core_access_Data-Center": true,
+    "core_access_Employee": true,
+    "core_access_Guest": true,
+    "core_access_DMZ": true,
+    "core_access_Management": true,
+    "both_firewalls_WAN-ISP-1": true,
+    "both_firewalls_WAN-ISP-2": true
+  },
+  "all_structural_checks_passed": true,
+  "scope": "XML structure only; not guest configuration, traffic, gateway, HA, IDS or SOC verification",
+  "global_TOPOLOGY_READY": false,
+  "unresolved": "Wazuh physical attachment, WAN upstream and exact endpoint multiplicity are not specified"
+}

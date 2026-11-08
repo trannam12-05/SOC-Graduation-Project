@@ -1,0 +1,87 @@
+{
+  "collected_at": "2026-11-05T10:31:35.038121+07:00",
+  "scope": "Actual VPCS console: Employee/Guest DHCP; Management static; CARP VIP .1 as gateway",
+  "endpoints": [
+    {
+      "node": "Employee",
+      "id": "5",
+      "console_port": 32773,
+      "logs": [
+        {
+          "command": "connect-and-cancel-startup-check",
+          "output": "\u001b]0;Employee\u0007\r\n\rEmployee> "
+        },
+        {
+          "command": "set pcname Employee",
+          "output": "\r\n\rEmployee> "
+        },
+        {
+          "command": "ip dhcp",
+          "output": "ip dhcp\r\nDORA IP 192.168.40.110/24 GW 192.168.40.1\r\n\r\n\rEmployee> "
+        },
+        {
+          "command": "save",
+          "output": "save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rEmployee> "
+        },
+        {
+          "command": "show ip",
+          "output": "show ip\r\n\r\nNAME        : Employee[1]\r\nIP/MASK     : 192.168.40.110/24\r\nGATEWAY     : 192.168.40.1\r\nDNS         : 192.168.40.1  \r\nDHCP SERVER : 192.168.40.2\r\nDHCP LEASE  : 3998, 4000/2000/3500\r\nDOMAIN NAME : soc.local\r\nMAC         : 00:50:79:66:68:05\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rEmployee> "
+        }
+      ]
+    },
+    {
+      "node": "Guest",
+      "id": "6",
+      "console_port": 32774,
+      "logs": [
+        {
+          "command": "connect-and-cancel-startup-check",
+          "output": "\u001b]0;Guest\u0007\r\n\rVPCS> "
+        },
+        {
+          "command": "set pcname Guest",
+          "output": "\r\n\rVPCS> "
+        },
+        {
+          "command": "ip dhcp",
+          "output": "ip dhcp\r\nDORA IP 192.168.50.110/24 GW 192.168.50.1\r\n\r\n\rVPCS> "
+        },
+        {
+          "command": "save",
+          "output": "save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rVPCS> "
+        },
+        {
+          "command": "show ip",
+          "output": "show ip\r\n\r\nNAME        : VPCS[1]\r\nIP/MASK     : 192.168.50.110/24\r\nGATEWAY     : 192.168.50.1\r\nDNS         : 192.168.50.1  \r\nDHCP SERVER : 192.168.50.2\r\nDHCP LEASE  : 3999, 4000/2000/3500\r\nDOMAIN NAME : soc.local\r\nMAC         : 00:50:79:66:68:06\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rVPCS> "
+        }
+      ]
+    },
+    {
+      "node": "Management",
+      "id": "8",
+      "console_port": 32776,
+      "logs": [
+        {
+          "command": "connect-and-cancel-startup-check",
+          "output": "\u001b]0;Management\u0007\r\n\rManagement> "
+        },
+        {
+          "command": "set pcname Management",
+          "output": "\r\n\rManagement> "
+        },
+        {
+          "command": "ip 192.168.99.100/24 192.168.99.1",
+          "output": "ip 192.168.99.100/24 192.168.99.1\r\nChecking for duplicate address...\r\nManagement : 192.168.99.100 255.255.255.0 gateway 192.168.99.1\r\n\r\n\rManagement> "
+        },
+        {
+          "command": "save",
+          "output": "save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rManagement> "
+        },
+        {
+          "command": "show ip",
+          "output": "show ip\r\n\r\nNAME        : Management[1]\r\nIP/MASK     : 192.168.99.100/24\r\nGATEWAY     : 192.168.99.1\r\nDNS         : \r\nMAC         : 00:50:79:66:68:08\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rManagement> "
+        }
+      ]
+    }
+  ]
+}

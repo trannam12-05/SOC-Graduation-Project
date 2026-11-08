@@ -1,0 +1,24 @@
+{
+  "collector_time": "2026-11-05T09:18:48+07:00",
+  "source": "Real Microsoft Edge window displaying EVE-NG legacy topology",
+  "accepted_image": "topology-overview-20261105T091848+0700.png",
+  "sha256": "629E75C8E8E400DD28EFCA3D2246E7B481DF088C104ED01EBE38E4C6FEEDAE50",
+  "bytes": 151345,
+  "visual_review": {
+    "ten_nodes_visible": true,
+    "wazuh_e0_to_vlan99_link_visible": true,
+    "core_l2_and_two_opnsense_visible": true,
+    "five_user_server_zones_visible": true,
+    "suricata_capture_and_management_links_visible": true,
+    "two_isolated_wan_segments_visible": true,
+    "credentials_or_secrets_visible": false
+  },
+  "stale_canvas_label": "NIC chưa nối: cần xác nhận VLAN",
+  "stale_label_interpretation": "Historical textobject; contradicted by visible link and independently verified XML network_id 10. The image was not edited.",
+  "rejected_or_intermediate_images_retained": [
+    "topology-overview-20261105T-current+0700.png",
+    "topology-overview-20261105T091816+0700.png",
+    "topology-overview-20261105T091834+0700.png"
+  ],
+  "scope": "Topology GUI and structural link evidence only; no guest IP, service or live traffic acceptance."
+}

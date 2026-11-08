@@ -1,4 +1,10 @@
-﻿# Ánh xạ cổng Core Layer 2 (M1)
+# Cập nhật M1 — 05/11/2026, UTC+07:00
+
+Bản hiện hành: [Thiết kế hợp nhất](../../docs/M1/M1-design-consolidated-20261105.md). Năm VLAN, IP firewall .2/.3 và VIP .1 đã được nghiệm thu M3. Core dùng Open vSwitch ens3–ens10, không IP; LACP không áp dụng. Wazuh VLAN99 là thiết kế chưa triển khai. Internet ngoài phạm vi cơ sở. Nội dung dưới đây là trích xuất M1 gốc giữ làm lịch sử; không dùng trạng thái chưa xác nhận hoặc tên cổng IOS cũ thay bản hợp nhất.
+
+---
+
+# Ánh xạ cổng Core Layer 2 (M1)
 
 ## Trạng thái và nguyên tắc
 
@@ -27,4 +33,4 @@ M1 chỉ chỉ ra `Gi1/2` làm cổng đích cho Suricata; không xác định c
 - VLAN tag, native VLAN nếu có, danh sách allowed VLAN cuối cùng.
 - Thiết bị đầu cuối và cổng đích cụ thể cho từng access port.
 - SPAN source port/VLAN, hướng mirror, băng thông và bao phủ khi Primary/Secondary đổi vai.
-- Có một Core L2 trong M1; khả năng Core đơn là điểm lỗi đơn đã được Word lưu ý.
+- Có một Core L2 trong M1; khả năng Core đơn là điểm lỗi đơn đã được Word lưu ý.

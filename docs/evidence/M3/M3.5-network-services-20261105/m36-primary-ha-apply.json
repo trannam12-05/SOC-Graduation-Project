@@ -1,0 +1,43 @@
+{
+  "status": "DONE",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m36-primary-ha.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m36-primary-ha.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m36-primary-ha.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"hostname\":\"OPNsense-Primary\",\"syncitems\":\"aliases,rules,kea,dnsforwarder\",\"peers\":[{\"name\":\"OPNsense-Primary\",\"role\":\"primary\",\"url\":\"http:\\/\\/10.255.255.1:8001\\/\"},{\"name\":\"OPNsense-Secondary\",\"role\":\"standby\",\"url\":\"http:\\/\\/10.255.255.2:8001\\/\"}],\"ha_rule\":{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt6\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"tcp\",\"source_net\":\"10.255.255.2\\/32\",\"destination_net\":\"10.255.255.1\\/32\",\"destination_port\":\"8001\",\"log\":\"1\",\"nosync\":\"1\",\"sequence\":\"13\",\"description\":\"SOC HA KEA tcp8001\"}}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl template reload OPNsense/Kea",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl filter reload",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/bin/hostname OPNsense-Primary.internal",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    }
+  ],
+  "config_sha256": "189d39687b6963bc0cdd15741f7e91bcbfe6f03723331c33d2bf6602e7f215b1",
+  "collector_time": "2026-11-06T18:14:19.989668+07:00"
+}

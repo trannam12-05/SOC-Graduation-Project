@@ -1,0 +1,1 @@
+ifconfig pfsync0; ifconfig vtnet2 | grep -E "inet |description"; sysctl net.inet.carp.allow net.inet.carp.demotion net.inet.carp.preempt

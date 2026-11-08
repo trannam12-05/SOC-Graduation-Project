@@ -1,0 +1,65 @@
+[
+  {
+    "name": "client-result.json",
+    "source": "/root/soc-m34b-20261104/client-result.json",
+    "bytes": 8870,
+    "sha256": "f0b8101b884d3b7577c994f55e78532d09ab8ada28de7e3db105d9e85edbc819",
+    "copied_at": "2026-11-04T17:01:01.062502+07:00"
+  },
+  {
+    "name": "client-events.jsonl",
+    "source": "/root/soc-m34b-20261104/client-events.jsonl",
+    "bytes": 31957,
+    "sha256": "bce54471224a22bba8560a23d7b625ea46f3dd0fcf7ece98aca20897a3d41ecc",
+    "copied_at": "2026-11-04T17:01:01.062996+07:00"
+  },
+  {
+    "name": "client.pcap",
+    "source": "/root/soc-m34b-20261104/client.pcap",
+    "bytes": 9523,
+    "sha256": "b4546bf6e99acf6fa2f1f80621aeba59aca2b3f2f424f54e53f733b735fb4fdf",
+    "copied_at": "2026-11-04T17:01:01.064023+07:00"
+  },
+  {
+    "name": "wire-result.json",
+    "source": "/root/soc-m34b-20261104/wire-result.json",
+    "bytes": 460,
+    "sha256": "ff897c0c03acc3a10aeac9a26808de9af2ab3ad389559c0d9df56bf00257ce09",
+    "copied_at": "2026-11-04T17:01:01.064023+07:00"
+  },
+  {
+    "name": "wire.jsonl",
+    "source": "/root/soc-m34b-20261104/wire.jsonl",
+    "bytes": 74718,
+    "sha256": "bd4e94c57b4abd0c4aebf3b6acb7b1a6971ab8d461be9fcab2cff227af0305be",
+    "copied_at": "2026-11-04T17:01:01.064599+07:00"
+  },
+  {
+    "name": "vunl0_3_5-flow.pcap",
+    "source": "/root/soc-m34b-20261104/vunl0_3_5-flow.pcap",
+    "bytes": 9704,
+    "sha256": "a75a2a5483c824117f077f169ebf9e9820a309ca9cacbbb16e9b5007570339ee",
+    "copied_at": "2026-11-04T17:01:01.065093+07:00"
+  },
+  {
+    "name": "vunl0_3_6-flow.pcap",
+    "source": "/root/soc-m34b-20261104/vunl0_3_6-flow.pcap",
+    "bytes": 8182,
+    "sha256": "8d087c9db35d8a06d549d409bba5c1e25e7e0f01c29d33ac81bd67a5a47f5460",
+    "copied_at": "2026-11-04T17:01:01.065594+07:00"
+  },
+  {
+    "name": "daemon.log",
+    "source": "/root/soc-m34b-20261104/daemon.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "copied_at": "2026-11-04T17:01:01.065594+07:00"
+  },
+  {
+    "name": "wire-daemon.log",
+    "source": "/root/soc-m34b-20261104/wire-daemon.log",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "copied_at": "2026-11-04T17:01:01.065594+07:00"
+  }
+]

@@ -1,0 +1,80 @@
+{
+  "phase": "M3.4A — Khôi phục baseline",
+  "M3.4_status": "READY_FOR_RETEST",
+  "collector_time": "2026-11-04T16:39:50.103201+07:00",
+  "core": {
+    "status": "PASS",
+    "ovs_active": true,
+    "layer2": true,
+    "no_nonloopback_ip": true,
+    "ipv4_forwarding": 0,
+    "ipv6_forwarding": 0,
+    "access_trunk_five_vlans": true
+  },
+  "firewalls": {
+    "primary": {
+      "status": "PASS",
+      "carp": "MASTER",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "physical_ip_suffix": 2,
+      "vip_suffix": 1,
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "sync_ping": "2/2",
+      "hook_this_boot": true,
+      "config_matches_previous_checkpoint": true,
+      "backup": "/root/soc-m34a-baseline-20261104/config.before.xml"
+    },
+    "secondary": {
+      "status": "PASS",
+      "carp": "BACKUP",
+      "vlans": [
+        30,
+        40,
+        50,
+        60,
+        99
+      ],
+      "physical_ip_suffix": 3,
+      "vip_suffix": 1,
+      "pfsync_ready": true,
+      "syncok": 1,
+      "demotion": 0,
+      "sync_ping": "2/2",
+      "hook_this_boot": true,
+      "config_matches_previous_checkpoint": true,
+      "backup": "/root/soc-m34a-baseline-20261104/config.before.xml"
+    }
+  },
+  "endpoint": {
+    "status": "PASS",
+    "node": "Data-Center",
+    "ip": "192.168.30.10/24",
+    "service": "soc-lab-http active; 192.168.30.10:8000 LISTEN",
+    "default_gateway": "192.168.30.2",
+    "old_test_runtime_route_restored": false,
+    "http_request_tested": false
+  },
+  "running_resources_mib": {
+    "SOC-Core-L2": 1024,
+    "OPNsense-Primary": 2048,
+    "OPNsense-Secondary": 2048,
+    "Data-Center": 1024
+  },
+  "node_resource_interface_mapping_unchanged": true,
+  "lab_byte_hash_unchanged": true,
+  "state_test_run_this_phase": false,
+  "failover_test_run_this_phase": false,
+  "native_pfsync_reapplied": false,
+  "guest_configuration_changed": false,
+  "previous_M3_4_evidence_unchanged": true,
+  "M3_4_experiment_complete": false,
+  "checkpoint": "Baseline đã đạt; chờ chỉ thị M3.4B với session mới. Không chạy retest hoặc cleanup."
+}

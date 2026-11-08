@@ -1,0 +1,150 @@
+{
+  "role": "secondary",
+  "config_sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "backup_sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "backup_equal": true,
+  "sections_equal": {
+    "OPNsense": true,
+    "aliases": true,
+    "bridges": true,
+    "cert": true,
+    "dnsmasq": true,
+    "filter": true,
+    "gifs": true,
+    "gres": true,
+    "hasync": true,
+    "ifgroups": true,
+    "interfaces": true,
+    "laggs": true,
+    "nat": true,
+    "ntpd": true,
+    "openvpn": true,
+    "revision": true,
+    "staticroutes": true,
+    "sysctl": true,
+    "system": true,
+    "theme": true,
+    "trigger_initial_wizard": true,
+    "virtualip": true,
+    "vlans": true
+  },
+  "interfaces": [
+    {
+      "assignment": "wan",
+      "if": "vtnet1",
+      "enable": "1",
+      "ipaddr": "dhcp",
+      "subnet": ""
+    },
+    {
+      "assignment": "lan",
+      "if": "vtnet0",
+      "enable": "1",
+      "ipaddr": "192.168.1.2",
+      "subnet": "24"
+    },
+    {
+      "assignment": "lo0",
+      "if": "lo0",
+      "enable": "1",
+      "descr": "Loopback",
+      "ipaddr": "127.0.0.1",
+      "subnet": "8"
+    },
+    {
+      "assignment": "opt1",
+      "if": "vtnet0_vlan30",
+      "enable": "1",
+      "ipaddr": "192.168.30.3",
+      "subnet": "24"
+    },
+    {
+      "assignment": "opt2",
+      "if": "vtnet0_vlan40",
+      "enable": "1",
+      "ipaddr": "192.168.40.3",
+      "subnet": "24"
+    },
+    {
+      "assignment": "opt3",
+      "if": "vtnet0_vlan50",
+      "enable": "1",
+      "ipaddr": "192.168.50.3",
+      "subnet": "24"
+    },
+    {
+      "assignment": "opt4",
+      "if": "vtnet0_vlan60",
+      "enable": "1",
+      "ipaddr": "192.168.60.3",
+      "subnet": "24"
+    },
+    {
+      "assignment": "opt5",
+      "if": "vtnet0_vlan99",
+      "enable": "1",
+      "ipaddr": "192.168.99.3",
+      "subnet": "24"
+    },
+    {
+      "assignment": "opt6",
+      "if": "vtnet2",
+      "enable": "1",
+      "ipaddr": "10.255.255.2",
+      "subnet": "30"
+    }
+  ],
+  "vips": [],
+  "version": {
+    "rc": 0,
+    "stdout": "OPNsense 26.7 (amd64)\n",
+    "stderr": ""
+  },
+  "kernel": {
+    "rc": 0,
+    "stdout": "FreeBSD 15.1-RELEASE-p1\n",
+    "stderr": ""
+  },
+  "hostname": {
+    "rc": 0,
+    "stdout": "OPNsense.internal\n",
+    "stderr": ""
+  },
+  "uid": {
+    "rc": 0,
+    "stdout": "uid=0(root) gid=0(wheel) groups=0(wheel),5(operator),1999(admins)\n",
+    "stderr": ""
+  },
+  "ifconfig": {
+    "rc": 0,
+    "stdout": "vtnet0: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: LAN (lan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:02:00:00\n\tinet 192.168.1.2 netmask 0xffffff00 broadcast 192.168.1.255\n\tinet6 fe80::5200:ff:fe02:0%vtnet0 prefixlen 64 scopeid 0x1\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nvtnet1: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:02:00:01\n\tinet6 fe80::5200:ff:fe02:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=23<PERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL>\nvtnet2: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT6 (opt6)\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:02:00:02\n\tinet 10.255.255.2 netmask 0xfffffffc broadcast 10.255.255.3\n\tinet6 fe80::5200:ff:fe02:2%vtnet2 prefixlen 64 scopeid 0x3\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nvtnet3: flags=1008802<BROADCAST,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\toptions=880028<VLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS>\n\tether 50:00:00:02:00:03\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nlo0: flags=1008049<UP,LOOPBACK,RUNNING,MULTICAST,LOWER_UP> metric 0 mtu 16384\n\toptions=680003<RXCSUM,TXCSUM,LINKSTATE,RXCSUM_IPV6,TXCSUM_IPV6>\n\tinet 127.0.0.1 netmask 0xff000000\n\tinet6 ::1 prefixlen 128\n\tinet6 fe80::1%lo0 prefixlen 64 scopeid 0x5\n\tgroups: lo\n\tnd6 options=21<PERFORMNUD,AUTO_LINKLOCAL>\nenc0: flags=0 metric 0 mtu 1536\n\toptions=0\n\tgroups: enc\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\npfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\npflog0: flags=0 metric 0 mtu 33152\n\toptions=0\n\tgroups: pflog\nvtnet0_vlan30: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT1 (opt1)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:02:00:00\n\tinet 192.168.30.3 netmask 0xffffff00 broadcast 192.168.30.255\n\tgroups: vlan\n\tvlan: 30 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan40: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:02:00:00\n\tinet 192.168.40.3 netmask 0xffffff00 broadcast 192.168.40.255\n\tgroups: vlan\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan50: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT3 (opt3)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:02:00:00\n\tinet 192.168.50.3 netmask 0xffffff00 broadcast 192.168.50.255\n\tgroups: vlan\n\tvlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan60: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT4 (opt4)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:02:00:00\n\tinet 192.168.60.3 netmask 0xffffff00 broadcast 192.168.60.255\n\tgroups: vlan\n\tvlan: 60 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\nvtnet0_vlan99: flags=1008843<UP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT5 (opt5)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:02:00:00\n\tinet 192.168.99.3 netmask 0xffffff00 broadcast 192.168.99.255\n\tgroups: vlan\n\tvlan: 99 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+    "stderr": ""
+  },
+  "routes": {
+    "rc": 0,
+    "stdout": "Routing tables\n\nInternet:\nDestination        Gateway            Flags         Netif Expire\n10.255.255.0/30    link#3             U            vtnet2\n10.255.255.2       link#5             UHS             lo0\n127.0.0.1          link#5             UH              lo0\n192.168.1.0/24     link#1             U            vtnet0\n192.168.1.2        link#5             UHS             lo0\n192.168.30.0/24    link#9             U      vtnet0_vlan3\n192.168.30.3       link#5             UHS             lo0\n192.168.40.0/24    link#10            U      vtnet0_vlan4\n192.168.40.3       link#5             UHS             lo0\n192.168.50.0/24    link#11            U      vtnet0_vlan5\n192.168.50.3       link#5             UHS             lo0\n192.168.60.0/24    link#12            U      vtnet0_vlan6\n192.168.60.3       link#5             UHS             lo0\n192.168.99.0/24    link#13            U      vtnet0_vlan9\n192.168.99.3       link#5             UHS             lo0\n\nInternet6:\nDestination                       Gateway                       Flags         Netif Expire\n::1                               link#5                        UHS             lo0\nfe80::%vtnet0/64                  link#1                        U            vtnet0\nfe80::5200:ff:fe02:0%lo0          link#5                        UHS             lo0\nfe80::%vtnet1/64                  link#2                        U            vtnet1\nfe80::5200:ff:fe02:1%lo0          link#5                        UHS             lo0\nfe80::%vtnet2/64                  link#3                        U            vtnet2\nfe80::5200:ff:fe02:2%lo0          link#5                        UHS             lo0\nfe80::%lo0/64                     link#5                        U               lo0\nfe80::1%lo0                       link#5                        UHS             lo0\n",
+    "stderr": ""
+  },
+  "carp_sysctl": {
+    "rc": 0,
+    "stdout": "net.inet.carp.allow: 1\nnet.inet.carp.preempt: 1\nnet.inet.carp.demotion: 0\n",
+    "stderr": ""
+  },
+  "pfsync_stats": {
+    "rc": 0,
+    "stdout": "pfsync:\n\t18 packets received (IPv4)\n\t0 packets received (IPv6)\n\t\t0 clear all requests received\n\t\t0 13.1 state inserts received\n\t\t0 state inserted acks received\n\t\t0 13.1 state updates received\n\t\t0 compressed state updates received\n\t\t7 uncompressed state requests received\n\t\t0 state deletes received\n\t\t6 compressed state deletes received\n\t\t0 fragment inserts received\n\t\t0 fragment deletes received\n\t\t2 bulk update marks received\n\t\t0 TDB replay counter updates received\n\t\t18 end of frame marks received\n\t\t3 14.0 state inserts received\n\t\t0 14.0 state updates received\n\t\t0 state inserts received\n\t\t0 state updates received\n\t\t0 packets discarded for bad interface\n\t\t0 packets discarded for bad ttl\n\t\t0 packets shorter than header\n\t\t0 packets discarded for bad version\n\t\t0 packets discarded for bad HMAC\n\t\t0 packets discarded for bad action\n\t\t0 packets discarded for short packet\n\t\t0 states discarded for bad values\n\t\t0 stale states\n\t\t2 failed state lookup/inserts\n\t21 packets sent (IPv4)\n\t0 packets sent (IPv6)\n\t\t0 clear all requests sent\n\t\t0 13.1 state inserts sent\n\t\t0 state inserted acks sent\n\t\t0 13.1 state updates sent\n\t\t0 compressed state updates sent\n\t\t5 uncompressed state requests sent\n\t\t0 state deletes sent\n\t\t3 compressed state deletes sent\n\t\t0 fragment inserts sent\n\t\t0 fragment deletes sent\n\t\t9 bulk update marks sent\n\t\t0 TDB replay counter updates sent\n\t\t21 end of frame marks sent\n\t\t4 14.0 state inserts sent\n\t\t0 14.0 state updates sent\n\t\t0 state inserts sent\n\t\t0 state updates sent\n\t\t0 failures due to mbuf memory error\n\t\t0 send errors\n",
+    "stderr": ""
+  },
+  "pfsync_logs": [
+    "[2414] carp: demoted by 240 to 240 (pfsync bulk start)",
+    "[2419] carp: demoted by -240 to 0 (pfsync bulk done)"
+  ],
+  "probe_file_exists": false,
+  "config_sha256_after": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "config_unchanged_during_read": true,
+  "transport": {
+    "method": "exact console glyph decode with SHA256; no OCR guesses",
+    "encoded_sha256": "ae9d1da51ce999e2f1b738caaac8c9824d2cc654defb2fada9593954c425df50",
+    "encoded_chars": 2920
+  }
+}

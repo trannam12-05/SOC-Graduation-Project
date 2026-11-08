@@ -1,0 +1,24 @@
+{
+  "collected_at": "2026-11-03T18:13:29.854707+07:00",
+  "backups": [
+    {
+      "role": "Primary",
+      "snapshot_guest": "/root/soc-m3-1b-primary-20261103/config.before.xml",
+      "local_backup": "docs\\evidence\\M3\\group1b-prerequisites-20261103\\private-backups\\Primary-before.xml",
+      "sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+      "bytes": 48839,
+      "method": "Fresh snapshot on guest; local bytes copied from prior verified backup after exact SHA256 comparison to fresh snapshot; no redundant secret transfer"
+    },
+    {
+      "role": "Secondary",
+      "snapshot_guest": "/root/soc-m3-1b-secondary-20261103/config.before.xml",
+      "local_backup": "docs\\evidence\\M3\\group1b-prerequisites-20261103\\private-backups\\Secondary-before.xml",
+      "sha256": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+      "bytes": 45360,
+      "method": "Fresh snapshot on guest; local bytes copied from prior verified backup after exact SHA256 comparison to fresh snapshot; no redundant secret transfer"
+    }
+  ],
+  "private_directory_owner_only": true,
+  "CARP_secret_created_once_DPAPI_CurrentUser": true,
+  "CARP_secret_disclosed": false
+}

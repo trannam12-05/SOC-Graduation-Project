@@ -1,0 +1,1 @@
+python3 -c 'import xml.etree.ElementTree as e; r=e.parse("/conf/config.xml").getroot(); print("vip_count",len(r.findall(".//vip"))); print("carp_nodes",len([n for n in r.iter() if n.tag.lower()=="mode" and n.text=="carp"]))'

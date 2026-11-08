@@ -1,0 +1,62 @@
+{
+  "hostname": {
+    "rc": 0,
+    "stdout": "OPNsense-Secondary.internal\n",
+    "stderr": ""
+  },
+  "kea_status": {
+    "rc": 0,
+    "stdout": "kea-dhcp[v4] is not running.\nkea-dhcp[ca] is not running.\n",
+    "stderr": ""
+  },
+  "safe_ha_config_lines": [
+    "// - change the network interface names",
+    "    // Add names of your network interfaces to listen on.",
+    "        // interface name (e.g. \"eth0\" or specific IPv4 address on that",
+    "        // interface name (e.g. \"eth0/192.0.2.1\").",
+    "        \"socket-name\": \"kea4-ctrl-socket\"",
+    "    // parameters, like name, host and possibly user and password.",
+    "    //     \"name\": \"kea\",",
+    "        // one of (name or code) and data. The full option specification",
+    "        // covers name, code, space, csv-format and data.",
+    "        // domain-name-servers you could do this:",
+    "        //     \"name\": \"domain-name-servers\",",
+    "            \"name\": \"domain-name-servers\",",
+    "        // Typically people prefer to refer to options by their names, so they",
+    "        // don't need to remember the code names. However, some people like",
+    "        // to use numerical values. For example, option \"domain-name\" uses",
+    "        // \"name\": \"domain-name\" or \"code\": 15.",
+    "        // attempt to resolve names within those specified domains. For",
+    "        // example, name \"foo\" would be attempted to be resolved as",
+    "            \"name\": \"domain-search\",",
+    "            \"name\": \"boot-file-name\",",
+    "            \"name\": \"default-ip-ttl\",",
+    "            // This specifies a name of this class. It's useful if you need to",
+    "            \"name\": \"voip\",",
+    "            \"server-hostname\": \"hal9000\",",
+    "            \"boot-file-name\": \"/dev/null\"",
+    "    //           \"base-name\": \"kea-forensic4\"",
+    "            // parameter and specify the appropriate interface name if the DHCPv4",
+    "                    \"name\": \"routers\",",
+    "                // the this client will get a reserved hostname. A hostname can",
+    "                    \"hostname\": \"special-snowflake\"",
+    "                // domain-name-servers option would have been defined on a global,",
+    "                        \"name\": \"domain-name-servers\",",
+    "                            \"name\": \"vivso-suboptions\",",
+    "                            \"name\": \"tftp-servers\",",
+    "                // server-hostname and boot-file-name",
+    "                    \"server-hostname\": \"hal9000\",",
+    "                    \"boot-file-name\": \"/dev/null\"",
+    "    // activities. For details (e.g. names of loggers), see Chapter 18.",
+    "        \"name\": \"kea-dhcp4\",",
+    "                // - syslog:name (logs to syslog using specified name)",
+    "                // Any other value is considered a name of the file"
+  ],
+  "kea_relevant_log_lines": [],
+  "listeners": {
+    "rc": 0,
+    "stdout": "USER    COMMAND      PID FD PROTO LOCAL ADDRESS         FOREIGN ADDRESS      \nroot    lighttpd    8370  7 tcp4  *:443                 *:*                  \nroot    lighttpd    8370  9 tcp4  *:80                  *:*                  \nunbound unbound     1626  6 udp4  *:53                  *:*                  \nunbound unbound     1626  7 tcp4  *:53                  *:*                  \nunbound unbound     1626 10 udp4  *:53                  *:*                  \nunbound unbound     1626 11 tcp4  *:53                  *:*                  \nunbound unbound     1626 12 tcp4  127.0.0.1:953         *:*                  \nroot    ntpd       52798 21 udp4  *:123                 *:*                  \nroot    ntpd       52798 22 udp4  192.168.1.2:123       *:*                  \nroot    ntpd       52798 25 udp4  10.255.255.2:123      *:*                  \nroot    ntpd       52798 29 udp4  127.0.0.1:123         *:*                  \nroot    ntpd       52798 30 udp4  192.168.30.3:123      *:*                  \nroot    ntpd       52798 31 udp4  192.168.30.1:123      *:*                  \nroot    ntpd       52798 32 udp4  192.168.40.3:123      *:*                  \nroot    ntpd       52798 33 udp4  192.168.40.1:123      *:*                  \nroot    ntpd       52798 34 udp4  192.168.50.3:123      *:*                  \nroot    ntpd       52798 35 udp4  192.168.50.1:123      *:*                  \nroot    ntpd       52798 36 udp4  192.168.60.3:123      *:*                  \nroot    ntpd       52798 37 udp4  192.168.60.1:123      *:*                  \nroot    ntpd       52798 38 udp4  192.168.99.3:123      *:*                  \nroot    ntpd       52798 39 udp4  192.168.99.1:123      *:*                  \nnobody  dnsmasq    24418  7 udp4  127.0.0.1:53053       *:*                  \nnobody  dnsmasq    24418  8 tcp4  127.0.0.1:53053       *:*                  \nnobody  dnsmasq    24418  9 udp4  192.168.1.2:53053     *:*                  \nnobody  dnsmasq    24418 10 tcp4  192.168.1.2:53053     *:*                  \n",
+    "stderr": ""
+  },
+  "collector_time": "2026-11-06T18:52:45.393488+07:00"
+}

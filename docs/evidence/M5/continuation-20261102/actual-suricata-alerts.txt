@@ -1,0 +1,1 @@
+sudo -n python3 -c 'import json; a=[json.loads(s) for s in open("/var/ossec/logs/alerts/alerts.json")]; [print(d["rule"],d.get("location"),list(d),d.get("data",{})) for d in a if "suricata" in d.get("rule",{}).get("groups",[])]'

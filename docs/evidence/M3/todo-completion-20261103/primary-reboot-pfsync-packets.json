@@ -1,0 +1,10 @@
+{
+  "scope": "Real protocol-240 packets only; not proof of CARP failover or complete state-table replication",
+  "capture_interface": "vunl0_2_2",
+  "pcap_path": "/root/soc-ha-pfsync-capture-20261102-1793729067/pfsync.pcap",
+  "pcap_sha256": "acc530668c8bc60b2d229281130b1899bfc81d70fdada5c34b3236c628f739c8",
+  "packets": [],
+  "packet_count": 0,
+  "both_directions": false,
+  "collector_time": "2026-11-03T23:12:24.701566+07:00"
+}

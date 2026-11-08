@@ -1,0 +1,1 @@
+sudo -n sh -c 'cat /mnt/soc-seed/suricata-real-alert-replay.jsonl | /var/ossec/bin/wazuh-logtest 2>&1 | tail -n 16'

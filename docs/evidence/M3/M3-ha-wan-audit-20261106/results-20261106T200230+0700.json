@@ -1,0 +1,731 @@
+﻿{
+    "OPNsense-Primary":  {
+                             "started_utc":  "2026-11-06T19:50:32.661760+00:00",
+                             "hostname":  "OPNsense-Primary",
+                             "wan_config":  {
+                                                "if":  "vtnet1",
+                                                "enable":  "1",
+                                                "ipaddr":  "dhcp",
+                                                "subnet":  "",
+                                                "gateway":  ""
+                                            },
+                             "boot":  {
+                                          "rc":  0,
+                                          "stdout":  "kern.boottime: { sec = 1793992616, usec = 551827 } Fri Nov  6 19:16:56 2026\n",
+                                          "stderr":  ""
+                                      },
+                             "uptime":  {
+                                            "rc":  0,
+                                            "stdout":  " 7:50PM  up 34 mins, 1 user, load averages: 1.14, 0.91, 0.86\n",
+                                            "stderr":  ""
+                                        },
+                             "logs":  [
+                                          {
+                                              "path":  "/var/log/system/system_20261104.log",
+                                              "matching_lines":  [
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:55+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"265\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : ipsec_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"267\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : openvpn_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"268\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : wireguard_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"270\"] /usr/local/etc/rc.bootup: plugins_configure bootup (1)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"271\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : system_powerd_configure(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"272\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : dhcrelay_configure_id(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:56+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"273\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : ntpd_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:57+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"274\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : opendns_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:03:57+00:00 OPNsense.internal opnsense 453 - [meta sequenceId=\"275\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : unbound_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:08+00:00 OPNsense.internal kernel - - [meta sequenceId=\"284\"] \u003c118\u003e[137] \u003e\u003e\u003e Invoking start script \u0027carp\u0027",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"287\"] \u003c6\u003e[139] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"288\"] \u003c6\u003e[139] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"289\"] \u003c6\u003e[139] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"290\"] \u003c6\u003e[139] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"291\"] \u003c6\u003e[139] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:16+00:00 OPNsense.internal opnsense 60399 - [meta sequenceId=\"292\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:26+00:00 OPNsense.internal opnsense 68703 - [meta sequenceId=\"5\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:31+00:00 OPNsense.internal opnsense 75826 - [meta sequenceId=\"9\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:36+00:00 OPNsense.internal opnsense 90058 - [meta sequenceId=\"18\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:39+00:00 OPNsense.internal opnsense 900 - [meta sequenceId=\"25\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"30\"] \u003c118\u003e[169] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal opnsense 9805 - [meta sequenceId=\"31\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal opnsense 9805 - [meta sequenceId=\"32\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"33\"] \u003c6\u003e[169] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"34\"] \u003c6\u003e[169] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"35\"] \u003c6\u003e[169] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"36\"] \u003c6\u003e[169] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"37\"] \u003c6\u003e[169] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"38\"] \u003c6\u003e[169] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:41+00:00 OPNsense.internal kernel - - [meta sequenceId=\"40\"] \u003c6\u003e[170] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:41+00:00 OPNsense.internal opnsense 18848 - [meta sequenceId=\"43\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"44\"] \u003c6\u003e[171] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"45\"] \u003c6\u003e[171] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"46\"] \u003c6\u003e[171] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"47\"] \u003c6\u003e[171] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"48\"] \u003c6\u003e[171] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:44+00:00 OPNsense.internal opnsense 35483 - [meta sequenceId=\"64\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:47+00:00 OPNsense.internal opnsense 46177 - [meta sequenceId=\"71\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:50+00:00 OPNsense.internal opnsense 58613 - [meta sequenceId=\"75\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:53+00:00 OPNsense.internal opnsense 67713 - [meta sequenceId=\"78\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-04T17:04:57+00:00 OPNsense.internal opnsense 80633 - [meta sequenceId=\"82\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-04T17:05:00+00:00 OPNsense.internal opnsense 96072 - [meta sequenceId=\"86\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-04T17:05:13+00:00 OPNsense.internal opnsense 12504 - [meta sequenceId=\"91\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-04T17:05:18+00:00 OPNsense.internal opnsense 27909 - [meta sequenceId=\"94\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-04T17:05:22+00:00 OPNsense.internal opnsense 46321 - [meta sequenceId=\"98\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99"
+                                                                 ]
+                                          },
+                                          {
+                                              "path":  "/var/log/system/system_20261105.log",
+                                              "matching_lines":  [
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:02+00:00 OPNsense.internal kernel - - [meta sequenceId=\"264\"] \u003c6\u003e[61] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:02+00:00 OPNsense.internal opnsense 68967 - [meta sequenceId=\"265\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:03+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"269\"] /usr/local/etc/rc.bootup: plugins_configure early (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:03+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"270\"] /usr/local/etc/rc.bootup: plugins_configure early (execute task : openssh_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:04+00:00 OPNsense.internal opnsense 72882 - [meta sequenceId=\"272\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:04+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"273\"] /usr/local/etc/rc.bootup: plugins_configure early (execute task : unbound_cache_flush(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:04+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"275\"] /usr/local/etc/rc.bootup: plugins_configure early (execute task : webgui_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:05+00:00 OPNsense.internal opnsense 81578 - [meta sequenceId=\"278\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:06+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"282\"] /usr/local/etc/rc.bootup: ROUTING: entering configure using defaults",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:08+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"284\"] /usr/local/etc/rc.bootup: plugins_configure dhcp (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:08+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"286\"] /usr/local/etc/rc.bootup: plugins_configure dhcp (execute task : radvd_configure_dhcp(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:08+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"287\"] /usr/local/etc/rc.bootup: plugins_configure dns (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:08+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"288\"] /usr/local/etc/rc.bootup: plugins_configure dns (execute task : dnsmasq_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:09+00:00 OPNsense.internal opnsense 89268 - [meta sequenceId=\"289\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:11+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"296\"] /usr/local/etc/rc.bootup: plugins_configure dns (execute task : unbound_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:12+00:00 OPNsense.internal opnsense 98100 - [meta sequenceId=\"297\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:13+00:00 OPNsense.internal opnsense 2709 - [meta sequenceId=\"302\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:15+00:00 OPNsense.internal opnsense 6319 - [meta sequenceId=\"308\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:16+00:00 OPNsense.internal opnsense 8692 - [meta sequenceId=\"311\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"319\"] /usr/local/etc/rc.bootup: plugins_configure monitor (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"320\"] /usr/local/etc/rc.bootup: plugins_configure monitor (execute task : dpinger_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"321\"] /usr/local/etc/rc.bootup: plugins_configure vpn (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"322\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : ipsec_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"325\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : openvpn_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"326\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : wireguard_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"327\"] /usr/local/etc/rc.bootup: plugins_configure bootup (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"328\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : system_powerd_configure(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"329\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : dhcrelay_configure_id(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:26+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"331\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : ntpd_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:27+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"332\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : opendns_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:27+00:00 OPNsense.internal opnsense 452 - [meta sequenceId=\"333\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : unbound_configure_do(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:35+00:00 OPNsense.internal kernel - - [meta sequenceId=\"341\"] \u003c118\u003e[94] \u003e\u003e\u003e Invoking start script \u0027carp\u0027",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal kernel - - [meta sequenceId=\"12\"] \u003c118\u003e[104] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal opnsense 12377 - [meta sequenceId=\"13\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal opnsense 12377 - [meta sequenceId=\"14\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal kernel - - [meta sequenceId=\"15\"] \u003c6\u003e[104] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal kernel - - [meta sequenceId=\"16\"] \u003c6\u003e[104] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal kernel - - [meta sequenceId=\"17\"] \u003c6\u003e[104] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:45+00:00 OPNsense.internal kernel - - [meta sequenceId=\"18\"] \u003c6\u003e[104] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:46+00:00 OPNsense.internal opnsense 18008 - [meta sequenceId=\"33\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:46+00:00 OPNsense.internal kernel - - [meta sequenceId=\"36\"] \u003c6\u003e[106] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:46+00:00 OPNsense.internal kernel - - [meta sequenceId=\"37\"] \u003c6\u003e[106] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:48+00:00 OPNsense.internal opnsense 23632 - [meta sequenceId=\"42\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:50+00:00 OPNsense.internal opnsense 26231 - [meta sequenceId=\"45\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-05T09:33:52+00:00 OPNsense.internal opnsense 32074 - [meta sequenceId=\"50\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99"
+                                                                 ]
+                                          },
+                                          {
+                                              "path":  "/var/log/system/system_20261106.log",
+                                              "matching_lines":  [
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:24+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"29\"] \u003c118\u003e[207] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal opnsense 30361 - [meta sequenceId=\"32\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal opnsense 30361 - [meta sequenceId=\"33\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"34\"] \u003c6\u003e[209] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"35\"] \u003c6\u003e[209] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"36\"] \u003c6\u003e[209] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"37\"] \u003c6\u003e[209] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"38\"] \u003c6\u003e[209] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:25+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"39\"] \u003c6\u003e[209] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:28+00:00 OPNsense-Primary.internal opnsense 32650 - [meta sequenceId=\"55\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:33+00:00 OPNsense-Primary.internal opnsense 35050 - [meta sequenceId=\"58\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:38+00:00 OPNsense-Primary.internal opnsense 37978 - [meta sequenceId=\"64\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:41+00:00 OPNsense-Primary.internal opnsense 39792 - [meta sequenceId=\"69\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-06T19:20:44+00:00 OPNsense-Primary.internal opnsense 41493 - [meta sequenceId=\"73\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"79\"] \u003c6\u003e[290] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"80\"] \u003c6\u003e[290] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"81\"] \u003c6\u003e[290] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"82\"] \u003c6\u003e[290] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"83\"] \u003c6\u003e[290] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"84\"] \u003c6\u003e[290] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"85\"] \u003c6\u003e[290] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"86\"] \u003c6\u003e[290] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"87\"] \u003c6\u003e[290] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:47+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"88\"] \u003c6\u003e[290] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:48+00:00 OPNsense-Primary.internal opnsense 48753 - [meta sequenceId=\"89\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:51+00:00 OPNsense-Primary.internal opnsense 50649 - [meta sequenceId=\"92\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:54+00:00 OPNsense-Primary.internal opnsense 52235 - [meta sequenceId=\"96\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:56+00:00 OPNsense-Primary.internal opnsense 53830 - [meta sequenceId=\"101\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-06T19:21:59+00:00 OPNsense-Primary.internal opnsense 55627 - [meta sequenceId=\"105\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-06T19:22:07+00:00 OPNsense-Primary.internal opnsense 59532 - [meta sequenceId=\"109\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                     "\u003c13\u003e1 2026-11-06T19:22:14+00:00 OPNsense-Primary.internal opnsense 61004 - [meta sequenceId=\"112\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-06T19:22:19+00:00 OPNsense-Primary.internal opnsense 63821 - [meta sequenceId=\"117\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-06T19:22:21+00:00 OPNsense-Primary.internal opnsense 68577 - [meta sequenceId=\"120\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-06T19:22:22+00:00 OPNsense-Primary.internal opnsense 71374 - [meta sequenceId=\"125\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:38+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[881] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[882] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[882] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[882] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"6\"] \u003c6\u003e[882] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal kernel - - [meta sequenceId=\"7\"] \u003c6\u003e[882] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Primary.internal opnsense 27839 - [meta sequenceId=\"8\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:42+00:00 OPNsense-Primary.internal opnsense 29583 - [meta sequenceId=\"11\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:45+00:00 OPNsense-Primary.internal opnsense 32020 - [meta sequenceId=\"16\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:47+00:00 OPNsense-Primary.internal opnsense 34092 - [meta sequenceId=\"20\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                     "\u003c13\u003e1 2026-11-06T19:31:49+00:00 OPNsense-Primary.internal opnsense 35691 - [meta sequenceId=\"23\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40"
+                                                                 ]
+                                          }
+                                      ],
+                             "kernel_events":  [
+                                                   "[97] carp: 30@vtnet0_vlan30: INIT -\u003e BACKUP (initialization complete)",
+                                                   "[97] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                   "[100] carp: 40@vtnet0_vlan40: INIT -\u003e BACKUP (initialization complete)",
+                                                   "[104] carp: 50@vtnet0_vlan50: INIT -\u003e BACKUP (initialization complete)",
+                                                   "[109] carp: 60@vtnet0_vlan60: INIT -\u003e BACKUP (initialization complete)",
+                                                   "[111] carp: 99@vtnet0_vlan99: INIT -\u003e BACKUP (initialization complete)",
+                                                   "[116] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                   "[166] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[166] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[166] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[166] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[166] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[209] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                   "[209] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[209] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[209] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[209] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[209] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[290] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                   "[290] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                   "[290] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                   "[290] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                   "[290] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[290] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[290] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[290] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                   "[290] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[290] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                   "[881] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                   "[882] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[882] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[882] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[882] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                   "[882] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)"
+                                               ],
+                             "wan_runtime":  {
+                                                 "rc":  0,
+                                                 "stdout":  "vtnet1: flags=1008843\u003cUP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP\u003e metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028\u003cVLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS\u003e\n\tether 50:00:00:01:00:01\n\tinet6 fe80::5200:ff:fe01:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T \u003cfull-duplex\u003e)\n\tstatus: active\n\tnd6 options=23\u003cPERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL\u003e\n",
+                                                 "stderr":  ""
+                                             },
+                             "default_route":  {
+                                                   "rc":  255,
+                                                   "stdout":  "",
+                                                   "stderr":  "route: route has not been found\n"
+                                               },
+                             "nat":  {
+                                         "rc":  0,
+                                         "stdout":  "no nat proto carp all\nno rdr proto carp all\nno rdr on vtnet0 proto tcp from any to (vtnet0) port = http\nno rdr on vtnet0 proto tcp from any to (vtnet0) port = https\n",
+                                         "stderr":  ""
+                                     },
+                             "samples":  [
+                                             {
+                                                 "utc":  "2026-11-06T19:50:33.080213+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:50:43.165829+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:50:53.236498+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:51:03.341960+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:51:13.457158+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:51:23.616643+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             },
+                                             {
+                                                 "utc":  "2026-11-06T19:51:33.751746+00:00",
+                                                 "carp":  [
+                                                              "carp: MASTER vhid 30 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 40 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 50 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 60 advbase 1 advskew 0",
+                                                              "carp: MASTER vhid 99 advbase 1 advskew 0"
+                                                          ],
+                                                 "pfsync":  {
+                                                                "rc":  0,
+                                                                "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                "stderr":  ""
+                                                            },
+                                                 "carp_sysctl":  {
+                                                                     "rc":  0,
+                                                                     "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                     "stderr":  ""
+                                                                 }
+                                             }
+                                         ],
+                             "finished_utc":  "2026-11-06T19:51:33.831543+00:00"
+                         },
+    "OPNsense-Secondary":  {
+                               "started_utc":  "2026-11-06T19:55:02.217787+00:00",
+                               "hostname":  "OPNsense-Secondary",
+                               "wan_config":  {
+                                                  "if":  "vtnet1",
+                                                  "enable":  "1",
+                                                  "ipaddr":  "dhcp",
+                                                  "subnet":  "",
+                                                  "gateway":  ""
+                                              },
+                               "boot":  {
+                                            "rc":  0,
+                                            "stdout":  "kern.boottime: { sec = 1793992618, usec = 702120 } Fri Nov  6 19:16:58 2026\n",
+                                            "stderr":  ""
+                                        },
+                               "uptime":  {
+                                              "rc":  0,
+                                              "stdout":  " 7:55PM  up 38 mins, 1 user, load averages: 1.00, 0.93, 0.82\n",
+                                              "stderr":  ""
+                                          },
+                               "logs":  [
+                                            {
+                                                "path":  "/var/log/system/system_20261104.log",
+                                                "matching_lines":  [
+                                                                       "\u003c13\u003e1 2026-11-04T16:29:54+00:00 OPNsense.internal opnsense 11546 - [meta sequenceId=\"64\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-04T16:29:57+00:00 OPNsense.internal opnsense 12625 - [meta sequenceId=\"67\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-04T16:30:05+00:00 OPNsense.internal opnsense 14328 - [meta sequenceId=\"72\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-04T16:30:11+00:00 OPNsense.internal opnsense 17082 - [meta sequenceId=\"78\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-04T16:30:15+00:00 OPNsense.internal opnsense 19333 - [meta sequenceId=\"81\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:20+00:00 OPNsense.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[1841] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:20+00:00 OPNsense.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[1841] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:20+00:00 OPNsense.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[1841] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:20+00:00 OPNsense.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[1841] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:20+00:00 OPNsense.internal kernel - - [meta sequenceId=\"6\"] \u003c6\u003e[1841] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:21+00:00 OPNsense.internal opnsense 76271 - [meta sequenceId=\"7\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:24+00:00 OPNsense.internal opnsense 77158 - [meta sequenceId=\"10\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:26+00:00 OPNsense.internal opnsense 78389 - [meta sequenceId=\"15\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:28+00:00 OPNsense.internal opnsense 79532 - [meta sequenceId=\"19\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-04T16:56:30+00:00 OPNsense.internal opnsense 80452 - [meta sequenceId=\"22\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"1\"] \u003c6\u003e[2310] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[2310] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[2310] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[2310] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:10+00:00 OPNsense.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[2310] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:11+00:00 OPNsense.internal opnsense 7811 - [meta sequenceId=\"6\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:14+00:00 OPNsense.internal opnsense 8715 - [meta sequenceId=\"9\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:16+00:00 OPNsense.internal opnsense 9516 - [meta sequenceId=\"13\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:18+00:00 OPNsense.internal opnsense 10544 - [meta sequenceId=\"17\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:20+00:00 OPNsense.internal opnsense 11653 - [meta sequenceId=\"21\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"27\"] \u003c6\u003e[2341] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"28\"] \u003c6\u003e[2341] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"29\"] \u003c6\u003e[2341] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"30\"] \u003c6\u003e[2341] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:40+00:00 OPNsense.internal kernel - - [meta sequenceId=\"31\"] \u003c6\u003e[2341] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:41+00:00 OPNsense.internal opnsense 13133 - [meta sequenceId=\"33\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"34\"] \u003c6\u003e[2342] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"35\"] \u003c6\u003e[2342] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"36\"] \u003c6\u003e[2342] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"37\"] \u003c6\u003e[2342] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:42+00:00 OPNsense.internal kernel - - [meta sequenceId=\"38\"] \u003c6\u003e[2342] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:43+00:00 OPNsense.internal opnsense 13970 - [meta sequenceId=\"42\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:45+00:00 OPNsense.internal opnsense 14921 - [meta sequenceId=\"45\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:47+00:00 OPNsense.internal opnsense 15851 - [meta sequenceId=\"49\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:49+00:00 OPNsense.internal opnsense 17167 - [meta sequenceId=\"53\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:50+00:00 OPNsense.internal opnsense 18451 - [meta sequenceId=\"57\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:52+00:00 OPNsense.internal opnsense 19338 - [meta sequenceId=\"61\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:54+00:00 OPNsense.internal opnsense 20202 - [meta sequenceId=\"65\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:55+00:00 OPNsense.internal opnsense 21171 - [meta sequenceId=\"69\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-04T17:04:57+00:00 OPNsense.internal opnsense 22167 - [meta sequenceId=\"73\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99"
+                                                                   ]
+                                            },
+                                            {
+                                                "path":  "/var/log/system/system_20261105.log",
+                                                "matching_lines":  [
+                                                                       "\u003c13\u003e1 2026-11-05T09:33:59+00:00 OPNsense.internal opnsense 65028 - [meta sequenceId=\"80\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[461] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[461] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[461] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[461] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"6\"] \u003c6\u003e[461] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"7\"] \u003c6\u003e[461] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"8\"] \u003c6\u003e[461] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"9\"] \u003c6\u003e[461] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"10\"] \u003c6\u003e[461] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:44+00:00 OPNsense.internal kernel - - [meta sequenceId=\"11\"] \u003c6\u003e[461] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:45+00:00 OPNsense.internal opnsense 76953 - [meta sequenceId=\"12\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:46+00:00 OPNsense.internal opnsense 85140 - [meta sequenceId=\"15\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:48+00:00 OPNsense.internal opnsense 94858 - [meta sequenceId=\"19\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:49+00:00 OPNsense.internal opnsense 5747 - [meta sequenceId=\"24\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:50+00:00 OPNsense.internal opnsense 12577 - [meta sequenceId=\"27\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:51+00:00 OPNsense.internal opnsense 24465 - [meta sequenceId=\"31\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:52+00:00 OPNsense.internal opnsense 35515 - [meta sequenceId=\"35\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:53+00:00 OPNsense.internal opnsense 45275 - [meta sequenceId=\"39\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:55+00:00 OPNsense.internal opnsense 56071 - [meta sequenceId=\"43\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-05T09:39:56+00:00 OPNsense.internal opnsense 70460 - [meta sequenceId=\"47\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-05T10:37:03+00:00 OPNsense.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[3900] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:37:03+00:00 OPNsense.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[3900] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:37:11+00:00 OPNsense.internal opnsense 81807 - [meta sequenceId=\"4\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T10:37:17+00:00 OPNsense.internal opnsense 97402 - [meta sequenceId=\"8\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[4022] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[4022] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[4022] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[4022] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"6\"] \u003c6\u003e[4022] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"7\"] \u003c6\u003e[4022] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"8\"] \u003c6\u003e[4022] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"9\"] \u003c6\u003e[4022] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"10\"] \u003c6\u003e[4022] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:05+00:00 OPNsense.internal kernel - - [meta sequenceId=\"11\"] \u003c6\u003e[4022] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:07+00:00 OPNsense.internal opnsense 82153 - [meta sequenceId=\"12\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:09+00:00 OPNsense.internal opnsense 94376 - [meta sequenceId=\"16\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:10+00:00 OPNsense.internal opnsense 10429 - [meta sequenceId=\"19\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:11+00:00 OPNsense.internal opnsense 34056 - [meta sequenceId=\"23\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:12+00:00 OPNsense.internal opnsense 48293 - [meta sequenceId=\"27\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:13+00:00 OPNsense.internal opnsense 59460 - [meta sequenceId=\"31\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:13+00:00 OPNsense.internal opnsense 73862 - [meta sequenceId=\"35\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:14+00:00 OPNsense.internal opnsense 86170 - [meta sequenceId=\"39\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:14+00:00 OPNsense.internal opnsense 97123 - [meta sequenceId=\"43\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-05T10:39:15+00:00 OPNsense.internal opnsense 10333 - [meta sequenceId=\"47\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50"
+                                                                   ]
+                                            },
+                                            {
+                                                "path":  "/var/log/system/system_20261106.log",
+                                                "matching_lines":  [
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:18+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"310\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : ipsec_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"312\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : openvpn_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"313\"] /usr/local/etc/rc.bootup: plugins_configure vpn (execute task : wireguard_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"314\"] /usr/local/etc/rc.bootup: plugins_configure bootup (1)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"315\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : system_powerd_configure(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"316\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : dhcrelay_configure_id(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"317\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : ntpd_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"319\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : opendns_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:20+00:00 OPNsense-Secondary.internal opnsense 445 - [meta sequenceId=\"320\"] /usr/local/etc/rc.bootup: plugins_configure bootup (execute task : unbound_configure_do(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:37+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"336\"] \u003c118\u003e[159] \u003e\u003e\u003e Invoking start script \u0027carp\u0027",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:42+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"339\"] \u003c6\u003e[163] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:43+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"340\"] \u003c6\u003e[164] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:43+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"341\"] \u003c6\u003e[164] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:43+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"342\"] \u003c6\u003e[164] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:43+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"343\"] \u003c6\u003e[164] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:47+00:00 OPNsense-Secondary.internal opnsense 53544 - [meta sequenceId=\"344\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:52+00:00 OPNsense-Secondary.internal opnsense 59896 - [meta sequenceId=\"7\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-06T19:19:57+00:00 OPNsense-Secondary.internal opnsense 70581 - [meta sequenceId=\"11\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:08+00:00 OPNsense-Secondary.internal opnsense 80213 - [meta sequenceId=\"21\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:12+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"26\"] \u003c118\u003e[193] \u003e\u003e\u003e Invoking start script \u0027soc-pfsync\u0027",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:13+00:00 OPNsense-Secondary.internal opnsense 87401 - [meta sequenceId=\"27\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (1)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:13+00:00 OPNsense-Secondary.internal opnsense 87401 - [meta sequenceId=\"28\"] /usr/local/sbin/pluginctl: plugins_configure pfsync (execute task : interfaces_pfsync_configure(1))",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:14+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"29\"] \u003c6\u003e[195] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:16+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"32\"] \u003c6\u003e[197] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:22+00:00 OPNsense-Secondary.internal opnsense 95347 - [meta sequenceId=\"46\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:26+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"51\"] \u003c6\u003e[206] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:26+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"52\"] \u003c6\u003e[206] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:26+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"53\"] \u003c6\u003e[206] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:26+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"54\"] \u003c6\u003e[206] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:26+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"55\"] \u003c6\u003e[206] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:28+00:00 OPNsense-Secondary.internal opnsense 4344 - [meta sequenceId=\"58\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"MASTER\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:30+00:00 OPNsense-Secondary.internal opnsense 14883 - [meta sequenceId=\"61\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"MASTER\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:33+00:00 OPNsense-Secondary.internal opnsense 25781 - [meta sequenceId=\"66\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"MASTER\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:35+00:00 OPNsense-Secondary.internal opnsense 30595 - [meta sequenceId=\"69\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"MASTER\" for vhid 40",
+                                                                       "\u003c13\u003e1 2026-11-06T19:20:38+00:00 OPNsense-Secondary.internal opnsense 35591 - [meta sequenceId=\"73\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"MASTER\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"2\"] \u003c6\u003e[880] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"3\"] \u003c6\u003e[880] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"4\"] \u003c6\u003e[880] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"5\"] \u003c6\u003e[880] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:39+00:00 OPNsense-Secondary.internal kernel - - [meta sequenceId=\"6\"] \u003c6\u003e[880] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:40+00:00 OPNsense-Secondary.internal opnsense 20883 - [meta sequenceId=\"7\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN30 (192.168.30.1) (30@vtnet0_vlan30)\" has resumed the state \"BACKUP\" for vhid 30",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:41+00:00 OPNsense-Secondary.internal opnsense 24583 - [meta sequenceId=\"10\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN99 (192.168.99.1) (99@vtnet0_vlan99)\" has resumed the state \"BACKUP\" for vhid 99",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:43+00:00 OPNsense-Secondary.internal opnsense 28553 - [meta sequenceId=\"14\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN60 (192.168.60.1) (60@vtnet0_vlan60)\" has resumed the state \"BACKUP\" for vhid 60",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:46+00:00 OPNsense-Secondary.internal opnsense 33876 - [meta sequenceId=\"18\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN50 (192.168.50.1) (50@vtnet0_vlan50)\" has resumed the state \"BACKUP\" for vhid 50",
+                                                                       "\u003c13\u003e1 2026-11-06T19:31:50+00:00 OPNsense-Secondary.internal opnsense 39584 - [meta sequenceId=\"23\"] /usr/local/etc/rc.syshook.d/carp/20-openvpn: Carp cluster member \"SOC CARP VLAN40 (192.168.40.1) (40@vtnet0_vlan40)\" has resumed the state \"BACKUP\" for vhid 40"
+                                                                   ]
+                                            }
+                                        ],
+                               "kernel_events":  [
+                                                     "[88] carp: 30@vtnet0_vlan30: INIT -\u003e BACKUP (initialization complete)",
+                                                     "[88] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                     "[89] carp: 40@vtnet0_vlan40: INIT -\u003e BACKUP (initialization complete)",
+                                                     "[89] carp: 50@vtnet0_vlan50: INIT -\u003e BACKUP (initialization complete)",
+                                                     "[91] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (master timed out)",
+                                                     "[92] carp: 60@vtnet0_vlan60: INIT -\u003e BACKUP (initialization complete)",
+                                                     "[92] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (master timed out)",
+                                                     "[93] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (master timed out)",
+                                                     "[93] carp: 99@vtnet0_vlan99: INIT -\u003e BACKUP (initialization complete)",
+                                                     "[95] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (master timed out)",
+                                                     "[96] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (master timed out)",
+                                                     "[111] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                     "[163] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[164] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[164] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[164] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[164] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[195] carp: demoted by 240 to 240 (pfsync bulk start)",
+                                                     "[197] carp: demoted by -240 to 0 (pfsync bulk done)",
+                                                     "[206] carp: 99@vtnet0_vlan99: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                     "[206] carp: 60@vtnet0_vlan60: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                     "[206] carp: 50@vtnet0_vlan50: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                     "[206] carp: 40@vtnet0_vlan40: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                     "[206] carp: 30@vtnet0_vlan30: BACKUP -\u003e MASTER (preempting a slower master)",
+                                                     "[880] carp: 30@vtnet0_vlan30: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[880] carp: 99@vtnet0_vlan99: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[880] carp: 60@vtnet0_vlan60: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[880] carp: 50@vtnet0_vlan50: MASTER -\u003e BACKUP (more frequent advertisement received)",
+                                                     "[880] carp: 40@vtnet0_vlan40: MASTER -\u003e BACKUP (more frequent advertisement received)"
+                                                 ],
+                               "wan_runtime":  {
+                                                   "rc":  0,
+                                                   "stdout":  "vtnet1: flags=1008843\u003cUP,BROADCAST,RUNNING,SIMPLEX,MULTICAST,LOWER_UP\u003e metric 0 mtu 1500\n\tdescription: WAN (wan)\n\toptions=880028\u003cVLAN_MTU,JUMBO_MTU,LINKSTATE,HWSTATS\u003e\n\tether 50:00:00:02:00:01\n\tinet6 fe80::5200:ff:fe02:1%vtnet1 prefixlen 64 scopeid 0x2\n\tmedia: Ethernet autoselect (10Gbase-T \u003cfull-duplex\u003e)\n\tstatus: active\n\tnd6 options=23\u003cPERFORMNUD,ACCEPT_RTADV,AUTO_LINKLOCAL\u003e\n",
+                                                   "stderr":  ""
+                                               },
+                               "default_route":  {
+                                                     "rc":  255,
+                                                     "stdout":  "",
+                                                     "stderr":  "route: route has not been found\n"
+                                                 },
+                               "nat":  {
+                                           "rc":  0,
+                                           "stdout":  "no nat proto carp all\nno rdr proto carp all\nno rdr on vtnet0 proto tcp from any to (vtnet0) port = http\nno rdr on vtnet0 proto tcp from any to (vtnet0) port = https\n",
+                                           "stderr":  ""
+                                       },
+                               "samples":  [
+                                               {
+                                                   "utc":  "2026-11-06T19:55:03.868938+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:55:14.124311+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:55:24.297180+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:55:34.423367+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:55:44.509581+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:55:54.598222+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               },
+                                               {
+                                                   "utc":  "2026-11-06T19:56:04.692576+00:00",
+                                                   "carp":  [
+                                                                "carp: BACKUP vhid 30 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 40 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 50 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 60 advbase 1 advskew 100",
+                                                                "carp: BACKUP vhid 99 advbase 1 advskew 100"
+                                                            ],
+                                                   "pfsync":  {
+                                                                  "rc":  0,
+                                                                  "stdout":  "pfsync0: flags=1000041\u003cUP,RUNNING,LOWER_UP\u003e metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+                                                                  "stderr":  ""
+                                                              },
+                                                   "carp_sysctl":  {
+                                                                       "rc":  0,
+                                                                       "stdout":  "net.inet.carp.demotion: 0\nnet.inet.carp.allow: 1\n",
+                                                                       "stderr":  ""
+                                                                   }
+                                               }
+                                           ],
+                               "finished_utc":  "2026-11-06T19:56:04.734143+00:00"
+                           }
+}

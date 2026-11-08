@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "collector_time": "2026-11-04T11:20:39.170428+07:00",
+  "flow": "192.168.40.100:44340 -> 192.168.30.10:8000",
+  "matching_state_id_creatorid": [
+    [
+      "bf10eb6a00000000",
+      "c70da713"
+    ],
+    [
+      "c010eb6a00000000",
+      "c70da713"
+    ]
+  ],
+  "primary_states": "ESTABLISHED:ESTABLISHED",
+  "secondary_states": "ESTABLISHED:ESTABLISHED",
+  "secondary_packet_counters_before": "0:0",
+  "evidence": [
+    "primary-state-before.json",
+    "secondary-state-before.json",
+    "pfsync-during-state-creation.json",
+    "client-handshake.json"
+  ]
+}

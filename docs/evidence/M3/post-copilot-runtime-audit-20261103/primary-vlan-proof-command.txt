@@ -1,0 +1,1 @@
+ifconfig -a | grep -e vtnet0_vlan -e 'inet 192.168.' -e 'inet 10.255.' -e 'carp:'

@@ -1,0 +1,7 @@
+﻿Hạng mục,Trạng thái,Căn cứ
+Core L2,PASS,95/95 ca lịch sử + ảnh runtime L2 mới
+Inter-VLAN Routing,PASS,"HTTP200 + VLAN40→30, TTL64→63, MAC Primary"
+ACL/firewall giữa VLAN,PASS,Một ca dương/hai ca âm + PCAP + counter
+Access/trunk,PASS,Suite năm VLAN lịch sử + PCAP mới access/trunk
+LACP,N/A,"Hai trunk tới hai firewall riêng, không LAG chung"
+SPAN/Port Mirroring,PASS,PCAP mirror có marker GET + counter tăng

@@ -1,0 +1,1 @@
+sha256 -q /conf/config.xml; sysctl net.inet.ip.forwarding; pfctl -vvsr | grep -A4 -E "^@(10|96) "

@@ -1,0 +1,68 @@
+{
+  "service": "active",
+  "capture_interface": [
+    {
+      "ifindex": 2,
+      "ifname": "capture0",
+      "flags": [
+        "BROADCAST",
+        "MULTICAST",
+        "UP",
+        "LOWER_UP"
+      ],
+      "mtu": 1500,
+      "qdisc": "fq_codel",
+      "operstate": "UP",
+      "group": "default",
+      "txqlen": 1000,
+      "link_type": "ether",
+      "address": "02:54:42:38:75:00",
+      "broadcast": "ff:ff:ff:ff:ff:ff",
+      "altnames": [
+        "enp0s3"
+      ],
+      "addr_info": []
+    }
+  ],
+  "alerts": [
+    {
+      "timestamp": "2026-11-02T17:01:36.985227+0000",
+      "flow_id": 9396033340943,
+      "in_iface": "capture0",
+      "event_type": "alert",
+      "vlan": [
+        30
+      ],
+      "src_ip": "192.168.30.101",
+      "src_port": 0,
+      "dest_ip": "192.168.30.102",
+      "dest_port": 0,
+      "proto": "ICMP",
+      "icmp_type": 8,
+      "icmp_code": 0,
+      "pkt_src": "wire/pcap",
+      "alert": {
+        "action": "allowed",
+        "gid": 1,
+        "signature_id": 1000001,
+        "rev": 1,
+        "signature": "SOC M4 benign ICMP marker",
+        "category": "",
+        "severity": 3
+      },
+      "direction": "to_server",
+      "flow": {
+        "pkts_toserver": 1,
+        "pkts_toclient": 0,
+        "bytes_toserver": 82,
+        "bytes_toclient": 0,
+        "start": "2026-11-02T17:01:36.985227+0000",
+        "src_ip": "192.168.30.101",
+        "dest_ip": "192.168.30.102"
+      }
+    }
+  ],
+  "boot_id": "e31a5937-121a-4958-826c-ff4608e2ca89",
+  "collector_time": "2026-11-02T17:02:54.102647+07:00",
+  "scope": "Actual live sensor state; guest timestamps untrusted, correlate marker and addresses"
+}

@@ -1,0 +1,59 @@
+{
+  "routes_before": [
+    {
+      "dst": "default",
+      "gateway": "192.168.30.2",
+      "dev": "lan0",
+      "protocol": "static",
+      "flags": []
+    },
+    {
+      "dst": "192.168.30.0/24",
+      "dev": "lan0",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "192.168.30.10",
+      "flags": []
+    }
+  ],
+  "routes_after": [
+    {
+      "dst": "default",
+      "gateway": "192.168.30.2",
+      "dev": "lan0",
+      "protocol": "static",
+      "flags": []
+    },
+    {
+      "dst": "192.168.30.0/24",
+      "dev": "lan0",
+      "protocol": "kernel",
+      "scope": "link",
+      "prefsrc": "192.168.30.10",
+      "flags": []
+    },
+    {
+      "dst": "192.168.40.100",
+      "gateway": "192.168.30.1",
+      "dev": "lan0",
+      "flags": []
+    }
+  ],
+  "default_route_unchanged": true,
+  "backup": "/root/soc-m34b-20261104/routes.before.json",
+  "backup_mode": "0o600",
+  "backup_sha256": "8ab9dfd3e2b6e94b83bf9aa338c66a9ad761fba8ad56fa3a3dc33a134d605d1c",
+  "route_get": [
+    {
+      "dst": "192.168.40.100",
+      "gateway": "192.168.30.1",
+      "dev": "lan0",
+      "prefsrc": "192.168.30.10",
+      "flags": [],
+      "uid": 0,
+      "cache": []
+    }
+  ],
+  "scope": "One test host route via existing CARP VIP; no IP/default route/netplan/topology changes",
+  "collector_time": "2026-11-04T16:51:00.026697+07:00"
+}

@@ -1,0 +1,16 @@
+{
+    "collected_at":  "2026-11-04T10:25:14+07:00",
+    "status":  "BLOCKED",
+    "reason":  "SOC_TO_DO.md chỉ có M3.1 và M3.2, đều DONE/PASS; không có TODO M3 chưa DONE tiếp theo.",
+    "runtime_test":  "NOT_RUN — chưa xác định được TODO trong phạm vi yêu cầu",
+    "system_changes":  false,
+    "checkpoint":  "Giữ DONE/PASS M3.1 và M3.2 theo hồ sơ; không xác nhận lại runtime trong lượt này. Dừng, cần người dùng xác định TODO M3 mới.",
+    "sources":  [
+                    "SOC_TO_DO.before.md",
+                    "PROGRESS.before.md"
+                ],
+    "source_sha256":  {
+                          "todo":  "5F5E5110D7B434EAE4173265827E82974618D41AA07E17A4A5FA4EC427728732",
+                          "progress":  "0DB688B5FE8A91EAE8FF86EE03D4B3027D56846407E42FF2BBAB6D1DDAB79CF9"
+                      }
+}

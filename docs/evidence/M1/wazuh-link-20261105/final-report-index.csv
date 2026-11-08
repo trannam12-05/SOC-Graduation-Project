@@ -1,0 +1,5 @@
+file,content,collector_time_with_timezone,path,report_position,validation
+topology-overview-20261105T091848+0700.png,Real EVE topology after Wazuh e0 connected to VLAN99 Management,2026-11-05T09:18:48+07:00,docs/evidence/M1/wazuh-link-20261105/topology-overview-20261105T091848+0700.png,Hình 1.2,SHA-256 629E75C8E8E400DD28EFCA3D2246E7B481DF088C104ED01EBE38E4C6FEEDAE50; visually reviewed
+gui-capture-validation.json,Visual validation and explicit scope,2026-11-05T09:18:48+07:00,docs/evidence/M1/wazuh-link-20261105/gui-capture-validation.json,Supporting evidence,No guest traffic claim
+M1-final-acceptance-20261105.md,Final M1 acceptance report with real EVE image,2026-11-05T09:18:48+07:00,docs/M1/M1-final-acceptance-20261105.md,Chapter 1,SHA-256 48A83564B51499D65F099D84AFDA17379B6B722134E3CB4E59709D30089CFDD2
+M1-final-acceptance-20261105.docx,Final Word report with embedded real PNG,2026-11-05T09:18:48+07:00,docs/M1/M1-final-acceptance-20261105.docx,Chapter 1,SHA-256 96E12BC211C200D8C4640A007F60EE7A89413E9FACDEDDE64DD29C676933643D; DOCX XML and embedded PNG verified; GUI pagination not reviewed

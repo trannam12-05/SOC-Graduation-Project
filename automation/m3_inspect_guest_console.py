@@ -12,7 +12,13 @@ COMMANDS = {
     "disk": "gpart show vtbd0; diskinfo vtbd0; mount | head -5",
     "nics": "ifconfig vtnet0; ifconfig vtnet1; ifconfig vtnet2",
     "nic-summary": "ifconfig -a | grep -E '(^vtnet|ether |description:|inet )'",
+    "nic-mac": "echo vtnet0; ifconfig vtnet0 | grep ether; echo vtnet1; ifconfig vtnet1 | grep ether; echo vtnet2; ifconfig vtnet2 | grep ether",
     "version": "opnsense-version; df -h; sysctl hw.physmem",
+    "config-api": "command -v python3; ls /usr/local/etc/inc/config.inc; grep -n '^function interface_' /usr/local/etc/inc/interfaces.inc | head -12",
+    "vlan-api": "grep -n 'function.*vlan' /usr/local/etc/inc/interfaces.inc; grep -n 'function.*configure' /usr/local/etc/inc/interfaces.inc | tail -8; ls /usr/local/opnsense/mvc/app/models/OPNsense/Interfaces",
+    "vlan-schema": "head -22 /usr/local/opnsense/mvc/app/models/OPNsense/Interfaces/Vlan.xml",
+    "vlan-runtime-api": "sed -n '110,128p' /usr/local/etc/inc/interfaces.inc",
+    "interface-entry": "grep -n 'function interface[s]*_configure' /usr/local/etc/inc/interfaces.inc; tail -35 /usr/local/opnsense/mvc/app/models/OPNsense/Interfaces/Vlan.xml",
 }
 
 if __name__ == "__main__":

@@ -1,0 +1,31 @@
+{
+  "status": "DONE",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m36-secondary.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m36-secondary.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m36-secondary.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"hostname\":\"OPNsense-Secondary\",\"rule\":{\"enabled\":\"1\",\"action\":\"pass\",\"quick\":\"1\",\"interface\":\"opt6\",\"direction\":\"in\",\"ipprotocol\":\"inet\",\"protocol\":\"tcp\",\"source_net\":\"10.255.255.1\\/32\",\"destination_net\":\"10.255.255.2\\/32\",\"destination_port\":\"8001\",\"log\":\"1\",\"nosync\":\"1\",\"sequence\":\"13\",\"description\":\"SOC HA KEA tcp8001\"}}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl filter reload",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/bin/hostname OPNsense-Secondary.internal",
+      "rc": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "config_sha256": "170254808ed7f18ef01d26ff4e70256fd5da9fb3f662a10b2923fa70046f6b41",
+  "collector_time": "2026-11-06T18:11:20.966877+07:00"
+}

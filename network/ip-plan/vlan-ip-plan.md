@@ -1,4 +1,10 @@
-﻿# Kế hoạch VLAN và địa chỉ IP (M1)
+# Cập nhật M1 — 05/11/2026, UTC+07:00
+
+Bản hiện hành: [Thiết kế hợp nhất](../../docs/M1/M1-design-consolidated-20261105.md). Năm VLAN, IP firewall .2/.3 và VIP .1 đã được nghiệm thu M3. Core dùng Open vSwitch ens3–ens10, không IP; LACP không áp dụng. Wazuh VLAN99 là thiết kế chưa triển khai. Internet ngoài phạm vi cơ sở. Nội dung dưới đây là trích xuất M1 gốc giữ làm lịch sử; không dùng trạng thái chưa xác nhận hoặc tên cổng IOS cũ thay bản hợp nhất.
+
+---
+
+# Kế hoạch VLAN và địa chỉ IP (M1)
 
 ## Quy ước trạng thái
 
@@ -40,4 +46,4 @@ OPNsense tạo interface VLAN trên LAN trunk, giữ CARP VIP làm default gatew
 - VLAN 60 có được chốt cho DMZ không; danh sách VLAN chính thức.
 - VIP và IP riêng Primary/Secondary trên từng VLAN.
 - VLAN nào cấp DHCP, scope, reservation, DNS resolver và các địa chỉ tĩnh loại trừ.
-- WAN/transit, mạng HA sync và địa chỉ thiết bị trên các mạng này (không có trong bảng trên).
+- WAN/transit, mạng HA sync và địa chỉ thiết bị trên các mạng này (không có trong bảng trên).

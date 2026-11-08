@@ -1,0 +1,1 @@
+sudo -n journalctl -u soc-lab-http --no-pager -n 6

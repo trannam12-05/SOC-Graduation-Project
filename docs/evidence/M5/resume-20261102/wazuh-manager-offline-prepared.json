@@ -1,0 +1,15 @@
+{
+  "collected_at": "2026-11-02T16:03:12.971317+07:00",
+  "package": "wazuh-manager",
+  "version": "4.14.9-1",
+  "architecture": "amd64",
+  "bytes": 595732468,
+  "sha256": "8b6f615f84c93a51c6023e7e542b9519945684434b117396ae61517bcdcba5f8",
+  "signature_verification": {
+    "gpgv_returncode": 0,
+    "signature_status": "[GNUPG:] NEWSIG\n[GNUPG:] KEY_CONSIDERED 0DCFCA5547B19D2A6099506096B3EE5F29111145 0\n[GNUPG:] SIG_ID TEw4Z6CSYMwpxOKXQRkh+M/lfyI 2026-10-14 1791982681\n[GNUPG:] GOODSIG 96B3EE5F29111145 Wazuh.com (Wazuh Signing Key) <support@wazuh.com>\n[GNUPG:] VALIDSIG 0DCFCA5547B19D2A6099506096B3EE5F29111145 2026-10-14 1791982681 0 4 0 1 8 01 0DCFCA5547B19D2A6099506096B3EE5F29111145\n[GNUPG:] VERIFICATION_COMPLIANCE_MODE 23\n",
+    "package_index_sha256_verified": true
+  },
+  "remote_package": "/opt/unetlab/soc-wazuh-preparation-20261102/wazuh-manager_4.14.9-1_amd64.deb",
+  "scope": "Manager package prepared; not a complete indexer/dashboard deployment, not installed yet"
+}

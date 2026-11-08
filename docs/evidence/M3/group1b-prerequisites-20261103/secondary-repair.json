@@ -1,0 +1,23 @@
+{
+  "role": "Secondary",
+  "mode": "repair",
+  "native_command": "/usr/local/sbin/pluginctl -c pfsync",
+  "native_apply": {
+    "rc": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  "runtime_after": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.1 maxupd: 128 defer: off version: 1400\n\tsyncok: 0\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "runtime_ready": true,
+  "config_unchanged": true,
+  "config_sha256_before": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "config_sha256_after": "fd0482546117a18254e05114dc1b101012b95c1388e4ba9ea4eaafce115c69bd",
+  "secret_file_unchanged": true,
+  "secret_mode": "0o600",
+  "CARP_VIPs_created": 0,
+  "collector_time": "2026-11-03T18:19:37.901065+07:00"
+}

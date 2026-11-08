@@ -1,0 +1,15 @@
+{
+  "running": [
+    {
+      "name": "OPNsense-Primary",
+      "ram_mib": 3072
+    },
+    {
+      "name": "OPNsense-Secondary",
+      "ram_mib": 3072
+    }
+  ],
+  "eve_available_mib": 3339.15234375,
+  "swap_used_kib": 0,
+  "collector_time": "2026-11-03T17:46:22.536206+07:00"
+}

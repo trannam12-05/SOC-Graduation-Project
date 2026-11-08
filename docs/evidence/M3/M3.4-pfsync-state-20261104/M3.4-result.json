@@ -1,0 +1,68 @@
+{
+  "todo": "M3.4 — Kiểm thử pfsync state synchronization khi CARP failover",
+  "status": "FAIL/BLOCKED",
+  "collector_time": "2026-11-04T16:20:04.824645+07:00",
+  "state_before": "PASS — hai entry ESTABLISHED:ESTABLISHED của cùng flow trên Primary",
+  "state_sync": {
+    "status": "PASS",
+    "collector_time": "2026-11-04T11:20:39.170428+07:00",
+    "flow": "192.168.40.100:44340 -> 192.168.30.10:8000",
+    "matching_state_id_creatorid": [
+      [
+        "bf10eb6a00000000",
+        "c70da713"
+      ],
+      [
+        "c010eb6a00000000",
+        "c70da713"
+      ]
+    ],
+    "primary_states": "ESTABLISHED:ESTABLISHED",
+    "secondary_states": "ESTABLISHED:ESTABLISHED",
+    "secondary_packet_counters_before": "0:0",
+    "evidence": [
+      "primary-state-before.json",
+      "secondary-state-before.json",
+      "pfsync-during-state-creation.json",
+      "client-handshake.json"
+    ]
+  },
+  "failover": {
+    "status": "OBSERVED_IN_PACKET_EVIDENCE",
+    "primary_off_confirmed": true,
+    "secondary_advertised_vhids": [
+      30,
+      40,
+      50,
+      60,
+      99
+    ],
+    "all_five_vips_arp_observed": true,
+    "native_after_state_fully_retrieved": false
+  },
+  "connection": {
+    "status": "CONTINUED_DURING_OBSERVED_INTERVAL_THEN_TEST_INTERRUPTED",
+    "acked_markers_after_primary_off": 11,
+    "syn_transmissions": 1,
+    "tcp_retransmissions": 1,
+    "no_reconnect_observed": true,
+    "http_completed": false,
+    "zero_packet_loss_claimed": false,
+    "evidence": "interrupted-analysis.json and intact raw log/PCAP prefixes"
+  },
+  "recovery": {
+    "status": "NOT_RUN",
+    "qemu_running_at_resume": [],
+    "current_carp_pfsync": "NOT_VERIFIED"
+  },
+  "reason": "Gián đoạn/restart môi trường EVE: khi tiếp tục, host uptime khoảng 3 phút, không có QEMU hoặc client test chạy. Chưa thu đủ native state sau failover, chưa hoàn tất HTTP và chưa kiểm chứng recovery. Tác nhân gây restart chưa xác minh.",
+  "configuration_changes": {
+    "firewall_rules": false,
+    "NAT_DHCP": false,
+    "VIP_VHID_advskew": false,
+    "Core": false,
+    "topology": false,
+    "endpoint_runtime_route": "Data-Center: 192.168.40.100/32 via 192.168.30.1 dev lan0; original IP/default route/netplan preserved when checked; route after restart not checked"
+  },
+  "checkpoint": "Keep M3.1/M3.2/M3.3 historical PASS. M3.4 not complete. Need restore lab baseline and rerun M3.4 as a new TCP session; do not replay native apply or old TCP sequence numbers. No next TODO."
+}

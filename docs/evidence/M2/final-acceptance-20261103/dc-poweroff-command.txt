@@ -1,0 +1,1 @@
+sudo -n sh -c 'sleep 10; systemctl poweroff' &

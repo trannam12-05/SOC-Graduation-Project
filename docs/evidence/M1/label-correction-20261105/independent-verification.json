@@ -1,0 +1,31 @@
+{
+  "collector_time": "2026-11-05T09:29:00+07:00",
+  "lab_sha256": "2540b7ed54266134679023595125c5db0abcb659416a3a9a0f518d154d0c805c",
+  "labels": {
+    "4": {
+      "expected_ascii": "HTTP 8000",
+      "present": true,
+      "old_not_installed_absent": true
+    },
+    "7": {
+      "expected_ascii": "HTTP 80",
+      "present": true,
+      "old_not_installed_absent": true
+    },
+    "10": {
+      "expected_ascii": "Suricata 7.0.3",
+      "present": true,
+      "old_not_installed_absent": true
+    },
+    "11": {
+      "expected_ascii": "Wazuh Manager 4.14.9",
+      "present": true,
+      "old_not_installed_absent": true
+    }
+  },
+  "all_pass": true,
+  "node_count": 10,
+  "network_count": 11,
+  "running_node_processes": [],
+  "scope": "Independent XML label verification; no guest boot or current service-state claim."
+}

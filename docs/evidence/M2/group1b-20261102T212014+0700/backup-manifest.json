@@ -1,0 +1,41 @@
+{
+  "guest_backup_directory": "/root/m2-group1b-20261102-212014",
+  "database_name": "Open_vSwitch",
+  "schema": "8.5.1",
+  "config_changes": [],
+  "traffic_tested": false,
+  "files": [
+    {
+      "name": "ovsdb.snapshot",
+      "path": "D:\\SOC\\docs\\evidence\\M2\\group1b-20261102T212014+0700\\private-backups\\ovsdb.snapshot",
+      "bytes": 25764,
+      "sha256": "7214fd7d9b55d4f4a0d949283963a1e26744b7e6936243ca76f4e95764541645"
+    },
+    {
+      "name": "runtime.json",
+      "path": "D:\\SOC\\docs\\evidence\\M2\\group1b-20261102T212014+0700\\private-backups\\runtime.json",
+      "bytes": 21832,
+      "sha256": "3b453c2dd247ccb78faabc365355abc252918df7e800b699b88c9258467ebbbc"
+    },
+    {
+      "name": "ovs-show.txt",
+      "path": "D:\\SOC\\docs\\evidence\\M2\\group1b-20261102T212014+0700\\private-backups\\ovs-show.txt",
+      "bytes": 837,
+      "sha256": "5719c95044f6ad92c27449d4ae9e533e67a61e9016d4969cdfc0473aeb8d8970"
+    },
+    {
+      "name": "systemd-units.txt",
+      "path": "D:\\SOC\\docs\\evidence\\M2\\group1b-20261102T212014+0700\\private-backups\\systemd-units.txt",
+      "bytes": 2765,
+      "sha256": "157f10cf84027840214ec6f0b8943e4cea0f9f0a601d38b3b824c9f406d78471"
+    },
+    {
+      "name": "commands.jsonl",
+      "path": "D:\\SOC\\docs\\evidence\\M2\\group1b-20261102T212014+0700\\private-backups\\commands.jsonl",
+      "bytes": 24364,
+      "sha256": "0e8aa3b02f1c22cea9276d6124429e5e89a812d1758f100874bd18d065fee9af"
+    }
+  ],
+  "collector_time": "2026-11-02T21:44:54.159398+07:00",
+  "transport": "Exact console glyph decoding; whole reply and each file SHA-256 verified"
+}

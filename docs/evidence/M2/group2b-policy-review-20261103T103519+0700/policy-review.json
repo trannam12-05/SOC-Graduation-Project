@@ -1,0 +1,34 @@
+{
+  "collected_at": "2026-11-03T10:35:19.483196+07:00",
+  "status": "WAITING_FOR_APPROVED_VLAN30_POLICY",
+  "scope": "M2 Nh?m 2B / OPNsense Primary / VLAN 30",
+  "sources": [
+    {
+      "path": "docs/M1/M1_Thiet_ke_SOC_Core_L2_OPNsense_Giai_thich_thuat_ngu.docx",
+      "sha256": "79953fd2f21f14928d7c3c1c58f0d09575c71252c76ff273defaa63163ebe703",
+      "finding": "Ch??ng 4, B?ng 4.1: ma tr?n tham chi?u; Server/NIDS ? Wazuh/SIEM theo c?ng c?n thi?t, kh?ng c? IP/port c? th?."
+    },
+    {
+      "path": "docs/M1/open-questions.md",
+      "sha256": "a2e0acaf3ed292ecd6079419397fb6911adecc14c5c803b6460ef9253506b6f5",
+      "finding": "M?c 14: ch?nh s?ch li?n VLAN/NAT c?n c?n nh?m duy?t."
+    },
+    {
+      "path": "docs/M3/M3-deployment-matrix-and-tests-PREPARED-20261101.md",
+      "sha256": "ea501a01227f4376e15b750aea43c78ceb6bca0f97fc238a8d74b057e54cd9bc",
+      "finding": "M?c 3.3: Data Center DNS/NTP/c?p nh?t/log l? d? ki?n; y?u c?u IP server, ??ch v? port tr??c ?p d?ng."
+    },
+    {
+      "path": "docs/M2/M2-group2a-primary-vlans-20261102.md",
+      "sha256": "e1d9bd0045f2376277ba33393b269cfcd0b280a88290afdd7e09808da85e862d",
+      "finding": "M?c 2.7: ch?nh s?ch firewall ch?a ???c ch?t/nghi?m thu b?i Nh?m 2A."
+    }
+  ],
+  "remote_access_performed": false,
+  "new_backup_created": false,
+  "rules_added": [],
+  "rules_modified": [],
+  "rules_deleted": [],
+  "existing_rules_audited": false,
+  "traffic_tested": false
+}

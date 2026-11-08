@@ -1,0 +1,128 @@
+{
+  "client-events.jsonl": {
+    "valid": 143,
+    "invalid": [
+      {
+        "byte_offset": 28283,
+        "bytes": 263,
+        "sha256": "a80548bf8e395ca3fb84d76d69b290ba2d3c036abed405b2de6708d62c1672e1",
+        "nul_bytes": 263
+      }
+    ]
+  },
+  "wire.jsonl": {
+    "valid": 133,
+    "invalid": [
+      {
+        "byte_offset": 47112,
+        "bytes": 714,
+        "sha256": "90965c341840ec297f47e6b77a04dec7b3aad5fe2ee05b5237bc8db14d1daa67",
+        "nul_bytes": 714
+      }
+    ]
+  },
+  "acked_steps_after_primary_off": 11,
+  "syn_transmissions_observed": 1,
+  "tcp_retransmissions_observed": 1,
+  "wire_phases": [
+    [
+      "before",
+      "vunl0_3_5",
+      "02:53:4f:43:04:34",
+      40
+    ],
+    [
+      "before",
+      "vunl0_3_5",
+      "02:54:bc:2f:0c:00",
+      30
+    ],
+    [
+      "before",
+      "vunl0_3_5",
+      "50:00:00:01:00:00",
+      30
+    ],
+    [
+      "before",
+      "vunl0_3_5",
+      "50:00:00:01:00:00",
+      40
+    ],
+    [
+      "failover-start",
+      "vunl0_3_5",
+      "02:53:4f:43:04:34",
+      40
+    ],
+    [
+      "failover-start",
+      "vunl0_3_5",
+      "02:54:bc:2f:0c:00",
+      30
+    ],
+    [
+      "failover-start",
+      "vunl0_3_5",
+      "50:00:00:01:00:00",
+      30
+    ],
+    [
+      "failover-start",
+      "vunl0_3_5",
+      "50:00:00:01:00:00",
+      40
+    ],
+    [
+      "failover-start",
+      "vunl0_3_6",
+      "02:53:4f:43:04:34",
+      40
+    ],
+    [
+      "failover-start",
+      "vunl0_3_6",
+      "02:54:bc:2f:0c:00",
+      30
+    ],
+    [
+      "failover-start",
+      "vunl0_3_6",
+      "50:00:00:02:00:00",
+      30
+    ],
+    [
+      "failover-start",
+      "vunl0_3_6",
+      "50:00:00:02:00:00",
+      40
+    ],
+    [
+      "primary-off",
+      "vunl0_3_6",
+      "02:53:4f:43:04:34",
+      40
+    ],
+    [
+      "primary-off",
+      "vunl0_3_6",
+      "02:54:bc:2f:0c:00",
+      30
+    ],
+    [
+      "primary-off",
+      "vunl0_3_6",
+      "50:00:00:02:00:00",
+      30
+    ],
+    [
+      "primary-off",
+      "vunl0_3_6",
+      "50:00:00:02:00:00",
+      40
+    ]
+  ],
+  "client_final_result_exists": false,
+  "wire_final_result_exists": false,
+  "collector_time": "2026-11-04T16:16:58.502631+07:00"
+}

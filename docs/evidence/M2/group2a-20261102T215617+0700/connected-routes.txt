@@ -1,0 +1,1 @@
+netstat -rn -f inet; sysctl net.inet.ip.forwarding

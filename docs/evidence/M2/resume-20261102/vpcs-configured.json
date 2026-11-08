@@ -1,0 +1,111 @@
+{
+  "collected_at": "2026-11-02T16:50:03.171517+07:00",
+  "scope": "Actual VPCS console configuration; no CARP or end-to-end acceptance yet",
+  "endpoints": [
+    {
+      "node": "Employee",
+      "id": "5",
+      "vlan": 40,
+      "ip": "192.168.40.100/24",
+      "gateway": "192.168.40.2",
+      "state": "CONFIGURED_NOT_END_TO_END_VERIFIED",
+      "console_log": [
+        {
+          "command": "connect",
+          "output": "\u001b]0;Employee\u0007\r\r\nWelcome to Virtual PC Simulator, version 1.3 (0.8.1)\r\r\nDedicated to Daling.\r\r\nBuild time: Feb 22 2024 06:25:41\r\r\nCopyright (c) 2007-2015, Paul Meng (mirnshi@gmail.com)\r\r\nCopyright (c) 2021, Alain Degreffe (alain.degreffe@eve-ng.net)\r\r\nAll rights reserved.\r\r\n\r\r\nVPCS is free software, distributed under the terms of the \"BSD\" licence.\r\r\nSource code and license can be found at vpcs.sf.net.\r\r\nFor more information, please visit wiki.freecode.com.cn.\r\r\nModified version for EVE-NG.\r\r\n\r\nPress '?' to get help.\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "set pcname Employee",
+          "output": " \r\n\rVPCS>"
+        },
+        {
+          "command": "ip 192.168.40.100/24 192.168.40.2",
+          "output": " ip 192.168.40.100/24 192.168.40.2\r\nChecking for duplicate address...\r\nVPCS : 192.168.40.100 255.255.255.0 gateway 192.168.40.2\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "save",
+          "output": " save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "show ip",
+          "output": " show ip\r\n\r\nNAME        : VPCS[1]\r\nIP/MASK     : 192.168.40.100/24\r\nGATEWAY     : 192.168.40.2\r\nDNS         : \r\nMAC         : 00:50:79:66:68:05\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "ping ?",
+          "output": " ping ?\r\n\r\n\u001b[1mping\u001b[0m \u001b[4mHOST\u001b[0m [\u001b[4mOPTION\u001b[0m ...]\r\n  Ping the network \u001b[4mHOST\u001b[0m. \u001b[4mHOST\u001b[0m can be an ip address or name\r\n    Options:\r\n     \u001b[1m-1\u001b[0m             ICMP mode, default\r\n     \u001b[1m-2\u001b[0m             UDP mode\r\n     \u001b[1m-3\u001b[0m             TCP mode\r\n     \u001b[1m-c\u001b[0m \u001b[4mcount\u001b[0m       Packet count, default 5\r\n     \u001b[1m-D\u001b[0m             Set the Don't Fragment bit\r\n     \u001b[1m-f\u001b[0m \u001b[4mFLAG\u001b[0m        Tcp header FLAG |\u001b[1mC\u001b[0m|\u001b[1mE\u001b[0m|\u001b[1mU\u001b[0m|\u001b[1mA\u001b[0m|\u001b[1mP\u001b[0m|\u001b[1mR\u001b[0m|\u001b[1mS\u001b[0m|\u001b[1mF\u001b[0m|\r\n                               bits |7 6 5 4 3 2 1 0|\r\n     \u001b[1m-i\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds between sending each packet\r\n     \u001b[1m-l\u001b[0m \u001b[4msize\u001b[0m        Data size\r\n     \u001b[1m-P\u001b[0m \u001b[4mprotocol\u001b[0m    Use IP \u001b[4mprotocol\u001b[0m in ping packets\r\n                      \u001b[1m1\u001b[0m - ICMP (default), \u001b[1m17\u001b[0m - UDP, \u001b[1m6\u001b[0m - TCP\r\n     \u001b[1m-p\u001b[0m \u001b[4mport\u001b[0m        Destination port\r\n     \u001b[1m-s\u001b[0m \u001b[4mport\u001b[0m        Source port\r\n     \u001b[1m-T\u001b[0m \u001b[4mttl\u001b[0m         Set \u001b[4mttl\u001b[0m, default 64\r\n     \u001b[1m-t\u001b[0m             Send packets until interrupted by Ctrl+C\r\n     \u001b[1m-w\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds to receive the response\r\n\r\n  Notes: 1. Using names requires DNS to be set.\r\n         2. Use Ctrl+C to stop the command.\r\n\r\n\rVPCS>"
+        }
+      ],
+      "startup_config": "set pcname VPCS\nip 192.168.40.100 192.168.40.2 24\n"
+    },
+    {
+      "node": "Guest",
+      "id": "6",
+      "vlan": 50,
+      "ip": "192.168.50.100/24",
+      "gateway": "192.168.50.2",
+      "state": "CONFIGURED_NOT_END_TO_END_VERIFIED",
+      "console_log": [
+        {
+          "command": "connect",
+          "output": "\u001b]0;Guest\u0007\r\r\nWelcome to Virtual PC Simulator, version 1.3 (0.8.1)\r\r\nDedicated to Daling.\r\r\nBuild time: Feb 22 2024 06:25:41\r\r\nCopyright (c) 2007-2015, Paul Meng (mirnshi@gmail.com)\r\r\nCopyright (c) 2021, Alain Degreffe (alain.degreffe@eve-ng.net)\r\r\nAll rights reserved.\r\r\n\r\r\nVPCS is free software, distributed under the terms of the \"BSD\" licence.\r\r\nSource code and license can be found at vpcs.sf.net.\r\r\nFor more information, please visit wiki.freecode.com.cn.\r\r\nModified version for EVE-NG.\r\r\n\r\nPress '?' to get help.\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "set pcname Guest",
+          "output": " \r\n\rVPCS>"
+        },
+        {
+          "command": "ip 192.168.50.100/24 192.168.50.2",
+          "output": " ip 192.168.50.100/24 192.168.50.2\r\nChecking for duplicate address...\r\nVPCS : 192.168.50.100 255.255.255.0 gateway 192.168.50.2\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "save",
+          "output": " save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "show ip",
+          "output": " show ip\r\n\r\nNAME        : VPCS[1]\r\nIP/MASK     : 192.168.50.100/24\r\nGATEWAY     : 192.168.50.2\r\nDNS         : \r\nMAC         : 00:50:79:66:68:06\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "ping ?",
+          "output": " ping ?\r\n\r\n\u001b[1mping\u001b[0m \u001b[4mHOST\u001b[0m [\u001b[4mOPTION\u001b[0m ...]\r\n  Ping the network \u001b[4mHOST\u001b[0m. \u001b[4mHOST\u001b[0m can be an ip address or name\r\n    Options:\r\n     \u001b[1m-1\u001b[0m             ICMP mode, default\r\n     \u001b[1m-2\u001b[0m             UDP mode\r\n     \u001b[1m-3\u001b[0m             TCP mode\r\n     \u001b[1m-c\u001b[0m \u001b[4mcount\u001b[0m       Packet count, default 5\r\n     \u001b[1m-D\u001b[0m             Set the Don't Fragment bit\r\n     \u001b[1m-f\u001b[0m \u001b[4mFLAG\u001b[0m        Tcp header FLAG |\u001b[1mC\u001b[0m|\u001b[1mE\u001b[0m|\u001b[1mU\u001b[0m|\u001b[1mA\u001b[0m|\u001b[1mP\u001b[0m|\u001b[1mR\u001b[0m|\u001b[1mS\u001b[0m|\u001b[1mF\u001b[0m|\r\n                               bits |7 6 5 4 3 2 1 0|\r\n     \u001b[1m-i\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds between sending each packet\r\n     \u001b[1m-l\u001b[0m \u001b[4msize\u001b[0m        Data size\r\n     \u001b[1m-P\u001b[0m \u001b[4mprotocol\u001b[0m    Use IP \u001b[4mprotocol\u001b[0m in ping packets\r\n                      \u001b[1m1\u001b[0m - ICMP (default), \u001b[1m17\u001b[0m - UDP, \u001b[1m6\u001b[0m - TCP\r\n     \u001b[1m-p\u001b[0m \u001b[4mport\u001b[0m        Destination port\r\n     \u001b[1m-s\u001b[0m \u001b[4mport\u001b[0m        Source port\r\n     \u001b[1m-T\u001b[0m \u001b[4mttl\u001b[0m         Set \u001b[4mttl\u001b[0m, default 64\r\n     \u001b[1m-t\u001b[0m             Send packets until interrupted by Ctrl+C\r\n     \u001b[1m-w\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds to receive the response\r\n\r\n  Notes: 1. Using names requires DNS to be set.\r\n         2. Use Ctrl+C to stop the command.\r\n\r\n\rVPCS>"
+        }
+      ],
+      "startup_config": "set pcname VPCS\nip 192.168.50.100 192.168.50.2 24\n"
+    },
+    {
+      "node": "Management",
+      "id": "8",
+      "vlan": 99,
+      "ip": "192.168.99.100/24",
+      "gateway": "192.168.99.2",
+      "state": "CONFIGURED_NOT_END_TO_END_VERIFIED",
+      "console_log": [
+        {
+          "command": "connect",
+          "output": "\u001b]0;Management\u0007\r\r\nWelcome to Virtual PC Simulator, version 1.3 (0.8.1)\r\r\nDedicated to Daling.\r\r\nBuild time: Feb 22 2024 06:25:41\r\r\nCopyright (c) 2007-2015, Paul Meng (mirnshi@gmail.com)\r\r\nCopyright (c) 2021, Alain Degreffe (alain.degreffe@eve-ng.net)\r\r\nAll rights reserved.\r\r\n\r\r\nVPCS is free software, distributed under the terms of the \"BSD\" licence.\r\r\nSource code and license can be found at vpcs.sf.net.\r\r\nFor more information, please visit wiki.freecode.com.cn.\r\r\nModified version for EVE-NG.\r\r\n\r\nPress '?' to get help.\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "set pcname Management",
+          "output": " \r\n\rVPCS>"
+        },
+        {
+          "command": "ip 192.168.99.100/24 192.168.99.2",
+          "output": " ip 192.168.99.100/24 192.168.99.2\r\nChecking for duplicate address...\r\nVPCS : 192.168.99.100 255.255.255.0 gateway 192.168.99.2\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "save",
+          "output": " save\r\nSaving startup configuration to startup.vpc\r\n.  done\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "show ip",
+          "output": " show ip\r\n\r\nNAME        : VPCS[1]\r\nIP/MASK     : 192.168.99.100/24\r\nGATEWAY     : 192.168.99.2\r\nDNS         : \r\nMAC         : 00:50:79:66:68:08\r\nLPORT       : 20000\r\nRHOST:PORT  : 127.0.0.1:30000\r\nMTU         : 1500\r\n\r\n\rVPCS>"
+        },
+        {
+          "command": "ping ?",
+          "output": " ping ?\r\n\r\n\u001b[1mping\u001b[0m \u001b[4mHOST\u001b[0m [\u001b[4mOPTION\u001b[0m ...]\r\n  Ping the network \u001b[4mHOST\u001b[0m. \u001b[4mHOST\u001b[0m can be an ip address or name\r\n    Options:\r\n     \u001b[1m-1\u001b[0m             ICMP mode, default\r\n     \u001b[1m-2\u001b[0m             UDP mode\r\n     \u001b[1m-3\u001b[0m             TCP mode\r\n     \u001b[1m-c\u001b[0m \u001b[4mcount\u001b[0m       Packet count, default 5\r\n     \u001b[1m-D\u001b[0m             Set the Don't Fragment bit\r\n     \u001b[1m-f\u001b[0m \u001b[4mFLAG\u001b[0m        Tcp header FLAG |\u001b[1mC\u001b[0m|\u001b[1mE\u001b[0m|\u001b[1mU\u001b[0m|\u001b[1mA\u001b[0m|\u001b[1mP\u001b[0m|\u001b[1mR\u001b[0m|\u001b[1mS\u001b[0m|\u001b[1mF\u001b[0m|\r\n                               bits |7 6 5 4 3 2 1 0|\r\n     \u001b[1m-i\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds between sending each packet\r\n     \u001b[1m-l\u001b[0m \u001b[4msize\u001b[0m        Data size\r\n     \u001b[1m-P\u001b[0m \u001b[4mprotocol\u001b[0m    Use IP \u001b[4mprotocol\u001b[0m in ping packets\r\n                      \u001b[1m1\u001b[0m - ICMP (default), \u001b[1m17\u001b[0m - UDP, \u001b[1m6\u001b[0m - TCP\r\n     \u001b[1m-p\u001b[0m \u001b[4mport\u001b[0m        Destination port\r\n     \u001b[1m-s\u001b[0m \u001b[4mport\u001b[0m        Source port\r\n     \u001b[1m-T\u001b[0m \u001b[4mttl\u001b[0m         Set \u001b[4mttl\u001b[0m, default 64\r\n     \u001b[1m-t\u001b[0m             Send packets until interrupted by Ctrl+C\r\n     \u001b[1m-w\u001b[0m \u001b[4mms\u001b[0m          Wait \u001b[4mms\u001b[0m milliseconds to receive the response\r\n\r\n  Notes: 1. Using names requires DNS to be set.\r\n         2. Use Ctrl+C to stop the command.\r\n\r\n\rVPCS>"
+        }
+      ],
+      "startup_config": "set pcname VPCS\nip 192.168.99.100 192.168.99.2 24\n"
+    }
+  ]
+}

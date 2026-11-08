@@ -1,0 +1,38 @@
+{
+  "status": "DONE",
+  "config_sha256": "91ebed5337dfee10c339c8b04a5d84f32daadd61ae85edaa720e1e0ff22bd5c7",
+  "steps": [
+    {
+      "command": "/usr/local/bin/php -l /var/tmp/soc-m35-dnsmasq-bind.php",
+      "rc": 0,
+      "stdout": "No syntax errors detected in /var/tmp/soc-m35-dnsmasq-bind.php\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/bin/php /var/tmp/soc-m35-dnsmasq-bind.php",
+      "rc": 0,
+      "stdout": "{\"status\":\"SAVED\",\"backup\":\"\\/root\\/soc-m35-20261105\\/config.before-dnsmasq-bind.xml\",\"strictbind\":\"1\",\"dhcp_no_interface\":\"opt2,opt3\"}",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl template reload OPNsense/Dnsmasq",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl dnsmasq restart",
+      "rc": 0,
+      "stdout": "OK\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    }
+  ],
+  "listeners": "USER    COMMAND      PID FD PROTO LOCAL ADDRESS         FOREIGN ADDRESS      \nnobody  dnsmasq     7129  4 udp4  *:67                  *:*                  \nnobody  dnsmasq     7129 10 udp4  127.0.0.1:53053       *:*                  \nnobody  dnsmasq     7129 11 tcp4  127.0.0.1:53053       *:*                  \nnobody  dnsmasq     7129 12 udp4  192.168.1.1:53053     *:*                  \nnobody  dnsmasq     7129 13 tcp4  192.168.1.1:53053     *:*                  \nunbound unbound    37248  7 udp4  *:53                  *:*                  \nunbound unbound    37248  8 tcp4  *:53                  *:*                  \nunbound unbound    37248 11 udp4  *:53                  *:*                  \nunbound unbound    37248 12 tcp4  *:53                  *:*                  \nunbound unbound    37248 13 tcp4  127.0.0.1:953         *:*                  \nroot    ntpd       29949 21 udp4  *:123                 *:*                  \nroot    ntpd       29949 22 udp4  192.168.1.1:123       *:*                  \nroot    ntpd       29949 25 udp4  10.255.255.1:123      *:*                  \nroot    ntpd       29949 28 udp4  127.0.0.1:123         *:*                  \nroot    ntpd       29949 29 udp4  192.168.30.2:123      *:*                  \nroot    ntpd       29949 30 udp4  192.168.30.1:123      *:*                  \nroot    ntpd       29949 31 udp4  192.168.40.2:123      *:*                  \nroot    ntpd       29949 32 udp4  192.168.40.1:123      *:*                  \nroot    ntpd       29949 33 udp4  192.168.50.2:123      *:*                  \nroot    ntpd       29949 34 udp4  192.168.50.1:123      *:*                  \nroot    ntpd       29949 35 udp4  192.168.60.2:123      *:*                  \nroot    ntpd       29949 36 udp4  192.168.60.1:123      *:*                  \nroot    ntpd       29949 37 udp4  192.168.99.2:123      *:*                  \nroot    ntpd       29949 38 udp4  192.168.99.1:123      *:*                  \nroot    lighttpd   83967  7 tcp4  *:443                 *:*                  \nroot    lighttpd   83967  9 tcp4  *:80                  *:*                  \n",
+  "collector_time": "2026-11-05T10:24:41.474352+07:00"
+}

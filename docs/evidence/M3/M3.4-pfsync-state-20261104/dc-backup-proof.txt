@@ -1,0 +1,1 @@
+sudo -n cat /root/soc-m34-20261104/routes.before.json; sudo -n stat -c '%a %n' /root/soc-m34-20261104/routes.before.json; ip route get 192.168.40.100

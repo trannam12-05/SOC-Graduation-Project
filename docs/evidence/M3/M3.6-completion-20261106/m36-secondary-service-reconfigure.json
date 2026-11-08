@@ -1,0 +1,55 @@
+{
+  "status": "DONE",
+  "steps": [
+    {
+      "command": "/usr/local/sbin/configctl template reload OPNsense/Kea",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl filter reload",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl dnsmasq restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea restart",
+      "rc": 0,
+      "stdout": "OK\n\n\n",
+      "stderr": ""
+    },
+    {
+      "command": "/usr/local/sbin/configctl kea status",
+      "rc": 0,
+      "stdout": "kea-dhcp[v4] is running as pid 71011.\nkea-dhcp[ca] is running as pid 71597.\n",
+      "stderr": ""
+    }
+  ],
+  "safe_ha_config_lines": [
+    "\"name\": \"kea-dhcp4\",",
+    "\"name\": \"domain-name-servers\",",
+    "\"name\": \"routers\",",
+    "\"name\": \"domain-name\",",
+    "\"name\": \"domain-name-servers\",",
+    "\"name\": \"routers\",",
+    "\"name\": \"domain-name\",",
+    "\"name\": \"domain-name-servers\",",
+    "\"name\": \"routers\",",
+    "\"name\": \"domain-name\",",
+    "\"this-server-name\": \"OPNsense\",",
+    "\"name\": \"OPNsense-Primary\",",
+    "\"role\": \"primary\",",
+    "\"url\": \"http:\\/\\/10.255.255.1:8001\\/\"",
+    "\"name\": \"OPNsense-Secondary\",",
+    "\"role\": \"standby\",",
+    "\"url\": \"http:\\/\\/10.255.255.2:8001\\/\""
+  ],
+  "collector_time": "2026-11-06T18:54:52.672611+07:00"
+}

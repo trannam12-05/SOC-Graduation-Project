@@ -1,0 +1,119 @@
+{
+  "role": "primary",
+  "rows": [
+    {
+      "vlan": 30,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt1",
+        "subnet": "192.168.30.1",
+        "subnet_bits": "24",
+        "vhid": "30",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "runtime": {
+        "rc": 0,
+        "stdout": "vtnet0_vlan30: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT1 (opt1)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.30.2 netmask 0xffffff00 broadcast 192.168.30.255\n\tinet 192.168.30.1 netmask 0xffffff00 broadcast 192.168.30.255 vhid 30\n\tgroups: vlan\n\tcarp: MASTER vhid 30 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 30 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+        "stderr": ""
+      },
+      "expected_state": "MASTER",
+      "pass_verified": true
+    },
+    {
+      "vlan": 40,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt2",
+        "subnet": "192.168.40.1",
+        "subnet_bits": "24",
+        "vhid": "40",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "runtime": {
+        "rc": 0,
+        "stdout": "vtnet0_vlan40: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT2 (opt2)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.40.2 netmask 0xffffff00 broadcast 192.168.40.255\n\tinet 192.168.40.1 netmask 0xffffff00 broadcast 192.168.40.255 vhid 40\n\tgroups: vlan\n\tcarp: MASTER vhid 40 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 40 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+        "stderr": ""
+      },
+      "expected_state": "MASTER",
+      "pass_verified": true
+    },
+    {
+      "vlan": 50,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt3",
+        "subnet": "192.168.50.1",
+        "subnet_bits": "24",
+        "vhid": "50",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "runtime": {
+        "rc": 0,
+        "stdout": "vtnet0_vlan50: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT3 (opt3)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.50.2 netmask 0xffffff00 broadcast 192.168.50.255\n\tinet 192.168.50.1 netmask 0xffffff00 broadcast 192.168.50.255 vhid 50\n\tgroups: vlan\n\tcarp: MASTER vhid 50 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 50 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+        "stderr": ""
+      },
+      "expected_state": "MASTER",
+      "pass_verified": true
+    },
+    {
+      "vlan": 60,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt4",
+        "subnet": "192.168.60.1",
+        "subnet_bits": "24",
+        "vhid": "60",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "runtime": {
+        "rc": 0,
+        "stdout": "vtnet0_vlan60: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT4 (opt4)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.60.2 netmask 0xffffff00 broadcast 192.168.60.255\n\tinet 192.168.60.1 netmask 0xffffff00 broadcast 192.168.60.255 vhid 60\n\tgroups: vlan\n\tcarp: MASTER vhid 60 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 60 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+        "stderr": ""
+      },
+      "expected_state": "MASTER",
+      "pass_verified": true
+    },
+    {
+      "vlan": 99,
+      "persistent": {
+        "mode": "carp",
+        "interface": "opt5",
+        "subnet": "192.168.99.1",
+        "subnet_bits": "24",
+        "vhid": "99",
+        "advbase": "1",
+        "advskew": "0"
+      },
+      "runtime": {
+        "rc": 0,
+        "stdout": "vtnet0_vlan99: flags=1008943<UP,BROADCAST,RUNNING,PROMISC,SIMPLEX,MULTICAST,LOWER_UP> metric 0 mtu 1500\n\tdescription: OPT5 (opt5)\n\toptions=80000<LINKSTATE>\n\tether 50:00:00:01:00:00\n\tinet 192.168.99.2 netmask 0xffffff00 broadcast 192.168.99.255\n\tinet 192.168.99.1 netmask 0xffffff00 broadcast 192.168.99.255 vhid 99\n\tgroups: vlan\n\tcarp: MASTER vhid 99 advbase 1 advskew 0\n\t      peer 224.0.0.18 peer6 ff02::12\n\tvlan: 99 vlanproto: 802.1q vlanpcp: 0 parent interface: vtnet0\n\tmedia: Ethernet autoselect (10Gbase-T <full-duplex>)\n\tstatus: active\n\tnd6 options=29<PERFORMNUD,IFDISABLED,AUTO_LINKLOCAL>\n",
+        "stderr": ""
+      },
+      "expected_state": "MASTER",
+      "pass_verified": true
+    }
+  ],
+  "all_five_pass": true,
+  "pfsync": {
+    "rc": 0,
+    "stdout": "pfsync0: flags=1000041<UP,RUNNING,LOWER_UP> metric 0 mtu 1500\n\toptions=0\n\tsyncdev: vtnet2 syncpeer: 10.255.255.2 maxupd: 128 defer: off version: 1400\n\tsyncok: 1\n\tgroups: pfsync\n",
+    "stderr": ""
+  },
+  "demotion": {
+    "rc": 0,
+    "stdout": "net.inet.carp.demotion: 0\n",
+    "stderr": ""
+  },
+  "carp_filter_rules": [
+    "pass log quick inet6 proto carp from any to ff02::12 keep state label \"cf439d72ef4d245e8ad4a1405df1f665\"",
+    "pass log quick inet proto carp from any to 224.0.0.18 keep state label \"2ffa978d51f7b3fbc9000c2895106ee7\""
+  ],
+  "config_sha256": "f2e62e02319a00831a72c4c610aa71781656f90130723df34b383e844e65e799",
+  "vip_count": 5,
+  "failover_tested": false,
+  "collector_time": "2026-11-03T23:33:51.568123+07:00"
+}

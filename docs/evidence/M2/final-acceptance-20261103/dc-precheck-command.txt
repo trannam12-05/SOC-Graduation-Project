@@ -1,0 +1,1 @@
+ip -br address; ip route; systemctl is-active soc-lab-http.service; sudo -n true

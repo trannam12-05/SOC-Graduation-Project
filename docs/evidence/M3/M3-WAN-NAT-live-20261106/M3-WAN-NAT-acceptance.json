@@ -1,0 +1,60 @@
+﻿{
+    "stage":  "M3 WAN/NAT minimum approved scope",
+    "status":  "DONE/PASS",
+    "m3_status":  "DONE/PASS trong phạm vi các hạng mục độc lập đã được giao và nghiệm thu; không phải NAT HA hay M4/M5",
+    "collected_at":  "2026-11-06T21:50:18.2076200+07:00",
+    "wan":  {
+                "rollback_watchdog":  "Armed180s, disarmed after valid leases/HA/management; exited",
+                "backup_topology":  "/root/soc-m3-wan-live-20261106T212212Z/lab-before.unl",
+                "primary":  "192.168.220.144/24 DHCP",
+                "network_type":  "pnet0",
+                "gateway":  "192.168.220.2",
+                "network_id":  "12",
+                "after_sha256":  "99b5831249221866e60b58f1ca6f1f153c258d329aaab6e1171da699242fc149",
+                "before_sha256":  "1e64569039daf6dabc9e5f9a86c086edc7239f4950bfe507f669851584ca78b6",
+                "secondary":  "192.168.220.145/24 DHCP",
+                "transaction":  "WAN_READY"
+            },
+    "nat":  {
+                "mode":  "hybrid",
+                "source":  "192.168.40.110/32 Employee-Linux",
+                "primary_snat_uuid":  "22b3f6fa-a716-497a-b30e-3167e9eb0501",
+                "primary_backup":  "/root/soc-m3-wan-nat-20261106/config.before-nat.xml",
+                "destination":  "1.1.1.1/32 TCP443",
+                "secondary_firewall_uuid":  "a4914efb-1367-4a09-ae0f-56e9e4afb826",
+                "primary_firewall_uuid":  "3f845536-0298-401c-8842-8a15754f21da",
+                "secondary_snat_uuid":  "5928f332-f05f-4b62-81e3-443fb3f6335f",
+                "old_rules_unchanged":  true,
+                "secondary_backup":  "/root/soc-m3-wan-nat-20261106/config.before-nat.xml",
+                "translation":  "WAN interface address; no WAN VIP"
+            },
+    "https":  {
+                  "http_status":  "301",
+                  "elapsed_seconds":  "0.439285",
+                  "ssl_verify_result":  "0",
+                  "proxy":  false,
+                  "redirects_followed":  false,
+                  "retries":  0,
+                  "requests":  1,
+                  "curl_rc":  0
+              },
+    "pcap_translation_proved":  true,
+    "final_guard":  "PASS: MASTER/BACKUP5VLAN, syncok1/demotion0, protected config/hook hashes and pnet0 IP/routes unchanged",
+    "previous_acceptances_reused":  [
+                                        "M3.1 persistent pfsync",
+                                        "M3.2 CARP5VLAN",
+                                        "M3.3 failover/recovery",
+                                        "M3.4 state continuity",
+                                        "M3.5 DHCP/DNS/firewall",
+                                        "XMLRPC full8rules/3pools"
+                                    ],
+    "limitations":  [
+                        "Only one Employee IPv4 HTTPS destination tested; no redirect followed.",
+                        "No NAT failover/session continuity acceptance; no WAN VIP configured.",
+                        "No long-term SLA/zero-loss claim; no previous PASS retests.",
+                        "Hook unchanged; underlying long bulk timing not declared fixed.",
+                        "Hybrid also retains automatic NAT rules; no broad new firewall egress permission."
+                    ],
+    "rollback":  "Not required: no HA or management degradation observed by guards",
+    "tool_diagnostic":  "Initial post-save guard false negative from tuple/list comparison, corrected and subsequent guards PASS; original logs retained"
+}

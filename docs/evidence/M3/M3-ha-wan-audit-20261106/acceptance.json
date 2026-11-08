@@ -1,0 +1,11 @@
+﻿{
+    "status":  "PARTIAL",
+    "recorded_at":  "2026-11-06T20:04:46.9779284+07:00",
+    "cause":  "Primary demotion240 do pfsync bulk start; bulk done giảm về0 rồi Primary MASTER, Secondary BACKUP. Snapshot cũ thu tuần tự, không chứng minh đồng thời hai BACKUP. Chưa rõ vì sao bulk kéo dài.",
+    "ha":  "PASS giới hạn cửa sổ: 7/7 mẫu mỗi máy trong khoảng60 giây riêng, năm VHID đúng vai trò, syncok1/demotion0",
+    "nat":  "BLOCKED: WAN cấu hình DHCP nhưng runtime không có IPv4/default route; không có outbound NAT dịch địa chỉ",
+    "reused":  "Giữ PASS M3.5/M3.6/XMLRPC và rule runtime; không kiểm thử lại",
+    "conditions":  "NAT cần upstream có đường ra Internet, IP WAN và gateway hợp lệ cùng phương án cấu hình được phê duyệt. Không tự nối mạng hoặc sửa cấu hình.",
+    "changes":  "Chỉ đọc; không cài đặt hoặc thay cấu hình, reload, restart hay failover",
+    "source":  "results-20261106T200230+0700.json"
+}

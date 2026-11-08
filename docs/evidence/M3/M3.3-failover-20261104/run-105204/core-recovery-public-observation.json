@@ -1,0 +1,15 @@
+{
+  "collector_time": "2026-11-04T11:05:29.685373+07:00",
+  "method": "Đọc ảnh console thật bởi trợ lý; không tạo/chỉnh ảnh hoặc suy từ cấu hình dự kiến.",
+  "pass_verified": true,
+  "ovs_services": [
+    "openvswitch-switch active",
+    "ovsdb-server active",
+    "ovs-vswitchd active"
+  ],
+  "interfaces": "ens3–ens10 UP; chỉ loopback có IP",
+  "ipv4_forwarding": 0,
+  "ipv6_forwarding": 0,
+  "evidence": "core-recovery-public-20261104T110425+0700.png",
+  "limitation": "Không audit lại OVSDB vì sudo cache hết hạn; đường dữ liệu xác minh thêm bằng recovery-arp.json."
+}

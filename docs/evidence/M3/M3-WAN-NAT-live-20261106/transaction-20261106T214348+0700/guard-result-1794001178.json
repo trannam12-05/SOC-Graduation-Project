@@ -1,0 +1,100 @@
+{
+  "status": "GUARD_PASS",
+  "guards": {
+    "OPNsense-Primary": {
+      "role": "Primary",
+      "wan": [
+        [
+          "192.168.220.144",
+          "0xffffff00"
+        ]
+      ],
+      "gateway": "192.168.220.2",
+      "carp": [
+        [
+          "MASTER",
+          "30"
+        ],
+        [
+          "MASTER",
+          "40"
+        ],
+        [
+          "MASTER",
+          "50"
+        ],
+        [
+          "MASTER",
+          "60"
+        ],
+        [
+          "MASTER",
+          "99"
+        ]
+      ],
+      "syncok": true,
+      "demotion": "0",
+      "protected": {
+        "interfaces": "51b957b60b8e3e9c67b192b7e6afe06acf186dc66cf394a8ed054b4ab8585bb6",
+        "virtualip": "6aa1e3edce18fe6543a6b3073e15e05eb624739b608adcad39c78493bb66188e",
+        "hasync": "f57e1b4af34c48dbcfee82aa906c5fd185922b30737eba554cfaa7218b6352a7"
+      },
+      "hook": "7575588f69bfc2eee49b5d9cd336659d32e6831651366aba355d8b750b9a36a8"
+    },
+    "OPNsense-Secondary": {
+      "role": "Secondary",
+      "wan": [
+        [
+          "192.168.220.145",
+          "0xffffff00"
+        ]
+      ],
+      "gateway": "192.168.220.2",
+      "carp": [
+        [
+          "BACKUP",
+          "30"
+        ],
+        [
+          "BACKUP",
+          "40"
+        ],
+        [
+          "BACKUP",
+          "50"
+        ],
+        [
+          "BACKUP",
+          "60"
+        ],
+        [
+          "BACKUP",
+          "99"
+        ]
+      ],
+      "syncok": true,
+      "demotion": "0",
+      "protected": {
+        "interfaces": "7468c52bf7e4651cc4f9a0f9a84fe68137ec553d7b2afeaf2954c92df9b43ee7",
+        "virtualip": "6ebb05e9230267fa3149e9b0c39ff85f7da22dda4cfbd2f77aade64c89bc2d28",
+        "hasync": "21920282e829d40318032ff3a40da3a9c1ff397f11ce297ea8a684b90dff7159"
+      },
+      "hook": "7575588f69bfc2eee49b5d9cd336659d32e6831651366aba355d8b750b9a36a8"
+    }
+  },
+  "host": {
+    "addresses": [
+      [
+        "192.168.220.143",
+        24
+      ]
+    ],
+    "routes": [
+      [
+        "192.168.220.2",
+        "pnet0"
+      ]
+    ]
+  },
+  "work": "/root/soc-m3-wan-live-20261106T212212Z"
+}

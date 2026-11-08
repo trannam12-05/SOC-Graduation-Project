@@ -1,0 +1,1 @@
+sudo -n sh -c 'umask 077; mkdir /root/soc-timeout-20261102-2042 && systemctl cat wazuh-manager > /root/soc-timeout-20261102-2042/unit.before; test ! -d /etc/systemd/system/wazuh-manager.service.d || cp -a /etc/systemd/system/wazuh-manager.service.d /root/soc-timeout-20261102-2042/'

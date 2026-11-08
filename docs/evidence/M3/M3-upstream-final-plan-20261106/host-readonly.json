@@ -1,0 +1,37 @@
+﻿{
+    "host_clock_utc_unverified":  "2026-11-06T20:19:08.146495+00:00",
+    "packages":  {
+                     "rc":  0,
+                     "stdout":  "eve-ng\t6.2.0-4\neve-ng-pro\t\n",
+                     "stderr":  ""
+                 },
+    "addresses":  {
+                      "rc":  0,
+                      "stdout":  "[{\"ifindex\":1,\"ifname\":\"lo\",\"flags\":[\"LOOPBACK\",\"UP\",\"LOWER_UP\"],\"mtu\":65536,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"group\":\"default\",\"txqlen\":1000,\"addr_info\":[{\"family\":\"inet\",\"local\":\"127.0.0.1\",\"prefixlen\":8,\"scope\":\"host\",\"label\":\"lo\",\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295}]},{\"ifindex\":3,\"ifname\":\"pnet0\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"addr_info\":[{\"family\":\"inet\",\"local\":\"192.168.220.143\",\"prefixlen\":24,\"broadcast\":\"192.168.220.255\",\"scope\":\"global\",\"dynamic\":true,\"label\":\"pnet0\",\"valid_life_time\":1461,\"preferred_life_time\":1461}]}]\n",
+                      "stderr":  ""
+                  },
+    "routes":  {
+                   "rc":  0,
+                   "stdout":  "[{\"dst\":\"default\",\"gateway\":\"192.168.220.2\",\"dev\":\"pnet0\",\"flags\":[]},{\"dst\":\"192.168.220.0/24\",\"dev\":\"pnet0\",\"protocol\":\"kernel\",\"scope\":\"link\",\"prefsrc\":\"192.168.220.143\",\"flags\":[]}]\n",
+                   "stderr":  ""
+               },
+    "route_lookup_only":  {
+                              "rc":  0,
+                              "stdout":  "[{\"dst\":\"1.1.1.1\",\"gateway\":\"192.168.220.2\",\"dev\":\"pnet0\",\"prefsrc\":\"192.168.220.143\",\"flags\":[],\"uid\":0,\"cache\":[]}]\n",
+                              "stderr":  ""
+                          },
+    "nat_rules":  {
+                      "rc":  0,
+                      "stdout":  "-P PREROUTING ACCEPT\n-P INPUT ACCEPT\n-P OUTPUT ACCEPT\n-P POSTROUTING ACCEPT\n",
+                      "stderr":  ""
+                  },
+    "dnsmasq_status":  {
+                           "rc":  3,
+                           "stdout":  "inactive\n",
+                           "stderr":  ""
+                       },
+    "nat_source":  [
+
+                   ],
+    "collected_at":  "2026-11-06T20:23:18.8069985+07:00"
+}

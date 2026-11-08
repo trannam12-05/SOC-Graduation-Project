@@ -1,0 +1,1 @@
+grep -n 'function.*vlan' /usr/local/etc/inc/interfaces.inc; grep -n 'function.*configure' /usr/local/etc/inc/interfaces.inc | tail -8; ls /usr/local/opnsense/mvc/app/models/OPNsense/Interfaces

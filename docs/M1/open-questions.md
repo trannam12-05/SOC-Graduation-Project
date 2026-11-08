@@ -1,4 +1,10 @@
-﻿# Câu hỏi còn mở sau khi đọc M1
+# Cập nhật M1 — 05/11/2026, UTC+07:00
+
+Xem [bản hợp nhất](M1-design-consolidated-20261105.md). Đã làm rõ VLAN60, subnet/VIP, SYNC /30, mapping OVS và nguồn mirror bằng nghiệm thu M2–M3. Người dùng chọn lab nội bộ, Internet là mở rộng. Thiết kế cơ sở dùng một endpoint mỗi vùng. Còn cần đối chiếu IP sensor/Wazuh trước triển khai, chốt máy automation và DNS/DHCP ở giai đoạn sau; thông tin bìa chưa cung cấp. Wazuh e0 → Management là thiết kế chưa áp dụng. Danh sách dưới đây là lịch sử.
+
+---
+
+# Câu hỏi còn mở sau khi đọc M1
 
 ## Cách hiểu trạng thái
 
@@ -34,4 +40,4 @@ M1 là báo cáo thiết kế, không xác nhận cấu hình đã chạy trên 
 
 ## Điều kiện đầu vào trước M2
 
-Chốt ít nhất image và interface switch, VLAN được duyệt, port mapping hai đầu, trunk/access, SPAN source/destination, và quy hoạch IP chính thức. Mọi giá trị chưa được nhóm xác nhận tiếp tục phải được đánh dấu là đề xuất; không tạo IP hoặc cổng thay cho thông tin còn thiếu.
+Chốt ít nhất image và interface switch, VLAN được duyệt, port mapping hai đầu, trunk/access, SPAN source/destination, và quy hoạch IP chính thức. Mọi giá trị chưa được nhóm xác nhận tiếp tục phải được đánh dấu là đề xuất; không tạo IP hoặc cổng thay cho thông tin còn thiếu.

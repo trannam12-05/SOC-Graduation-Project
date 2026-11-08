@@ -1,0 +1,13 @@
+{
+  "todo": "M3.3 — CARP failover/recovery",
+  "status": "BLOCKED",
+  "collector_time": "2026-11-04T10:27:35.821104+07:00",
+  "before": "Không có QEMU đang chạy; không xác minh được trạng thái CARP/pfsync ban đầu.",
+  "failover": "NOT_RUN",
+  "recovery": "NOT_RUN",
+  "pfsync": "NOT_VERIFIED",
+  "reason": "Trạng thái đầu không đúng; dừng theo yêu cầu.",
+  "system_changes": false,
+  "backup_metadata": "/root/soc-resource-checkpoint-20261104T102737",
+  "next": "Khôi phục điều kiện đầu theo quyền riêng rồi thử lại M3.3."
+}

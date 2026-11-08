@@ -1,0 +1,13 @@
+{
+  "collected_at": "2026-11-03T10:37:52.842442+07:00",
+  "returncode": 0,
+  "result": {
+    "node": "OPNsense-Primary",
+    "matching_qemu_count": 0,
+    "pids": [],
+    "action": "READ_ONLY_NO_START_NO_DISK_ACCESS"
+  },
+  "error": "",
+  "console_capture": "FAILED_NO_UNIQUE_RUNNING_PRIMARY_QEMU; no screenshot produced",
+  "guest_rules_read": false
+}

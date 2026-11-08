@@ -1,0 +1,43 @@
+{
+  "services": {
+    "rc": 0,
+    "out": "active\nactive\nactive\n",
+    "err": ""
+  },
+  "ports": {
+    "rc": 0,
+    "out": "{\"data\":[[\"ens10\",[\"set\",[]],[\"set\",[30,40,50,60,99]],\"trunk\"],[\"ens5\",50,[\"set\",[]],\"access\"],[\"ens9\",[\"set\",[]],[\"set\",[30,40,50,60,99]],\"trunk\"],[\"ens8\",[\"set\",[]],[\"set\",[30,40,50,60,99]],\"trunk\"],[\"br-core-l2\",99,[\"set\",[]],\"access\"],[\"ens7\",99,[\"set\",[]],\"access\"],[\"ens4\",40,[\"set\",[]],\"access\"],[\"ens6\",60,[\"set\",[]],\"access\"],[\"ens3\",30,[\"set\",[]],\"access\"]],\"headings\":[\"name\",\"tag\",\"trunks\",\"vlan_mode\"]}\n",
+    "err": ""
+  },
+  "bridge": {
+    "rc": 0,
+    "out": "br-core-l2\n",
+    "err": ""
+  },
+  "flow": {
+    "rc": 0,
+    "out": "NXST_FLOW reply (xid=0x4):\n cookie=0x0, duration=453.172s, table=0, n_packets=2111, n_bytes=151606, idle_age=0, priority=0 actions=NORMAL\n",
+    "err": ""
+  },
+  "addresses": {
+    "rc": 0,
+    "out": "[{\"ifindex\":1,\"ifname\":\"lo\",\"flags\":[\"LOOPBACK\",\"UP\",\"LOWER_UP\"],\"mtu\":65536,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"loopback\",\"address\":\"00:00:00:00:00:00\",\"broadcast\":\"00:00:00:00:00:00\",\"addr_info\":[{\"family\":\"inet\",\"local\":\"127.0.0.1\",\"prefixlen\":8,\"scope\":\"host\",\"label\":\"lo\",\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295},{\"family\":\"inet6\",\"local\":\"::1\",\"prefixlen\":128,\"scope\":\"host\",\"noprefixroute\":true,\"valid_life_time\":4294967295,\"preferred_life_time\":4294967295}]},{\"ifindex\":2,\"ifname\":\"ens3\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:00\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s3\"],\"addr_info\":[]},{\"ifindex\":3,\"ifname\":\"ens4\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:01\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s4\"],\"addr_info\":[]},{\"ifindex\":4,\"ifname\":\"ens5\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:02\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s5\"],\"addr_info\":[]},{\"ifindex\":5,\"ifname\":\"ens6\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:03\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s6\"],\"addr_info\":[]},{\"ifindex\":6,\"ifname\":\"ens7\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:04\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s7\"],\"addr_info\":[]},{\"ifindex\":7,\"ifname\":\"ens8\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:05\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s8\"],\"addr_info\":[]},{\"ifindex\":8,\"ifname\":\"ens9\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:06\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s9\"],\"addr_info\":[]},{\"ifindex\":9,\"ifname\":\"ens10\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"fq_codel\",\"master\":\"ovs-system\",\"operstate\":\"UP\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"02:53:45:f2:19:07\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"altnames\":[\"enp0s10\"],\"addr_info\":[]},{\"ifindex\":10,\"ifname\":\"ovs-system\",\"flags\":[\"BROADCAST\",\"MULTICAST\"],\"mtu\":1500,\"qdisc\":\"noop\",\"operstate\":\"DOWN\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"8e:43:b7:f2:cb:90\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"addr_info\":[]},{\"ifindex\":11,\"ifname\":\"br-core-l2\",\"flags\":[\"BROADCAST\",\"MULTICAST\",\"UP\",\"LOWER_UP\"],\"mtu\":1500,\"qdisc\":\"noqueue\",\"operstate\":\"UNKNOWN\",\"group\":\"default\",\"txqlen\":1000,\"link_type\":\"ether\",\"address\":\"2a:de:e5:91:5a:40\",\"broadcast\":\"ff:ff:ff:ff:ff:ff\",\"addr_info\":[]}]\n",
+    "err": ""
+  },
+  "ipv4_forwarding": {
+    "rc": 0,
+    "out": "0\n",
+    "err": ""
+  },
+  "ipv6_forwarding": {
+    "rc": 0,
+    "out": "0\n",
+    "err": ""
+  },
+  "hostname": {
+    "rc": 0,
+    "out": "soc-core-l2\n",
+    "err": ""
+  },
+  "collector_time": "2026-11-04T16:34:56.062914+07:00"
+}

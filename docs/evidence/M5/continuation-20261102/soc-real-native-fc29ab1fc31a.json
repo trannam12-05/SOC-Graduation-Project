@@ -1,0 +1,123 @@
+{
+  "session": "soc-real-native-fc29ab1fc31a",
+  "mode": "real",
+  "guest_time_untrusted": "2026-11-02T20:45:47.999133+00:00",
+  "backup_directory": "/root/soc-real-fc29ab1fc31a",
+  "live_end_to_end": "NOT_VERIFIED",
+  "service": {
+    "rc": 0,
+    "stdout": "active",
+    "stderr": ""
+  },
+  "systemd": {
+    "rc": 0,
+    "stdout": "TimeoutStartUSec=5min\nActiveState=active\nSubState=running\nDropInPaths=/etc/systemd/system/wazuh-manager.service.d/soc-timeout.conf",
+    "stderr": ""
+  },
+  "enabled": {
+    "rc": 0,
+    "stdout": "enabled",
+    "stderr": ""
+  },
+  "components": {
+    "rc": 1,
+    "stdout": "wazuh-clusterd not running...\nwazuh-modulesd is running...\nwazuh-monitord is running...\nwazuh-logcollector is running...\nwazuh-remoted is running...\nwazuh-syscheckd is running...\nwazuh-analysisd is running...\nwazuh-maild not running...\nwazuh-execd is running...\nwazuh-db is running...\nwazuh-authd is running...\nwazuh-agentlessd not running...\nwazuh-integratord not running...\nwazuh-csyslogd not running...\nwazuh-apid is running...",
+    "stderr": ""
+  },
+  "version": {
+    "rc": 0,
+    "stdout": "wazuh-manager\t4.14.9-1",
+    "stderr": ""
+  },
+  "boot_id": "6d3e08fd-005e-4c6b-bb3e-0b4db7aab557",
+  "replay_localfile": [
+    {
+      "log_format": "json",
+      "location": "/var/log/soc-suricata-replay.json"
+    }
+  ],
+  "rules": [
+    {
+      "name": "soc_suricata_replay.xml",
+      "sha256": "b1f3bdae5fbe612e2ae2dbddfb8b36cf34060385553c2154d9826ad5e0786ff6",
+      "text": "<group name=\"local,soc,suricata,\">\n <rule id=\"100101\" level=\"8\">\n  <decoded_as>json</decoded_as>\n  <field name=\"event_type\">^alert$</field>\n  <field name=\"alert.signature_id\">^1000001$</field>\n  <description>SOC benign Suricata marker: controlled replay</description>\n </rule>\n</group>\n"
+    }
+  ],
+  "override_files": [
+    {
+      "name": "soc-timeout.conf",
+      "timeout_lines": [
+        "TimeoutStartSec=300"
+      ],
+      "sha256": "f888cff58438850a6c7416e313e4e2fbe69c2b327c6e8d53ecc4b6c7f4a5dd64"
+    }
+  ],
+  "replay_before": {
+    "bytes": 170,
+    "lines": 1,
+    "mode": "0o644",
+    "uid": 0,
+    "gid": 0,
+    "sha256": "12b31e852bc3f9eac9dcaa543729a3e01006cb21c6e13cc86e1a6e63c7a5b0cc"
+  },
+  "logcollector_process": {
+    "rc": 0,
+    "stdout": "PID EUSER    EGROUP   COMMAND\n   1446 root     wazuh    wazuh-logcollec",
+    "stderr": ""
+  },
+  "collector_messages": [
+    "2026/11/02 17:21:36 wazuh-logcollector: INFO: (1950): Analyzing file: '/var/log/soc-suricata-replay.json'.",
+    "2026/11/02 20:43:36 wazuh-logcollector: INFO: (1950): Analyzing file: '/var/log/soc-suricata-replay.json'."
+  ],
+  "component_error_counts_last_500": {
+    "wazuh-logcollector": 0,
+    "wazuh-analysisd": 0
+  },
+  "rule_100101_existing": 1,
+  "input_sha256": "ce69196abe7eb37559d534040eed5d41ae3fc09e6fc0e0116b61bd85b0aec5f6",
+  "input_event": {
+    "timestamp": "2026-11-02T17:01:36.985227+0000",
+    "flow_id": 9396033340943,
+    "in_iface": "capture0",
+    "event_type": "alert",
+    "vlan": [
+      30
+    ],
+    "src_ip": "192.168.30.101",
+    "src_port": 0,
+    "dest_ip": "192.168.30.102",
+    "dest_port": 0,
+    "proto": "ICMP",
+    "icmp_type": 8,
+    "icmp_code": 0,
+    "pkt_src": "wire/pcap",
+    "alert": {
+      "action": "allowed",
+      "gid": 1,
+      "signature_id": 1000001,
+      "rev": 1,
+      "signature": "SOC M4 benign ICMP marker",
+      "category": "",
+      "severity": 3
+    },
+    "direction": "to_server",
+    "flow": {
+      "pkts_toserver": 1,
+      "pkts_toclient": 0,
+      "bytes_toserver": 82,
+      "bytes_toclient": 0,
+      "start": "2026-11-02T17:01:36.985227+0000",
+      "src_ip": "192.168.30.101",
+      "dest_ip": "192.168.30.102"
+    }
+  },
+  "logtest": "\n\n",
+  "alerts_offset_before": 743737,
+  "new_matching_alerts": [],
+  "result": "NOT_VERIFIED",
+  "original_verification": "/root/soc-real-fc29ab1fc31a/public-result.json",
+  "original_result": "NOT_VERIFIED_NO_NEW_MATCH",
+  "native_rule": "86601",
+  "collector_time": "2026-11-02T20:56:48.939652+07:00",
+  "time_basis": "Windows collector UTC+07:00; guest timestamps untrusted"
+}

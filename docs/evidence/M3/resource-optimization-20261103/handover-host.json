@@ -1,0 +1,406 @@
+{
+  "checkpoint": "/root/soc-resource-checkpoint-20261103T174229",
+  "lab_sha256": "9ba8aaf4220da0de93383ff70e6a0ff106dfba7641ff3a92f7631427d399644d",
+  "nodes": [
+    {
+      "id": "3",
+      "name": "SOC-Core-L2",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-ubuntu-24.04-soc-core-l2",
+      "console": "vnc",
+      "cpu": "1",
+      "cpulimit": "1",
+      "ram": "1024",
+      "ethernet": "8",
+      "uuid": "2b295168-b72e-4de7-b364-37298252dd9f",
+      "firstmac": "02:53:45:f2:19:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=cd -cpu host",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "558",
+      "top": "363",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "e0",
+          "type": "ethernet",
+          "network_id": "6"
+        },
+        {
+          "id": "1",
+          "name": "e1",
+          "type": "ethernet",
+          "network_id": "7"
+        },
+        {
+          "id": "2",
+          "name": "e2",
+          "type": "ethernet",
+          "network_id": "8"
+        },
+        {
+          "id": "3",
+          "name": "e3",
+          "type": "ethernet",
+          "network_id": "9"
+        },
+        {
+          "id": "4",
+          "name": "e4",
+          "type": "ethernet",
+          "network_id": "10"
+        },
+        {
+          "id": "5",
+          "name": "e5",
+          "type": "ethernet",
+          "network_id": "1"
+        },
+        {
+          "id": "6",
+          "name": "e6",
+          "type": "ethernet",
+          "network_id": "2"
+        },
+        {
+          "id": "7",
+          "name": "e7",
+          "type": "ethernet",
+          "network_id": "11"
+        }
+      ]
+    },
+    {
+      "id": "1",
+      "name": "OPNsense-Primary",
+      "type": "qemu",
+      "template": "opnsense",
+      "image": "opnsense-26.7-soc",
+      "console": "vnc",
+      "cpu": "2",
+      "cpulimit": "0",
+      "ram": "2048",
+      "ethernet": "4",
+      "uuid": "fe606d13-1542-490b-b651-5c1c6289afde",
+      "qemu_options": "-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Firewall-2D-Generic-S.svg",
+      "config": "0",
+      "left": "348",
+      "top": "189",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "vtnet0",
+          "type": "ethernet",
+          "network_id": "1"
+        },
+        {
+          "id": "1",
+          "name": "vtnet1",
+          "type": "ethernet",
+          "network_id": "4"
+        },
+        {
+          "id": "2",
+          "name": "vtnet2",
+          "type": "ethernet",
+          "network_id": "3"
+        },
+        {
+          "id": "3",
+          "name": "vtnet3",
+          "type": "ethernet",
+          "network_id": "5"
+        }
+      ]
+    },
+    {
+      "id": "2",
+      "name": "OPNsense-Secondary",
+      "type": "qemu",
+      "template": "opnsense",
+      "image": "opnsense-26.7-soc",
+      "console": "vnc",
+      "cpu": "2",
+      "cpulimit": "0",
+      "ram": "2048",
+      "ethernet": "4",
+      "uuid": "64b94195-c24d-4107-95d4-737e0a4b3016",
+      "qemu_options": "-machine type=pc,accel=kvm -nographic -usbdevice tablet -boot order=c -serial mon:stdio",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Firewall-2D-Generic-S.svg",
+      "config": "0",
+      "left": "768",
+      "top": "189",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "vtnet0",
+          "type": "ethernet",
+          "network_id": "2"
+        },
+        {
+          "id": "1",
+          "name": "vtnet1",
+          "type": "ethernet",
+          "network_id": "4"
+        },
+        {
+          "id": "2",
+          "name": "vtnet2",
+          "type": "ethernet",
+          "network_id": "3"
+        },
+        {
+          "id": "3",
+          "name": "vtnet3",
+          "type": "ethernet",
+          "network_id": "5"
+        }
+      ]
+    },
+    {
+      "id": "4",
+      "name": "Data-Center",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-soc-data-center",
+      "console": "vnc",
+      "cpu": "1",
+      "cpulimit": "1",
+      "ram": "1024",
+      "ethernet": "1",
+      "uuid": "bd24a0ca-57c8-488b-8ecf-9bb98d91739b",
+      "firstmac": "02:54:bc:2f:0c:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "141",
+      "top": "423",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "e0",
+          "type": "ethernet",
+          "network_id": "6"
+        }
+      ]
+    },
+    {
+      "id": "5",
+      "name": "Employee",
+      "type": "vpcs",
+      "template": "vpcs",
+      "image": "",
+      "ethernet": "1",
+      "delay": "0",
+      "icon": "PC-2D-Desktop-Generic-S.svg",
+      "config": "0",
+      "left": "330",
+      "top": "609",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "eth0",
+          "type": "ethernet",
+          "network_id": "7"
+        }
+      ]
+    },
+    {
+      "id": "6",
+      "name": "Guest",
+      "type": "vpcs",
+      "template": "vpcs",
+      "image": "",
+      "ethernet": "1",
+      "delay": "0",
+      "icon": "PC-2D-Desktop-Generic-S.svg",
+      "config": "0",
+      "left": "534",
+      "top": "609",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "eth0",
+          "type": "ethernet",
+          "network_id": "8"
+        }
+      ]
+    },
+    {
+      "id": "7",
+      "name": "DMZ",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-soc-dmz",
+      "console": "vnc",
+      "cpu": "1",
+      "cpulimit": "1",
+      "ram": "1024",
+      "ethernet": "1",
+      "uuid": "4ed38325-37bd-44e5-8b46-e4b093341139",
+      "firstmac": "02:54:12:37:e0:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "740",
+      "top": "610",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "e0",
+          "type": "ethernet",
+          "network_id": "9"
+        }
+      ]
+    },
+    {
+      "id": "8",
+      "name": "Management",
+      "type": "vpcs",
+      "template": "vpcs",
+      "image": "",
+      "ethernet": "1",
+      "delay": "0",
+      "icon": "PC-2D-Desktop-Generic-S.svg",
+      "config": "0",
+      "left": "945",
+      "top": "609",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "eth0",
+          "type": "ethernet",
+          "network_id": "10"
+        }
+      ]
+    },
+    {
+      "id": "9",
+      "name": "Suricata-NIDS",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-soc-suricata-nids",
+      "console": "vnc",
+      "cpu": "1",
+      "cpulimit": "1",
+      "ram": "1024",
+      "ethernet": "2",
+      "uuid": "fc376eb8-8121-4fae-ba5c-c96e82c307fd",
+      "firstmac": "02:54:42:38:75:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "1120",
+      "top": "365",
+      "interfaces": [
+        {
+          "id": "0",
+          "name": "e0",
+          "type": "ethernet",
+          "network_id": "11"
+        },
+        {
+          "id": "1",
+          "name": "e1",
+          "type": "ethernet",
+          "network_id": "10"
+        }
+      ]
+    },
+    {
+      "id": "10",
+      "name": "Wazuh-SOC",
+      "type": "qemu",
+      "template": "linux",
+      "image": "linux-soc-wazuh-soc",
+      "console": "vnc",
+      "cpu": "2",
+      "cpulimit": "1",
+      "ram": "4096",
+      "ethernet": "1",
+      "uuid": "ee01b238-4fdf-47a8-ae11-f29097126cc9",
+      "firstmac": "02:54:1d:c7:d8:00",
+      "qemu_options": "-machine type=pc,accel=kvm -vga std -usbdevice tablet -boot order=c -cpu host -serial file:serial.log",
+      "qemu_version": "2.12.0",
+      "qemu_arch": "x86_64",
+      "qemu_nic": "virtio-net-pci",
+      "delay": "0",
+      "icon": "Server-2D-Linux-S.svg",
+      "config": "0",
+      "left": "1119",
+      "top": "549",
+      "interfaces": []
+    }
+  ],
+  "running": [
+    {
+      "pid": 157793,
+      "name": "SOC-Core-L2",
+      "ram": "1024",
+      "smp": "1"
+    },
+    {
+      "pid": 158107,
+      "name": "OPNsense-Primary",
+      "ram": "2048",
+      "smp": "2"
+    },
+    {
+      "pid": 158390,
+      "name": "OPNsense-Secondary",
+      "ram": "2048",
+      "smp": "2"
+    }
+  ],
+  "commands": {
+    "free": {
+      "rc": 0,
+      "stdout": "               total        used        free      shared  buff/cache   available\nMem:            7897        4110        2303           6        1484        3390\nSwap:           4095           0        4095\n",
+      "stderr": ""
+    },
+    "vmstat": {
+      "rc": 0,
+      "stdout": "procs -----------memory---------- ---swap-- -----io---- -system-- ------cpu-----\n r  b   swpd   free   buff  cache   si   so    bi    bo   in   cs us sy id wa st\n 0  0      0 2358952 234052 1285612    0    0    41    69  208  418 10 13 77  0  0\n 1  0      0 2358952 234052 1285636    0    0     0    32  826 1361  1  6 93  0  0\n 6  0      0 2358952 234052 1285636    0    0     0     0  818 1375  1  7 92  0  0\n",
+      "stderr": ""
+    },
+    "uptime": {
+      "rc": 0,
+      "stdout": " 17:42:31 up  7:07,  0 users,  load average: 4.21, 4.62, 4.31\n",
+      "stderr": ""
+    },
+    "oom": {
+      "rc": 1,
+      "stdout": "-- No entries --\n",
+      "stderr": ""
+    }
+  },
+  "meminfo": "MemTotal:        8087324 kB\nMemFree:         2358952 kB\nMemAvailable:    3472296 kB\nBuffers:          234052 kB\nCached:          1125832 kB\nSwapCached:            0 kB\nActive:          4179940 kB\nInactive:         986268 kB\nActive(anon):    3822000 kB\nInactive(anon):        0 kB\nActive(file):     357940 kB\nInactive(file):   986268 kB\nUnevictable:       27792 kB\nMlocked:           27792 kB\nSwapTotal:       4194300 kB\nSwapFree:        4194300 kB\nZswap:                 0 kB\nZswapped:              0 kB\nDirty:               768 kB\nWriteback:             0 kB\nAnonPages:       3831900 kB\nMapped:           229204 kB\nShmem:              6604 kB\nKReclaimable:     159804 kB\nSlab:             334996 kB\nSReclaimable:     159804 kB\nSUnreclaim:       175192 kB\nKernelStack:        9264 kB\nPageTables:        21904 kB\nSecPageTables:      7364 kB\nNFS_Unstable:          0 kB\nBounce:                0 kB\nWritebackTmp:          0 kB\nCommitLimit:     8237960 kB\nCommitted_AS:    8419280 kB\nVmallocTotal:   34359738367 kB\nVmallocUsed:       37740 kB\nVmallocChunk:          0 kB\nPercpu:            92672 kB\nHardwareCorrupted:     0 kB\nAnonHugePages:     81920 kB\nShmemHugePages:        0 kB\nShmemPmdMapped:        0 kB\nFileHugePages:         0 kB\nFilePmdMapped:         0 kB\nUnaccepted:            0 kB\nHugePages_Total:       0\nHugePages_Free:        0\nHugePages_Rsvd:        0\nHugePages_Surp:        0\nHugepagesize:       2048 kB\nHugetlb:               0 kB\nDirectMap4k:      182080 kB\nDirectMap2M:     5060608 kB\nDirectMap1G:     5242880 kB\n",
+  "cpu_count": 4,
+  "collector_time": "2026-11-03T22:49:54.087900+07:00"
+}

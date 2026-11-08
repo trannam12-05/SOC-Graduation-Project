@@ -1,0 +1,42 @@
+{
+  "collected_at": "2026-11-03T18:30:33.807929+07:00",
+  "VIPs": {
+    "192.168.30.1/24": "APPROVED",
+    "192.168.40.1/24": "APPROVED",
+    "192.168.50.1/24": "APPROVED",
+    "192.168.60.1/24": "APPROVED",
+    "192.168.99.1/24": "APPROVED"
+  },
+  "VHIDs": {
+    "30": 30,
+    "40": 40,
+    "50": 50,
+    "60": 60,
+    "99": 99
+  },
+  "VIP_conflict_scope": "Current firewall full configuration/runtime and passive ARP cache; saved VPCS/seed endpoint assignments; IP plan; no active DAD and no assurance about undisclosed external/offline device",
+  "pfsync_status": "READY",
+  "pfsync_readiness_scope": "Current runtime UP/syncpeer, two-way protocol240, settled syncok=1/demotion=0 and kernel bulk done both sides; not reboot, full state retention or failover acceptance",
+  "pfsync_packets_by_source": {
+    "10.255.255.1": 5,
+    "10.255.255.2": 8
+  },
+  "native_repair": "/usr/local/sbin/pluginctl -c pfsync",
+  "settled_syncok": {
+    "Primary": 1,
+    "Secondary": 1
+  },
+  "settled_CARP_demotion": {
+    "Primary": 0,
+    "Secondary": 0
+  },
+  "bulk_done_verified_both": true,
+  "saved_XML_changed": false,
+  "HA_SYNC_rules_changed": false,
+  "M2_changed": false,
+  "NAT_DHCP_changed": false,
+  "secret_same_verified_without_disclosure": true,
+  "CARP_VIPs_created": 0,
+  "failover_run": false,
+  "stop_before_CARP_creation": true
+}

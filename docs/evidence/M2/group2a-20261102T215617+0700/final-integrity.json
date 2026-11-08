@@ -1,0 +1,8 @@
+{
+  "collector_time": "2026-11-02T22:22:35.639824+07:00",
+  "current_config_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "backup_sha256": "2a8dff44d86ee2971237c05fc94cec5e99ceccb642893f12474de6d8f54028a2",
+  "configuration_unchanged_since_backup": true,
+  "hash_console_image": "docs\\evidence\\M2\\group2a-20261102T215617+0700\\console-transfer-primary-read\\job4-20261102T222212+0700.png",
+  "configuration_changes": []
+}

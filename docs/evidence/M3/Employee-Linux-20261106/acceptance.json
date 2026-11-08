@@ -1,0 +1,18 @@
+﻿{
+    "recorded_at":  "2026-11-06T21:13:55.2881264+07:00",
+    "status":  "PASS_EMPLOYEE_LOCAL_READINESS",
+    "m3":  "PARTIAL",
+    "wan":  "PENDING_SEPARATE_APPROVAL",
+    "node":  "Employee-Linux",
+    "node_id":  "11",
+    "ip":  "192.168.40.110/24 (DHCP, reverify before NAT)",
+    "gateway":  "192.168.40.1",
+    "https_client":  "curl8.5.0 HTTPS/SSL; Python SSL OpenSSL3.0.13; CA exists; no remote TLS handshake performed",
+    "existing_nodes_unchanged":  true,
+    "networks_unchanged":  true,
+    "topology_backup":  "/root/soc-employee-linux-20261106T210505Z/lab-before.unl",
+    "vcps":  "Employee VPCS retained unchanged, not started",
+    "changes":  "Only Employee overlay/NoCloud seed/node and authorized start; no WAN/HA/hook/Core change",
+    "evidence":  "Employee-Linux-status-20261106T211238+0700.png",
+    "scope":  "No external HTTPS, no retest of previous PASS"
+}
